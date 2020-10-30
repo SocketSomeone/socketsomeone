@@ -1,3 +1,3 @@
 <p align="center">
-  [![](https://github-readme-stats.vercel.app/api?username=SocketSomeone)]()
+  <img src="https://github-readme-stats.vercel.app/api?username=SocketSomeone"></img>
 </p>
