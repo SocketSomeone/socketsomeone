@@ -3,7 +3,7 @@
 <!-- Credit: https://github.com/anuraghazra/github-readme-stats -->
 <img width="50%" align="right" src="https://github-readme-stats.vercel.app/api?username=SocketSomeone&show_icons=true&include_all_commits=true">
 <img width="50%" align="right" src="https://media.giphy.com/media/UV4rSwlTM7mnRa5l4o/giphy.gif">   
-<img width="50%" align="right" src="https://github-profile-trophy.vercel.app/?username=SocketSomeone">
+<img width="50%" align="right" src="https://github-profile-trophy.vercel.app/?username=SocketSomeone&margin-w=5&row=2&column=3">
 
 ![Discord (Status)](https://img.shields.io/endpoint?url=https://dev.discordprofiles.me/api/badge/status/235413185639874561?simple=true&logo=discord&logoColor=white&color=43B581) ![Discord (Spotify)](https://img.shields.io/endpoint?label=Listening%20To&url=https://dev.discordprofiles.me/api/badge/spotify/235413185639874561&color=1ED45F) ![Profile Views](https://komarev.com/ghpvc/?username=SocketSomeone)
 
