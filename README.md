@@ -7,3 +7,7 @@ Hi, my name is Alexey (known as Someone or someone#6191) and I am a 16 year old 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=SocketSomeone&count_private=true&show_icons=true&theme=dracula)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=SocketSomeone&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+
+## Current Projects
+> Updated since November 7th, 2020
+[Miko](https://mikoapp.xyz/) - Advanced and cute discord bot! Set up your server in 5 minutes!
