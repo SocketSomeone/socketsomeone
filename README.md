@@ -20,9 +20,8 @@ Hi, my name is Alexey (known as Someone or someone#6191) and I am a 16 year old 
 
 - [Miko](https://mikoapp.xyz/) (Bot, Backend, Frontend) - **Advanced and cute discord bot! Set up your server in 5 minutes!**
 
-<br>
-
 ##
+
 <p align="right">
    <img src="https://komarev.com/ghpvc/?username=SocketSomeone" alt="Profile Views"/></a>
 </p>
