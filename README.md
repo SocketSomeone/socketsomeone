@@ -22,6 +22,4 @@ Hi, my name is Alexey (known as Someone or someone#6191) and I am a 16 year old 
 
 ##
 
-<p align="right">
-   <img src="https://komarev.com/ghpvc/?username=SocketSomeone&label=💖" alt="Profile Views"/></a>
-</p>
+<img align="right" src="https://komarev.com/ghpvc/?username=SocketSomeone&label=💖" alt="Profile Views"/>
