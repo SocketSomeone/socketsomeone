@@ -12,7 +12,7 @@ Hi, my name is Alexey (known as Someone or someone#6191) and I am a 16 year old 
 
 ### Socials
 - Discord: https://dsc.bio/socketsomeone
-- Telegram: https://t.me/socketsomeone
+- Telegram: https://t.me/someonewillkillyou
 - WT: https://wakatime.com/@SocketSomeone
 
 ## Current Projects
