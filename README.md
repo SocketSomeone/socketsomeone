@@ -1,7 +1,9 @@
 # Welcome 👋
 
 <!-- Credit: https://github.com/anuraghazra/github-readme-stats -->
-<img width="50%" align="right" src="https://github-readme-stats.vercel.app/api?username=SocketSomeone&show_icons=true&include_all_commits=true">
+<a href="https://discord.com/users/235413185639874561" target="_blank">
+  <img width="50%" align="right" alt="Discord Status" src="https://lanyard.cnrad.dev/api/235413185639874561?theme=light&borderRadius=5px">
+<a />
 <img width="50%" align="right" src="https://media.giphy.com/media/UV4rSwlTM7mnRa5l4o/giphy.gif">   
 <img width="50%" align="right" src="https://github-readme-stats.vercel.app/api/wakatime?username=SocketSomeone">
 
