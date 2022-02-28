@@ -6,7 +6,7 @@
 <a />
 <img width="50%" align="right" src="https://media.giphy.com/media/UV4rSwlTM7mnRa5l4o/giphy.gif">
 <a href="https://wakatime.com/@SocketSomeone" target="_blank">
-  <img width="50%" align="right" src="https://github-readme-stats.vercel.app/api/wakatime? username=SocketSomeone&border_radius=5px&border_color=fff&icon_color=58a6ff&show_icons=true&custom_title=Weekly%20Stats">
+  <img width="50%" align="right" src="https://github-readme-stats.vercel.app/api/wakatime?username=SocketSomeone&border_radius=5px&border_color=fff&icon_color=58a6ff&show_icons=true&custom_title=Weekly%20Stats">
 <a/>
 
 Hi, my name is Alexey (known as Someone or someone#6191) and I am a 17 year old TypeScript developer. I like music, coding, and playing video games!
