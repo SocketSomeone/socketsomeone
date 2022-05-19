@@ -4,7 +4,7 @@
 <a href="https://discord.com/users/235413185639874561" target="_blank">
   <img width="50%" align="right" alt="Discord Status" src="https://lanyard.cnrad.dev/api/235413185639874561?theme=light&borderRadius=5px">
 <a />
-<img width="50%" align="right" src="https://media.giphy.com/media/UV4rSwlTM7mnRa5l4o/giphy.gif">
+<img width="50%" align="right" src="https://i.imgur.com/kWJpUr0.giff">
 <a href="https://wakatime.com/@SocketSomeone" target="_blank">
   <img width="50%" align="right" src="https://github-readme-stats.vercel.app/api/wakatime?username=SocketSomeone&border_radius=5px&border_color=fff&icon_color=58a6ff&show_icons=true&custom_title=Weekly%20Stats">
 <a/>
