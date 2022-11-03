@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.7",
     "@types/next-seo": "^2.1.2",
     "@types/node": "18.11.9",
     "@types/react": "18.0.24",
