@@ -20,7 +20,7 @@ Hi, my name is Alexey (known as Someone or someone#6191) and I am a 18 year old 
 - [Necord](https://necord.org/) -  **A module for creating [Discord](https://discord.com) bots using [NestJS](https://nestjs.com), based on [Discord.js](https://discord.js.org/)**
 - [Cent.js](https://github.com/SocketSomeone/cent.js) - **Javascript library to communicate with [Centrifugo](https://centrifugal.dev/) HTTP API**
 - [Nestjs Hot-Shots](https://github.com/SocketSomeone/nestjs-hot-shots) - **[Hot-shots](https://www.npmjs.com/package/hot-shots) Module for [Nest.js](https://nestjs.com) Framework**
-- [Fotrum](https://fotrum.com) - **First automated competitive mobile platform. Every player will find a place for himself and will be able to show he is capable of.**
+- [Fotrum](https://fotrum.com) - **First automated competitive mobile platform. Every player will find a place for himself and will be able to show what he's is capable of.**
 
 ##
 
