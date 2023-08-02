@@ -107,7 +107,7 @@ export default function Home() {
 
                         <div className="flex flex-row flex-wrap flex-1 justify-center items-stretch py-16">
                             {
-                                loading || !!error
+                                loading
                                     ? <Loader/>
                                     : projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).map((project: any, i: number) => (
                                         <ProjectCard key={i} url={project.html_url} thumbnail={project.owner.avatar_url}
