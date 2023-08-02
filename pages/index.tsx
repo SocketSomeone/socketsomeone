@@ -5,7 +5,6 @@ import Banner from "../components/organisms/Banner";
 import Star from "../components/atoms/Star";
 import Light from "../components/atoms/Light";
 import { ChevronDownIcon, LinkIcon, StarIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
 import ThemeSwitcher from "../components/molecules/ThemeSwitcher";
 import ProjectCard from "../components/molecules/ProjectCard";
 import { useEffect, useMemo, useState } from "react";
@@ -86,10 +85,17 @@ export default function Home() {
                         </div>
 
 
-                        <Link href={"#projects"} className="justify-center hidden md:flex mb-5">
+                        <div className="justify-center  mb-5">
                             <ChevronDownIcon
-                                className="animate-bounce w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"/>
-                        </Link>
+                                className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 hidden md:flex dark:text-gray-300"
+                                onClick={() => {
+                                    window.scrollTo({
+                                        top: document.getElementById("projects")?.offsetTop,
+                                        behavior: "smooth"
+                                    })
+                                }}
+                            />
+                        </div>
 
                     </div>
 
