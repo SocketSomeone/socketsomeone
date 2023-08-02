@@ -29,7 +29,7 @@ export default function Technologies() {
         // GRPC
         'https://grpc.io/img/logos/grpc-icon-color.png',
         // Redis
-        'https://assets.stickpng.com/images/584830b5cef1014c0b5e4a9c.png',
+        'https://static-00.iconduck.com/assets.00/redis-plain-icon-1024x873-u8pai5bq.png',
         // RabbitMQ
         'https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg',
         // Nginx
