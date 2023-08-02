@@ -36,7 +36,7 @@ export default function Metrics({style, stars, watchers, forks, issues, language
             {language &&
                 <li className="flex items-center">
                     <LanguageIcon className="w-5 h-5 mr-2"/>
-                    {language.replace('TypeScript', 'TS') ?? 'Unknown'}
+                    {language.replace('TypeScript', 'TS').replace('JavaScript', 'JS') ?? 'Unknown'}
                 </li>
             }
         </ul>
