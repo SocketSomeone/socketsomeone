@@ -126,8 +126,8 @@ a {
 
 .technologies li:nth-child(12) {
     left: 96%;
-    width: 100px;
-    height: 100px;
+    width: 55px;
+    height: 55px;
     animation-delay: 0s;
 }
 
@@ -144,6 +144,21 @@ a {
     width: 100px;
     height: 100px;
     animation-delay: 4s;
+}
+
+.technologies li:nth-child(15) {
+    left: 82%;
+    width: 66px;
+    height: 66px;
+    animation-delay: 0s;
+    animation-duration: 20s;
+}
+
+.technologies li:nth-child(16) {
+    left: 9%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 2s;
 }
 
 

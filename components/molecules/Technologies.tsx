@@ -27,7 +27,13 @@ export default function Technologies() {
         // MongoDB
         'https://cdn.iconscout.com/icon/free/png-256/free-mongodb-3629020-3030245.png',
         // GRPC
-        'https://grpc.io/img/logos/grpc-icon-color.png'
+        'https://grpc.io/img/logos/grpc-icon-color.png',
+        // Redis
+        'https://assets.stickpng.com/images/584830b5cef1014c0b5e4a9c.png',
+        // RabbitMQ
+        'https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg',
+        // Nginx
+        'https://d4.alternativeto.net/rzVs59edzRVa55KMDeoptD3jkE1Ulv-DycWvE_c4nkw/rs:fill:280:280:0/g:ce:0:0/YWJzOi8vZGlzdC9pY29ucy9uZ2lueF8xMDIwMzUucG5n.png',
     ]
 
     return (
