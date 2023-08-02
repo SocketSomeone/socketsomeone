@@ -2,18 +2,15 @@ import SocialLinksGroup from "../components/molecules/SocialLinksGroup";
 import Avatar from "../components/atoms/Avatar";
 import Footer from "../components/organisms/Footer";
 import Banner from "../components/organisms/Banner";
-import { useTheme } from "next-themes";
 import Star from "../components/atoms/Star";
 import Light from "../components/atoms/Light";
 import { ChevronDownIcon, LinkIcon, StarIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import ThemeSwitcher from "../components/molecules/ThemeSwitcher";
 import ProjectCard from "../components/molecules/ProjectCard";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useFetch } from "use-http";
-import { Simulate } from "react-dom/test-utils";
 import Loader from "../components/atoms/Loader";
-import error = Simulate.error;
 
 function format(num: number) {
     return Math.abs(num) > 999
@@ -22,9 +19,9 @@ function format(num: number) {
 }
 
 export default function Home() {
-    const {resolvedTheme} = useTheme();
-    const [profile, setProfile] = useState<any>({stars: 0, followers: 0, repos: 0});
     const [projects, setProjects] = useState<any>([]);
+    const [starsCount, setStarsCount] = useState(0)
+    const stars = useMemo(() => starsCount, [projects])
     const {
         get,
         response,
@@ -44,6 +41,8 @@ export default function Home() {
         if (response.ok) {
             setProjects(initialProjects.filter((project: any) => approvedOwners.includes(project.owner.login)));
         }
+
+        setStarsCount(80)
     }
 
     return (
@@ -141,8 +140,9 @@ export default function Home() {
 
                 <Footer/>
 
+
                 <div className="z-[-1]">
-                    {resolvedTheme === 'dark' && Array(80).fill(0).map((_, i) => <Star key={i}/>)}
+                    {stars && new Array(stars).fill(stars).map((_, i) => <Star key={i}/>)}
                 </div>
 
 

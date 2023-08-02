@@ -15,7 +15,7 @@ export default function Star() {
         }
     }, [radius])
 
-    return <div className="absolute dark:bg-white rounded-full opacity-100 animate-pulse" style={{
+    return <div className="absolute dark:bg-white rounded-full opacity-100 animate-pulse hidden dark:flex" style={{
         top: y + 'px',
         left: x + 'px',
         height: radius + 'px',
