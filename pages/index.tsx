@@ -36,6 +36,10 @@ export default function Home() {
 
 
     async function initialProjects() {
+        if (projects.length !== 0) {
+            return;
+        }
+
         const initialProjects = await get('users/SocketSomeone/starred?per_page=1000');
 
         if (response.ok) {
