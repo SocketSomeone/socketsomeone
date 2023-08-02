@@ -9,6 +9,7 @@ import ProjectCard from "../components/molecules/ProjectCard";
 import { useEffect, useMemo, useState } from "react";
 import { useFetch } from "use-http";
 import Loader from "../components/atoms/Loader";
+import Technologies from "../components/molecules/Technologies";
 
 function format(num: number) {
     return Math.abs(num) > 999
@@ -48,7 +49,7 @@ export default function Home() {
     }
 
     return (
-        <div className="p-0 px-8">
+        <div className="p-0 px-8 relative overflow-hidden">
             <main
                 className="min-h-[100vh] flex flex-col align-center justify-center font-Poppins z-1000">
 
@@ -114,7 +115,7 @@ export default function Home() {
 
                         <div className="flex flex-row flex-wrap flex-1 justify-center items-stretch py-16">
                             {
-                                loading
+                                loading || error
                                     ? <Loader/>
                                     : projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).map((project: any, i: number) => (
                                         <ProjectCard key={i} url={project.html_url} thumbnail={project.owner.avatar_url}
@@ -143,6 +144,7 @@ export default function Home() {
 
                 </div>
 
+                <Technologies/>
 
                 <Footer/>
 
