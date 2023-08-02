@@ -1,8 +1,7 @@
-import { isBirthday, lanyard } from "../../utils";
+import { lanyard } from "../../utils";
 import { useEffect, useState, } from "react";
 import { LanyardPresence } from "../../utils/lanyard/interfaces";
 import Image from "next/image";
-import { CakeIcon } from "@heroicons/react/24/solid";
 
 enum StatusColor {
     ONLINE = "bg-green-500",
