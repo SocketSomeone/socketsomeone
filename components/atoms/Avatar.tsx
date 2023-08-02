@@ -1,9 +1,8 @@
-import {lanyard} from "../../utils";
-import {useEffect, useState,} from "react";
-import {LanyardPresence} from "../../utils/lanyard/interfaces";
+import { lanyard } from "../../utils";
+import { useEffect, useState, } from "react";
+import { LanyardPresence } from "../../utils/lanyard/interfaces";
 import Image from "next/image";
-import {Simulate} from "react-dom/test-utils";
-import load = Simulate.load;
+import { Simulate } from "react-dom/test-utils";
 
 enum StatusColor {
     ONLINE = "bg-green-500",
@@ -49,7 +48,7 @@ export default function Avatar() {
     });
 
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center select-none">
             <div className="relative">
                 {loading
                     ?
