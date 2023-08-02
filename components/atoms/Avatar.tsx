@@ -53,7 +53,7 @@ export default function Avatar() {
                 {loading
                     ?
                     <div className="w-40 h-40 rounded-full bg-gray-300 animate-pulse"/> :
-                    <Image className="h-40 w-40 rounded-full" width={4096} height={4096} src={avatar} quality={100}
+                    <Image className="h-40 w-40 rounded-full object-contain" width={4096} height={4096} src={avatar} quality={100}
                            alt=""/>
                 }
                 <span className="flex">

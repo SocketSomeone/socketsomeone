@@ -6,8 +6,8 @@ export default function ThemeSwitcher() {
 
     return (
         <div className="absolute z-30 top-6 right-5 flex justify-center cursor-pointer">
-            <SunIcon className="w-6 md:w-10 text-white hidden dark:flex" onClick={() => setTheme('light')}/>
-            <MoonIcon className="w-6 md:w-10 text-gray-800 dark:hidden" onClick={() => setTheme('dark')}/>
+            <SunIcon className="w-6 md:w-8 text-white hidden dark:flex" onClick={() => setTheme('light')}/>
+            <MoonIcon className="w-6 md:w-8 text-blue-500 dark:hidden" onClick={() => setTheme('dark')}/>
         </div>
     )
 }
