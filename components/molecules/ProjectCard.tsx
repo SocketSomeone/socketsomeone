@@ -28,7 +28,7 @@ export default function ProjectCard({
             <img
                 src={thumbnail}
                 alt={title}
-                className="w-32 rounded-2xl mr-4 object-contain"/>
+                className="w-32 self-center rounded-2xl mr-4 object-contain"/>
 
             <div className="flex flex-col justify-between overflow-hidden w-full p-4">
                 <h1 className="text-2xl  truncate font-medium dark:text-white">{title}</h1>
