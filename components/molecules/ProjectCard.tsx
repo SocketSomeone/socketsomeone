@@ -7,7 +7,6 @@ interface ProjectCardProps {
     description?: string;
     metrics: {
         stars: number;
-        watchers: number;
         forks: number;
         issues?: number;
         language?: string
@@ -19,7 +18,7 @@ export default function ProjectCard({
                                         url,
                                         title,
                                         description,
-                                        metrics: {forks, watchers, stars, issues, language}
+                                        metrics: {forks, stars, issues, language}
                                     }: ProjectCardProps) {
 
     return (
@@ -35,7 +34,7 @@ export default function ProjectCard({
                 <h1 className="text-2xl  truncate font-medium dark:text-white">{title}</h1>
                 <p className="text-gray-500 flex-1 text-sm font-normal dark:text-gray-300">{description ?? 'No description'}</p>
 
-                <Metrics style={"mt-2 justify-start dark:text-blue-500"} forks={forks} watchers={watchers} stars={stars}
+                <Metrics style={"mt-2 justify-start dark:text-blue-500"} forks={forks} stars={stars}
                          issues={issues ?? 0} language={language ?? 'Unknown'}/>
             </div>
         </a>

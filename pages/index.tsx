@@ -121,7 +121,6 @@ export default function Home() {
                                                      title={project.name} description={project.description} metrics={{
                                             forks: project.forks,
                                             stars: project.stargazers_count,
-                                            watchers: project.watchers_count,
                                             issues: project.open_issues,
                                             language: project.language
                                         }}/>
