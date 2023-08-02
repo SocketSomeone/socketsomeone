@@ -5,7 +5,6 @@ import Banner from "../components/organisms/Banner";
 import Star from "../components/atoms/Star";
 import Light from "../components/atoms/Light";
 import { ChevronDownIcon, LinkIcon, StarIcon } from "@heroicons/react/24/solid";
-import ThemeSwitcher from "../components/molecules/ThemeSwitcher";
 import ProjectCard from "../components/molecules/ProjectCard";
 import { useEffect, useMemo, useState } from "react";
 import { useFetch } from "use-http";
