@@ -5,13 +5,15 @@ import Banner from "../components/organisms/Banner";
 import { useTheme } from "next-themes";
 import Star from "../components/atoms/Star";
 import Light from "../components/atoms/Light";
-import Metrics from "../components/molecules/Metrics";
 import { ChevronDownIcon, LinkIcon, StarIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import ThemeSwitcher from "../components/molecules/ThemeSwitcher";
 import ProjectCard from "../components/molecules/ProjectCard";
 import { useEffect, useState } from "react";
 import { useFetch } from "use-http";
+import { Simulate } from "react-dom/test-utils";
+import Loader from "../components/atoms/Loader";
+import error = Simulate.error;
 
 function format(num: number) {
     return Math.abs(num) > 999
@@ -26,7 +28,8 @@ export default function Home() {
     const {
         get,
         response,
-        loading
+        loading,
+        error
     } = useFetch("https://api.github.com");
     const approvedOwners = ['SocketSomeone', 'necordjs', 'miko-org', 'burger-club', 'Fotrum', 'VENOM-MULTICHEAT', 'noiro-org', 'External-Wallhack']
 
@@ -81,7 +84,6 @@ export default function Home() {
 
 
                         <Link href={"#projects"} className="justify-center hidden md:flex mb-5">
-
                             <ChevronDownIcon
                                 className="animate-bounce w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"/>
                         </Link>
@@ -91,7 +93,7 @@ export default function Home() {
 
                     <div
                         id={"projects"}
-                        className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4">
+                        className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-2">
 
                         <h1 className="font-semibold text-3xl text-gray-900 dark:text-white">My Projects</h1>
                         {/* Stars around my projects text */}
@@ -106,16 +108,18 @@ export default function Home() {
 
                         <div className="flex flex-row flex-wrap flex-1 justify-center items-stretch py-16">
                             {
-                                projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).map((project: any, i: number) => (
-                                    <ProjectCard key={i} url={project.html_url} thumbnail={project.owner.avatar_url}
-                                                 title={project.name} description={project.description} metrics={{
-                                        forks: project.forks,
-                                        stars: project.stargazers_count,
-                                        watchers: project.watchers_count,
-                                        issues: project.open_issues,
-                                        language: project.language
-                                    }}/>
-                                ))
+                                loading || !!error
+                                    ? <Loader/>
+                                    : projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).map((project: any, i: number) => (
+                                        <ProjectCard key={i} url={project.html_url} thumbnail={project.owner.avatar_url}
+                                                     title={project.name} description={project.description} metrics={{
+                                            forks: project.forks,
+                                            stars: project.stargazers_count,
+                                            watchers: project.watchers_count,
+                                            issues: project.open_issues,
+                                            language: project.language
+                                        }}/>
+                                    ))
                             }
                         </div>
 
