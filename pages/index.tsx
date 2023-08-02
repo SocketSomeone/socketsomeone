@@ -53,8 +53,6 @@ export default function Home() {
             <main
                 className="min-h-[100vh] flex flex-col align-center justify-center font-Poppins z-1000">
 
-                <ThemeSwitcher/>
-
                 <Light/>
 
                 <div
@@ -102,7 +100,7 @@ export default function Home() {
 
                     <div
                         id={"projects"}
-                        className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-2">
+                        className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1">
 
                         <h1 className="font-semibold text-3xl text-gray-900 dark:text-white">My Projects</h1>
                         {/* Stars around my projects text */}
