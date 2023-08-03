@@ -3,7 +3,7 @@ export default function Technologies() {
         // NestJS
         'https://static-00.iconduck.com/assets.00/nestjs-icon-256x255-r03j160r.png',
         // JS
-        'https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-4.png',
+        'https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png',
         // TS
         'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png',
         // Docker
@@ -13,7 +13,7 @@ export default function Technologies() {
         // K8s
         'https://kubernetes.io/images/favicon.png',
         // Python
-        'https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png',
+        'https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png',
         // C#
         'https://www.freeiconspng.com/uploads/c-logo-icon-18.png',
         // C++
@@ -29,7 +29,7 @@ export default function Technologies() {
         // GRPC
         'https://grpc.io/img/logos/grpc-icon-color.png',
         // Redis
-        'https://assets.stickpng.com/images/584830b5cef1014c0b5e4a9c.png',
+        'https://cdn.iconscout.com/icon/free/png-256/free-redis-4-1175103.png',
         // RabbitMQ
         'https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg',
         // Nginx
