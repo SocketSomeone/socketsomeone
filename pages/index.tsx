@@ -85,7 +85,7 @@ export default function Home() {
 
                         <div className="justify-center  mb-5">
                             <ChevronDownIcon
-                                className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 hidden md:flex dark:text-gray-300"
+                                className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
                                 onClick={() => {
                                     window.scrollTo({
                                         top: document.getElementById("projects")?.offsetTop,
@@ -118,7 +118,7 @@ export default function Home() {
                                 loading || error
                                     ? <Loader/>
                                     : projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).map((project: any, i: number) => (
-                                        <ProjectCard key={i} url={project.html_url} thumbnail={project.owner.avatar_url}
+                                        <ProjectCard key={i} url={project.html_url} thumbnail={project.owner.login !== 'SocketSomeone' ? project.owner.avatar_url : 'icons/github_gradient.svg' }
                                                      title={project.name} description={project.description} metrics={{
                                             forks: project.forks,
                                             stars: project.stargazers_count,

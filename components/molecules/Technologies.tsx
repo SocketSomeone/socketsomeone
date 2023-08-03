@@ -40,7 +40,7 @@ export default function Technologies() {
         <ul className="technologies z-[-1] hidden sm:flex">
             {technologies.map((technology, index) => (
                 <li key={index} className={`left-${index} duration-[${index * 250}]`}>
-                    <img className="object-contain" src={technology} alt={index.toString()}/>
+                    <img className="object-contain" src={technology}  />
                 </li>
             ))}
         </ul>
