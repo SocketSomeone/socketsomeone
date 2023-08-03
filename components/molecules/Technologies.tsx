@@ -3,7 +3,7 @@ export default function Technologies() {
         // NestJS
         'https://static-00.iconduck.com/assets.00/nestjs-icon-256x255-r03j160r.png',
         // JS
-        'https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-4.png',
+        'https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png',
         // TS
         'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png',
         // Docker
