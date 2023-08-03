@@ -13,7 +13,7 @@ export default function Technologies() {
         // K8s
         'https://kubernetes.io/images/favicon.png',
         // Python
-        'https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png',
+        'https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png',
         // C#
         'https://www.freeiconspng.com/uploads/c-logo-icon-18.png',
         // C++
