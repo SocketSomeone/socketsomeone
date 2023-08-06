@@ -7,43 +7,43 @@
 
   <a href="https://github.com/SocketSomeone">
     <picture>
-       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/dark/github.png">
-       <img src="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/light/github.png">
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/github.png">
+       <img src="./assets/light/github.png">
     </picture>
   </a>
   &emsp;
   <a href="https://t.me/socketsomeone">
     <picture>
-       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/dark/telegram.png">
-       <img src="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/light/telegram.png">
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/telegram.png">
+       <img src="./assets/light/telegram.png">
     </picture>
   </a> 
   &emsp;
   <a href="https://discord.com/users/235413185639874561">
     <picture>
-       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/dark/discord.png">
-       <img src="https://github.com/SocketSomeone/socketsomeone/tree/main/assetslight/discord.png">
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/discord.png">
+       <img src="./assets/light/discord.png">
     </picture>
   </a> 
   &emsp;
   <a href="https://instagram.com/socketsomeone">
     <picture>
-       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/dark/instagram.png">
-       <img src="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/light/instagram.png">
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/instagram.png">
+       <img src="./assets/light/instagram.png">
     </picture>
   </a>
   &emsp;
   <a href="https://twitter.com/SocketSomeone">
     <picture>
-       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/dark/twitter.png">
-       <img src="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/light/twitter.png">
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/twitter.png">
+       <img src="./assets/light/twitter.png">
     </picture>
   </a> 
   &emsp;
   <a href="mailto:socket.someone@gmail.com">
     <picture>
-       <source media="(prefers-color-scheme: dark)" srcset="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/dark/email.png">
-       <img src="https://github.com/SocketSomeone/socketsomeone/tree/main/assets/light/email.png">
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/email.png">
+       <img src="./assets/light/email.png">
     </picture>
   </a>
 </div>
