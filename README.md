@@ -12,7 +12,7 @@
     </picture>
   </a>
   &emsp;
-  <a href="[https://github.com/SocketSomeone](https://t.me/socketsomeone)">
+  <a href="https://t.me/socketsomeone">
     <picture>
        <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/telegram.png">
        <img src="./assets/light/telegram.png">
