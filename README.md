@@ -60,7 +60,5 @@
     <img  src="https://github-readme-stats.vercel.app/api/wakatime?username=SocketSomeone&border_radius=5px&border_color=fff&icon_color=58a6ff&show_icons=true&custom_title=Weekly%20Stats">
   <a/>
   <br/>
-  <img width="100%" src="https://i.imgur.com/kWJpUr0.giff">
-  <br/>
   <img align="right" src="https://komarev.com/ghpvc/?username=SocketSomeone&label=💖" alt="Profile Views"/>
 </details>
