@@ -6,20 +6,48 @@
   <p>
        You just found my profile! I'm a kitten who loves coffee and bugs! ( •̀ ω •́ )✧
   </p>
-  
+
   <a href="https://github.com/SocketSomeone">
-    <img src="./assets/light/github.png#gh-light-mode-only" />
-    <img src="./assets/dark/github.png#gh-dark-mode-only" />
-  </a> &emsp; <a href="https://github.com/SocketSomeone/necord">Source code 🪡</a> &emsp; <a href="https://github.com/necordjs/samples">Examples 🛠️</a> &emsp; <a href="https://discord.gg/mcBYvMTnwP">Community 💬</a>
-
-  <details>
-<summary><b>Weekly Stats</b></summary>
-
-<a href="https://wakatime.com/@SocketSomeone" target="_blank">
-  <img width="50%" align="right" src="https://github-readme-stats.vercel.app/api/wakatime?username=SocketSomeone&border_radius=5px&border_color=fff&icon_color=58a6ff&show_icons=true&custom_title=Weekly%20Stats">
-<a/>
-
-</details>
+    <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/github.png">
+       <img src="./assets/light/github.png">
+    </picture>
+  </a>
+  &emsp;
+  <a href="[https://github.com/SocketSomeone](https://t.me/socketsomeone)">
+    <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/telegram.png">
+       <img src="./assets/light/telegram.png">
+    </picture>
+  </a> 
+  &emsp;
+  <a href="https://discord.com/users/235413185639874561">
+    <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/discord.png">
+       <img src="./assets/light/discord.png">
+    </picture>
+  </a> 
+  &emsp;
+  <a href="https://instagram.com/socketsomeone">
+    <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/instagram.png">
+       <img src="./assets/light/instagram.png">
+    </picture>
+  </a>
+  &emsp;
+  <a href="https://twitter.com/SocketSomeone">
+    <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/twitter.png">
+       <img src="./assets/light/twitter.png">
+    </picture>
+  </a> 
+  &emsp;
+  <a href="mailto:socket.someone@gmail.com">
+    <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="./assets/dark/email.png">
+       <img src="./assets/light/email.png">
+    </picture>
+  </a>
 </div>
 
 ##
