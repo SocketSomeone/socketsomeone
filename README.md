@@ -48,7 +48,7 @@
   </a>
 </div>
 
-<br/><br/>
+<br/>
 
 <details align="right">
   <summary>My Stats</summary>
