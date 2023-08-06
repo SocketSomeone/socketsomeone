@@ -1,7 +1,5 @@
 <div align="center">
-   <h1>
-       Hello, I’m SocketSomeone your Software Engineer
-   </h1>
+  <h3>Hello, I’m SocketSomeone your Software Engineer</h3>
 
   <p>
        You just found my profile! I'm a kitten who loves coffee and bugs! ( •̀ ω •́ )✧
@@ -50,6 +48,6 @@
   </a>
 </div>
 
-##
+<br/><br/>
 
 <img align="right" src="https://komarev.com/ghpvc/?username=SocketSomeone&label=💖" alt="Profile Views"/>
