@@ -53,7 +53,10 @@
 <details align="right">
   <summary>My Stats</summary>
   <a width="50%" align="right" href="https://wakatime.com/@SocketSomeone" target="_blank">
-    <img  src="https://github-readme-stats.vercel.app/api/wakatime?username=SocketSomeone&border_radius=5px&border_color=fff&icon_color=58a6ff&show_icons=true&custom_title=Weekly%20Stats">
+    <picture>
+       <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/wakatime?username=SocketSomeone&theme=transparent&hide_border=true&border_radius=5px&icon_color=58a6ff&show_icons=true&custom_title=Weekly%20Stats">
+       <img src="https://github-readme-stats.vercel.app/api/wakatime?username=SocketSomeone&theme=algolia&hide_border=true&border_radius=5px&icon_color=58a6ff&show_icons=true&custom_title=Weekly%20Stats">
+    </picture>
   <a/>
   <br/>
   <img align="right" src="https://komarev.com/ghpvc/?username=SocketSomeone&label=💖" alt="Profile Views"/>
