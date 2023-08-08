@@ -83,70 +83,75 @@ export default function Home() {
                         </div>
 
 
-                        <div className="justify-center  mb-5">
-                            <ChevronDownIcon
-                                className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
-                                onClick={() => {
-                                    window.scrollTo({
-                                        top: document.getElementById("projects")?.offsetTop,
-                                        behavior: "smooth"
-                                    })
-                                }}
-                            />
-                        </div>
-
+                        {projects.length > 0 ?
+                            <div className="justify-center mb-5">
+                                <ChevronDownIcon
+                                    className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
+                                    onClick={() => {
+                                        window.scrollTo({
+                                            top: document.getElementById("projects")?.offsetTop,
+                                            behavior: "smooth"
+                                        })
+                                    }}
+                                />
+                            </div>
+                            : <Footer/>
+                        }
                     </div>
 
 
-                    <div
-                        id={"projects"}
-                        className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1">
+                    {projects.length > 0 &&
+                        <div
+                            id={"projects"}
+                            className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1">
 
-                        <h1 className="font-semibold text-3xl text-gray-900 dark:text-white">My Projects</h1>
-                        {/* Stars around my projects text */}
+                            <h1 className="font-semibold text-3xl text-gray-900 dark:text-white">My Projects</h1>
+                            {/* Stars around my projects text */}
 
-                        <div className="relative">
-                            <StarIcon
-                                className="absolute bottom-6 right-28 rotate-12 w-5 h-5 text-red-500"/>
-                            <StarIcon className="absolute bottom-0 right-24 rotate-12 w-5 h-5 text-yellow-500"/>
-                            <StarIcon className="absolute bottom-12 left-24 rotate-12 w-5 h-5 text-purple-500"/>
-                            <StarIcon className="absolute bottom-6 left-28 -rotate-12 w-5 h-5 text-blue-500"/>
-                        </div>
+                            <div className="relative">
+                                <StarIcon
+                                    className="absolute bottom-6 right-28 rotate-12 w-5 h-5 text-red-500"/>
+                                <StarIcon className="absolute bottom-0 right-24 rotate-12 w-5 h-5 text-yellow-500"/>
+                                <StarIcon className="absolute bottom-12 left-24 rotate-12 w-5 h-5 text-purple-500"/>
+                                <StarIcon className="absolute bottom-6 left-28 -rotate-12 w-5 h-5 text-blue-500"/>
+                            </div>
 
-                        <div className="flex flex-row flex-wrap flex-1 justify-center items-stretch py-16">
-                            {
-                                loading || error
-                                    ? <Loader/>
-                                    : projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).map((project: any, i: number) => (
-                                        <ProjectCard key={i} url={project.html_url} thumbnail={project.owner.login !== 'SocketSomeone' ? project.owner.avatar_url : 'icons/github_gradient.svg' }
-                                                     title={project.name} description={project.description} metrics={{
-                                            forks: project.forks,
-                                            stars: project.stargazers_count,
-                                            issues: project.open_issues,
-                                            language: project.language
-                                        }}/>
-                                    ))
-                            }
-                        </div>
+                            <div className="flex flex-row flex-wrap flex-1 justify-center items-stretch py-16">
+                                {
+                                    loading || error
+                                        ? <Loader/>
+                                        : projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).map((project: any, i: number) => (
+                                            <ProjectCard key={i} url={project.html_url}
+                                                         thumbnail={project.owner.login !== 'SocketSomeone' ? project.owner.avatar_url : 'icons/github_gradient.svg'}
+                                                         title={project.name} description={project.description} metrics={{
+                                                forks: project.forks,
+                                                stars: project.stargazers_count,
+                                                issues: project.open_issues,
+                                                language: project.language
+                                            }}/>
+                                        ))
+                                }
+                            </div>
 
 
-                        <div className="flex justify-center pb-3">
-                            <a href="https://github.com/SocketSomeone"
-                               className="flex items-center truncate  py-3 px-4 bg-white shadow-xl shadow-black/5 ring-1 ring-slate-600/10 hover:bg-slate-50 dark:bg-gray-800 dark:ring-gray-800 rounded-xl">
-                                <LinkIcon className="w-4 h-4 mr-2"/>
+                            <div className="flex justify-center pb-3">
+                                <a href="https://github.com/SocketSomeone"
+                                   className="flex items-center truncate  py-3 px-4 bg-white shadow-xl shadow-black/5 ring-1 ring-slate-600/10 hover:bg-slate-50 dark:bg-gray-800 dark:ring-gray-800 rounded-xl">
+                                    <LinkIcon className="w-4 h-4 mr-2"/>
 
-                                <span className="truncate text-lg font-regular">
+                                    <span className="truncate text-lg font-regular">
                                 More projects on my GitHub
                                 </span>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    }
 
                 </div>
 
                 <Technologies/>
 
-                <Footer/>
+                {projects.length > 0 && <Footer/>}
 
 
                 <div className="z-[-1]">
