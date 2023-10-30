@@ -1,6 +1,5 @@
-import { lanyard } from "../../utils";
-import { useEffect, useState, } from "react";
-import { LanyardPresence } from "../../utils/lanyard/interfaces";
+import {lanyard, LanyardPresence} from "../../utils";
+import {useEffect, useState,} from "react";
 import Image from "next/image";
 
 enum StatusColor {
@@ -62,7 +61,6 @@ export default function Avatar() {
                     <span
                         className={"bottom-0 right-5 absolute w-7 h-7 border-2 border-white dark:border-gray-800 rounded-full " + getStatusColor(presence?.discord_status)}></span>
                     </span>
-
 
             </div>
         </div>

@@ -1,6 +1,5 @@
-import {Op, Event} from "./enums";
+import {Event, Op} from "./enums";
 import {EventEmitter} from "events";
-import {type} from "os";
 import {LanyardPresence} from "./interfaces";
 
 interface SocketData extends Partial<LanyardPresence> {
@@ -25,6 +24,8 @@ export class Lanyard extends EventEmitter implements Lanyard {
     public ws = new WebSocket(`wss://api.lanyard.rest/socket`);
 
     public heartbeat?: NodeJS.Timer;
+
+    public lastPresence?: LanyardPresence;
 
     public constructor(public user_id: string) {
         super();
@@ -51,7 +52,10 @@ export class Lanyard extends EventEmitter implements Lanyard {
     }
 
     public fetch(): Promise<LanyardPresence> {
-        return fetch(`https://api.lanyard.rest/v1/users/${this.user_id}`, {cache: 'force-cache', }).then(res => res.json()).then(data => data.data);
+        return fetch(`https://api.lanyard.rest/v1/users/${this.user_id}`, {cache: 'force-cache',}).then(res => res.json()).then(data => {
+            this.lastPresence = data.data
+            return data.data
+        });
     }
 
     private handle(data: SocketMessage) {

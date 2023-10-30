@@ -4,12 +4,13 @@ import Footer from "../components/organisms/Footer";
 import Banner from "../components/organisms/Banner";
 import Star from "../components/atoms/Star";
 import Light from "../components/atoms/Light";
-import { ChevronDownIcon, LinkIcon, StarIcon } from "@heroicons/react/24/solid";
+import {ChevronDownIcon, LinkIcon, StarIcon} from "@heroicons/react/24/solid";
 import ProjectCard from "../components/molecules/ProjectCard";
-import { useEffect, useMemo, useState } from "react";
-import { useFetch } from "use-http";
+import {useEffect, useMemo, useState} from "react";
+import {useFetch} from "use-http";
 import Loader from "../components/atoms/Loader";
 import Technologies from "../components/molecules/Technologies";
+import Toast from "../components/molecules/Toast";
 
 function format(num: number) {
     return Math.abs(num) > 999
@@ -54,6 +55,7 @@ export default function Home() {
                 className="min-h-[100vh] flex flex-col align-center justify-center font-Poppins z-1000">
 
                 <Light/>
+
 
                 <div
                     className="md:container px-5 pt-6 md:pt-0 mx-auto my-auto w-full">
@@ -153,6 +155,7 @@ export default function Home() {
 
                 {projects.length > 0 && <Footer/>}
 
+                <Toast/>
 
                 <div className="z-[-1]">
                     {stars && new Array(stars).fill(stars).map((_, i) => <Star key={i}/>)}
