@@ -23,7 +23,7 @@ export default function Toast() {
 
     useEffect(() => {
         lanyard?.on('presence', (data) => {
-            setActivity(data.activities.find((activity) => activity.type === 0))
+            setActivity(data.activities.find((activity) => activity.type === 0 && activity.name === 'Dota 2'))
         })
     }, []);
 
@@ -96,9 +96,9 @@ export default function Toast() {
                             <div className="ml-3 text-sm font-normal whitespace-nowrap max-w-[200px]">
                                 <span
                                     className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">{activity.name}</span>
-                                <div className="text-sm font-normal truncate">{activity.details}
+                                <div className="text-sm font-normal truncate">{activity.details ?? 'Details not available'}
                                 </div>
-                                <div className="text-sm font-normal truncate">{activity.state}
+                                <div className="text-sm font-normal truncate">{activity.state ?? 'State not available'}
                                 </div>
 
 
