@@ -7,6 +7,8 @@ export default function Toast() {
     const [activity, setActivity] = useState<LanyardActivity>();
     const [elapsed, setElapsed] = useState<string>("");
     const [left, setLeft] = useState<string>("");
+    const [largeImage, setLargeImage] = useState<string>("");
+    const [smallImage, setSmallImage] = useState<string>("");
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -20,6 +22,19 @@ export default function Toast() {
 
         return () => clearInterval(interval);
     }, [activity?.timestamps]);
+
+    useEffect(() => {
+        const largeURL = assetURL('large_image');
+        const smallURL = assetURL('small_image');
+
+        if (largeURL !== largeImage) {
+            setLargeImage(largeURL)
+        }
+
+        if (smallURL !== smallURL) {
+            setSmallImage(smallURL)
+        }
+    }, [assetURL, largeImage]);
 
     useEffect(() => {
         lanyard?.on('presence', (data) => {
@@ -38,7 +53,6 @@ export default function Toast() {
 
         return `https://cdn.discordapp.com/app-assets/${activity?.application_id}/${activity?.assets?.[field]}.png?size=4096`
     }
-
 
 
     function formatTime(time?: number) {
@@ -74,22 +88,27 @@ export default function Toast() {
                         <div className="flex">
                             <div className="relative">
 
-                                <Image className="w-20 rounded-md object-contain"
-                                       onError={({currentTarget}) => currentTarget.style.display = 'none'}
-                                       width={4096} height={4096}
-                                       quality={100}
-                                       src={assetURL('large_image')}
-                                       alt="Large Image"/>
+                                {largeImage.length > 0 &&
+                                    <Image className="w-20 rounded-md object-contain"
+                                           onError={({currentTarget}) => currentTarget.style.display = 'none'}
+                                           width={4096} height={4096}
+                                           quality={100}
+                                           src={largeImage}
+                                           alt="Large Image"/>
+                                }
 
 
                                 <span className="flex">
+                                    {smallImage.length > 0 &&
                                         <Image
                                             className={"top-14 left-14 absolute w-8 border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full "}
                                             onError={({currentTarget}) => currentTarget.style.display = 'none'}
                                             width={4096} height={4096}
                                             quality={100}
-                                            src={assetURL('small_image')}
+                                            src={smallImage}
                                             alt="Small Image"/>
+                                    }
+
                             </span>
                             </div>
 
