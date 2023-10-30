@@ -5,21 +5,56 @@ import Image from "next/image";
 export default function Toast() {
     const [closed, setClosed] = useState<boolean>(false);
     const [activity, setActivity] = useState<LanyardActivity>();
+    const [elapsed, setElapsed] = useState<string>("");
+    const [left, setLeft] = useState<string>("");
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const timestamps = activity?.timestamps;
+            const start = timestamps?.start
+            const end = timestamps?.end
+
+            setElapsed(start ? formatTime(activity?.timestamps?.start) : "")
+            setLeft(end ? formatTime(activity?.timestamps?.end) : "")
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, [activity?.timestamps]);
 
     useEffect(() => {
         lanyard?.on('presence', (data) => {
-            setActivity(data.activities.find((activity) => activity.type === 0));
-            console.log(data.activities)
+            setActivity(data.activities.find((activity) => activity.type === 0))
         })
     }, []);
 
     function assetURL(field: 'small_image' | 'large_image' = 'large_image') {
-        if (activity?.assets?.large_image.startsWith('mp:')) {
-            return `https://media.discordapp.net/${activity.assets?.[field]?.slice(3)}`
+        if (activity?.assets?.[field]?.startsWith('mp:')) {
+            return `https://media.discordapp.net/${activity.assets?.[field]?.slice(3)}?size=4096`
         }
 
-        return `https://cdn.discordapp.com/app-assets/${activity?.application_id}/${activity?.assets?.[field]}.png`
+        if (!activity?.assets?.[field] && field === 'large_image') {
+            return `https://dcdn.dstn.to/app-icons/${activity?.application_id}.png?size=4096`
+        }
+
+        return `https://cdn.discordapp.com/app-assets/${activity?.application_id}/${activity?.assets?.[field]}.png?size=4096`
     }
+
+
+    function formatTime(time?: number) {
+        const diff = Math.abs(Date.now() - (time ?? 0));
+
+        const seconds = Math.floor((diff / 1000) % 60);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+
+        return [days, hours, minutes, seconds]
+            .map((v) => v.toString().padStart(2, '0'))
+            .filter((v, index) => v !== '00' || index > 1)
+            .join(':');
+    }
+
 
     if (closed || !activity) {
         return (<> </>)
@@ -37,34 +72,43 @@ export default function Toast() {
 
                         <div className="flex">
                             <div className="relative">
-                                {activity.assets?.large_image &&
-                                    <Image className="w-16 rounded-md object-contain"
-                                           width={4096} height={4096}
-                                           quality={100}
-                                           src={assetURL('large_image')}
-                                           alt="Large Image"/>
-                                }
+
+                                <Image className="w-20 rounded-md object-contain"
+                                       onError={(e) => e.target.style.display = 'none'}
+                                       width={4096} height={4096}
+                                       quality={100}
+                                       src={assetURL('large_image')}
+                                       alt="Large Image"/>
 
 
                                 <span className="flex">
-                                    {activity.assets?.small_image &&
                                         <Image
-                                            className={"top-11 left-11 absolute w-6 border-2 border-white dark:border-gray-800 dark:bg-gray-800 rounded-full "}
+                                            className={"top-14 left-14 absolute w-8 border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full "}
+                                            onError={(e) => e.target.style.display = 'none'}
                                             width={4096} height={4096}
                                             quality={100}
                                             src={assetURL('small_image')}
-                                            alt="Small Image"/>}
+                                            alt="Small Image"/>
                             </span>
                             </div>
 
 
-                            <div className="ml-3 text-sm font-normal whitespace-nowrap max-w-[50vw] sm:max-w-xs">
+                            <div className="ml-3 text-sm font-normal whitespace-nowrap max-w-[200px]">
                                 <span
                                     className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">{activity.name}</span>
                                 <div className="text-sm font-normal truncate">{activity.details}
                                 </div>
                                 <div className="text-sm font-normal truncate">{activity.state}
                                 </div>
+
+
+                                {
+                                    (elapsed?.length > 0 || left?.length > 0) && (
+                                        <div
+                                            className="text-sm font-normal truncate">{left.length > 0 ? `${left} left` : `${elapsed} elapsed`}
+
+                                        </div>)
+                                }
                             </div>
                         </div>
                     </div>
