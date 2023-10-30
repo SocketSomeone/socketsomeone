@@ -21,8 +21,11 @@ export default function Toast() {
         return `https://cdn.discordapp.com/app-assets/${activity?.application_id}/${activity?.assets?.[field]}.png`
     }
 
+    if (closed || !activity) {
+        return (<> </>)
+    }
 
-    return (!closed && activity &&
+    return (
         <div className="fixed bottom-2 right-2">
             <div id="toast-message-cta"
                  className="w-full max-w-md p-4 text-gray-500 bg-white rounded-lg  shadow-2xl shadow-black/5 ring-1 ring-slate-700/10 dark:bg-gray-800 dark:text-gray-400"
