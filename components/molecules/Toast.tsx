@@ -37,11 +37,14 @@ export default function Toast() {
 
                         <div className="flex">
                             <div className="relative">
-                                <Image className="w-16 rounded-md object-contain"
-                                       width={4096} height={4096}
-                                       quality={100}
-                                       src={assetURL('large_image')}
-                                       alt="Large Image"/>
+                                {activity.assets?.large_image &&
+                                    <Image className="w-16 rounded-md object-contain"
+                                           width={4096} height={4096}
+                                           quality={100}
+                                           src={assetURL('large_image')}
+                                           alt="Large Image"/>
+                                }
+
 
                                 <span className="flex">
                                     {activity.assets?.small_image &&
