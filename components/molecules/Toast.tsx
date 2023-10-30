@@ -74,7 +74,7 @@ export default function Toast() {
                             <div className="relative">
 
                                 <Image className="w-20 rounded-md object-contain"
-                                       onError={(e) => e.target.style.display = 'none'}
+                                       onError={({currentTarget}) => currentTarget.style.display = 'none'}
                                        width={4096} height={4096}
                                        quality={100}
                                        src={assetURL('large_image')}
@@ -84,7 +84,7 @@ export default function Toast() {
                                 <span className="flex">
                                         <Image
                                             className={"top-14 left-14 absolute w-8 border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full "}
-                                            onError={(e) => e.target.style.display = 'none'}
+                                            onError={({currentTarget}) => currentTarget.style.display = 'none'}
                                             width={4096} height={4096}
                                             quality={100}
                                             src={assetURL('small_image')}
@@ -96,7 +96,8 @@ export default function Toast() {
                             <div className="ml-3 text-sm font-normal whitespace-nowrap max-w-[200px]">
                                 <span
                                     className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">{activity.name}</span>
-                                <div className="text-sm font-normal truncate">{activity.details ?? 'Details not available'}
+                                <div
+                                    className="text-sm font-normal truncate">{activity.details ?? 'Details not available'}
                                 </div>
                                 <div className="text-sm font-normal truncate">{activity.state ?? 'State not available'}
                                 </div>
