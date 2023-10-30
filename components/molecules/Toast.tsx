@@ -23,7 +23,7 @@ export default function Toast() {
 
     useEffect(() => {
         lanyard?.on('presence', (data) => {
-            setActivity(data.activities.find((activity) => activity.type === 0 && activity.name === 'Dota 2'))
+            setActivity(data.activities.find((activity) => activity.type === 0))
         })
     }, []);
 
