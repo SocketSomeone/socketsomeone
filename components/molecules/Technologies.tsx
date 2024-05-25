@@ -11,7 +11,7 @@ export default function Technologies() {
         // Github Actions
         'https://avatars.githubusercontent.com/u/44036562?s=200&v=4',
         // K8s
-        'https://kubernetes.io/images/favicon.png',
+        'https://1000logos.net/wp-content/uploads/2022/07/Kubernetes-Emblem.png',
         // Python
         'https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png',
         // C#
