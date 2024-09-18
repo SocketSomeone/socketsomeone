@@ -24,11 +24,11 @@ export default function ProjectCard({
     return (
         <a
             href={url}
-            className="flex flex-row flex-3 flex-grow pointer-events-auto py-2 px-4 mx-2 my-4 w-[24rem] rounded-xl bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50 dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer">
+            className="flex flex-row pointer-events-auto py-2 px-4 mx-2 my-4 w-[22rem] sm:w-[26rem] md:w-[24rem] lg:w-[26rem] xl:w-[30rem] rounded-xl bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50 dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer">
             <img
                 src={thumbnail}
                 alt={title}
-                className="w-32 self-center rounded-2xl mr-4 object-contain"/>
+                className="w-16 sm:w-20 md:w-20 lg:w-28 xl:w-32 hidden sm:flex self-center rounded-2xl mr-4 object-contain"/>
 
             <div className="flex flex-col justify-between overflow-hidden w-full p-4">
                 <h1 className="text-2xl  truncate font-medium dark:text-white">{title}</h1>

@@ -118,7 +118,7 @@ export default function Home() {
                                 <StarIcon className="absolute bottom-6 left-28 -rotate-12 w-5 h-5 text-blue-500"/>
                             </div>
 
-                            <div className="flex flex-row flex-wrap flex-1 justify-center items-stretch py-16">
+                            <div className="flex flex-row flex-wrap justify-center items-stretch py-16">
                                 {
                                     loading || error
                                         ? <Loader/>
