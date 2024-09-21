@@ -1,6 +1,6 @@
 import Metrics from "./Metrics";
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
     thumbnail?: string;
     url?: string
     title?: string;

@@ -1,170 +1,180 @@
-import SocialLinksGroup from "../components/molecules/SocialLinksGroup";
-import Avatar from "../components/atoms/Avatar";
-import Footer from "../components/organisms/Footer";
-import Banner from "../components/organisms/Banner";
-import Star from "../components/atoms/Star";
-import Light from "../components/atoms/Light";
-import {ChevronDownIcon, LinkIcon, StarIcon} from "@heroicons/react/24/solid";
-import ProjectCard from "../components/molecules/ProjectCard";
-import {useEffect, useMemo, useState} from "react";
-import {useFetch} from "use-http";
-import Loader from "../components/atoms/Loader";
-import Technologies from "../components/molecules/Technologies";
-import Toast from "../components/molecules/Toast";
-
-function format(num: number) {
-    return Math.abs(num) > 999
-        ? (Math.sign(num) * (Math.abs(num) / 1000)).toFixed(1) + "k+"
-        : Math.sign(num) * Math.abs(num)
-}
+import Footer from '../components/organisms/Footer';
+import Light from '../components/atoms/Light';
+import { ChevronDownIcon, LinkIcon } from '@heroicons/react/24/solid';
+import { useEffect, useMemo, useState } from 'react';
+import { useFetch } from 'use-http';
+import Loader from '../components/atoms/Loader';
+import Technologies from '../components/molecules/Technologies';
+import Toast from '../components/molecules/Toast';
+import MarqueeProjectsHorizontal from '@/components/organisms/MarqueeProjectsHorizontal';
+import Intro from '@/components/organisms/Intro';
+import StarsGrid from '@/components/molecules/StarsGrid';
+import SectionHeader from '@/components/atoms/SectionHeader';
 
 export default function Home() {
-    const [projects, setProjects] = useState<any>([]);
-    const [starsCount, setStarsCount] = useState(0)
-    const stars = useMemo(() => starsCount, [projects])
-    const {
-        get,
-        response,
-        loading,
-        error
-    } = useFetch("https://api.github.com");
-    const approvedOwners = ['SocketSomeone', 'necordjs', 'miko-org', 'burger-club', 'Fotrum', 'VENOM-MULTICHEAT', 'noiro-org', 'External-Wallhack']
+  const [projects, setProjects] = useState<any>([]);
+  const [starsCount, setStarsCount] = useState(0);
+  const stars = useMemo(() => starsCount, [projects]);
+  const {
+    get,
+    response,
+    loading,
+    error
+  } = useFetch('https://api.github.com');
+  const approvedOwners = ['SocketSomeone', 'necordjs', 'miko-org', 'burger-club', 'Fotrum', 'VENOM-MULTICHEAT', 'noiro-org', 'External-Wallhack'];
 
-    useEffect(() => {
-        initialProjects();
-    }, [projects])
+  useEffect(() => {
+    initialProjects();
+  }, [projects]);
 
 
-    async function initialProjects() {
-        if (projects.length !== 0) {
-            return;
-        }
-
-        const initialProjects = await get('users/SocketSomeone/starred?per_page=1000');
-
-        if (response.ok) {
-            setProjects(initialProjects.filter((project: any) => approvedOwners.includes(project.owner.login)));
-        }
-
-        setStarsCount(80)
+  async function initialProjects() {
+    if (projects.length !== 0) {
+      return;
     }
 
-    return (
-        <div className="p-0 px-8 relative overflow-hidden">
-            <main
-                className="min-h-[100vh] flex flex-col align-center justify-center font-Poppins z-1000">
+    const initialProjects = await get('users/SocketSomeone/starred?per_page=1000');
 
-                <Light/>
+    if (response.ok) {
+      setProjects(initialProjects.filter((project: any) => approvedOwners.includes(project.owner.login)));
+    }
 
+    setStarsCount(80);
+  }
 
-                <div
-                    className="md:container px-5 pt-6 md:pt-0 mx-auto my-auto w-full">
-                    <div
-                        className="h-screen flex flex-col">
+  return (
+    <div className="p-0 px-8 relative overflow-hidden">
+      <main
+        className="min-h-[100vh] flex flex-col align-center justify-center font-Poppins z-1000">
 
-                        <div
-                            className="h-full flex flex-col text-center justify-center w-full mx-auto lg:w-2/3 space-y-4">
-                            <Avatar/>
-
-                            <Banner/>
-
-                            <h1 className="text-3xl subpixel-antialiased sm:text-2xl md:text-4xl xl:text-6xl xl:leading-[70px] font-extrabold text-gray-900 dark:text-white">Hello,
-                                I’m <span
-                                    className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-300">SocketSomeone</span> your <span
-                                    className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Software Engineer</span>
-                            </h1>
-
-                            <p className="text-base md:text-xl subpixel-antialiased font-medium text-gray-500 dark:text-gray-300 leading-relaxed md:pb-8">You
-                                just
-                                found my profile! I&apos;m a
-                                kitten who loves coffee and bugs! <span
-                                    className="whitespace-nowrap">( •̀ ω •́ )✧</span>
-                            </p>
-
-                            <SocialLinksGroup/>
-                        </div>
+        <Light/>
 
 
-                        {projects.length > 0 ?
-                            <div className="justify-center mb-5">
-                                <ChevronDownIcon
-                                    className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
-                                    onClick={() => {
-                                        window.scrollTo({
-                                            top: document.getElementById("projects")?.offsetTop,
-                                            behavior: "smooth"
-                                        })
-                                    }}
-                                />
-                            </div>
-                            : <Footer/>
-                        }
-                    </div>
+        <div
+          className="md:container px-5 pt-6 md:pt-0 mx-auto my-auto w-full">
 
 
-                    {projects.length > 0 &&
-                        <div
-                            id={"projects"}
-                            className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1">
+          <div
+            className="h-screen flex flex-col">
+            <Intro/>
 
-                            <h1 className="font-semibold text-3xl text-gray-900 dark:text-white">My Projects</h1>
-                            {/* Stars around my projects text */}
-
-                            <div className="relative">
-                                <StarIcon
-                                    className="absolute bottom-6 right-28 rotate-12 w-5 h-5 text-red-500"/>
-                                <StarIcon className="absolute bottom-0 right-24 rotate-12 w-5 h-5 text-yellow-500"/>
-                                <StarIcon className="absolute bottom-12 left-24 rotate-12 w-5 h-5 text-purple-500"/>
-                                <StarIcon className="absolute bottom-6 left-28 -rotate-12 w-5 h-5 text-blue-500"/>
-                            </div>
-
-                            <div className="flex flex-row flex-wrap justify-center items-stretch py-16">
-                                {
-                                    loading || error
-                                        ? <Loader/>
-                                        : projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count).map((project: any, i: number) => (
-                                            <ProjectCard key={i} url={project.html_url}
-                                                         thumbnail={project.owner.login !== 'SocketSomeone' ? project.owner.avatar_url : 'icons/github_gradient.svg'}
-                                                         title={project.name} description={project.description} metrics={{
-                                                forks: project.forks,
-                                                stars: project.stargazers_count,
-                                                issues: project.open_issues,
-                                                language: project.language
-                                            }}/>
-                                        ))
-                                }
-                            </div>
-
-
-                            <div className="flex justify-center pb-3">
-                                <a href="https://github.com/SocketSomeone"
-                                   className="flex items-center truncate  py-3 px-4 bg-white shadow-xl shadow-black/5 ring-1 ring-slate-600/10 hover:bg-slate-50 dark:bg-gray-800 dark:ring-gray-800 rounded-xl">
-                                    <LinkIcon className="w-4 h-4 mr-2"/>
-
-                                    <span className="truncate text-lg font-regular">
-                                More projects on my GitHub
-                                </span>
-                                </a>
-                            </div>
-                        </div>
-                    }
-
-                </div>
-
-                <Technologies/>
-
-                {projects.length > 0 && <Footer/>}
-
-                <Toast/>
-
-                <div className="z-[-1]">
-                    {stars && new Array(stars).fill(stars).map((_, i) => <Star key={i}/>)}
-                </div>
-
-
-            </main>
-
+            {projects.length > 0 ?
+              <div className="justify-center mb-5">
+                <ChevronDownIcon
+                  className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
+                  onClick={() => {
+                    window.scrollTo({
+                      top: document.getElementById('projects')?.offsetTop,
+                      behavior: 'smooth'
+                    });
+                  }}
+                />
+              </div>
+              : <Footer/>
+            }
+          </div>
 
         </div>
-    )
+
+        {projects.length > 0 &&
+            <div
+                id={'projects'}
+                className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1">
+
+                <SectionHeader title={'My Projects'} subtitle={'Here are some of my projects that I have worked on.'}/>
+
+                <div className="flex flex-row justify-center py-16 w-full">
+                  {
+                    loading || error
+                      ? <Loader/>
+                      : <MarqueeProjectsHorizontal projects={projects} rows={3}/>
+                  }
+                </div>
+
+
+                <div className="flex justify-center pb-3">
+                    <a href="https://github.com/SocketSomeone"
+                       className="flex items-center truncate  py-3 px-4 bg-white shadow-xl shadow-black/5 ring-1 ring-slate-600/10 hover:bg-slate-50 dark:bg-gray-800 dark:ring-gray-800 rounded-xl">
+
+                        <LinkIcon className="w-4 h-4 mr-2"/>
+
+                        <span className="truncate text-lg font-regular">
+                                More projects on my GitHub
+                                </span>
+
+                    </a>
+                </div>
+
+            </div>
+        }
+
+        {/**
+         <div
+         className="md:container pt-6 md:pt-0 my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
+         <SectionHeader title="Experience"/>
+
+         <div className="text-muted-foreground ml-5">
+         <TimelineEvent active={true} last={false}>
+         <div className="flex flex-col gap-4">
+         <TimelineHeader>
+         Company
+         <span className="text-sm opacity-55">
+         Feb. 2024 - {1}
+         </span>
+         </TimelineHeader>
+         {/* <p className="text-foreground/80">
+         I created user-friendly dashboards and specialized in
+         real-time technologies, including video streaming with event
+         streams, REST APIs, and websockets. Working with a team of
+         four, I revamped routing logic to boost page load speed by 80%
+         and reduced errors. I also refactored legacy code to improve
+         project architecture and the developer experience.
+         </p> }
+         <p>
+         Bla-bla
+         </p>
+         <ol className="list-disc flex flex-col pl-4">
+         <li>
+         Bla-bla
+         </li>
+         <li>
+         Bla-bla
+         </li>
+         </ol>
+         </div>
+         </TimelineEvent>
+         <TimelineEvent last={true}>
+         <div className="flex flex-col gap-4">
+         <TimelineHeader>
+         Company
+         <span className="text-sm opacity-55">
+         Jun. 2023 - Sep. 2023
+         </span>
+         </TimelineHeader>
+         <p>
+         Bla-bla
+         </p>
+         <p>
+         Bla-bla
+         </p>
+         </div>
+         </TimelineEvent>;
+         </div>
+         </div>
+         */};
+
+
+        <Technologies/>;
+
+        {projects.length > 0 && <Footer/>}
+
+        <Toast/>;
+
+        <StarsGrid stars={stars}/>;
+      </main>
+
+
+    </div>
+  )
+    ;
 }

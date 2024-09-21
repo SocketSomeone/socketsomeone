@@ -10,7 +10,7 @@ export default function App({Component, pageProps}: AppProps) {
     return (
         <Fragment>
             <DefaultSeo {...SEO} />
-            <ThemeProvider attribute="class">
+            <ThemeProvider attribute="class" defaultTheme="system" >
                 <Component {...pageProps} />
             </ThemeProvider>
         </Fragment>
