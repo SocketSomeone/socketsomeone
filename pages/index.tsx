@@ -161,20 +161,19 @@ export default function Home() {
          </TimelineEvent>;
          </div>
          </div>
-         */};
+         */}
 
 
-        <Technologies/>;
+        <Technologies/>
 
         {projects.length > 0 && <Footer/>}
 
-        <Toast/>;
+        <Toast/>
 
-        <StarsGrid stars={stars}/>;
+        <StarsGrid stars={stars}/>
       </main>
 
 
     </div>
   )
-    ;
 }
