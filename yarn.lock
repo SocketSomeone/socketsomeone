@@ -3192,7 +3192,7 @@ next-sitemap@^3.1.30:
 
 next-themes@^0.3.0:
   version "0.3.0"
-  resolved "https://registry.npmjs.org/next-themes/-/next-themes-0.3.0.tgz#b4d2a866137a67d42564b07f3a3e720e2ff3871a"
+  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.3.0.tgz#b4d2a866137a67d42564b07f3a3e720e2ff3871a"
   integrity sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==
 
 next@13.5.1:
@@ -3754,7 +3754,7 @@ react-dom@18.2.0:
 
 react-icon-cloud@^4.1.4:
   version "4.1.4"
-  resolved "https://registry.npmjs.org/react-icon-cloud/-/react-icon-cloud-4.1.4.tgz#a6aa7a2d6f48a0eaacb091ca9fe830568a840c0e"
+  resolved "https://registry.yarnpkg.com/react-icon-cloud/-/react-icon-cloud-4.1.4.tgz#a6aa7a2d6f48a0eaacb091ca9fe830568a840c0e"
   integrity sha512-hc8yGNU98V6ObPdeNIt75M016xGMxbTWqB4l6exo1uwE5bvFU095unMbX2K3YBKYhGKEV3c7fSmq3jD3cRWX+A==
   dependencies:
     "@csstools/convert-colors" "^2.0.0"
