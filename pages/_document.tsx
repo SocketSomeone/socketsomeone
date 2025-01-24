@@ -1,29 +1,18 @@
-import {Html, Head, Main, NextScript} from 'next/document'
-import Script from "next/script";
+import { Head, Html, Main, NextScript } from 'next/document';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export default function Document() {
-    return (
-        <Html>
-            <Head>
-            </Head>
-            <body className="dark:bg-gray-900">
-            <Main/>
-            <NextScript/>
-            <Script
-                src="https://www.googletagmanager.com/gtag/js?id=G-FGL4QES69Q"
-                strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-                {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
+	return (
+		<Html>
+			<Head>
+				<link rel={'stylesheet'}
+					  href={'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'}/>
+			</Head>
+			<body className="dark:bg-gray-900">
+			<Main/>
+			<NextScript/>
+			</body>
 
-          gtag('config', 'G-FGL4QES69Q');
-        `}
-            </Script>
-            </body>
-
-        </Html>
-    )
+		</Html>
+	);
 }

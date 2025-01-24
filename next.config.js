@@ -8,7 +8,6 @@ const withPWA = require('next-pwa')({
 /** @type {import('next').NextConfig} */
 const nextConfig = withPWA({
     reactStrictMode: true,
-    swcMinify: true,
     output: 'export',
     images: {
         unoptimized: true,
@@ -16,6 +15,14 @@ const nextConfig = withPWA({
             {
                 protocol: "https",
                 hostname: "cdn.discordapp.com"
+            },
+            {
+                protocol: "https",
+                hostname: "cdn.discord.com"
+            },
+            {
+                protocol: "https",
+                hostname: "avatars.githubusercontent.com"
             }
         ]
     }

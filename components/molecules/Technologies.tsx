@@ -45,7 +45,6 @@ export default function Technologies() {
     'tailwindcss',
     'postgresql',
     'mongodb',
-    'grpc',
     'redis',
     'rabbitmq',
     'nginx'
@@ -53,7 +52,6 @@ export default function Technologies() {
 
   useEffect(() => {
     fetchSimpleIcons({slugs: iconSlugs}).then(setData);
-    console.log(data);
   }, [iconSlugs]);
 
   const renderedIcons = useMemo(() => {
