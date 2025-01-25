@@ -30,7 +30,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 
 export default function Technologies() {
   const [data, setData] = useState<IconData | null>(null);
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const iconSlugs = [
     'nestjs',
     'javascript',
@@ -58,9 +58,9 @@ export default function Technologies() {
     if (!data) return [];
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "light"),
+      renderCustomIcon(icon, resolvedTheme || "light"),
     );
-  }, [data, theme]);
+  }, [data, resolvedTheme]);
 
   return (
     <ul className="technologies z-[-1] hidden sm:flex">
