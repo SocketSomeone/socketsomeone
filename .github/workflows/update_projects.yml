@@ -33,10 +33,8 @@ jobs:
           branch: example-patches
           delete-branch: true
           title: 'chore: update projects'
-          body:
-          labels: |
-              report
-              automated pr
+          body: |
+            This PR updates the projects in the repository.
           assignees: socketsomeone
           reviewers: socketsomeone
           draft: false
