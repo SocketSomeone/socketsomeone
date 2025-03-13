@@ -24,7 +24,7 @@ jobs:
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
-        цшер:
+        with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'chore: update projects'
           committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
@@ -38,3 +38,4 @@ jobs:
           assignees: socketsomeone
           reviewers: socketsomeone
           draft: false
+
