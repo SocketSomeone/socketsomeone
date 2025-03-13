@@ -1,7 +1,6 @@
 import Metrics from './Metrics';
 import Badge from '../atoms/Badge';
-import { FireIcon } from '@heroicons/react/20/solid';
-import { LightningBolt } from 'next/dist/client/components/react-dev-overlay/internal/icons/LightningBolt';
+import { BoltIcon, FireIcon } from '@heroicons/react/20/solid';
 
 export interface ProjectCardProps {
 	thumbnail?: string;
@@ -31,7 +30,7 @@ export default function ProjectCard({
 		need: hotest || newest,
 		text: hotest ? 'HOT' : 'NEW',
 		color: hotest ? 'red' : 'blue' as 'red' | 'blue',
-		icon: hotest ? <FireIcon  width={'14px'} /> : <LightningBolt width={'14px'} />,
+		icon: hotest ? <FireIcon  width={'14px'} /> : <BoltIcon width={'14px'} />,
 	};
 
 

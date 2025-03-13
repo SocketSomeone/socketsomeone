@@ -20,7 +20,7 @@ export default function Home() {
     response,
     loading,
     error
-  } = useFetch('https://github.com');
+  } = useFetch('https://raw.githubusercontent.com');
 
   useEffect(() => {
     initialProjects();
@@ -32,9 +32,9 @@ export default function Home() {
       return;
     }
 
-    const initialProjects = get('https://raw.githubusercontent.com/SocketSomeone/socketsomeone/refs/heads/main/assets/projects.json')
+    const initialProjects = await get('SocketSomeone/socketsomeone/refs/heads/main/assets/projects.json')
     if (response.ok) {
-      setProjects(initialProjects.flat());
+      setProjects(initialProjects);
     }
 
     setStarsCount(80);

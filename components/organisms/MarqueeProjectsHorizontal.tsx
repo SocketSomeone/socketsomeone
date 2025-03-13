@@ -20,7 +20,7 @@ export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProje
 	}, []);
 	const sortedProjects = projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
 	const mostPopularProjects = sortedProjects.slice(0, 5).map((project: any) => project.id);
-	const threeMonthsAgo = new Date(new Date().setMonth(new Date().getMonth() - 3));
+	const threeMonthsAgo = new Date(new Date().setMonth(new Date().getMonth() - 6));
 
 	return (
 		<div
