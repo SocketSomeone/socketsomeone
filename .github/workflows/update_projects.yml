@@ -3,8 +3,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
+
 permissions:
   contents: write
+  pull-requests: write
+
 jobs:
   download_projects:
     name: Download projects
@@ -19,10 +22,21 @@ jobs:
       - name: Download projects
         run: npx tsx scripts/download-all-projects.script.ts
 
-      - name: Commit changes
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git add assets/projects.json
-          git commit -m "chore: update projects"
-          git push
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: update projects'
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: example-patches
+          delete-branch: true
+          title: 'chore: update projects'
+          body:
+          labels: |
+              report
+              automated pr
+          assignees: socketsomeone
+          reviewers: socketsomeone
+          draft: false
