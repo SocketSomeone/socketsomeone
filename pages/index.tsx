@@ -20,8 +20,7 @@ export default function Home() {
     response,
     loading,
     error
-  } = useFetch('https://api.github.com');
-  const approvedOwners = ['SocketSomeone', 'necordjs', 'miko-org', 'burger-club', 'Fotrum', 'VENOM-MULTICHEAT', 'noiro-org', 'External-Wallhack'];
+  } = useFetch('https://github.com');
 
   useEffect(() => {
     initialProjects();
@@ -33,10 +32,9 @@ export default function Home() {
       return;
     }
 
-    const initialProjects = await get('users/SocketSomeone/starred?per_page=1000');
-
+    const initialProjects = get('https://raw.githubusercontent.com/SocketSomeone/socketsomeone/refs/heads/main/assets/projects.json')
     if (response.ok) {
-      setProjects(initialProjects.filter((project: any) => approvedOwners.includes(project.owner.login)));
+      setProjects(initialProjects.flat());
     }
 
     setStarsCount(80);
