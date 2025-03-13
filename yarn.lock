@@ -4836,10 +4836,10 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-icon-cloud@^4.1.4:
-  version "4.1.4"
-  resolved "https://registry.npmjs.org/react-icon-cloud/-/react-icon-cloud-4.1.4.tgz"
-  integrity sha512-hc8yGNU98V6ObPdeNIt75M016xGMxbTWqB4l6exo1uwE5bvFU095unMbX2K3YBKYhGKEV3c7fSmq3jD3cRWX+A==
+react-icon-cloud@^4.1.7:
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/react-icon-cloud/-/react-icon-cloud-4.1.7.tgz#eca9999b623223c595b9b53e728d7aa751c68de9"
+  integrity sha512-E5k93BlO7dNLmFZPd0JlJ1dO6pUI86IarVEXo3bkQg6oFqqwKv3XFkEKRl2iaxB9K2uOvOvoCJu2kjkoQWI6Mg==
   dependencies:
     "@csstools/convert-colors" "^2.0.0"
 
