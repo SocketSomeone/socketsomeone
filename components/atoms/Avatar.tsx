@@ -23,12 +23,12 @@ function getStatusColor(status: string = 'offline'): string {
 }
 
 export default function Avatar() {
-    const [avatar, setAvatar] = useState<string>("https://avatars.githubusercontent.com/u/30754373");
+    const [avatar /*, setAvatar */] = useState<string>("https://avatars.githubusercontent.com/u/30754373");
     const [presence, setPresence] = useState<LanyardPresence>();
     const [loading, setLoading] = useState<boolean>(true);
 
     const setAvatarAndPresence = (presence: LanyardPresence) => {
-        const user = presence?.discord_user;
+        // const user = presence?.discord_user;
 
         // TODO: Disabled due sanctions from Discord
         // setAvatar(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`);

@@ -1,9 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import {
-	fetchSimpleIcons,
-	renderSimpleIcon,
-	SimpleIcon,
-} from 'react-icon-cloud';
+import { useEffect, useState } from 'react';
+import { fetchSimpleIcons, renderSimpleIcon, SimpleIcon, } from 'react-icon-cloud';
 import { useTheme } from 'next-themes';
 
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;

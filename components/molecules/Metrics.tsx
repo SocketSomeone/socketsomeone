@@ -1,4 +1,4 @@
-import { BeakerIcon, BookmarkIcon, EyeIcon, LanguageIcon, StarIcon } from "@heroicons/react/24/solid";
+import { BeakerIcon, BookmarkIcon, LanguageIcon, StarIcon } from '@heroicons/react/24/solid';
 
 interface MetricsProps {
     style: string;

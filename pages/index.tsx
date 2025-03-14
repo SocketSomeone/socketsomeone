@@ -1,6 +1,6 @@
 import Footer from '../components/organisms/Footer';
 import Light from '../components/atoms/Light';
-import { ChevronDownIcon, CodeBracketIcon, LinkIcon, StarIcon } from '@heroicons/react/24/solid';
+import { ChevronDownIcon, LinkIcon, StarIcon } from '@heroicons/react/24/solid';
 import { useEffect, useMemo, useState } from 'react';
 import { useFetch } from 'use-http';
 import Loader from '../components/atoms/Loader';

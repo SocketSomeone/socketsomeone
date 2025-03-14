@@ -27,7 +27,7 @@ interface ExperienceProps {
 	className?: string;
 }
 
-export default function Experience({children, className, ...props}: ExperienceProps) {
+export default function Experience() {
 	const currentDate = new Date();
 	const companies: Company[] = [
 		{

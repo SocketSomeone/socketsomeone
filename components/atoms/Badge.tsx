@@ -1,6 +1,5 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { cn } from '@/utils';
-import clsx from 'clsx';
 
 type ChipType = 'flat' | 'outlined';
 type ChipColor = 'white' | 'blue' | 'green' | 'red' | 'yellow' | 'gray';
