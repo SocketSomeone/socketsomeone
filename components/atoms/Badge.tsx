@@ -27,24 +27,24 @@ const sizeVariants = {
 
 const textColorVariants = (color: ChipColor) => {
 	const colors: Record<ChipColor, string> = {
-		gray: 'text-gray-800',
-		red: 'text-red-800',
-		blue: 'text-blue-800',
-		green: 'text-green-800',
-		yellow: 'text-yellow-800',
-		white: 'text-white',
+		gray: 'text-gray-800 dark:text-gray-200',
+		red: 'text-red-800 dark:text-red-200',
+		blue: 'text-blue-800 dark:text-blue-200',
+		green: 'text-green-800 dark:text-green-200',
+		yellow: 'text-yellow-800 dark:text-yellow-200',
+		white: 'text-white dark:text-white',
 	};
 	return colors[color] || 'text-black';
 };
 
 const bgColorVariants = (color: ChipColor) => {
 	const colors: Record<ChipColor, string> = {
-		gray: 'bg-gray-100',
-		red: 'bg-red-100',
-		blue: 'bg-blue-100',
-		green: 'bg-green-100',
-		yellow: 'bg-yellow-100',
-		white: 'bg-white',
+		gray: 'bg-gray-100 dark:bg-gray-900',
+		red: 'bg-red-100 dark:bg-red-900',
+		blue: 'bg-blue-100 dark:bg-blue-900',
+		green: 'bg-green-100 dark:bg-green-900',
+		yellow: 'bg-yellow-100 dark:bg-yellow-900',
+		white: 'bg-white dark:bg-gray-800',
 	};
 	return colors[color] || 'bg-white';
 };
