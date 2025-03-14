@@ -20,13 +20,6 @@ interface Company extends ExperienceEntry {
 	icon?: React.ReactNode;
 }
 
-interface ExperienceProps {
-	[key: string]: any;
-
-	children?: React.ReactNode;
-	className?: string;
-}
-
 export default function Experience() {
 	const currentDate = new Date();
 	const companies: Company[] = [

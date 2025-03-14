@@ -7,7 +7,13 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "npx serve@latest out",
     "lint": "next lint",
-    "publish": "release-it"
+    "publish": "release-it",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint"
+    ]
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.0",
@@ -42,7 +48,11 @@
     "use-http": "^1.0.28"
   },
   "devDependencies": {
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-angular": "19.7.0",
     "@release-it/conventional-changelog": "^10.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "tsx": "^4.19.3"
   }
 }
