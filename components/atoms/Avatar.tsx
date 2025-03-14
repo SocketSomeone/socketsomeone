@@ -23,14 +23,15 @@ function getStatusColor(status: string = 'offline'): string {
 }
 
 export default function Avatar() {
-    const [avatar, setAvatar] = useState<string>("https://cdn.discordapp.com/embed/avatars/0.png");
+    const [avatar, setAvatar] = useState<string>("https://avatars.githubusercontent.com/u/30754373");
     const [presence, setPresence] = useState<LanyardPresence>();
     const [loading, setLoading] = useState<boolean>(true);
 
     const setAvatarAndPresence = (presence: LanyardPresence) => {
         const user = presence?.discord_user;
 
-        setAvatar(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`);
+        // TODO: Disabled due sanctions from Discord
+        // setAvatar(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`);
         setPresence(presence);
     }
 
@@ -53,7 +54,7 @@ export default function Avatar() {
                     <div className="w-40 h-40 rounded-full bg-gray-300 animate-pulse"/> :
                     <Image className="h-40 w-40 rounded-full object-contain" width={4096} height={4096} src={avatar}
                            quality={100}
-                           alt=""/>
+                           alt="avatar"/>
                 }
                 <span className="flex">
                     <span
