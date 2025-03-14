@@ -122,11 +122,12 @@ export default function Home() {
 				<div
 					className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
 
+					<LightbulbIcon className="self-center  text-yellow-500" width={24}/>
+
 					<SectionHeader title="Experience" subtitle={'My work experience and achievements'}/>
 
 
 					<div className="relative">
-						<LightbulbIcon className="absolute bottom-28 left-[-20px] w-10 text-yellow-500"/>
 					</div>
 
 					<Experience/>

@@ -7,7 +7,7 @@ interface ThemeSwitcherProps {
 }
 
 export default function ThemeSwitcher({className}: ThemeSwitcherProps) {
-	const {theme, resolvedTheme, setTheme} = useTheme();
+	const {theme, setTheme} = useTheme();
 
 	const nextTheme = theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light';
 

@@ -1,5 +1,3 @@
-import { StarIcon } from '@heroicons/react/24/solid';
-
 type Props = {
 	title: string;
 	subtitle?: string;
