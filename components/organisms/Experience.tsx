@@ -216,10 +216,10 @@ export default function Experience({children, className, ...props}: ExperiencePr
 
 	return (
 		<div className="md:container text-muted-foreground self-center pt-20 w-full relative">
-			{companies.map((company, index) => (
+			{companies.map((company, companyIndex) => (
 				<>
-					<TimelineEvent key={index} active={!company.endDate || company.endDate.includes('Present')}
-								   last={index === companies.length - 1} position={index % 2 === 0 ? 'left' : 'right'}
+					<TimelineEvent key={`timeline-${companyIndex}`} active={!company.endDate || company.endDate.includes('Present')}
+								   last={companyIndex === companies.length - 1} position={companyIndex % 2 === 0 ? 'left' : 'right'}
 								   onClick={() => {
 									   if (company.url) {
 										   window.open(company.url, '_blank');
@@ -235,7 +235,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 
 
 							<span
-								className="text-xs text-neutral-700 dark:bg-gray-800 dark:text-gray-400 pb-1 rounded-lg">
+								className="text-xs text-neutral-700 dark:text-gray-400 pb-1 rounded-lg">
 								{company.role}
 							</span>
 
@@ -250,7 +250,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 									</p>
 									<ol className="list-disc flex flex-col pl-4">
 										{company.responsibilities.map((responsibility, index) => (
-											<li key={index} className="list-disc text-sm py-0.5  ml-1 opacity-55">
+											<li key={`responsibility-${companyIndex}-${index}`} className="list-disc text-sm py-0.5  ml-1 opacity-55">
 												{responsibility}
 											</li>
 										))}
@@ -265,7 +265,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 									</p>
 									<ol className="list-disc flex flex-col pl-4">
 										{company.achievements.map((achievement, index) => (
-											<li key={index} className="list-disc text-sm py-0.5 ml-1 opacity-55">
+											<li key={`achievement-${companyIndex}-${index}`} className="list-disc text-sm py-0.5 ml-1 opacity-55">
 												{achievement}
 											</li>
 										))}
@@ -275,7 +275,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 
 							<div className="flex flex-wrap gap-2">
 								{company.skills.map((skill, index) => (
-									<span key={index}
+									<span key={`skill-${companyIndex}-${index}`}
 										  className="text-xs bg-neutral-100 text-neutral-700 dark:bg-gray-800 dark:text-gray-400 px-1.5 py-0.5 rounded-lg">
 										{skill}
 									</span>

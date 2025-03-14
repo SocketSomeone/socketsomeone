@@ -27,7 +27,7 @@ export const TimelineEvent = ({active, last, position, children, onClick}: Timel
 
 			<div
 				className="relative w-full rounded-lg border bg-white bg-opacity-20 backdrop-blur-sm py-5 px-10 dark:border-gray-700
-				 dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50
+				 dark:bg-gray-800 dark:bg-opacity-80 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50
 				  dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer
 				  "
 				onClick={onClick}
