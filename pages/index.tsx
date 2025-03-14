@@ -126,10 +126,6 @@ export default function Home() {
 
 					<SectionHeader title="Experience" subtitle={'My work experience and achievements'}/>
 
-
-					<div className="relative">
-					</div>
-
 					<Experience/>
 				</div>
 

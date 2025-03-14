@@ -215,7 +215,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 	});
 
 	return (
-		<div className="md:container text-muted-foreground self-center pt-20 w-full relative">
+		<div className="md:container text-muted-foreground self-center pt-10 w-full relative">
 			{companies.map((company, companyIndex) => (
 				<>
 					<TimelineEvent key={`timeline-${companyIndex}`} active={!company.endDate || company.endDate.includes('Present')}
