@@ -18,8 +18,12 @@ export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProje
 
 		return resultArray;
 	}, []);
-	const sortedProjects = projects.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
-	const mostPopularProjects = sortedProjects.slice(0, 5).map((project: any) => project.id);
+
+	const mostPopularProjects = projects
+		.filter((project: any) => project.stargazers_count > 100)
+		.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count)
+		.slice(0, 5)
+		.map((project: any) => project.id);
 	const threeMonthsAgo = new Date(new Date().setMonth(new Date().getMonth() - 6));
 
 	return (
