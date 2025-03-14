@@ -12,6 +12,7 @@ import StarsGrid from '@/components/molecules/StarsGrid';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience';
 import { LightbulbIcon } from 'lucide-react';
+import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
 
 export default function Home() {
 	const [projects, setProjects] = useState<any>([]);
@@ -48,6 +49,7 @@ export default function Home() {
 				className="min-h-[100vh] flex flex-col align-center justify-center font-Poppins z-1000">
 
 				<Light/>
+				<ThemeSwitcher/>
 
 
 				<div
