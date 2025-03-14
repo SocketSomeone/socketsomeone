@@ -7,12 +7,13 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "npx serve@latest out",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "prepare": "husky",
     "publish:git": "release-it"
   },
   "lint-staged": {
     "*.(ts|tsx)": [
-      "npm run lint"
+      "npm run lint:fix"
     ]
   },
   "dependencies": {
