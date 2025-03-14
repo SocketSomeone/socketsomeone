@@ -124,7 +124,7 @@ export default function Home() {
 
 
 					<div className="relative">
-						<LightbulbIcon className="absolute bottom-28 left-[-16px]  w-10 text-yellow-500"/>
+						<LightbulbIcon className="absolute bottom-28 left-[-20px]  w-10 text-yellow-500"/>
 					</div>
 
 					<Experience/>

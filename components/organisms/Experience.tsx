@@ -35,8 +35,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 			url: 'https://necord.org',
 			startDate: 'Oct. 2021',
 			endDate: 'Present',
-			description: 'This package uses the best of the NodeJS world under the hood. ' +
-				'Discord.js is the most powerful library for creating bots and Nest.js is a progressive framework for creating well-architectured applications. ' +
+			description:
 				'This module provides fast and easy way for creating Discord bots and deep integration with your NestJS application.',
 			role: 'Maintainer',
 			skills: ['Node.js', 'TypeScript', 'Discord.js', 'Nest.js'],
@@ -196,7 +195,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 				'Achieved over 500,000 customers in a year with high conversion rates',
 				'Gained consistent organic traffic of 100+ unique visitors per day through SEO optimization'
 			],
-			icon: <BoltIcon width={36} height={36}/>,
+			icon: <BoltIcon width={36}/>,
 		},
 		{
 			name: 'Freelance',
@@ -207,7 +206,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 			skills: [],
 			responsibilities: [],
 			achievements: [],
-			icon: <BoltIcon width={48} height={48}/>,
+			icon: <BoltIcon width={36}/>,
 		}
 	].sort((a, b) => {
 		const aEndDate = a.endDate ? new Date(a.endDate) : currentDate;
