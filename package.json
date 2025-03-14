@@ -6,7 +6,8 @@
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "npx serve@latest out",
-    "lint": "next lint"
+    "lint": "next lint",
+    "publish": "release-it"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.0",
@@ -41,6 +42,7 @@
     "use-http": "^1.0.28"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^10.0.0",
     "tsx": "^4.19.3"
   }
 }
