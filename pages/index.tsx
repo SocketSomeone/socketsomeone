@@ -1,6 +1,6 @@
 import Footer from '../components/organisms/Footer';
 import Light from '../components/atoms/Light';
-import { ChevronDownIcon, LinkIcon } from '@heroicons/react/24/solid';
+import { ChevronDownIcon, CodeBracketIcon, LinkIcon, StarIcon } from '@heroicons/react/24/solid';
 import { useEffect, useMemo, useState } from 'react';
 import { useFetch } from 'use-http';
 import Loader from '../components/atoms/Loader';
@@ -10,8 +10,8 @@ import MarqueeProjectsHorizontal from '@/components/organisms/MarqueeProjectsHor
 import Intro from '@/components/organisms/Intro';
 import StarsGrid from '@/components/molecules/StarsGrid';
 import SectionHeader from '@/components/atoms/SectionHeader';
-import { TimelineEvent, TimelineHeader } from '@/components/molecules/Timeline';
 import Experience from '@/components/organisms/Experience';
+import { LightbulbIcon } from 'lucide-react';
 
 export default function Home() {
 	const [projects, setProjects] = useState<any>([]);
@@ -81,8 +81,15 @@ export default function Home() {
 						id={'projects'}
 						className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1">
 
-						<SectionHeader title={'My Projects'}
-									   subtitle={'Here are some of my projects that I have worked on.'}/>
+						<SectionHeader title={'My Projects'}/>
+
+						<div className="relative">
+							<StarIcon
+								className="absolute bottom-6 right-28 rotate-12 w-5 h-5 text-red-500"/>
+							<StarIcon className="absolute bottom-0 right-24 rotate-12 w-5 h-5 text-yellow-500"/>
+							<StarIcon className="absolute bottom-12 left-24 rotate-12 w-5 h-5 text-purple-500"/>
+							<StarIcon className="absolute bottom-6 left-28 -rotate-12 w-5 h-5 text-blue-500"/>
+						</div>
 
 						<div className="flex flex-row justify-center py-16 w-full">
 							{
@@ -111,8 +118,14 @@ export default function Home() {
 
 
 				<div
-					className=" pt-6 md:pt-0 my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
-					<SectionHeader title="Experience"/>
+					className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
+
+					<SectionHeader title="Experience" subtitle={'My work experience and achievements'}/>
+
+
+					<div className="relative">
+						<LightbulbIcon className="absolute bottom-28 left-[-16px]  w-10 text-yellow-500"/>
+					</div>
 
 					<Experience/>
 				</div>

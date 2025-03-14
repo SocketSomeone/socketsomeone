@@ -26,7 +26,7 @@ export const TimelineEvent = ({active, last, position, children, onClick}: Timel
 			<TimelineDot active={!!active} position={currentPos}/>
 
 			<div
-				className="relative w-full rounded-lg border bg-white py-5 px-10 dark:border-gray-700
+				className="relative w-full rounded-lg border bg-white bg-opacity-20 backdrop-blur-sm py-5 px-10 dark:border-gray-700
 				 dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50
 				  dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer
 				  "
@@ -49,7 +49,7 @@ export const TimelineDot = ({active, position}: { active: boolean; position: 'le
 	return (
 		<div
 			className={cn(
-				'absolute top-0 left-[-9.1px] lg:left-[-6.9px] w-4 h-4 rounded-full aspect-square',
+				'absolute top-0 left-[-6.5px] lg:left-[-6.9px] w-4 h-4 rounded-full aspect-square',
 				{
 					'bg-emerald-500': active,
 					'bg-neutral-700': !active,

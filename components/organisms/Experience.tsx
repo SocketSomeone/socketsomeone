@@ -196,7 +196,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 				'Achieved over 500,000 customers in a year with high conversion rates',
 				'Gained consistent organic traffic of 100+ unique visitors per day through SEO optimization'
 			],
-			icon: <BoltIcon width={48} height={48}/>,
+			icon: <BoltIcon width={36} height={36}/>,
 		},
 		{
 			name: 'Freelance',
@@ -216,7 +216,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 	});
 
 	return (
-		<div className="md:container text-muted-foreground self-center w-full relative">
+		<div className="md:container text-muted-foreground self-center pt-20 w-full relative">
 			{companies.map((company, index) => (
 				<>
 					<TimelineEvent key={index} active={!company.endDate || company.endDate.includes('Present')}
@@ -227,7 +227,7 @@ export default function Experience({children, className, ...props}: ExperiencePr
 									   }
 								   }}>
 						<div className="flex flex-col gap-2">
-							<div className="flex flex-row gap-2 items-center justify-between">
+							<div className="flex flex-row gap-2 items-center justify-between text-blue-500">
 								<TimelineHeader>
 									{company.name}
 								</TimelineHeader>
@@ -236,11 +236,11 @@ export default function Experience({children, className, ...props}: ExperiencePr
 
 
 							<span
-								className="text-xs bg-neutral-100 text-neutral-700 dark:bg-gray-800 dark:text-gray-400 pb-1 rounded-lg">
+								className="text-xs text-neutral-700 dark:bg-gray-800 dark:text-gray-400 pb-1 rounded-lg">
 								{company.role}
 							</span>
 
-							<p className="text-sm text-gray-100 dark:text-white">
+							<p className="text-sm text-gray-800 dark:text-white">
 								{company.description}
 							</p>
 
