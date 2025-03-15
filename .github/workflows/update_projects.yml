@@ -32,7 +32,6 @@ jobs:
           commit-message: 'chore: update projects'
           signoff: false
           branch: feat/update-projects
-          base: master
           delete-branch: true
           title: 'chore: update projects'
           body: |
