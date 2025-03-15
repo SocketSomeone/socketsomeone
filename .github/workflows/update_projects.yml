@@ -23,6 +23,7 @@ jobs:
         run: npx tsx scripts/download-all-projects.script.ts
 
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -39,3 +40,8 @@ jobs:
           reviewers: socketsomeone
           draft: false
 
+      - name: Enable auto-merge for Projects PRs
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ steps.cpr.outputs.pull-request-url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
