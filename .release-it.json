@@ -6,7 +6,7 @@
 		"release": true
 	},
 	"npm": {
-		"publish": false
+		"release": false
 	},
 	"hooks": {
 		"before:init": ["npx lint-staged"]
@@ -14,7 +14,7 @@
 	"plugins": {
 		"@release-it/conventional-changelog": {
 			"preset": {
-				"name": "angular",
+				"name": "conventionalcommits",
 				"types": [
 					{
 						"type": "feat",
