@@ -30,7 +30,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'chore: update projects'
-          signoff: false
+          signoff: true
           branch: feat/update-projects
           delete-branch: true
           title: 'chore: update projects'
