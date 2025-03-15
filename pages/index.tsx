@@ -35,7 +35,7 @@ export default function Home() {
 			return;
 		}
 
-		const initialProjects = await get('SocketSomeone/socketsomeone/refs/heads/main/assets/projects.json');
+		const initialProjects = await get('SocketSomeone/socketsomeone/refs/heads/master/assets/projects.json');
 		if (response.ok) {
 			setProjects(initialProjects);
 		}

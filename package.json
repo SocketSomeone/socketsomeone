@@ -12,9 +12,7 @@
     "publish:git": "release-it"
   },
   "lint-staged": {
-    "*.(ts|tsx)": [
-      "npm run lint:fix"
-    ]
+    "*.(ts|tsx)": []
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.0",
