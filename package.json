@@ -17,7 +17,7 @@
   "dependencies": {
     "@eslint/eslintrc": "^3.3.0",
     "@heroicons/react": "^2.2.0",
-    "@next/third-parties": "^15.2.2",
+    "@next/third-parties": "^15.2.3",
     "@types/canvas-confetti": "^1.9.0",
     "@types/next-seo": "^2.1.2",
     "@types/node": "22.13.10",
