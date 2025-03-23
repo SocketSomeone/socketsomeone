@@ -70,9 +70,9 @@ export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProje
 			}
 
 			<div
-				className="pointer-events-none absolute inset-y-0 left-0 w-0 sm:w-1/4 md:w-1/6 xl:w-1/3  bg-gradient-to-r from-white dark:from-background"></div>
+				className="pointer-events-none absolute inset-y-0 left-0 w-0 sm:w-1/4 md:w-1/6 xl:w-1/4  bg-gradient-to-r from-white dark:from-background"></div>
 			<div
-				className="pointer-events-none absolute inset-y-0 right-0 w-0 sm:w-1/4 md:w-1/6 xl:w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+				className="pointer-events-none absolute inset-y-0 right-0 w-0 sm:w-1/4 md:w-1/6 xl:w-1/4 bg-gradient-to-l from-white dark:from-background"></div>
 		</div>
 	);
 }
