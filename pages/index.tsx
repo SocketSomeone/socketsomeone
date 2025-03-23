@@ -1,6 +1,6 @@
 import Footer from '../components/organisms/Footer';
 import Light from '../components/atoms/Light';
-import { ChevronDownIcon, LinkIcon, StarIcon } from '@heroicons/react/24/solid';
+import { ChevronDownIcon, LinkIcon } from '@heroicons/react/24/solid';
 import { useEffect, useMemo, useState } from 'react';
 import { useFetch } from 'use-http';
 import Loader from '../components/atoms/Loader';
@@ -13,6 +13,7 @@ import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience';
 import { LightbulbIcon } from 'lucide-react';
 import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
+import LaurelIcon from '@/components/icons/LaurelIcon';
 
 export default function Home() {
 	const [projects, setProjects] = useState<any>([]);
@@ -60,7 +61,7 @@ export default function Home() {
 						className="h-screen flex flex-col">
 						<Intro/>
 
-						{projects.length > 0 ?
+						{projects.length &&
 							<div className="justify-center mb-5">
 								<ChevronDownIcon
 									className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
@@ -72,7 +73,6 @@ export default function Home() {
 									}}
 								/>
 							</div>
-							: <Footer/>
 						}
 					</div>
 
@@ -83,15 +83,22 @@ export default function Home() {
 						id={'projects'}
 						className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1">
 
-						<SectionHeader title={'My Projects'}/>
 
-						<div className="relative">
-							<StarIcon
-								className="absolute bottom-6 right-28 rotate-12 w-5 h-5 text-red-500"/>
-							<StarIcon className="absolute bottom-0 right-24 rotate-12 w-5 h-5 text-yellow-500"/>
-							<StarIcon className="absolute bottom-12 left-24 rotate-12 w-5 h-5 text-purple-500"/>
-							<StarIcon className="absolute bottom-6 left-28 -rotate-12 w-5 h-5 text-blue-500"/>
-						</div>
+						<SectionHeader
+							before={
+								<div className="flex flex-row items-center space-x-0 ">
+									<LaurelIcon
+										className="w-8 h-8 -scale-x-100 text-green-500"/>
+									<div
+										className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+										My Projects
+									</div>
+
+									<LaurelIcon className="w-8 h-8 text-green-500"/>
+								</div>
+							}
+							title={'Check out my latest work'}
+							description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}/>
 
 						<div className="flex flex-row justify-center py-16 w-full">
 							{
@@ -124,22 +131,37 @@ export default function Home() {
 
 					<LightbulbIcon className="self-center  text-yellow-500" width={24}/>
 
-					<SectionHeader title="Experience" subtitle={'My work experience and achievements'}/>
+					<SectionHeader head={'Experience'} title={'My professional journey'}
+								   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
 
 					<Experience/>
+				</div>
+
+				<div className="flex flex-col justify-center items-center w-full space-y-4 mb-10">
+					<SectionHeader
+						className="space-y-3"
+						head={'Contact'} title={'Get in Touch'}>
+
+						<p className={'mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'}>Have
+							a question or want to work together? Just shoot me a dm <a
+								className="text-blue-500 hover:underline" href={'https://t.me/socketsomeone'}
+								target="_blank">with a direct question on
+								telegram </a> and I&#39;ll respond whenever I can. I&#39;m always open to new
+							opportunities.</p>
+
+					</SectionHeader>
 				</div>
 
 
 				<Technologies/>
 
-				{projects.length > 0 && <Footer/>}
 
 				<Toast/>
 
 				<StarsGrid stars={stars}/>
 			</main>
 
-
+			<Footer/>
 		</div>
 	);
 }

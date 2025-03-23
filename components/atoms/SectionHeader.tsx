@@ -1,14 +1,27 @@
+import { cn } from '@/utils';
+import React from 'react';
+
 type Props = {
+	className?: string;
+	before?: React.ReactNode;
+	head?: string | React.ReactNode;
 	title: string;
-	subtitle?: string;
+	description?: string;
+	children?: React.ReactNode;
 }
 
-export default function SectionHeader({title, subtitle}: Props) {
+export default function SectionHeader({className, before, head, title, description, children}: Props) {
 	return (
-		<>
-			<h1 className="font-semibold text-center text-3xl text-gray-900 dark:text-white">{title}</h1>
+		<div className={cn('flex flex-col items-center justify-center text-center space-y-2 max-w-2xl', className)}>
+			{before}
 
-			{subtitle && <p className="text-center text-lg text-gray-700 dark:text-gray-300">{subtitle}</p>}
-		</>
+			{head && <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">{head}</div>}
+
+			<h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">{title}</h1>
+
+			{description &&<p className={'text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'}>{description}</p>}
+
+			{children}
+		</div>
 	);
 }
