@@ -137,7 +137,7 @@ export default function Home() {
 					<Experience/>
 				</div>
 
-				<div className="flex flex-col justify-center items-center w-full space-y-4 mb-10">
+				<div className="mb-14 py-14 container mx-auto px-4 flex flex-col justify-center items-center">
 					<SectionHeader
 						className="space-y-3"
 						head={'Contact'} title={'Get in Touch'}>
