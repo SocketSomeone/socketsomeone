@@ -249,7 +249,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 						<TimelineHeader>
 							<div
 								className="flex-col gap-1 ml-4 inline-flex font-semibold leading-none text-xs sm:text-sm">
-								<div className="flex items-center">
+								<div className="flex items-center text-foreground">
 									{company.name}
 
 									<ChevronRightIcon className={cn('w-3 md:w-4 md:ml-1 transition-all duration-200 ease-in-out', {

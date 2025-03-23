@@ -45,7 +45,7 @@ export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProje
 						})]}
 							  className={'w-[100vw]'}
 					>
-						<CarouselContent className={''}>
+						<CarouselContent>
 							{row.map((project: any, i: number) => (
 
 								<CarouselItem className={'basis-auto'} key={i}>
