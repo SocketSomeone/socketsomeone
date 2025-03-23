@@ -1,5 +1,4 @@
 import ProjectCard from '@/components/molecules/ProjectCard';
-import Marquee from '@/components/magicui/marquee';
 import { Carousel, CarouselContent, CarouselItem } from '../magicui/carousel';
 import AutoScroll from 'embla-carousel-auto-scroll';
 
