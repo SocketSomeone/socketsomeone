@@ -2,6 +2,8 @@ import React from 'react';
 import { TimelineEvent, TimelineHeader } from '../molecules/Timeline';
 import { BriefcaseIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';
+import { cn } from '@/utils';
+import { ChevronRightIcon } from 'lucide-react';
 
 
 interface ExperienceEntry {
@@ -45,7 +47,7 @@ export default function Experience() {
 			icon: <HeartIcon width={36}/>,
 		},
 		{
-			name: 'Octopod LLC | Yahont',
+			name: 'Yahont',
 			description: 'Participated in the development of a mobile application for selling jewelry products.',
 			url: 'https://yahont.online',
 			role: 'Software Engineer',
@@ -64,7 +66,7 @@ export default function Experience() {
 			icon: <BriefcaseIcon width={36}/>,
 		},
 		{
-			name: 'Octopod LLC | Fotrum',
+			name: 'Fotrum',
 			description: 'Led the backend development of a competitive gaming mobile application aimed at rivaling Faceit.',
 			url: 'https://apps.apple.com/ru/app/fotrum/id1564952971',
 			role: 'Tech Lead',
@@ -210,78 +212,127 @@ export default function Experience() {
 	return (
 		<div className="md:container text-muted-foreground self-center pt-10 w-full relative">
 			{companies.map((company, companyIndex) => (
-				<>
-					<TimelineEvent key={`timeline-${companyIndex}`} active={!company.endDate || company.endDate.includes('Present')}
-								   last={companyIndex === companies.length - 1} position={companyIndex % 2 === 0 ? 'left' : 'right'}
-								   onClick={() => {
-									   if (company.url) {
-										   window.open(company.url, '_blank');
-									   }
-								   }}>
-						<div className="flex flex-col gap-2">
-							<div className="flex flex-row gap-2 items-center justify-between text-blue-500">
-								<TimelineHeader>
-									{company.name}
-								</TimelineHeader>
-								{company.icon && company.icon}
-							</div>
-
-
-							<span
-								className="text-xs text-neutral-700 dark:text-gray-400 pb-1 rounded-lg">
-								{company.role}
-							</span>
-
-							<p className="text-sm text-gray-800 dark:text-white">
-								{company.description}
-							</p>
-
-							{company.responsibilities.length > 0 && (
-								<>
-									<p className="text-md opacity-55 font-semibold">
-										Responsibilities:
-									</p>
-									<ol className="list-disc flex flex-col pl-4">
-										{company.responsibilities.map((responsibility, index) => (
-											<li key={`responsibility-${companyIndex}-${index}`} className="list-disc text-sm py-0.5  ml-1 opacity-55">
-												{responsibility}
-											</li>
-										))}
-									</ol>
-								</>
-							)}
-
-							{company.achievements.length > 0 && (
-								<>
-									<p className="text-md opacity-55 font-semibold">
-										Achievements:
-									</p>
-									<ol className="list-disc flex flex-col pl-4">
-										{company.achievements.map((achievement, index) => (
-											<li key={`achievement-${companyIndex}-${index}`} className="list-disc text-sm py-0.5 ml-1 opacity-55">
-												{achievement}
-											</li>
-										))}
-									</ol>
-								</>
-							)}
-
-							<div className="flex flex-wrap gap-2">
-								{company.skills.map((skill, index) => (
-									<span key={`skill-${companyIndex}-${index}`}
-										  className="text-xs bg-neutral-100 text-neutral-700 dark:bg-gray-800 dark:text-gray-400 px-1.5 py-0.5 rounded-lg">
-										{skill}
-									</span>
-								))}
-							</div>
-
-							<small className="text-sm text-right font-thin opacity-55">
-								{company.startDate} - {company.endDate}
-							</small>
-						</div>
-					</TimelineEvent>
-				</>
+				<TimelineExperience
+					key={`timeline-${companyIndex}`}
+					company={company}
+					companyIndex={companyIndex}
+					isLast={companyIndex === companies.length - 1}
+				/>
 			))}
 		</div>
+	);
+}
+
+
+function TimelineExperience({company, companyIndex, isLast}: {
+	company: Company,
+	companyIndex: number,
+	isLast?: boolean
+}) {
+	const [isExpanded, setIsExpanded] = React.useState(false);
+
+
+	return (
+		<TimelineEvent
+			active={!company.endDate || company.endDate.includes('Present')}
+			last={isLast}
+			className="transition duration-400 ease-in-out"
+			onClick={() => {
+				setIsExpanded(!isExpanded);
+			}}>
+			<div className="flex flex-col">
+
+				<div className="flex flex-row items-center text-blue-500">
+					{company.icon && company.icon}
+
+					<div className="flex flex-row items-start justify-between w-full">
+						<TimelineHeader>
+							<div
+								className="flex-col gap-1 ml-4 inline-flex font-semibold leading-none text-xs sm:text-sm">
+								<div className="flex items-center">
+									{company.name}
+
+									<ChevronRightIcon className={cn('w-3 md:w-4 md:ml-1 transition-all duration-200 ease-in-out', {
+										'transform rotate-90': isExpanded
+									})}/>
+								</div>
+								<span
+									className="font-sans text-xs text-neutral-700 dark:text-gray-400">
+								{company.role}
+								</span>
+							</div>
+						</TimelineHeader>
+
+						<small className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+							{company.startDate} - {company.endDate}
+						</small>
+					</div>
+
+				</div>
+
+
+				<div className={cn(
+					'transition-all duration-500 ease-in-out overflow-hidden ',
+					isExpanded ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+				)}>
+					<p className="text-sm text-gray-800 dark:text-white">
+						{company.description}
+					</p>
+
+					{company.responsibilities.length > 0 && (
+						<>
+							<p className="text-md opacity-55 font-semibold">
+								Responsibilities:
+							</p>
+							<ol className="list-disc flex flex-col pl-4">
+								{company.responsibilities.map((responsibility, index) => (
+									<li key={`responsibility-${companyIndex}-${index}`}
+										className="list-disc text-sm py-0.5  ml-1 opacity-55">
+										{responsibility}
+									</li>
+								))}
+							</ol>
+						</>
+					)}
+
+					{company.achievements.length > 0 && (
+						<>
+							<p className="text-md opacity-55 font-semibold">
+								Achievements:
+							</p>
+							<ol className="list-disc flex flex-col pl-4 mb-4">
+								{company.achievements.map((achievement, index) => (
+									<li key={`achievement-${companyIndex}-${index}`}
+										className="list-disc text-sm py-0.5 ml-1 opacity-55">
+										{achievement}
+									</li>
+								))}
+							</ol>
+						</>
+					)}
+
+
+
+					<div className="flex flex-wrap gap-2">
+						{company.skills.map((skill, index) => (
+							<span key={`skill-${companyIndex}-${index}`}
+								  className="text-xs bg-neutral-100 text-neutral-700 dark:bg-gray-800 dark:text-gray-400 px-1.5 py-0.5 rounded-lg">
+										{skill}
+									</span>
+						))}
+					</div>
+
+
+					{company.url && (
+						<a href={company.url} target="_blank" rel="noopener noreferrer"
+						   className="text-blue-500 text-xs font-semibold mt-4 inline-flex items-center">
+							Visit website
+						</a>
+					)}
+				</div>
+
+
+			</div>
+		</TimelineEvent>
 	);
 }

@@ -7,29 +7,28 @@ type TimelineEventProps = {
 	position?: 'left' | 'right';
 	children: React.ReactNode;
 	onClick?: () => void;
+	className?: string;
 };
 
-export const TimelineEvent = ({active, last, position, children, onClick}: TimelineEventProps) => {
+export const TimelineEvent = ({active, last, position, children, onClick, className}: TimelineEventProps) => {
 	const isLeft = position === 'left';
 	const currentPos = isLeft ? 'left' : 'right';
 
 	return (
 		<div
-			className={cn('relative w-full lg:w-1/2', {
+			className={cn('relative w-full lg:w-1/2 left-1/2 -translate-x-1/2', {
 				'border-none': last,
 
-				'pb-16': !last,
-				'lg:left-0 pl-5 lg:pl-0 lg:pr-10 border-l lg:border-r lg:border-l-0': isLeft,
-				'lg:left-1/2 pl-5 lg:pl-10 border-l lg:border-l': !isLeft
+				'pb-8': !last,
+				'pl-5 border-l lg:border-l': !isLeft
 			})}
 		>
 			<TimelineDot active={!!active} position={currentPos}/>
 
 			<div
-				className="relative w-full rounded-lg border bg-white bg-opacity-20 backdrop-blur-sm py-5 px-10 dark:border-gray-700
-				 dark:bg-gray-800 dark:bg-opacity-80 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50
-				  dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer
-				  "
+				className={cn("relative w-full rounded-lg border bg-white bg-opacity-20 backdrop-blur-sm py-5 px-4 md:px-10 dark:border-gray-700 " +
+					"dark:bg-gray-800 dark:bg-opacity-80 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50" +
+					"dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer", className)}
 				onClick={onClick}
 			>
 				<div className="-translate-y-1 flex flex-col gap-2">{children}</div>
@@ -40,7 +39,7 @@ export const TimelineEvent = ({active, last, position, children, onClick}: Timel
 
 
 export const TimelineHeader = ({children}: { children: React.ReactNode }) => {
-	return <h3 className="text-lg font-semibold text-muted-foreground flex  gap-2 items-center">{children}</h3>;
+	return <h3 className="text-lg font-semibold text-muted-foreground flex items-center">{children}</h3>;
 };
 
 export const TimelineDot = ({active, position}: { active: boolean; position: 'left' | 'right' }) => {
