@@ -11,7 +11,7 @@ import Intro from '@/components/organisms/Intro';
 import StarsGrid from '@/components/molecules/StarsGrid';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience';
-import { LightbulbIcon } from 'lucide-react';
+import { LucideGraduationCap } from 'lucide-react';
 import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
 import LaurelIcon from '@/components/icons/LaurelIcon';
 
@@ -88,13 +88,13 @@ export default function Home() {
 							before={
 								<div className="flex flex-row items-center space-x-0 ">
 									<LaurelIcon
-										className="w-8 h-8 -scale-x-100 text-green-500"/>
+										className="w-8 h-8 -scale-x-100 text-yellow-500"/>
 									<div
 										className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
 										My Projects
 									</div>
 
-									<LaurelIcon className="w-8 h-8 text-green-500"/>
+									<LaurelIcon className="w-8 h-8 text-yellow-500"/>
 								</div>
 							}
 							title={'Check out my latest work'}
@@ -129,7 +129,7 @@ export default function Home() {
 				<div
 					className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
 
-					<LightbulbIcon className="self-center  text-yellow-500" width={24}/>
+					<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500" />
 
 					<SectionHeader head={'Experience'} title={'My professional journey'}
 								   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
