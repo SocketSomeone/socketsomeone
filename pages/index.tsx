@@ -11,6 +11,7 @@ import Intro from '@/components/organisms/Intro';
 import StarsGrid from '@/components/molecules/StarsGrid';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience';
+import Education from '@/components/organisms/Education';
 import { LucideGraduationCap } from 'lucide-react';
 import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
 import LaurelIcon from '@/components/icons/LaurelIcon';
@@ -129,12 +130,19 @@ export default function Home() {
 				<div
 					className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
 
-					<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500" />
+					<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500"/>
 
 					<SectionHeader head={'Experience'} title={'My professional journey'}
 								   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
 
 					<Experience/>
+				</div>
+
+				<div className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
+					<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500"/>
+					<SectionHeader head={'Education'} title={'My Education Journey'}
+								   description={'A showcase of my educational background — the institutions and achievements that have shaped my learning.'}/>
+					<Education/>
 				</div>
 
 				<div className="mb-14 py-14 container mx-auto px-4 flex flex-col justify-center items-center">
