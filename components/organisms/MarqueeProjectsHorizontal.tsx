@@ -29,7 +29,7 @@ export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProje
 
 	return (
 		<div
-			className="flex flex-col flex-wrap rounded-lg border bg-background bg-gray-100 border-gray-300 bg-opacity-80 backdrop-blur-sm dark:bg-gray-800 dark:border-gray-800 dark:bg-opacity-40">
+			className="flex flex-col flex-wrap rounded-lg border bg-gray-100/80 border-gray-300 backdrop-blur-xs dark:bg-gray-800/40 dark:border-gray-800">
 			{
 				projectsRows.map((row: any[], index: number) => (
 					<Carousel key={index}
@@ -70,9 +70,9 @@ export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProje
 			}
 
 			<div
-				className="pointer-events-none absolute inset-y-0 left-0 w-0 sm:w-1/4 md:w-1/6 xl:w-1/4  bg-gradient-to-r from-white dark:from-background"></div>
+				className="pointer-events-none absolute inset-y-0 left-0 w-0 sm:w-1/4 md:w-1/6 xl:w-1/4  bg-linear-to-r from-white dark:from-background"></div>
 			<div
-				className="pointer-events-none absolute inset-y-0 right-0 w-0 sm:w-1/4 md:w-1/6 xl:w-1/4 bg-gradient-to-l from-white dark:from-background"></div>
+				className="pointer-events-none absolute inset-y-0 right-0 w-0 sm:w-1/4 md:w-1/6 xl:w-1/4 bg-linear-to-l from-white dark:from-background"></div>
 		</div>
 	);
 }

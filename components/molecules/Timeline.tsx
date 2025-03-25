@@ -24,9 +24,7 @@ export const TimelineEvent = ({active, last, children, onClick, className}: Time
 			<TimelineDot active={!!active}/>
 
 			<div
-				className={cn('relative w-full  py-5 px-4 md:px-8 bg-white bg-opacity-80 dark:border-gray-700 ' +
-					'dark:bg-gray-800 dark:bg-opacity-80  ring-slate-700/10 hover:bg-slate-50' +
-					'dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer', className)}
+				className={cn('relative w-full py-5 px-4 md:px-8 cursor-pointer', className)}
 				onClick={onClick}
 			>
 				<div className="-translate-y-1 flex flex-col gap-2">{children}</div>
@@ -40,7 +38,7 @@ export const TimelineHeader = ({children}: { children: React.ReactNode }) => {
 	return <h3 className="text-lg font-semibold text-muted-foreground flex items-center">{children}</h3>;
 };
 
-export const TimelineDot = ({active, }: { active: boolean; }) => {
+export const TimelineDot = ({active,}: { active: boolean; }) => {
 	const isLeft = false;
 
 	return (

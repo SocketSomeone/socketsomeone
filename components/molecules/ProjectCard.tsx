@@ -58,7 +58,7 @@ export default function ProjectCard({
 				</div>
 
 
-				<p className="text-gray-500 flex-grow text-sm font-normal dark:text-gray-300">{description ?? 'No description'}</p>
+				<p className="text-gray-500 grow text-sm font-normal dark:text-gray-300">{description ?? 'No description'}</p>
 
 				<Metrics style={'mt-2 justify-start dark:text-blue-500'} forks={forks} stars={stars}
 						 issues={issues ?? 0} language={language ?? 'Unknown'}/>

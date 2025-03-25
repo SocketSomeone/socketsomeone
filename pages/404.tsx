@@ -13,7 +13,7 @@ export default function FourZeroFour() {
                     </p>
                     {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                     <a href="/"
-                          className="mt-8 inline-flex cursor-pointer items-center justify-center rounded-xl border-2 border-blue-500 bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:border-blue-400 hover:bg-blue-400 disabled:opacity-30 disabled:hover:border-primary disabled:hover:bg-primary disabled:hover:text-white">Go
+                          className="mt-8 inline-flex cursor-pointer items-center justify-center rounded-xl border-2 border-blue-500 bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:border-blue-400 hover:bg-blue-400 disabled:opacity-30 disabled:hover:border-primary disabled:hover:bg-primary disabled:hover:text-white">Go
                         Home
                     </a>
                 </div>

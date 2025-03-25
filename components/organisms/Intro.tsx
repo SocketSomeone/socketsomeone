@@ -26,8 +26,8 @@ export default function Intro() {
         <h1
           className="text-3xl subpixel-antialiased sm:text-2xl md:text-4xl xl:text-6xl xl:leading-[70px] font-extrabold text-gray-900 dark:text-white">Hello,
           I’m <span
-            className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-300">SocketSomeone</span> your <span
-            className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Software Engineer</span>
+            className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-300">SocketSomeone</span> your <span
+            className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Software Engineer</span>
         </h1>
       </BlurFade>
 
