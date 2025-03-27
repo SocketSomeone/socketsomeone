@@ -13,7 +13,7 @@ interface EducationEntry {
 
 const education: EducationEntry[] = [
     {
-        name: 'Bonch-burevich',
+        name: 'Federal State Budget-Financed Educational Institution of Higher Education The Bonch-Bruevich',
         startDate: '2022',
         endDate: '2026',
         description: 'Study at the university in the direction of "Technology".',
@@ -32,7 +32,7 @@ export default function Education() {
     return (
         <div className="md:container text-muted-foreground self-center pt-10 w-full relative">
             {education.map((school, index) => (
-                <TimelineEvent key={`timeline-education-${index}`} active={school.name === 'Bonch-burevich'} last={index === education.length - 1}>
+                <TimelineEvent key={`timeline-education-${index}`} active={school.name === 'Federal State Budget-Financed Educational Institution of Higher Education The Bonch-Bruevich'} last={index === education.length - 1}>
                     <div className="flex flex-col">
                         <div className="flex flex-row items-center text-blue-500">
                             {school.icon}
