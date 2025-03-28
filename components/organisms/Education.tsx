@@ -5,8 +5,8 @@ import { BookOpenIcon } from '@heroicons/react/24/solid';
 
 interface EducationEntry {
     name: string;
-    startDate: string;
-    endDate: string;
+    startDate: number;
+    endDate: number;
     description?: string;
     icon?: React.ReactNode;
 }
@@ -14,15 +14,15 @@ interface EducationEntry {
 const education: EducationEntry[] = [
     {
         name: 'Federal State Budget-Financed Educational Institution of Higher Education The Bonch-Bruevich',
-        startDate: '2022',
-        endDate: '2026',
+        startDate: 2022,
+        endDate: 2026,
         description: 'Study at the university in the direction of "Technology".',
         icon: <BookOpenIcon width={36} />,
     },
     {
         name: 'Lyceum No. 5',
-        startDate: '2012',
-        endDate: '2022',
+        startDate: 2012,
+        endDate: 2022,
         description: 'Secondary education with an emphasis in technical sciences.',
         icon: <BookOpenIcon width={36} />,
     }
@@ -34,7 +34,7 @@ export default function Education() {
     return (
         <div className="md:container text-muted-foreground self-center pt-10 w-full relative">
             {education.map((school, index) => (
-                <TimelineEvent key={`timeline-education-${index}`} active={!school.endDate || Number(school.endDate) >= currentDate}
+                <TimelineEvent key={`timeline-education-${index}`} active={school.endDate >= currentDate}
                                last={index === education.length - 1}>
                     <div className="flex flex-col">
                         <div className="flex flex-row items-center text-blue-500">
