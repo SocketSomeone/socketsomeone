@@ -12,9 +12,10 @@ import StarsGrid from '@/components/molecules/StarsGrid';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience';
 import Education from '@/components/organisms/Education';
-import {Briefcase, LucideGraduationCap} from 'lucide-react';
+import { LucideGraduationCap} from 'lucide-react';
 import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
 import LaurelIcon from '@/components/icons/LaurelIcon';
+import { BriefcaseIcon } from '@heroicons/react/24/solid';
 
 
 export default function Home() {
@@ -131,7 +132,7 @@ export default function Home() {
 				<div
 					className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
 
-					<Briefcase width={24} className="self-center text-gray-400 dark:text-gray-500"/>
+					<BriefcaseIcon width={24} className="self-center text-gray-400 dark:text-gray-500"/>
 
 					<SectionHeader head={'Experience'} title={'My professional journey'}
 								   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>

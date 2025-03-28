@@ -1,6 +1,6 @@
 import React from 'react';
-import {TimelineEvent} from '../molecules/Timeline';
-import {BookOpenIcon} from '@heroicons/react/24/solid';
+import { TimelineEvent } from '../molecules/Timeline';
+import { BookOpenIcon } from '@heroicons/react/24/solid';
 
 
 interface EducationEntry {
@@ -34,7 +34,7 @@ export default function Education() {
     return (
         <div className="md:container text-muted-foreground self-center pt-10 w-full relative">
             {education.map((school, index) => (
-                <TimelineEvent key={`timeline-education-${index}`} active={!school.endDate || parseInt(school.endDate) >= currentDate}
+                <TimelineEvent key={`timeline-education-${index}`} active={!school.endDate || Number(school.endDate) >= currentDate}
                                last={index === education.length - 1}>
                     <div className="flex flex-col">
                         <div className="flex flex-row items-center text-blue-500">

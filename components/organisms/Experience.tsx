@@ -24,7 +24,7 @@ interface Company extends ExperienceEntry {
 
 export default function Experience() {
 	const currentDate = new Date();
-	const companies: Company[] =  [
+	const companies: Company[] = [
 		{
 			name: 'Necord',
 			url: 'https://necord.org',
