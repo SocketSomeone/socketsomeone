@@ -22,7 +22,7 @@
     "@tailwindcss/postcss": "^4.0.17",
     "@types/canvas-confetti": "^1.9.0",
     "@types/next-seo": "^2.1.2",
-    "@types/node": "22.13.14",
+    "@types/node": "22.13.16",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
     "canvas-confetti": "^1.9.3",
