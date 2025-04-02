@@ -32,7 +32,7 @@ export default function Education() {
     const currentDate = new Date().getFullYear();
 
     return (
-        <div className="md:container text-muted-foreground self-center pt-10 w-full relative">
+        <div className="self-center pt-10 relative">
             {education.map((school, index) => (
                 <TimelineEvent key={`timeline-education-${index}`} active={school.endDate >= currentDate}
                                last={index === education.length - 1}>

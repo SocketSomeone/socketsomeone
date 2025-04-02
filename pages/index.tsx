@@ -12,11 +12,10 @@ import StarsGrid from '@/components/molecules/StarsGrid';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience';
 import Education from '@/components/organisms/Education';
-import { LucideGraduationCap} from 'lucide-react';
+import { LucideGraduationCap } from 'lucide-react';
 import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
 import LaurelIcon from '@/components/icons/LaurelIcon';
 import { BriefcaseIcon } from '@heroicons/react/24/solid';
-
 
 export default function Home() {
 	const [projects, setProjects] = useState<any>([]);
