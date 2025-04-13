@@ -253,7 +253,14 @@ function TimelineExperience({company, companyIndex, isLast}: {
 			<div className="flex flex-col">
 
 				<div className="flex flex-row items-center text-blue-500">
-					{company.icon && company.icon}
+					{company.icon && (
+						<div className={cn(
+							'flex justify-center items-center w-12 h-12 rounded-md bg-blue-500/10 text-blue-500',
+							'dark:bg-blue-500/20 dark:text-blue-500/80',
+						)}>
+							{company.icon}
+						</div>
+					)}
 
 					<div className="flex flex-row items-start justify-between w-full">
 						<TimelineHeader>
