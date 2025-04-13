@@ -38,11 +38,11 @@ const textColorVariants = (color: ChipColor) => {
 
 const bgColorVariants = (color: ChipColor) => {
 	const colors: Record<ChipColor, string> = {
-		gray: 'bg-gray-100 dark:bg-gray-900',
-		red: 'bg-red-100 dark:bg-red-900',
-		blue: 'bg-blue-100 dark:bg-blue-900',
-		green: 'bg-green-100 dark:bg-green-900',
-		yellow: 'bg-yellow-100 dark:bg-yellow-900',
+		gray: 'bg-gray-100 dark:bg-gray-800',
+		red: 'bg-red-100 dark:bg-red-800',
+		blue: 'bg-blue-100 dark:bg-blue-800',
+		green: 'bg-green-100 dark:bg-green-800',
+		yellow: 'bg-yellow-100 dark:bg-yellow-800',
 		white: 'bg-white dark:bg-gray-800',
 	};
 	return colors[color] || 'bg-white';

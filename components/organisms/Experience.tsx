@@ -4,6 +4,7 @@ import { BriefcaseIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';
 import { cn } from '@/utils';
 import { ChevronRightIcon } from 'lucide-react';
+import Badge from '../atoms/Badge';
 
 
 interface ExperienceEntry {
@@ -297,7 +298,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 							'transition-all duration-500 ease-in-out overflow-hidden ',
 							isExpanded ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'
 						)}>
-							<p className="text-sm text-gray-800 dark:text-white">
+							<p className="text-sm text-gray-800 dark:text-white my-2">
 								{company.description}
 							</p>
 
@@ -336,10 +337,9 @@ function TimelineExperience({company, companyIndex, isLast}: {
 
 							<div className="flex flex-wrap gap-2">
 								{company.skills.map((skill, index) => (
-									<span key={`skill-${companyIndex}-${index}`}
-										  className="text-xs bg-neutral-100 text-neutral-700 dark:bg-gray-800 dark:text-gray-400 px-1.5 py-0.5 rounded-lg">
+									<Badge key={`skill-${companyIndex}-${index}`} type={'flat'} color={'gray'} className={"text-neutral-700 dark:text-gray-400  border-white font-light"}>
 										{skill}
-									</span>
+									</Badge>
 								))}
 							</div>
 
