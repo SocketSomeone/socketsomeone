@@ -337,7 +337,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 
 							<div className="flex flex-wrap gap-2">
 								{company.skills.map((skill, index) => (
-									<Badge key={`skill-${companyIndex}-${index}`} type={'flat'} color={'gray'} className={"text-neutral-700 dark:text-gray-400  border-white font-light"}>
+									<Badge key={`skill-${companyIndex}-${index}`} type={'flat'} color={'gray'} className={"text-neutral-700 dark:text-gray-400  border-white font-normal"}>
 										{skill}
 									</Badge>
 								))}
