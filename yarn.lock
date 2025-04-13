@@ -4281,7 +4281,7 @@ for-each@^0.3.3, for-each@^0.3.5:
   dependencies:
     is-callable "^1.2.7"
 
-framer-motion@^12.6.3, framer-motion@^12.6.5:
+framer-motion@^12.6.5:
   version "12.6.5"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.6.5.tgz#5777760290f2011ec71afe1bdd7053e91459bc47"
   integrity sha512-MKvnWov0paNjvRJuIy6x418w23tFqRfS6CXHhZrCiSEpXVlo/F+usr8v4/3G6O0u7CpsaO1qop+v4Ip7PRCBqQ==

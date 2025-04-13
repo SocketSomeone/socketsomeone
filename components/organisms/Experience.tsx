@@ -13,7 +13,7 @@ interface ExperienceEntry {
 
 interface Company extends ExperienceEntry {
 	name: string;
-	description: string;
+	description?: string;
 	url?: string;
 	role: string;
 	skills: string[];
@@ -194,7 +194,6 @@ export default function Experience() {
 		},
 		{
 			name: 'Freelance',
-			description: 'Worked on various projects, including the development of websites and web applications.',
 			role: 'Fullstack Developer',
 			startDate: 'Jan. 2018',
 			endDate: 'Present',
@@ -231,6 +230,8 @@ function TimelineExperience({company, companyIndex, isLast}: {
 }) {
 	const [isExpanded, setIsExpanded] = React.useState(false);
 
+	const canBeExpanded = Boolean(company.responsibilities.length ||
+		company.achievements.length || company.description?.length);
 
 	return (
 		<TimelineEvent
@@ -252,9 +253,12 @@ function TimelineExperience({company, companyIndex, isLast}: {
 								<div className="flex items-center text-foreground">
 									{company.name}
 
-									<ChevronRightIcon className={cn('w-3 md:w-4 md:ml-1 transition-all duration-200 ease-in-out', {
-										'transform rotate-90': isExpanded
-									})}/>
+									{canBeExpanded && (
+										<ChevronRightIcon
+											className={cn('w-3 md:w-4 md:ml-1 transition-all duration-200 ease-in-out', {
+												'transform rotate-90': isExpanded
+											})}/>
+									)}
 								</div>
 								<span
 									className="font-sans text-xs text-neutral-700 dark:text-gray-400">
@@ -271,65 +275,68 @@ function TimelineExperience({company, companyIndex, isLast}: {
 				</div>
 
 
-				<div className={cn(
-					'transition-all duration-500 ease-in-out overflow-hidden ',
-					isExpanded ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'
-				)}>
-					<p className="text-sm text-gray-800 dark:text-white">
-						{company.description}
-					</p>
-
-					{company.responsibilities.length > 0 && (
-						<>
-							<p className="text-md opacity-55 font-semibold">
-								Responsibilities:
+				{
+					canBeExpanded && (
+						<div className={cn(
+							'transition-all duration-500 ease-in-out overflow-hidden ',
+							isExpanded ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+						)}>
+							<p className="text-sm text-gray-800 dark:text-white">
+								{company.description}
 							</p>
-							<ol className="list-disc flex flex-col pl-4">
-								{company.responsibilities.map((responsibility, index) => (
-									<li key={`responsibility-${companyIndex}-${index}`}
-										className="list-disc text-sm py-0.5  ml-1 opacity-55">
-										{responsibility}
-									</li>
-								))}
-							</ol>
-						</>
-					)}
 
-					{company.achievements.length > 0 && (
-						<>
-							<p className="text-md opacity-55 font-semibold">
-								Achievements:
-							</p>
-							<ol className="list-disc flex flex-col pl-4 mb-4">
-								{company.achievements.map((achievement, index) => (
-									<li key={`achievement-${companyIndex}-${index}`}
-										className="list-disc text-sm py-0.5 ml-1 opacity-55">
-										{achievement}
-									</li>
-								))}
-							</ol>
-						</>
-					)}
+							{company.responsibilities.length > 0 && (
+								<>
+									<p className="text-md opacity-55 font-semibold">
+										Responsibilities:
+									</p>
+									<ol className="list-disc flex flex-col pl-4">
+										{company.responsibilities.map((responsibility, index) => (
+											<li key={`responsibility-${companyIndex}-${index}`}
+												className="list-disc text-sm py-0.5  ml-1 opacity-55">
+												{responsibility}
+											</li>
+										))}
+									</ol>
+								</>
+							)}
+
+							{company.achievements.length > 0 && (
+								<>
+									<p className="text-md opacity-55 font-semibold">
+										Achievements:
+									</p>
+									<ol className="list-disc flex flex-col pl-4 mb-4">
+										{company.achievements.map((achievement, index) => (
+											<li key={`achievement-${companyIndex}-${index}`}
+												className="list-disc text-sm py-0.5 ml-1 opacity-55">
+												{achievement}
+											</li>
+										))}
+									</ol>
+								</>
+							)}
 
 
-
-					<div className="flex flex-wrap gap-2">
-						{company.skills.map((skill, index) => (
-							<span key={`skill-${companyIndex}-${index}`}
-								  className="text-xs bg-neutral-100 text-neutral-700 dark:bg-gray-800 dark:text-gray-400 px-1.5 py-0.5 rounded-lg">
+							<div className="flex flex-wrap gap-2">
+								{company.skills.map((skill, index) => (
+									<span key={`skill-${companyIndex}-${index}`}
+										  className="text-xs bg-neutral-100 text-neutral-700 dark:bg-gray-800 dark:text-gray-400 px-1.5 py-0.5 rounded-lg">
 										{skill}
 									</span>
-						))}
-					</div>
+								))}
+							</div>
 
 
-					{company.url && (
-						<a href={company.url} target="_blank" rel="noopener noreferrer"
-						   className="text-blue-500 text-xs font-semibold mt-4 inline-flex items-center">
-							Visit website
-						</a>
-					)}
-				</div>
+							{company.url && (
+								<a href={company.url} target="_blank" rel="noopener noreferrer"
+								   className="text-blue-500 text-xs font-semibold mt-4 inline-flex items-center">
+									Visit website
+								</a>
+							)}
+						</div>
+					)
+				}
 
 
 			</div>
