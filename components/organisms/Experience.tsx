@@ -205,6 +205,15 @@ export default function Experience() {
 	].sort((a, b) => {
 		const aEndDate = a.endDate ? new Date(a.endDate) : currentDate;
 		const bEndDate = b.endDate ? new Date(b.endDate) : currentDate;
+
+		if (a.endDate === 'Present') {
+			if (b.endDate === 'Present') {
+				return 0;
+			}
+
+			return -1;
+		}
+
 		return bEndDate.getTime() - aEndDate.getTime();
 	});
 
