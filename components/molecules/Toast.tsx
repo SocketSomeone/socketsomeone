@@ -11,6 +11,10 @@ export default function Toast() {
 	const [smallImage, setSmallImage] = useState<string>('');
 
 	const assetURL = useCallback((field: 'small_image' | 'large_image' = 'large_image') => {
+		if (!activity?.assets?.[field]) {
+			return '';
+		}
+
 		if (activity?.assets?.[field]?.startsWith('mp:')) {
 			return `https://media.discordapp.net/${activity.assets?.[field]?.slice(3)}?size=4096`;
 		}

@@ -11,7 +11,7 @@ import MarqueeProjectsHorizontal from '@/components/organisms/MarqueeProjectsHor
 import Intro from '@/components/organisms/Intro';
 import StarsGrid from '@/components/molecules/StarsGrid';
 import SectionHeader from '@/components/atoms/SectionHeader';
-import Experience from '@/components/organisms/Experience';
+import Experience from '@/components/organisms/Experience/Experience';
 import { LucideGraduationCap } from 'lucide-react';
 import LaurelIcon from '@/components/icons/LaurelIcon';
 import Page from '@/components/Page';
@@ -72,7 +72,6 @@ export default function Home() {
 						</div>
 					}
 				</div>
-
 			</div>
 
 			{projects.length > 0 &&

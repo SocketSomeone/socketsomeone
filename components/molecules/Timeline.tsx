@@ -10,13 +10,10 @@ type TimelineEventProps = {
 };
 
 export const TimelineEvent = ({active, last, children, onClick, className}: TimelineEventProps) => {
-
-
 	return (
 		<div
-			className={cn('relative w-full lg:w-1/2 left-1/2 -translate-x-1/2 pl-5 border-l border-b', {
+			className={cn('relative w-full lg:w-1/2 left-1/2 -translate-x-1/2 border-b print:pb-0 before:-ml-6 before:w-px print:before:hidden before:absolute before:bg-border before:h-full before:mt-2', {
 				'border-none': last,
-
 				'py-2': !last,
 				'pt-2': last,
 			})}
@@ -39,24 +36,19 @@ export const TimelineHeader = ({children}: { children: React.ReactNode }) => {
 };
 
 export const TimelineDot = ({active,}: { active: boolean; }) => {
-	const isLeft = false;
-
 	return (
 		<div
 			className={cn(
-				'absolute top-0 left-[-6.5px] lg:left-[-6.2px] w-4 h-4 rounded-full aspect-square',
+				'absolute w-2 h-2 bg-neutral-700 rounded-full mt-6 -translate-x-[1.71rem] ring-8 print:hidden ring-background dark:ring-gray-900',
 				{
 					'bg-emerald-500': active,
-					'bg-neutral-700': !active,
-					'w-3 h-3': !active,
-					'lg:left-[-7.2px]': active && !isLeft,
 				}
 			)}
 		>
 			{active && (
 				<div
 					className={cn(
-						'absolute top-0 left-0 rounded-full  w-4 h-4 bg-emerald-500 animate-ping aspect-square'
+						'absolute w-2 h-2 rounded-full top-0 left-0 ring print:hidden bg-emerald-500 animate-ping aspect-square'
 					)}
 				/>
 			)}

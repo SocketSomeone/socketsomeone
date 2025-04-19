@@ -5,99 +5,111 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
+    --color-border: hsl(var(--border));
+    --color-input: hsl(var(--input));
+    --color-ring: hsl(var(--ring));
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
 
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
+    --color-primary: hsl(var(--primary));
+    --color-primary-foreground: hsl(var(--primary-foreground));
 
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
+    --color-secondary: hsl(var(--secondary));
+    --color-secondary-foreground: hsl(var(--secondary-foreground));
 
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
+    --color-destructive: hsl(var(--destructive));
+    --color-destructive-foreground: hsl(var(--destructive-foreground));
 
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
+    --color-muted: hsl(var(--muted));
+    --color-muted-foreground: hsl(var(--muted-foreground));
 
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
+    --color-accent: hsl(var(--accent));
+    --color-accent-foreground: hsl(var(--accent-foreground));
 
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
+    --color-popover: hsl(var(--popover));
+    --color-popover-foreground: hsl(var(--popover-foreground));
 
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
+    --color-card: hsl(var(--card));
+    --color-card-foreground: hsl(var(--card-foreground));
 
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-  --animate-marquee: marquee var(--duration) linear infinite;
-  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-  --animate-shimmer: shimmer 8s infinite;
-  --animate-gradient: gradient 8s linear infinite;
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+    --animate-marquee: marquee var(--duration) linear infinite;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+    --animate-shimmer: shimmer 8s infinite;
+    --animate-gradient: gradient 8s linear infinite;
+    --animate-float: floating 20s linear infinite;
 
-  @keyframes accordion-down {
-    from {
-      height: 0;
+    @keyframes accordion-down {
+        from {
+            height: 0;
+        }
+        to {
+            height: var(--radix-accordion-content-height);
+        }
     }
-    to {
-      height: var(--radix-accordion-content-height);
+    @keyframes accordion-up {
+        from {
+            height: var(--radix-accordion-content-height);
+        }
+        to {
+            height: 0;
+        }
     }
-  }
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-100% - var(--gap)));
+        }
     }
-    to {
-      height: 0;
+    @keyframes marquee-vertical {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(calc(-100% - var(--gap)));
+        }
     }
-  }
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
+    @keyframes shimmer {
+        0%,
+        90%,
+        100% {
+            background-position: calc(-100% - var(--shimmer-width)) 0;
+        }
+        30%,
+        60% {
+            background-position: calc(100% + var(--shimmer-width)) 0;
+        }
     }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
+    @keyframes gradient {
+        to {
+            background-position: var(--bg-size) 0;
+        }
     }
-  }
-  @keyframes marquee-vertical {
-    from {
-      transform: translateY(0);
+
+    @keyframes floating {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-800px) rotate(360deg);
+            opacity: 0;
+        }
     }
-    to {
-      transform: translateY(calc(-100% - var(--gap)));
-    }
-  }
-  @keyframes shimmer {
-    0%,
-    90%,
-    100% {
-      background-position: calc(-100% - var(--shimmer-width)) 0;
-    }
-    30%,
-    60% {
-      background-position: calc(100% + var(--shimmer-width)) 0;
-    }
-  }
-  @keyframes gradient {
-    to {
-      background-position: var(--bg-size) 0;
-    }
-  }
 }
 
 @utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
-  @media (width >= --theme(--breakpoint-sm)) {
+    margin-inline: auto;
+    padding-inline: 2rem;
+    @media (width >= --theme(--breakpoint-sm)) {
     max-width: none;
-  }
-  @media (width >= 1400px) {
-    max-width: 1400px;
-  }
+}
+    @media (width >= 1400px) {
+        max-width: 1400px;
+    }
 }
 
 /*
@@ -109,13 +121,13 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
 }
 
 @layer base {
@@ -179,6 +191,7 @@
     * {
         @apply border-border;
     }
+
     body {
         @apply bg-background text-foreground;
     }
@@ -199,145 +212,4 @@ a {
 
 * {
     box-sizing: border-box;
-}
-
-.technologies li {
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-    animation: animate 20s linear infinite;
-    bottom: -150px;
-}
-
-.technologies li:nth-child(1) {
-    left: 86%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
-}
-
-.technologies li:nth-child(2) {
-    left: 12%;
-    width: 30px;
-    height: 30px;
-    animation-delay: 1.5s;
-    animation-duration: 10s;
-}
-
-.technologies li:nth-child(3) {
-    left: 70%;
-    width: 100px;
-    height: 100px;
-    animation-delay: 5.5s;
-}
-
-.technologies li:nth-child(4) {
-    left: 42%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 15s;
-}
-
-.technologies li:nth-child(5) {
-    left: 65%;
-    width: 40px;
-    height: 40px;
-    animation-delay: 0s;
-}
-
-.technologies li:nth-child(6) {
-    left: 3%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3.5s;
-}
-
-.technologies li:nth-child(7) {
-    left: 25%;
-    width: 25px;
-    height: 25px;
-    animation-delay: 2s;
-    animation-duration: 12s;
-}
-
-.technologies li:nth-child(8) {
-    left: 63%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 15s;
-}
-
-.technologies li:nth-child(9) {
-    left: 45%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 0s;
-}
-
-.technologies li:nth-child(10) {
-    left: 10%;
-    width: 50px;
-    height: 50px;
-    animation-delay: 1.5s;
-}
-
-.technologies li:nth-child(11) {
-    left: 29%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
-    animation-duration: 10s;
-}
-
-.technologies li:nth-child(12) {
-    left: 96%;
-    width: 55px;
-    height: 55px;
-    animation-delay: 0s;
-}
-
-.technologies li:nth-child(13) {
-    left: 37%;
-    width: 45px;
-    height: 45px;
-    animation-delay: 0s;
-    animation-duration: 15s;
-}
-
-.technologies li:nth-child(14) {
-    left: 79%;
-    width: 100px;
-    height: 100px;
-    animation-delay: 4s;
-}
-
-.technologies li:nth-child(15) {
-    left: 82%;
-    width: 66px;
-    height: 66px;
-    animation-delay: 0s;
-    animation-duration: 20s;
-}
-
-.technologies li:nth-child(16) {
-    left: 56%;
-    width: 40px;
-    height: 40px;
-    animation-delay: 2s;
-}
-
-@keyframes animate {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-800px) rotate(360deg);
-        opacity: 0;
-    }
 }

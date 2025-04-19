@@ -1,10 +1,12 @@
 import React from 'react';
-import { TimelineEvent, TimelineHeader } from '../molecules/Timeline';
+import { TimelineEvent, TimelineHeader } from '../../molecules/Timeline';
 import { BriefcaseIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';
 import { cn } from '@/utils';
 import { ChevronRightIcon } from 'lucide-react';
-import Badge from '../atoms/Badge';
+import Badge from '../../atoms/Badge';
+
+import './styles.css';
 
 
 interface ExperienceEntry {
@@ -252,7 +254,6 @@ function TimelineExperience({company, companyIndex, isLast}: {
 				setIsExpanded(!isExpanded);
 			}}>
 			<div className="flex flex-col">
-
 				<div className="flex flex-row items-center text-blue-500">
 					{company.icon && (
 						<div className={cn(
@@ -291,7 +292,6 @@ function TimelineExperience({company, companyIndex, isLast}: {
 
 				</div>
 
-
 				{
 					canBeExpanded && (
 						<div className={cn(
@@ -302,46 +302,9 @@ function TimelineExperience({company, companyIndex, isLast}: {
 								{company.description}
 							</p>
 
-							{company.responsibilities.length > 0 && (
-								<>
-									<p className="text-md opacity-55 font-semibold">
-										Responsibilities:
-									</p>
-									<ol className="list-disc flex flex-col pl-4">
-										{company.responsibilities.map((responsibility, index) => (
-											<li key={`responsibility-${companyIndex}-${index}`}
-												className="list-disc text-sm py-0.5  ml-1 opacity-55">
-												{responsibility}
-											</li>
-										))}
-									</ol>
-								</>
-							)}
+							<TimelineSectionList name={'Responsibilities'} items={company.responsibilities} />
 
-							{company.achievements.length > 0 && (
-								<>
-									<p className="text-md opacity-55 font-semibold">
-										Achievements:
-									</p>
-									<ol className="list-disc flex flex-col pl-4 mb-4">
-										{company.achievements.map((achievement, index) => (
-											<li key={`achievement-${companyIndex}-${index}`}
-												className="list-disc text-sm py-0.5 ml-1 opacity-55">
-												{achievement}
-											</li>
-										))}
-									</ol>
-								</>
-							)}
-
-
-							<div className="flex flex-wrap gap-2">
-								{company.skills.map((skill, index) => (
-									<Badge key={`skill-${companyIndex}-${index}`} type={'flat'} color={'gray'} className={"text-neutral-700 dark:text-gray-400  border-white font-normal"}>
-										{skill}
-									</Badge>
-								))}
-							</div>
+							<TimelineSectionList name={'Achievements'} items={company.achievements} />
 
 
 							{company.url && (
@@ -354,8 +317,42 @@ function TimelineExperience({company, companyIndex, isLast}: {
 					)
 				}
 
-
+				<div className="flex flex-wrap gap-2 mt-2">
+					{company.skills.map((skill, index) => (
+						<Badge key={`skill-${companyIndex}-${index}`} type={'flat'} color={'gray'}
+							   className={'text-neutral-700 dark:text-gray-400  border-white font-normal'}>
+							{skill}
+						</Badge>
+					))}
+				</div>
 			</div>
 		</TimelineEvent>
+	);
+}
+
+
+function TimelineSectionList({name, items, className}: {
+	name: string;
+	items: string[];
+	className?: string
+}) {
+	if (items.length === 0) {
+		return;
+	}
+
+	return (
+		<>
+			<p className={cn('text-md font-semibold text-foreground my-2', className)}>
+				{name}:
+			</p>
+			<ol className={`list-disc flex flex-col pl-4 mb-4 custom-list-marker`}>
+				{items.map((item, index) => (
+					<li key={`item-${index}`}
+						className={`list-disc text-sm py-0.5 ml-1 text-muted-foreground`}>
+						{item}
+					</li>
+				))}
+			</ol>
+		</>
 	);
 }
