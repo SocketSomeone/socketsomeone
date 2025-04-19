@@ -1,9 +1,9 @@
 import React from 'react';
 import { TimelineEvent, TimelineHeader } from '../../molecules/Timeline';
-import { BriefcaseIcon, HeartIcon } from '@heroicons/react/24/solid';
+import { BriefcaseIcon, ChevronDownIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';
 import { cn } from '@/utils';
-import { ChevronRightIcon } from 'lucide-react';
+import { ExternalLinkIcon } from 'lucide-react';
 import Badge from '../../atoms/Badge';
 
 import './styles.css';
@@ -17,6 +17,7 @@ interface ExperienceEntry {
 interface Company extends ExperienceEntry {
 	name: string;
 	description?: string;
+	location: string;
 	url?: string;
 	role: string;
 	skills: string[];
@@ -31,6 +32,7 @@ export default function Experience() {
 		{
 			name: 'Necord',
 			url: 'https://necord.org',
+			location: 'Open Source - Remote',
 			startDate: 'Oct. 2021',
 			endDate: 'Present',
 			description:
@@ -52,6 +54,7 @@ export default function Experience() {
 		{
 			name: 'Yahont',
 			description: 'Participated in the development of a mobile application for selling jewelry products.',
+			location: 'Russia, Kazan - Remote',
 			url: 'https://yahont.online',
 			role: 'Software Engineer',
 			startDate: 'Feb. 2024',
@@ -71,6 +74,7 @@ export default function Experience() {
 		{
 			name: 'Fotrum',
 			description: 'Led the backend development of a competitive gaming mobile application aimed at rivaling Faceit.',
+			location: 'Russia, Saint-Petersburg - Remote',
 			url: 'https://apps.apple.com/ru/app/fotrum/id1564952971',
 			role: 'Tech Lead',
 			startDate: 'Dec. 2021',
@@ -111,6 +115,7 @@ export default function Experience() {
 		{
 			name: 'ZEN.CAR',
 			description: 'Contributed to the development of a service for selecting auto repair shops.',
+			location: 'Russia, Innopolis - Remote',
 			url: 'https://zencar.tech/',
 			role: 'Software Developer',
 			startDate: 'Nov. 2020',
@@ -146,6 +151,7 @@ export default function Experience() {
 		{
 			name: 'Burger Club',
 			description: 'Contributed to the development of a fast food delivery service.',
+			location: 'Russia, Kaliningrad - Remote',
 			role: 'Fullstack Developer',
 			startDate: 'Aug. 2020',
 			endDate: 'Nov. 2020',
@@ -171,6 +177,7 @@ export default function Experience() {
 		{
 			name: 'NIPBOX',
 			description: 'Worked on a full-cycle delivery service for Japanese sweets, allowing users to order randomized snack boxes via the website.',
+			location: 'Remote',
 			url: 'https://nipbox.ru',
 			role: 'Fullstack Developer',
 			startDate: 'Apr. 2019',
@@ -197,6 +204,8 @@ export default function Experience() {
 		},
 		{
 			name: 'Freelance',
+			description: 'Worked on various freelance projects, including a web application for a restaurant and a mobile application for a delivery service.',
+			location: 'Worldwide - Remote',
 			role: 'Fullstack Developer',
 			startDate: 'Jan. 2018',
 			endDate: 'Present',
@@ -243,7 +252,9 @@ function TimelineExperience({company, companyIndex, isLast}: {
 	const [isExpanded, setIsExpanded] = React.useState(false);
 
 	const canBeExpanded = Boolean(company.responsibilities.length ||
-		company.achievements.length || company.description?.length);
+		company.achievements.length);
+
+	const hasUrl = Boolean(company.url);
 
 	return (
 		<TimelineEvent
@@ -268,19 +279,25 @@ function TimelineExperience({company, companyIndex, isLast}: {
 						<TimelineHeader>
 							<div
 								className="flex-col gap-1 ml-4 inline-flex font-semibold leading-none text-xs sm:text-sm">
-								<div className="flex items-center text-foreground">
-									{company.name}
+								<h3 className="flex items-center text-foreground">
+									<span
+										className="inline-flex items-center text-lg print:text-base leading-tight group/link focus-visible:text-blue-500"
+										aria-label="{position} - {company}">
+										{company.role} <span className="px-1"> @ </span> <span
+										className={cn({
+											'text-blue-500': hasUrl
+										})}
+										onClick={() => open(company.url, '_blank')}
+									>{company.name}</span>
+									</span>
 
-									{canBeExpanded && (
-										<ChevronRightIcon
-											className={cn('w-3 md:w-4 md:ml-1 transition-all duration-200 ease-in-out', {
-												'transform rotate-90': isExpanded
-											})}/>
-									)}
-								</div>
+									<ExternalLinkIcon className={cn('w-4 md:w-4 md:ml-1 mb-1 text-blue-500', {
+										'hidden': !hasUrl
+									})}/>
+								</h3>
 								<span
-									className="font-sans text-xs text-neutral-700 dark:text-gray-400">
-								{company.role}
+									className="text-xs text-skin-muted">
+									{company.location}
 								</span>
 							</div>
 						</TimelineHeader>
@@ -289,38 +306,54 @@ function TimelineExperience({company, companyIndex, isLast}: {
 							{company.startDate} - {company.endDate}
 						</small>
 					</div>
-
 				</div>
 
-				{
-					canBeExpanded && (
-						<div className={cn(
-							'transition-all duration-500 ease-in-out overflow-hidden ',
-							isExpanded ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'
-						)}>
-							<p className="text-sm text-gray-800 dark:text-white my-2">
-								{company.description}
-							</p>
+				<div className={cn(
+					'overflow-hidden relative'
+				)}>
+					<p className="text-sm text-gray-800 dark:text-white mt-4">
+						{company.description}
+					</p>
 
-							<TimelineSectionList name={'Responsibilities'} items={company.responsibilities} />
-
-							<TimelineSectionList name={'Achievements'} items={company.achievements} />
-
-
-							{company.url && (
-								<a href={company.url} target="_blank" rel="noopener noreferrer"
-								   className="text-blue-500 text-xs font-semibold mt-4 inline-flex items-center">
-									Visit website
-								</a>
+					{canBeExpanded && (
+						<div
+							className={cn(
+								'overflow-hidden transition-all duration-300 ease-in-out max-sm:!h-auto md:after:from-background',
+								'dark:md:after:from-gray-900 dark:md:after:to-gray-900/0 md:after:w-full md:after:h-12 md:after:absolute md:after:bg-gradient-to-t md:after:left-0  md:after:bottom-0 md:after:content-[\'\']',
+								'md:after:transition-all duration-300 duration-200 ease-in-out',
+								isExpanded ? 'max-h-[1000px] md:after:h-0' : 'max-h-[90px]'
 							)}
-						</div>
-					)
-				}
+						>
+							<TimelineSectionList name={'Responsibilities'} items={company.responsibilities}/>
 
-				<div className="flex flex-wrap gap-2 mt-2">
+							<TimelineSectionList name={'Achievements'} items={company.achievements}/>
+						</div>
+					)}
+				</div>
+
+				<button className="flex flex-row items-center mt-2">
+					{canBeExpanded && (
+						<>
+							<span
+								className={cn('text-xs  font-semibold cursor-pointer underline')}>
+							Show {isExpanded ? 'less' : 'more'}
+							</span>
+
+							<ChevronDownIcon className={
+								cn('w-4 h-4 ml-1', {
+									'rotate-180': isExpanded
+								})
+							}/>
+						</>
+					)}
+				</button>
+
+				<div className="flex flex-wrap gap-2 mt-3">
 					{company.skills.map((skill, index) => (
-						<Badge key={`skill-${companyIndex}-${index}`} type={'flat'} color={'gray'}
-							   className={'text-neutral-700 dark:text-gray-400  border-white font-normal'}>
+						<Badge key={`skill-${companyIndex}-${index}`}
+							   type={'flat'}
+							   color={'blue'}
+							   className={' border-white font-normal rounded-md'}>
 							{skill}
 						</Badge>
 					))}

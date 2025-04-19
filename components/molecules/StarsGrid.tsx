@@ -9,7 +9,7 @@ export default function StarsGrid({stars}: Props) {
   const {resolvedTheme} = useTheme();
 
   if (!stars || resolvedTheme !== 'dark') {
-    return (<></>)
+    return;
   }
 
   return (

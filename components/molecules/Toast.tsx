@@ -76,7 +76,7 @@ export default function Toast() {
 
 
 	if (closed || !activity) {
-		return (<> </>);
+		return;
 	}
 
 	return (

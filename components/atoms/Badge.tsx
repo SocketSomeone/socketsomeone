@@ -26,11 +26,11 @@ const sizeVariants = {
 
 const textColorVariants = (color: ChipColor) => {
 	const colors: Record<ChipColor, string> = {
-		gray: 'text-gray-800 dark:text-gray-200',
-		red: 'text-red-800 dark:text-red-200',
-		blue: 'text-blue-800 dark:text-blue-200',
-		green: 'text-green-800 dark:text-green-200',
-		yellow: 'text-yellow-800 dark:text-yellow-200',
+		gray: 'text-gray-500 dark:text-gray-500',
+		red: 'text-red-500 dark:text-red-500',
+		blue: 'text-blue-500 dark:text-blue-500',
+		green: 'text-green-500 dark:text-green-500',
+		yellow: 'text-yellow-500 dark:text-yellow-500',
 		white: 'text-white dark:text-white',
 	};
 	return colors[color] || 'text-black';
@@ -38,12 +38,12 @@ const textColorVariants = (color: ChipColor) => {
 
 const bgColorVariants = (color: ChipColor) => {
 	const colors: Record<ChipColor, string> = {
-		gray: 'bg-gray-100 dark:bg-gray-800',
-		red: 'bg-red-100 dark:bg-red-800',
-		blue: 'bg-blue-100 dark:bg-blue-800',
-		green: 'bg-green-100 dark:bg-green-800',
-		yellow: 'bg-yellow-100 dark:bg-yellow-800',
-		white: 'bg-white dark:bg-gray-800',
+		gray: 'bg-gray-500/10 dark:bg-gray-500/20',
+		red: 'bg-red-500/10 dark:bg-red-500/20',
+		blue: 'bg-blue-500/10 dark:bg-blue-500/20',
+		green: 'bg-green-500/10 dark:bg-green-500/20',
+		yellow: 'bg-yellow-500/10 dark:bg-yellow-500/20',
+		white: 'bg-white dark:bg-gray-500/20',
 	};
 	return colors[color] || 'bg-white';
 };

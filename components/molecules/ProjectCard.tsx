@@ -49,7 +49,7 @@ export default function ProjectCard({
 					<h1 className="text-2xl truncate w-fit font-medium dark:text-white ">{title}</h1>
 
 					{
-						(chipData.need) && <>
+						chipData.need && <>
 							<Badge size={'xs'} color={chipData.color} type={'outlined'}
 								   icon={chipData.icon} iconPosition={'right'}
 								   className={'ml-2 my-auto rounded-lg text-xs py-[0.15rem]'}>{chipData.text}</Badge>

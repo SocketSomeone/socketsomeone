@@ -58,7 +58,7 @@ export default function Home() {
 					className="h-screen flex flex-col">
 					<Intro/>
 
-					{projects.length &&
+					{projects.length > 0 &&
 						<div className="justify-center mb-5">
 							<ChevronDownIcon
 								className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
