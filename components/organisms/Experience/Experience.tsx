@@ -6,7 +6,7 @@ import { cn } from '@/utils';
 import { ExternalLinkIcon } from 'lucide-react';
 import Badge from '../../atoms/Badge';
 
-import './styles.css';
+import './styles.module.css';
 
 
 interface ExperienceEntry {
