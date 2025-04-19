@@ -55,3 +55,11 @@ export const TimelineDot = ({active,}: { active: boolean; }) => {
 		</div>
 	);
 };
+
+export const TimelinePeriod = ({startDate, endDate}: { startDate: string, endDate: string }) => {
+	return (
+		<small className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+			{startDate} - {endDate}
+		</small>
+	);
+};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimelineEvent, TimelineHeader } from '../../molecules/Timeline';
+import { TimelineEvent, TimelineHeader, TimelinePeriod } from '../../molecules/Timeline';
 import { BriefcaseIcon, ChevronDownIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';
 import { cn } from '@/utils';
@@ -309,9 +309,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 							</div>
 						</TimelineHeader>
 
-						<small className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-							{company.startDate} - {company.endDate}
-						</small>
+						<TimelinePeriod startDate={company.startDate} endDate={company.endDate ?? 'Present'}/>
 					</div>
 				</div>
 
