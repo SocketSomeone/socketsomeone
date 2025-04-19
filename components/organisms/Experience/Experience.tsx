@@ -278,7 +278,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 					<div className="flex flex-row items-start justify-between w-full">
 						<TimelineHeader>
 							<div
-								className="flex-col gap-1 ml-4 inline-flex font-semibold leading-none text-xs sm:text-sm">
+								className="flex-col ml-4 inline-flex font-semibold leading-none text-xs sm:text-sm">
 								<h3 className="flex items-center text-foreground">
 									<div
 										className="inline-flex items-center text-lg print:text-base leading-tight group/link focus-visible:text-blue-500"
