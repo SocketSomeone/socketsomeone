@@ -280,20 +280,27 @@ function TimelineExperience({company, companyIndex, isLast}: {
 							<div
 								className="flex-col gap-1 ml-4 inline-flex font-semibold leading-none text-xs sm:text-sm">
 								<h3 className="flex items-center text-foreground">
-									<span
+									<div
 										className="inline-flex items-center text-lg print:text-base leading-tight group/link focus-visible:text-blue-500"
 										aria-label="{position} - {company}">
-										{company.role} <span className="px-1"> @ </span> <span
-										className={cn({
-											'text-blue-500': hasUrl
-										})}
-										onClick={() => open(company.url, '_blank')}
-									>{company.name}</span>
-									</span>
+										<span>
+											{company.role}
+											<span> @ </span>
+											<a
+												className={cn({
+													'text-blue-500': hasUrl
+												})}
+												href={company.url}
+											>{company.name}</a>
 
-									<ExternalLinkIcon className={cn('w-4 md:w-4 md:ml-1 mb-1 text-blue-500', {
-										'hidden': !hasUrl
-									})}/>
+											<ExternalLinkIcon
+												className={cn('w-4 md:w-4 ml-1 mb-1 text-blue-500 inline-block', {
+													'hidden': !hasUrl
+												})}
+											/>
+										</span>
+									</div>
+
 								</h3>
 								<span
 									className="text-xs text-skin-muted">
