@@ -37,12 +37,12 @@ export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProje
 								  loop: true,
 								  dragFree: true
 							  }}
-						plugins={[AutoScroll({
-							speed: 2,
-							direction:  index % 2 === 0 ? 'backward' : 'forward',
-							stopOnInteraction: false,
-							startDelay: 1
-						})]}
+							  plugins={[AutoScroll({
+								  speed: 2,
+								  direction: index % 2 === 0 ? 'backward' : 'forward',
+								  stopOnInteraction: false,
+								  startDelay: 1
+							  })]}
 							  className={'w-[100vw]'}
 					>
 						<CarouselContent>
