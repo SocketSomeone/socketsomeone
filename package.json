@@ -34,7 +34,7 @@
     "eslint": "9.25.1",
     "eslint-config-next": "15.3.1",
     "framer-motion": "^12.9.4",
-    "lucide-react": "^0.506.0",
+    "lucide-react": "^0.507.0",
     "motion": "^12.9.4",
     "next": "^15.3.1",
     "next-pwa": "^5.6.0",
