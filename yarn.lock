@@ -6001,12 +6001,12 @@ motion-utils@^12.9.4:
   resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-12.9.4.tgz#9d5a45a19971e20059911526d7af2217c5158fa2"
   integrity sha512-BW3I65zeM76CMsfh3kHid9ansEJk9Qvl+K5cu4DVHKGsI52n76OJ4z2CUJUV+Mn3uEP9k1JJA3tClG0ggSrRcg==
 
-motion@^12.9.4:
-  version "12.9.4"
-  resolved "https://registry.yarnpkg.com/motion/-/motion-12.9.4.tgz#bb38a4b86ac48e6288a053f20b82e110623a0462"
-  integrity sha512-ZMKNnhWylaIbtFmU+scDxdldk//3Rn/8B+dcDhIpGlixAl7yhiLx1WXyGD4TSJZf3sDU6yrnu3L3FWGFo4fTEQ==
+motion@^12.9.7:
+  version "12.9.7"
+  resolved "https://registry.yarnpkg.com/motion/-/motion-12.9.7.tgz#04df6b0d6bd058e3c9d56a1140a6ae47018a5d0f"
+  integrity sha512-Vh5NJxec7lZ4iNZXEhdweJpKwP2gjgevL/4Dx+dfMc7ABPMnLJaBUkz91TG/ZONhz/GUAy0Mw3Xd5rYtnxNRmw==
   dependencies:
-    framer-motion "^12.9.4"
+    framer-motion "^12.9.7"
     tslib "^2.4.0"
 
 ms@^2.1.1, ms@^2.1.3:
