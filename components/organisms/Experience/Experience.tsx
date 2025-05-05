@@ -260,10 +260,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 		<TimelineEvent
 			active={!company.endDate || company.endDate.includes('Present')}
 			last={isLast}
-			className="transition duration-400 ease-in-out"
-			onClick={() => {
-				setIsExpanded(!isExpanded);
-			}}>
+			className="transition duration-400 ease-in-out">
 			<div className="flex flex-col">
 				<div className="flex flex-row items-center text-blue-500">
 					{company.icon && (
@@ -336,7 +333,12 @@ function TimelineExperience({company, companyIndex, isLast}: {
 					)}
 				</div>
 
-				<button className="flex flex-row items-center mt-2">
+				<button className="flex flex-row items-center mt-2"
+						onClick={() => {
+							setIsExpanded(!isExpanded);
+						}}
+						aria-label={isExpanded ? 'Show less' : 'Show more'}
+				>
 					{canBeExpanded && (
 						<>
 							<span
@@ -353,16 +355,19 @@ function TimelineExperience({company, companyIndex, isLast}: {
 					)}
 				</button>
 
-				<div className="flex flex-wrap gap-2 mt-3">
-					{company.skills.map((skill, index) => (
-						<Badge key={`skill-${companyIndex}-${index}`}
-							   type={'flat'}
-							   color={'blue'}
-							   className={' border-white font-normal rounded-md'}>
-							{skill}
-						</Badge>
-					))}
-				</div>
+				{company.skills.length > 0 && (
+
+					<div className="flex flex-wrap gap-2 mt-3">
+						{company.skills.map((skill, index) => (
+							<Badge key={`skill-${companyIndex}-${index}`}
+								   type={'flat'}
+								   color={'blue'}
+								   className={' border-white font-normal rounded-md'}>
+								{skill}
+							</Badge>
+						))}
+					</div>
+				)}
 			</div>
 		</TimelineEvent>
 	);

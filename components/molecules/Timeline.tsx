@@ -21,7 +21,7 @@ export const TimelineEvent = ({active, last, children, onClick, className}: Time
 			<TimelineDot active={!!active}/>
 
 			<div
-				className={cn('relative w-full py-5 px-4 md:px-8 cursor-pointer', className)}
+				className={cn('relative w-full py-5 px-4 md:px-8', className)}
 				onClick={onClick}
 			>
 				<div className="-translate-y-1 flex flex-col gap-2">{children}</div>
