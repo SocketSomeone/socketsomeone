@@ -51,7 +51,7 @@
     "use-http": "^1.0.28"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.0",
+    "@commitlint/cli": "19.8.1",
     "@commitlint/config-angular": "19.8.0",
     "@release-it/conventional-changelog": "^10.0.1",
     "husky": "^9.1.7",
