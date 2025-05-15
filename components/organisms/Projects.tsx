@@ -1,7 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react";
-import { useFetch } from "use-http";
+import { JSX } from "react";
 import SectionHeader from "../atoms/SectionHeader";
 import LaurelIcon from "../icons/LaurelIcon";
 import Loader from "../atoms/Loader";
@@ -22,7 +21,7 @@ export default function Projects({
 
 
 	if (projects.length === 0) {
-		return
+		return <></>
 	}
 
 	return (
