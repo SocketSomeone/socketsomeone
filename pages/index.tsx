@@ -48,10 +48,10 @@ export default function Home() {
 	}
 
 	useEffect(() => {
-		if (isPrintMode) {
+		if (isPrintMode && !loading) {
 			window.print()
 		}
-	}, [isPrintMode]);
+	}, [isPrintMode, loading]);
 
 	return (
 		<Page>

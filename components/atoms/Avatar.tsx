@@ -23,7 +23,7 @@ function getStatusColor(status: string = 'offline'): string {
 }
 
 export default function Avatar() {
-    const [avatar /*, setAvatar */] = useState<string>("https://avatars.githubusercontent.com/u/30754373");
+    const [avatar /*, setAvatar */] = useState<string>("https://github.com/SocketSomeone.png");
     const [presence, setPresence] = useState<LanyardPresence>();
     const [loading, setLoading] = useState<boolean>(true);
 

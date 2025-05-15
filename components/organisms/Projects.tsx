@@ -15,9 +15,9 @@ interface ProjectsProps {
 
 export default function Projects({
 									 projects,
-	loading,
-	error,
-}: ProjectsProps): JSX.Element {
+									 loading,
+									 error,
+								 }: ProjectsProps): JSX.Element {
 
 
 	if (projects.length === 0) {
@@ -62,7 +62,6 @@ export default function Projects({
 				<span className="truncate text-lg font-regular">
                                 More projects on my GitHub
                                 </span>
-
 			</a>
 
 		</div>
