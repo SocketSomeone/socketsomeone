@@ -13,7 +13,7 @@ export default function StarsGrid({stars}: Props) {
   }
 
   return (
-    <div className="z-[-1]">
+    <div className="z-[-1] print:hidden">
       {stars && new Array(stars).fill(stars).map((_, i) => <Star key={i}/>)}
     </div>
   );

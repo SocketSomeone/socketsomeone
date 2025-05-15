@@ -56,7 +56,7 @@ export default function Avatar() {
                            quality={100}
                            alt="avatar"/>
                 }
-                <span className="flex">
+                <span className="flex print:hidden">
                     <span
                         className={"animate-ping bottom-0 right-5 absolute inline-flex h-7 w-7 rounded-full opacity-75 " + getStatusColor(presence?.discord_status)}></span>
                     <span

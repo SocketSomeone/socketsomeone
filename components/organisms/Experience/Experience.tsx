@@ -230,7 +230,7 @@ export default function Experience() {
 	});
 
 	return (
-		<div className="md:container text-muted-foreground self-center pt-10 w-full relative">
+		<div className="md:container text-muted-foreground self-center pt-10 w-full relative print:pt-0">
 			{companies.map((company, companyIndex) => (
 				<TimelineExperience
 					key={`timeline-${companyIndex}`}
@@ -272,7 +272,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 						</div>
 					)}
 
-					<div className="flex flex-row items-start justify-between w-full">
+					<div className="flex flex-col-reverse sm:flex-row items-start justify-between w-full print:break-inside-avoid">
 						<TimelineHeader>
 							<div
 								className="flex-col ml-4 inline-flex font-semibold leading-none text-xs sm:text-sm">
@@ -306,7 +306,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 							</div>
 						</TimelineHeader>
 
-						<TimelinePeriod startDate={company.startDate} endDate={company.endDate ?? 'Present'}/>
+						<TimelinePeriod className={'ml-4 md:ml-0'} startDate={company.startDate} endDate={company.endDate ?? 'Present'}/>
 					</div>
 				</div>
 
@@ -323,7 +323,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 								'overflow-hidden transition-all duration-300 ease-in-out max-sm:!h-auto md:after:from-background',
 								'dark:md:after:from-gray-900 dark:md:after:to-gray-900/0 md:after:w-full md:after:h-12 md:after:absolute md:after:bg-gradient-to-t md:after:left-0  md:after:bottom-0 md:after:content-[\'\']',
 								'md:after:transition-all duration-300 duration-200 ease-in-out',
-								isExpanded ? 'max-h-[1000px] md:after:h-0' : 'max-h-[90px]'
+								isExpanded ? 'max-h-[1000px] md:after:h-0' : 'max-h-[90px] print:max-h-[1000px] md:after:h-12',
 							)}
 						>
 							<TimelineSectionList name={'Responsibilities'} items={company.responsibilities}/>
@@ -333,7 +333,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 					)}
 				</div>
 
-				<button className="flex flex-row items-center mt-2"
+				<button className="flex flex-row items-center mt-2 print:hidden"
 						onClick={() => {
 							setIsExpanded(!isExpanded);
 						}}
@@ -356,7 +356,6 @@ function TimelineExperience({company, companyIndex, isLast}: {
 				</button>
 
 				{company.skills.length > 0 && (
-
 					<div className="flex flex-wrap gap-2 mt-3">
 						{company.skills.map((skill, index) => (
 							<Badge key={`skill-${companyIndex}-${index}`}

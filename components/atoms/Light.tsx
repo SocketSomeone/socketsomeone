@@ -1,6 +1,6 @@
 export default function Light() {
     return (
-        <div className="absolute z-[-1] top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none select-none">
+        <div className="absolute z-[-1] top-0 inset-x-0 flex justify-center overflow-hidden pointer-events-none select-none print:hidden">
             <div className="w-[108rem] flex-none flex justify-end">
                 <picture>
                     <source srcSet="/images/light-gradient.avif" type="image/avif"/>

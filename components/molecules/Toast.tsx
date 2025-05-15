@@ -80,7 +80,7 @@ export default function Toast() {
 	}
 
 	return (
-		<div className="fixed bottom-2 right-2 z-99">
+		<div className="fixed bottom-2 right-2 z-99 print:hidden">
 			<div id="toast-message-cta"
 				 className="w-full max-w-md p-4 text-gray-500 bg-white rounded-xl  shadow-2xl shadow-black/5 ring-1 ring-slate-700/10 dark:bg-gray-800 dark:text-gray-400"
 				 role="alert">

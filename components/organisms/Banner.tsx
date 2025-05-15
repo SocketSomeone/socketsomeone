@@ -6,7 +6,7 @@ import AnimatedShinyText from '@/components/magicui/animated-shiny-text';
 export default function Banner() {
   return (
     <a href="https://t.me/socketsomeoneshit"
-       className="flex items-center truncate">
+       className="flex items-center truncate print:hidden">
       <AnimatedGradientText className="overflow-hidden ">
         🚀
 

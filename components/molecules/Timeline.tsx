@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import {cn} from '@/lib/utils';
 
 type TimelineEventProps = {
 	active?: boolean;
@@ -56,9 +56,11 @@ export const TimelineDot = ({active,}: { active: boolean; }) => {
 	);
 };
 
-export const TimelinePeriod = ({startDate, endDate}: { startDate: string, endDate: string }) => {
+export const TimelinePeriod = ({className, startDate, endDate}: { className: string, startDate: string, endDate: string }) => {
 	return (
-		<small className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+		<small className={
+			cn('text-xs sm:text-sm tabular-nums text-muted-foreground text-right whitespace-nowrap', className)
+		}>
 			{startDate} - {endDate}
 		</small>
 	);

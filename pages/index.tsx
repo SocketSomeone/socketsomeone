@@ -1,25 +1,27 @@
 'use client';
 
 import Light from '../components/atoms/Light';
-import { ChevronDownIcon, LinkIcon } from '@heroicons/react/24/solid';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { useEffect, useMemo, useState } from 'react';
-import { useFetch } from 'use-http';
-import Loader from '../components/atoms/Loader';
 import Technologies from '../components/molecules/Technologies';
 import Toast from '../components/molecules/Toast';
-import MarqueeProjectsHorizontal from '@/components/organisms/MarqueeProjectsHorizontal';
 import Intro from '@/components/organisms/Intro';
 import StarsGrid from '@/components/molecules/StarsGrid';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience/Experience';
 import { LucideGraduationCap } from 'lucide-react';
-import LaurelIcon from '@/components/icons/LaurelIcon';
 import Page from '@/components/Page';
+import Projects from "@/components/organisms/Projects";
+import { useSearchParams } from "next/navigation";
+import Contact from "@/components/organisms/Contact";
+import { useFetch } from "use-http";
 
 export default function Home() {
 	const [projects, setProjects] = useState<any>([]);
 	const [starsCount, setStarsCount] = useState(0);
 	const stars = useMemo(() => starsCount, [projects]);
+	const searchParams = useSearchParams();
+	const isPrintMode = searchParams.has('view', 'cv');
 	const {
 		get,
 		response,
@@ -45,6 +47,12 @@ export default function Home() {
 		setStarsCount(80);
 	}
 
+	useEffect(() => {
+		if (isPrintMode) {
+			window.print()
+		}
+	}, [isPrintMode]);
+
 	return (
 		<Page>
 			<Light/>
@@ -53,76 +61,37 @@ export default function Home() {
 			<div
 				className="md:container px-5 pt-6 md:pt-0 mx-auto my-auto w-full">
 
-
 				<div
-					className="h-screen flex flex-col">
+					className="h-screen flex flex-col print:h-auto">
 					<Intro/>
 
-					{projects.length > 0 &&
-						<div className="justify-center mb-5">
-							<ChevronDownIcon
-								className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
-								onClick={() => {
-									window.scrollTo({
-										top: document.getElementById('projects')?.offsetTop,
-										behavior: 'smooth'
-									});
-								}}
-							/>
-						</div>
-					}
+					<div className="justify-center mb-5 print:hidden">
+						<ChevronDownIcon
+							className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
+							onClick={() => {
+								window.scrollTo({
+									top: ['projects', 'experience'].map((id) => document.getElementById(id))
+										.find(Boolean)
+										?.offsetTop,
+									behavior: 'smooth'
+								});
+							}}
+						/>
+					</div>
 				</div>
 			</div>
 
-			{projects.length > 0 &&
-				<div
-					id={'projects'}
-					className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1">
-
-
-					<SectionHeader
-						before={
-							<div className="flex flex-row items-center space-x-0 ">
-								<LaurelIcon
-									className="w-8 h-8 -scale-x-100 text-yellow-500"/>
-								<div
-									className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-									My Projects
-								</div>
-
-								<LaurelIcon className="w-8 h-8 text-yellow-500"/>
-							</div>
-						}
-						title={'Check out my latest work'}
-						description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}/>
-
-					<div className="flex flex-row justify-center py-16 w-full">
-						{
-							loading || error
-								? <Loader/>
-								: <MarqueeProjectsHorizontal projects={projects} rows={3}/>
-						}
-					</div>
-
-					<a href="https://github.com/SocketSomeone"
-					   className="flex items-center justify-center truncate mb-3 py-3 px-4 bg-white shadow-xl shadow-black/5 ring-1 ring-slate-600/10 hover:bg-slate-50 dark:bg-gray-800 dark:ring-gray-800 rounded-xl">
-
-						<LinkIcon className="w-4 h-4 mr-2"/>
-
-						<span className="truncate text-lg font-regular">
-                                More projects on my GitHub
-                                </span>
-
-					</a>
-
-				</div>
-			}
-
+			<Projects
+				projects={projects}
+				loading={loading}
+				error={error}
+			/>
 
 			<div
-				className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1">
+				id={'experience'}
+				className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1 print:block print:py-4 print:mb-0 print:space-y-0">
 
-				<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500"/>
+				<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500 print:hidden"/>
 
 				<SectionHeader head={'Experience'} title={'My professional journey'}
 							   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
@@ -130,21 +99,7 @@ export default function Home() {
 				<Experience/>
 			</div>
 
-			<div className="mb-14 py-14 container mx-auto px-4 flex flex-col justify-center items-center">
-				<SectionHeader
-					className="space-y-3"
-					head={'Contact'} title={'Get in Touch'}>
-
-					<p className={'mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'}>Have
-						a question or want to work together? Just shoot me a dm <a
-							className="text-blue-500 hover:underline" href={'https://t.me/socketsomeone'}
-							target="_blank">with a direct question on
-							telegram </a> and I&#39;ll respond whenever I can. I&#39;m always open to new
-						opportunities.</p>
-
-				</SectionHeader>
-			</div>
-
+			<Contact/>
 
 			<Technologies/>
 
