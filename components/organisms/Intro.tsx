@@ -35,7 +35,7 @@ export default function Intro() {
 
 					</h1>
 
-					<small className='text-foreground'>
+					<small className='text-muted-foreground text-sm font-medium'>
 						Russia, Saint-Petersburg
 					</small>
 				</div>
