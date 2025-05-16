@@ -14,12 +14,10 @@ export const GradientColors = {
 export default function AnimatedGradientText({
 												 children,
 												 className,
-												 isBorder = false,
 												 color = 'orange-purple',
 											 }: {
 	children: ReactNode;
 	className?: string;
-	isBorder?: boolean;
 	color?: keyof typeof GradientColors;
 }) {
 	return (

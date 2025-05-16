@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { cn } from '@/utils';
 import { DownloadIcon } from 'lucide-react';
 
-export default function CVDownloader(props: {}) {
+export default function CVDownloader() {
 	const openPrintMode = useCallback(() => window.print(), []);
 
 	return (
