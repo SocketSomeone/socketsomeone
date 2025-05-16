@@ -1,4 +1,4 @@
-import {cn} from '@/utils';
+import { cn } from '@/utils';
 import React from 'react';
 
 type Props = {
@@ -19,13 +19,16 @@ export default function SectionHeader({className, before, head, title, descripti
 			{before}
 
 			{head && <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm
-			print:text-2xl print:bg-transparent print:text-foreground print:font-bold print:px-4 print:pb-0
+			print:text-2xl print:bg-transparent print:text-foreground print:font-bold print:px-4 print:pb-0 print:mb-0
 			">{head}</div>}
 
 			<h1 className="text-3xl font-bold tracking-tighter sm:text-5xl print:hidden">{title}</h1>
 
-			{description &&
-				<p className={'text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed print:hidden'}>{description}</p>}
+			{description && (
+				<p className={'text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed print:hidden'}>
+					{description}
+				</p>
+			)}
 
 			{children}
 		</div>

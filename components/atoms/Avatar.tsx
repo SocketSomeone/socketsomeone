@@ -48,21 +48,21 @@ export default function Avatar() {
 
 	return (
 		<div className="flex flex-col items-center justify-center select-none">
-			<div className="relative">
-				{/*{loading*/}
-				{/*    ?*/}
-				{/*    <div className="w-40 h-40 rounded-full bg-gray-300 animate-pulse"/> :*/}
+			<div className="relative h-fit">
 				<Image className="h-40 w-40 rounded-full object-contain" width={4096} height={4096} src={avatar}
 					   quality={100}
 					   alt="avatar"/>
-				{/*}*/}
+
 				<span className="flex print:hidden">
                     <span
-						className={"animate-ping bottom-0 right-5 absolute inline-flex h-7 w-7 rounded-full opacity-75 " + getStatusColor(presence?.discord_status)}></span>
-                    <span
-						className={"bottom-0 right-5 absolute w-7 h-7 border-2 border-white dark:border-gray-800 rounded-full " + getStatusColor(presence?.discord_status)}></span>
-                    </span>
+						className={"animate-ping bottom-0 right-5 absolute inline-flex h-7 w-7 rounded-full opacity-75 " + getStatusColor(presence?.discord_status)}>
 
+					</span>
+                    <span
+						className={"bottom-0 right-5 absolute w-7 h-7 border-2 border-white dark:border-gray-800 rounded-full " + getStatusColor(presence?.discord_status)}>
+
+					</span>
+				</span>
 			</div>
 		</div>
 	)

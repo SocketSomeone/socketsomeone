@@ -57,25 +57,21 @@ export default function Home() {
 
 
 			<div
-				className="md:container px-5 pt-6 md:pt-0 mx-auto my-auto w-full">
+				className="md:container w-full h-screen flex flex-col print:h-fit px-4 pt-6 md:pt-0">
+				<Intro/>
 
-				<div
-					className="h-screen flex flex-col print:h-auto">
-					<Intro/>
-
-					<div className="justify-center mb-5 print:hidden">
-						<ChevronDownIcon
-							className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
-							onClick={() => {
-								window.scrollTo({
-									top: ['projects', 'experience'].map((id) => document.getElementById(id))
-										.find(Boolean)
-										?.offsetTop,
-									behavior: 'smooth'
-								});
-							}}
-						/>
-					</div>
+				<div className="justify-center mb-5 print:hidden">
+					<ChevronDownIcon
+						className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
+						onClick={() => {
+							window.scrollTo({
+								top: ['projects', 'experience'].map((id) => document.getElementById(id))
+									.find(Boolean)
+									?.offsetTop,
+								behavior: 'smooth'
+							});
+						}}
+					/>
 				</div>
 			</div>
 

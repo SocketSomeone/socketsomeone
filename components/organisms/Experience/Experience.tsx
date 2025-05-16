@@ -233,14 +233,14 @@ export default function Experience() {
 	return (
 		<div
 			id={'experience'}
-			className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1 print:block print:py-4 print:mb-0 print:space-y-0">
+			className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1 print:block print:py-8 print:mb-0 print:space-y-2">
 
 			<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500 print:hidden"/>
 
 			<SectionHeader head={'Experience'} title={'My professional journey'}
 						   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
 
-			<div className="md:container text-muted-foreground self-center pt-10 w-full relative print:pt-0">
+			<div className="md:container text-muted-foreground pt-10 relative flex flex-col items-center print:pt-0 print:px-0">
 				{companies.map((company, companyIndex) => (
 					<TimelineExperience
 						key={`timeline-${companyIndex}`}
@@ -271,9 +271,10 @@ function TimelineExperience({company, companyIndex, isLast}: {
 		<TimelineEvent
 			active={!company.endDate || company.endDate.includes('Present')}
 			last={isLast}
-			className="transition duration-400 ease-in-out">
+			className="transition duration-400 ease-in-out"
+		>
 			<div className="flex flex-col">
-				<div className="flex flex-row items-center text-blue-500">
+				<div className="flex flex-row items-center text-blue-500 print:break-inside-avoid">
 					{company.icon && (
 						<div className={cn(
 							'flex justify-center items-center w-12 h-12 rounded-md bg-blue-500/10 text-blue-500',
@@ -367,7 +368,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 				</button>
 
 				{company.skills.length > 0 && (
-					<div className="flex flex-wrap gap-2 mt-3">
+					<div className="flex flex-wrap gap-2 mt-3 print:break-inside-avoid">
 						{company.skills.map((skill, index) => (
 							<Badge key={`skill-${companyIndex}-${index}`}
 								   type={'flat'}
@@ -395,13 +396,13 @@ function TimelineSectionList({name, items, className}: {
 
 	return (
 		<>
-			<p className={cn('text-md font-semibold text-foreground my-2', className)}>
+			<p className={cn('text-md font-semibold text-foreground my-2 print:break-inside-avoid', className)}>
 				{name}:
 			</p>
 			<ol className={`list-disc flex flex-col pl-4 mb-4 custom-list-marker`}>
 				{items.map((item, index) => (
 					<li key={`item-${index}`}
-						className={`list-disc text-sm py-0.5 ml-1 text-muted-foreground`}>
+						className={`list-disc text-sm py-0.5 ml-1 text-muted-foreground print:break-inside-avoid`}>
 						{item}
 					</li>
 				))}
