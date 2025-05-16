@@ -2,14 +2,12 @@
 
 import Light from '../components/atoms/Light';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Technologies from '../components/molecules/Technologies';
 import Toast from '../components/molecules/Toast';
 import Intro from '@/components/organisms/Intro';
 import StarsGrid from '@/components/molecules/StarsGrid';
-import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience/Experience';
-import { LucideGraduationCap } from 'lucide-react';
 import Page from '@/components/Page';
 import Projects from '@/components/organisms/Projects';
 import { useSearchParams } from 'next/navigation';
