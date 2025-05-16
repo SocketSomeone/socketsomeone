@@ -1,7 +1,7 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { MoonIcon, SunIcon, ComputerDesktopIcon } from '@heroicons/react/24/solid';
+import { ComputerDesktopIcon, MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
 import { useEffect, useState } from 'react';
 
@@ -10,7 +10,7 @@ interface ThemeSwitcherProps {
 }
 
 export default function ThemeSwitcher({className}: ThemeSwitcherProps) {
-	const { theme, resolvedTheme, setTheme } = useTheme();
+	const { theme, setTheme } = useTheme();
 	const [isMounted, setIsMounted] = useState(false);
 
 	useEffect(() => {
@@ -37,7 +37,7 @@ export default function ThemeSwitcher({className}: ThemeSwitcherProps) {
 				return <SunIcon className="w-6 h-6 text-yellow-400"/>;
 			case 'system':
 				return <ComputerDesktopIcon
-					className={cn('w-6 h-6', resolvedTheme === 'light' ? 'text-black' : 'text-white')}/>;
+					className={cn('w-6 h-6 text-black dark:text-white')}/>;
 		}
 	};
 

@@ -20,7 +20,6 @@ export default function Banner() {
             `truncate inline animate-gradient bg-linear-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
           )}
         >
-
           <b className="hidden sm:inline ">Announcement:</b> Subscribe to my blog!
         </span>
         </AnimatedShinyText>

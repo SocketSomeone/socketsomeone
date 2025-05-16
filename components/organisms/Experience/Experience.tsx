@@ -3,10 +3,11 @@ import { TimelineEvent, TimelineHeader, TimelinePeriod } from '../../molecules/T
 import { BriefcaseIcon, ChevronDownIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';
 import { cn } from '@/utils';
-import { ExternalLinkIcon } from 'lucide-react';
+import { ExternalLinkIcon, LucideGraduationCap } from 'lucide-react';
 import Badge from '../../atoms/Badge';
 
 import './styles.module.css';
+import SectionHeader from '../../atoms/SectionHeader';
 
 
 interface ExperienceEntry {
@@ -230,15 +231,25 @@ export default function Experience() {
 	});
 
 	return (
-		<div className="md:container text-muted-foreground self-center pt-10 w-full relative print:pt-0">
-			{companies.map((company, companyIndex) => (
-				<TimelineExperience
-					key={`timeline-${companyIndex}`}
-					company={company}
-					companyIndex={companyIndex}
-					isLast={companyIndex === companies.length - 1}
-				/>
-			))}
+		<div
+			id={'experience'}
+			className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1 print:block print:py-4 print:mb-0 print:space-y-0">
+
+			<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500 print:hidden"/>
+
+			<SectionHeader head={'Experience'} title={'My professional journey'}
+						   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
+
+			<div className="md:container text-muted-foreground self-center pt-10 w-full relative print:pt-0">
+				{companies.map((company, companyIndex) => (
+					<TimelineExperience
+						key={`timeline-${companyIndex}`}
+						company={company}
+						companyIndex={companyIndex}
+						isLast={companyIndex === companies.length - 1}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }

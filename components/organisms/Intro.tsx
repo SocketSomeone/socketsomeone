@@ -29,13 +29,13 @@ export default function Intro() {
 						className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-300">SocketSomeone</span> your <span
 						className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Software Engineer</span>
 				</h1>
-				<div className='hidden print:flex flex-col mt-8 mb-2'>
+				<div className="hidden print:flex flex-col mt-8 mb-2">
 					<h1 className="text-3xl subpixel-antialiased sm:text-2xl md:text-4xl xl:text-6xl xl:leading-[70px] font-extrabold text-gray-900 dark:text-white flex-col mb-1">
 						Alexey Filippov
 
 					</h1>
 
-					<small className='text-muted-foreground text-sm font-medium'>
+					<small className="text-muted-foreground text-sm font-medium">
 						Russia, Saint-Petersburg
 					</small>
 				</div>
@@ -44,7 +44,7 @@ export default function Intro() {
 
 			<BlurFade delay={calculateDelay(3)} className={'print:blur-none! print:opacity-100! print:animate-none!'}>
 				<p
-					className="text-base md:text-xl subpixel-antialiased font-medium text-gray-500 dark:text-gray-300 leading-relaxed md:pb-8 print:hidden">You
+					className="text-base md:text-xl subpixel-antialiased font-medium text-gray-500 dark:text-gray-300 leading-relaxed print:hidden">You
 					just
 					found my profile! I&apos;m a
 					kitten who loves coffee and bugs! <span

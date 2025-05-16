@@ -2,7 +2,7 @@
 
 import Light from '../components/atoms/Light';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Technologies from '../components/molecules/Technologies';
 import Toast from '../components/molecules/Toast';
 import Intro from '@/components/organisms/Intro';
@@ -11,15 +11,15 @@ import SectionHeader from '@/components/atoms/SectionHeader';
 import Experience from '@/components/organisms/Experience/Experience';
 import { LucideGraduationCap } from 'lucide-react';
 import Page from '@/components/Page';
-import Projects from "@/components/organisms/Projects";
-import { useSearchParams } from "next/navigation";
-import Contact from "@/components/organisms/Contact";
-import { useFetch } from "use-http";
+import Projects from '@/components/organisms/Projects';
+import { useSearchParams } from 'next/navigation';
+import Contact from '@/components/organisms/Contact';
+import { useFetch } from 'use-http';
 
 export default function Home() {
 	const [projects, setProjects] = useState<any>([]);
 	const [starsCount, setStarsCount] = useState(0);
-	const stars = useMemo(() => starsCount, [projects]);
+	const stars = useMemo(() => starsCount, [starsCount]);
 	const searchParams = useSearchParams();
 	const isPrintMode = searchParams.has('view', 'cv');
 	const {
@@ -30,8 +30,8 @@ export default function Home() {
 	} = useFetch('https://raw.githubusercontent.com');
 
 	useEffect(() => {
-		initialProjects();
-	}, [projects]);
+		initialProjects().then();
+	}, [initialProjects, projects]);
 
 
 	async function initialProjects() {
@@ -49,7 +49,7 @@ export default function Home() {
 
 	useEffect(() => {
 		if (isPrintMode && !loading) {
-			window.print()
+			window.print();
 		}
 	}, [isPrintMode, loading]);
 
@@ -87,17 +87,7 @@ export default function Home() {
 				error={error}
 			/>
 
-			<div
-				id={'experience'}
-				className="my-auto w-full flex flex-col justify-center items-center mx-auto py-20 space-y-4 px-1 print:block print:py-4 print:mb-0 print:space-y-0">
-
-				<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500 print:hidden"/>
-
-				<SectionHeader head={'Experience'} title={'My professional journey'}
-							   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
-
-				<Experience/>
-			</div>
+			<Experience/>
 
 			<Contact/>
 
