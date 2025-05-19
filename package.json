@@ -32,7 +32,7 @@
     "cssnano": "^7.0.7",
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
-    "eslint": "9.26.0",
+    "eslint": "9.27.0",
     "eslint-config-next": "15.3.2",
     "framer-motion": "^12.12.1",
     "lucide-react": "^0.511.0",
