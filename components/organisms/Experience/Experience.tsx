@@ -27,9 +27,48 @@ interface Company extends ExperienceEntry {
 	icon?: React.ReactNode;
 }
 
+const WorkIcon = <BriefcaseIcon width={36}/>;
+const OpenSourceIcon = <HeartIcon width={36}/>;
+const OrderIcon = <BoltIcon width={36}/>;
+
 export default function Experience() {
 	const currentDate = new Date();
 	const companies: Company[] = [
+		{
+			name: 'X5 Tech',
+			url: 'https://x5.tech/',
+			location: 'Russia, Moscow - Remote',
+			startDate: 'Apr. 2024',
+			endDate: 'Present',
+			description: 'Contributed to the development of internal platform solutions by creating new services and tools aimed at improving the quality and scalability of the company’s information systems. Took part in strategic initiatives such as neural network integration, test automation, architectural transformation, and engineering culture development.',
+			role: 'Senior Software Engineer',
+			skills: [
+				'Node.js',
+				'TypeScript',
+				'Nest.js',
+				'Docker',
+				'CI/CD',
+			],
+			responsibilities: [
+				'Developed and maintained services powered by neural networks',
+				'Conducted internal research and POCs',
+				'Educated and mentored product development teams',
+				'Helped shape engineering policies and best practices',
+				'Built and evolved an internal testing automation platform',
+				'Designed and maintained libraries and services for test automation',
+				'Supported hiring and onboarding for strong cross-functional product teams',
+				'Promoted and nurtured internal engineering culture'
+			],
+			achievements: [
+				'Initiated and led the company’s open-source initiative',
+				'Automated test coverage generation based on OpenAPI specifications',
+				'Built an AI service that automatically generates test cases, code reviews, and business scenarios',
+				'Took part in designing and executing the architectural migration to NestJS',
+				'Developed a benchmarking and metrics system to evaluate neural network quality',
+				'Contributed to hiring top talent into core business teams'
+			],
+			icon: WorkIcon,
+		},
 		{
 			name: 'Necord',
 			url: 'https://necord.org',
@@ -50,7 +89,7 @@ export default function Experience() {
 				'Gained a community of 100+ developers using the package',
 				'More 400 stars on GitHub'
 			],
-			icon: <HeartIcon width={36}/>,
+			icon: OpenSourceIcon,
 		},
 		{
 			name: 'Yahont',
@@ -70,7 +109,7 @@ export default function Experience() {
 				'Wrote a significant part of the BFF in Node.js, reducing the workload on backend developers',
 				'Reduced the time needed to identify backend-related bugs'
 			],
-			icon: <BriefcaseIcon width={36}/>,
+			icon: WorkIcon,
 		},
 		{
 			name: 'Fotrum',
@@ -111,7 +150,7 @@ export default function Experience() {
 				'Introduced Domain-Driven Design (DDD) and Command Query Responsibility Segregation (CQRS)',
 				'Conducted a full development audit and documentation process'
 			],
-			icon: <BriefcaseIcon width={36}/>,
+			icon: WorkIcon,
 		},
 		{
 			name: 'ZEN.CAR',
@@ -147,7 +186,7 @@ export default function Experience() {
 				'Designed and implemented analytics algorithms to optimize order processing times, improving service efficiency',
 				'Successfully refactored the legacy codebase to improve readability, scalability, and maintainability'
 			],
-			icon: <BriefcaseIcon width={36}/>,
+			icon: WorkIcon,
 		},
 		{
 			name: 'Burger Club',
@@ -173,7 +212,7 @@ export default function Experience() {
 				'Improved skills in bot development',
 				'Conducted full application profiling and resolved performance issues'
 			],
-			icon: <BoltIcon width={36}/>,
+			icon: OrderIcon,
 		},
 		{
 			name: 'NIPBOX',
@@ -201,7 +240,7 @@ export default function Experience() {
 				'Achieved over 500,000 customers in a year with high conversion rates',
 				'Gained consistent organic traffic of 100+ unique visitors per day through SEO optimization'
 			],
-			icon: <BoltIcon width={36}/>,
+			icon: OrderIcon,
 		},
 		{
 			name: 'Freelance',
@@ -213,18 +252,18 @@ export default function Experience() {
 			skills: [],
 			responsibilities: [],
 			achievements: [],
-			icon: <BoltIcon width={36}/>,
+			icon: OrderIcon,
 		}
 	].sort((a, b) => {
 		const aEndDate = a.endDate ? new Date(a.endDate) : currentDate;
 		const bEndDate = b.endDate ? new Date(b.endDate) : currentDate;
 
-		if (a.endDate === 'Present') {
-			if (b.endDate === 'Present') {
-				return 0;
-			}
+		if (aEndDate.getTime() === bEndDate.getTime()) {
+			return 0;
+		}
 
-			return -1;
+		if (a.endDate === 'Present' && b.endDate !== 'Present') {
+			return 1;
 		}
 
 		return bEndDate.getTime() - aEndDate.getTime();
@@ -255,7 +294,7 @@ export default function Experience() {
 }
 
 
-function TimelineExperience({company, companyIndex, isLast}: {
+function TimelineExperience({ company, companyIndex, isLast }: {
 	company: Company,
 	companyIndex: number,
 	isLast?: boolean
@@ -385,7 +424,7 @@ function TimelineExperience({company, companyIndex, isLast}: {
 }
 
 
-function TimelineSectionList({name, items, className}: {
+function TimelineSectionList({ name, items, className }: {
 	name: string;
 	items: string[];
 	className?: string
