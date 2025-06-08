@@ -1,7 +1,7 @@
 import { DefaultSeoProps } from 'next-seo';
 
 const config: DefaultSeoProps = {
-	title: 'SocketSomeone • Vibing',
+	title: 'Alexey Filippov • SocketSomeone',
 	description: 'Personal website of SocketSomeone',
 	canonical: 'https://socketsomeone.me',
 	themeColor: '#3b82f6',
