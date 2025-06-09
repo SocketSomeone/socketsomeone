@@ -55,7 +55,6 @@ export default function Home() {
 		<Page>
 			<Light/>
 
-
 			<div
 				className="md:container w-full h-screen flex flex-col print:h-fit px-4 pt-6 md:pt-0">
 				<Intro/>

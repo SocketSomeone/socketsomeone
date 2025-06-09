@@ -2,7 +2,7 @@ import SectionHeader from "../atoms/SectionHeader";
 
 export default function Contact() {
 	return (
-		<div className="mb-14 py-14 container mx-auto px-4 flex flex-col justify-center items-center print:px-0 print:block print:mb-0 print:py-0">
+		<div id='contact'  className="mb-14 py-14 container mx-auto px-4 flex flex-col justify-center items-center print:px-0 print:block print:mb-0 print:py-0">
 			<SectionHeader
 				className="space-y-3"
 				head={'Contact'} title={'Get in Touch'}>

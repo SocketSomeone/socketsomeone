@@ -37,7 +37,7 @@ export default function ProjectCard({
 	return (
 		<a
 			href={url}
-			className="flex flex-row h-[180px] pointer-events-auto py-2 px-4 mx-2 my-4 w-[22rem] sm:w-[26rem] md:w-[24rem] lg:w-[26rem] xl:w-[30rem] rounded-xl
+			className="flex flex-row h-[160px] sm:h-[180px] pointer-events-auto py-2 px-4 mx-2 my-4 w-[18rem] sm:w-[26rem] md:w-[24rem] lg:w-[26rem] xl:w-[30rem] rounded-xl
 			bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50 dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer">
 			<img
 				src={thumbnail}
@@ -46,7 +46,7 @@ export default function ProjectCard({
 
 			<div className="flex flex-col justify-between overflow-hidden w-full p-4">
 				<div className="flex flex-row">
-					<h1 className="text-2xl truncate w-fit font-medium dark:text-white ">{title}</h1>
+					<h1 className="text-lg sm:text-2xl break-words w-fit font-medium dark:text-white ">{title}</h1>
 
 					{
 						chipData.need && <>

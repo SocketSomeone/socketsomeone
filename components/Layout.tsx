@@ -5,7 +5,7 @@ import CVDownloader from './molecules/CVDownloader';
 
 export default function Layout({children}: PropsWithChildren) {
 	return (
-		<div className="p-0 relative overflow-hidden">
+		<div className="p-0 relative flex flex-col min-h-screen overflow-hidden">
 			<CVDownloader/>
 
 			<ThemeSwitcher/>
