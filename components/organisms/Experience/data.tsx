@@ -102,6 +102,33 @@ export function getExperienceEntries(): ExperienceEntry[] {
 			icon: WorkIcon,
 		},
 		{
+			name: 'STC',
+			description: 'Development of a high-load information system, including a client application, admin panel, and server-side component. The system is designed for corporate environments, providing reliable data processing and integration with external services.',
+			location: 'Russia, Saint-Petersburg - Remote',
+			url: 'https://stс-groups.ru',
+			role: 'Software Architect',
+			startDate: 'Apr. 2023',
+			endDate: 'Feb. 2024',
+			skills: [
+				'Python',
+				'Architecture',
+				'UML'
+			],
+			responsibilities: [
+				"Designed the overall platform architecture: created an infrastructure diagram and described key components",
+				"Prepared technical documentation: functional diagrams for modules, API specifications, user permissions documentation",
+				"Developed CI/CD processes (GitLab CI, Docker) for automated build, test, and deployment of services",
+				"Collaborated with the development team and stakeholders to clarify requirements and coordinate changes"
+			],
+			achievements: [
+				"Analyzed the existing system, identified bottlenecks, and provided recommendations to improve fault tolerance and security",
+				"Performed performance profiling of key modules: reduced average response time by 40% by optimizing resource-intensive processes",
+				"Designed and implemented migration from a monolithic application to a microservices architecture (using message queues and caching), improving scalability and maintainability",
+				"Set up automated monitoring and metrics collection (log aggregation, load monitoring), enabling rapid response to system anomalies"
+			],
+			icon: WorkIcon,
+		},
+		{
 			name: 'Fotrum',
 			description: 'Led the backend development of a competitive gaming mobile application aimed at rivaling Faceit.',
 			location: 'Russia, Saint-Petersburg - Remote',

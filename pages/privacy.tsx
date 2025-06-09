@@ -2,7 +2,7 @@ import Page from '@/components/Page';
 
 export default function PrivacyPolicyPage() {
 	return (
-		<Page title="Privacy Policy - Socket Someone"
+		<Page title="Privacy Policy | SocketSomeone"
 			  description="Learn about our privacy practices and how we handle your personal information. Read our Privacy Policy for details on data collection, usage, and your rights.">
 			<div className="md:container mx-auto px-4 py-8">
 				<h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>

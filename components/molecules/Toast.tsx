@@ -82,76 +82,94 @@ export default function Toast() {
 	return (
 		<div className="fixed bottom-2 right-2 z-99 print:hidden">
 			<div id="toast-message-cta"
-				 className="w-full max-w-md p-4 text-gray-500 bg-white rounded-xl  shadow-2xl shadow-black/5 ring-1 ring-slate-700/10 dark:bg-gray-800 dark:text-gray-400"
+				 className="w-full max-w-md p-4 text-gray-500 bg-white rounded-xl shadow-2xl shadow-black/5 ring-1 ring-slate-700/10 dark:bg-gray-800 dark:text-gray-400"
 				 role="alert">
 				<div className="flex">
 					<div className="flex flex-col">
-						<div className="mb-2 text-sm font-semibold text-gray-900 dark:text-blue-500">My current activity
+						<div className="mb-2 text-sm font-semibold text-gray-900 dark:text-blue-500">
+							My current activity
 						</div>
 
-						<div className="flex">
+						<div className="flex items-start">
 							<div className="relative">
+								{largeImage && (
+									<Image
+										className="max-w-[80px] max-h-[80px] w-auto h-auto rounded-md object-contain"
+										onError={({ currentTarget }) => currentTarget.style.display = 'none'}
+										width={4096}
+										height={4096}
+										quality={100}
+										src={largeImage}
+										alt="Large Image"
+									/>
+								)}
 
-								{largeImage.length > 0 &&
-									<Image className="w-20 rounded-md object-contain"
-										   onError={({currentTarget}) => currentTarget.style.display = 'none'}
-										   width={4096} height={4096}
-										   quality={100}
-										   src={largeImage}
-										   alt="Large Image"/>
-								}
-
-
-								<span className="flex">
-                                    {smallImage.length > 0 &&
-										<Image
-											className={'top-14 left-14 absolute w-8 border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full '}
-											onError={({currentTarget}) => currentTarget.style.display = 'none'}
-											width={4096} height={4096}
-											quality={100}
-											src={smallImage}
-											alt="Small Image"/>
-									}
-
-                            </span>
+								{smallImage && (
+									<Image
+										className="absolute top-14 left-14 max-w-[32px] w-auto h-auto border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full"
+										onError={({ currentTarget }) => currentTarget.style.display = 'none'}
+										width={4096}
+										height={4096}
+										quality={100}
+										src={smallImage}
+										alt="Small Image"
+									/>
+								)}
 							</div>
 
-
-							<div className="ml-3 text-sm font-normal whitespace-nowrap max-w-[200px]">
-                                <span
-									className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">{activity.name}</span>
-								<div
-									className="text-sm font-normal truncate">{activity.details ?? 'Details not available'}
+							<div className="ml-3 text-sm font-normal whitespace-pre-line max-w-[220px]">
+								<div className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+									{activity.name}
 								</div>
-								<div className="text-sm font-normal truncate">{activity.state ?? 'State not available'}
-								</div>
-
-
-								{
-									(elapsed?.length > 0 || left?.length > 0) && (
-										<div
-											className="text-sm font-normal truncate">{left.length > 0 ? `${left} left` : `${elapsed} elapsed`}
-
-										</div>)
-								}
+								{activity.details && (
+									<div className="text-sm font-normal break-words">{activity.details}</div>
+								)}
+								{activity.state && (
+									<div className="text-sm font-normal break-words">{activity.state}</div>
+								)}
+								{(elapsed || left) && (
+									<div className="text-sm font-normal">
+										{left ? `${left} left` : `${elapsed} elapsed`}
+									</div>
+								)}
 							</div>
 						</div>
 					</div>
 
-
-					<button onClick={() => setClosed(true)} type="button"
-							className="ml-auto -mx-1.5 -my-1.5 bg-white justify-center items-center shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer"
-							data-dismiss-target="#toast-message-cta" aria-label="Close">
-						<span className="sr-only">Close</span>
-						<svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-							 fill="none" viewBox="0 0 14 14">
-							<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
-								  strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-						</svg>
-					</button>
+					<CloseButton
+						onClick={() => setClosed(true)}
+					/>
 				</div>
 			</div>
 		</div>
+	);
+}
 
+
+function CloseButton({ onClick, ariaLabel = 'Close' }: { onClick: () => void; ariaLabel?: string }) {
+	return (
+		<button
+			onClick={onClick}
+			type="button"
+			className="ml-auto -mx-1.5 -my-1.5 bg-white justify-center items-center shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer"
+			aria-label={ariaLabel}
+		>
+			<span className="sr-only">{ariaLabel}</span>
+			<svg
+				className="w-3 h-3"
+				aria-hidden="true"
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 14 14"
+			>
+				<path
+					stroke="currentColor"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeWidth="2"
+					d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+				/>
+			</svg>
+		</button>
 	);
 }
