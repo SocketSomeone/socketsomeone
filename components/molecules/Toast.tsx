@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { lanyard, LanyardActivity } from '@/utils';
 import Image from 'next/image';
+import { ClockIcon } from '@heroicons/react/24/solid';
 
 export default function Toast() {
 	const [closed, setClosed] = useState<boolean>(false);
@@ -90,11 +91,11 @@ export default function Toast() {
 							My current activity
 						</div>
 
-						<div className="flex items-start">
+						<div className="flex items-start gap-3">
 							<div className="relative">
 								{largeImage && (
 									<Image
-										className="max-w-[80px] max-h-[80px] w-auto h-auto rounded-md object-contain"
+										className="h-full w-auto max-h-[80px] rounded-md object-contain"
 										onError={({ currentTarget }) => currentTarget.style.display = 'none'}
 										width={4096}
 										height={4096}
@@ -112,13 +113,13 @@ export default function Toast() {
 										height={4096}
 										quality={100}
 										src={smallImage}
-										alt="Small Image"
+										alt="Small Icon"
 									/>
 								)}
 							</div>
 
-							<div className="ml-3 text-sm font-normal whitespace-pre-line max-w-[220px]">
-								<div className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">
+							<div className="text-sm font-normal whitespace-pre-line max-w-[220px]">
+								<div className="text-sm font-semibold text-gray-900 dark:text-white space-y-0.5">
 									{activity.name}
 								</div>
 								{activity.details && (
@@ -128,8 +129,11 @@ export default function Toast() {
 									<div className="text-sm font-normal break-words">{activity.state}</div>
 								)}
 								{(elapsed || left) && (
-									<div className="text-sm font-normal">
-										{left ? `${left} left` : `${elapsed} elapsed`}
+									<div className="flex items-center text-blue-600 dark:text-blue-500">
+										<ClockIcon width={16} height={16} className="inline-block mr-1"/>
+										<div className="text-sm font-normal ">
+											{left ? `${left} left` : `${elapsed} elapsed`}
+										</div>
 									</div>
 								)}
 							</div>
