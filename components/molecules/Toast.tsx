@@ -16,10 +16,14 @@ export default function Toast() {
 		const appId = activity?.application_id;
 
 		if (!asset) {
-			// Если нет изображения, но поле large_image — даём fallback на иконку приложения
+			if (!appId) {
+				return '';
+			}
+
 			if (field === 'large_image') {
 				return `https://dcdn.dstn.to/app-icons/${appId}.png?size=4096`;
 			}
+
 			return '';
 		}
 
