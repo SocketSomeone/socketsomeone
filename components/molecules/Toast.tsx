@@ -99,7 +99,7 @@ export default function Toast() {
 						</div>
 
 						<div className="flex items-center gap-3">
-							<div className={cn('relative', {
+							<div className={cn('relative flex h-max items-center', {
 								hidden: !largeImage && !smallImage,
 							})}>
 								{largeImage && (
@@ -116,7 +116,7 @@ export default function Toast() {
 
 								{smallImage && (
 									<Image
-										className="absolute top-14 left-14 max-w-[32px] w-auto h-auto border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full"
+										className="absolute -bottom-1 -right-1 max-w-[28px] w-auto h-auto border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full"
 										onError={({ currentTarget }) => currentTarget.style.display = 'none'}
 										width={4096}
 										height={4096}
