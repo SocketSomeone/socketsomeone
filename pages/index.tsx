@@ -52,7 +52,9 @@ export default function Home() {
 	}, [isPrintMode, loading]);
 
 	return (
-		<Page>
+		<Page
+			title="Alexey Filippov - Software Engineer"
+		>
 			<Light/>
 
 			<div

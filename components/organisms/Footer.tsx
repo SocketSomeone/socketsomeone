@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export default function Footer() {
 	return (
-		<footer className="px-4 pb-6 text-center print:hidden md:container">
-			<div className="flex flex-col items-center mb-2">
+		<footer className="px-4 py-6 text-center print:hidden md:container bg-background/60 dark:bg-gray-900/60 backdrop-blur-xs border border-b-0 sm:rounded-t-lg border-gray-200 dark:border-gray-700">
+			<div className="flex flex-col items-center mb-3">
 				<Link href="/">
-					<Logo className="w-12 mb-1 opacity-70 hover:opacity-100 duration-200"/>
+					<Logo className="w-12 opacity-70 hover:opacity-100 hover:scale-110 duration-300"/>
 				</Link>
 			</div>
 

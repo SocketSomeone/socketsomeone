@@ -1,7 +1,7 @@
 import { DefaultSeoProps } from 'next-seo';
 
 const config: DefaultSeoProps = {
-	title: 'Alexey Filippov - Software Engineer | SocketSomeone',
+	titleTemplate: '%s | SocketSomeone',
 	description: 'Personal website of Alexey Filippov, also known as SocketSomeone. A Software Engineer, Open-Source Enthusiast (OSS), and Tech Lead specializing in Backend development with over 5 years of experience.',
 	canonical: 'https://socketsomeone.me',
 	themeColor: '#3b82f6',
