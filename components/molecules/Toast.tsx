@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { lanyard, LanyardActivity } from '@/utils';
+import { cn, lanyard, LanyardActivity } from '@/utils';
 import Image from 'next/image';
 import { ClockIcon } from '@heroicons/react/24/solid';
 
@@ -12,19 +12,22 @@ export default function Toast() {
 	const [smallImage, setSmallImage] = useState<string>('');
 
 	const assetURL = useCallback((field: 'small_image' | 'large_image' = 'large_image') => {
-		if (!activity?.assets?.[field]) {
+		const asset = activity?.assets?.[field];
+		const appId = activity?.application_id;
+
+		if (!asset) {
+			// Если нет изображения, но поле large_image — даём fallback на иконку приложения
+			if (field === 'large_image') {
+				return `https://dcdn.dstn.to/app-icons/${appId}.png?size=4096`;
+			}
 			return '';
 		}
 
-		if (activity?.assets?.[field]?.startsWith('mp:')) {
-			return `https://media.discordapp.net/${activity.assets?.[field]?.slice(3)}?size=4096`;
+		if (asset.startsWith('mp:')) {
+			return `https://media.discordapp.net/${asset.slice(3)}?size=4096`;
 		}
 
-		if (!activity?.assets?.[field] && field === 'large_image') {
-			return `https://dcdn.dstn.to/app-icons/${activity?.application_id}.png?size=4096`;
-		}
-
-		return `https://cdn.discordapp.com/app-assets/${activity?.application_id}/${activity?.assets?.[field]}.png?size=4096`;
+		return `https://cdn.discordapp.com/app-assets/${appId}/${asset}.png?size=4096`;
 	}, [activity]);
 
 	useEffect(() => {
@@ -91,8 +94,10 @@ export default function Toast() {
 							My current activity
 						</div>
 
-						<div className="flex items-start gap-3">
-							<div className="relative">
+						<div className="flex items-center gap-3">
+							<div className={cn('relative', {
+								hidden: !largeImage && !smallImage,
+							})}>
 								{largeImage && (
 									<Image
 										className="h-full w-auto max-h-[80px] rounded-md object-contain"
