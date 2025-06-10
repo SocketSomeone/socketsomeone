@@ -24,7 +24,7 @@
     "@types/canvas-confetti": "^1.9.0",
     "@types/next-seo": "^2.1.2",
     "@types/node": "22.15.30",
-    "@types/react": "19.1.6",
+    "@types/react": "19.1.7",
     "@types/react-dom": "19.1.6",
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
