@@ -8,7 +8,7 @@ export default function PrivacyPolicyPage() {
 			  description="Learn about our privacy practices and how we handle your personal information. Read our Privacy Policy for details on data collection, usage, and your rights."
 		>
 			<div
-				className="md:container my-8 py-8 px-4 md:px-0! space-y-4">
+				className="md:container my-8 py-8 px-4 xl:px-0! space-y-4">
 				<div className="text-sm mb-1">
 					<Link href="/" className="text-blue-600 hover:underline flex items-center">
 						<ChevronLeftIcon width={16} height={16}/>
