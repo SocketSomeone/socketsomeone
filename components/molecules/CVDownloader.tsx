@@ -11,7 +11,7 @@ export default function CVDownloader({ className }: Props) {
 
 	return (
 		<button
-			className={cn("print:hidden space-x-1 flex items-center justify-center px-4 h-6 rounded-full bg-gray-100 dark:bg-gray-800 ring-1 ring-slate-600/10 dark:ring-slate-300/10 hover:bg-slate-50 select-none cursor-pointer", className)}
+			className={cn("print:hidden space-x-1 flex items-center justify-center px-4 h-6 rounded-full bg-white/60 dark:bg-gray-800/60 ring-1 ring-slate-600/10 dark:ring-slate-300/10 hover:bg-slate-50 select-none cursor-pointer", className)}
 			onClick={openPrintMode}
 			aria-label="Download CV"
 		>
