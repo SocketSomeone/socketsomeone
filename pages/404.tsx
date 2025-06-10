@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Placeholder from '@/components/molecules/Placeholder';
 import { useRouter } from 'next/router';
 
