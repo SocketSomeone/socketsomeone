@@ -155,7 +155,7 @@ function ExperienceExpandableBody({ entry }: { entry: ExperienceEntry }) {
 							</span>
 
 						<ChevronDownIcon className={
-							cn('w-4 h-4 ml-1', {
+							cn('w-4 h-4 ml-1 cursor-pointer', {
 								'rotate-180': isExpanded
 							})
 						}/>

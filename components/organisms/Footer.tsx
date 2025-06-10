@@ -15,7 +15,7 @@ export default function Footer() {
 
 			<div className="flex flex-wrap justify-center gap-6 gap-y-2 text-sm font-medium mb-6 text-gray-600 dark:text-gray-300">
 				<Link href="/">About</Link>
-				<button onClick={() => window.print()}>Resume</button>
+				<button className='cursor-pointer' onClick={() => window.print()}>Resume</button>
 				<Link href="/#projects">Projects</Link>
 				<Link href="/#contact">Contacts</Link>
 				<Link href="/privacy">Privacy Policy</Link>

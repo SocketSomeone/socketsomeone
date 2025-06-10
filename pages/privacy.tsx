@@ -75,56 +75,7 @@ export default function PrivacyPolicyPage() {
 				</section>
 
 				<section className="space-y-2 text-sm">
-					<h2 className="text-lg font-semibold">4. Your Choices</h2>
-					<p>
-						You can disable cookies or use browser extensions to block tracking
-						services. For details on managing privacy settings:
-					</p>
-					<ul className="list-disc list-inside space-y-1">
-						<li><a href="https://tools.google.com/dlpage/gaoptout" className="underline text-blue-600 dark:text-blue-400">Google
-							Analytics Opt-out</a></li>
-						<li><a href="https://yandex.com/support/metrica/general/opt-out.html"
-							   className="underline text-blue-600 dark:text-blue-400">Yandex Metrica Opt-out</a></li>
-					</ul>
-				</section>
-
-				<section className="space-y-2 text-sm">
-					<h2 className="text-lg font-semibold">5. GDPR Compliance (EU Users)</h2>
-					<p>
-						If you are located in the European Economic Area (EEA), we collect and process your data
-						only after obtaining your explicit consent via our cookie banner. The data collected
-						(e.g. IP address, device information, user behavior) is considered personal information
-						under the GDPR and is handled accordingly.
-					</p>
-					<p>
-						You have the right to access, correct, delete, or restrict the use of your data.
-						You can revoke consent at any time.
-					</p>
-					<p>
-						Data is processed by Google Analytics (USA) and Yandex Metrika (Russia), which may
-						involve international data transfers.
-					</p>
-					<p>
-						If you have GDPR-related concerns, please contact us at{' '}
-						<a href="mailto:socket.someone@gmail.com" className="underline text-blue-600 dark:text-blue-400">
-							socket.someone@gmail.com
-						</a>.
-					</p>
-				</section>
-
-				<section className="space-y-2 text-sm">
-					<h2 className="text-lg font-semibold">6. Data Retention</h2>
-					<p>
-						We retain anonymized usage data collected via Google Analytics and Yandex Metrika
-						for up to <span className="font-medium">24 months</span>. After this period, the data is automatically deleted.
-					</p>
-					<p>
-						We do not store any personally identifiable information on our servers.
-					</p>
-				</section>
-
-				<section className="space-y-2 text-sm">
-					<h2 className="text-lg font-semibold">7. Cookies</h2>
+					<h2 className="text-lg font-semibold">4. Cookies</h2>
 
 					<h3 className="text-md font-semibold">What are Cookies?</h3>
 					<p>
@@ -190,6 +141,18 @@ export default function PrivacyPolicyPage() {
 									expiration: '1 year'
 								},
 								{
+									name: 'yandexuid, yabs-sid,  yuidssc',
+									provider: 'Yandex Metrica',
+									purpose: 'User identification and session tracking',
+									expiration: '1 year'
+								},
+								{
+									name: 'ymex',
+									provider: 'Yandex Metrica',
+									purpose: 'User session tracking',
+									expiration: '1 year'
+								},
+								{
 									name: '__cf_bm',
 									provider: 'Cloudflare',
 									purpose: 'Bot mitigation and security',
@@ -221,8 +184,74 @@ export default function PrivacyPolicyPage() {
 					</p>
 				</section>
 
+
 				<section className="space-y-2 text-sm">
-					<h2 className="text-lg font-semibold">8. Contact Information</h2>
+					<h2 className="text-lg font-semibold">5. Your Choices</h2>
+					<p>
+						You can disable cookies or use browser extensions to block tracking
+						services. For details on managing privacy settings:
+					</p>
+					<ul className="list-disc list-inside space-y-1">
+						<li><a href="https://tools.google.com/dlpage/gaoptout" className="underline text-blue-600 dark:text-blue-400">Google
+							Analytics Opt-out</a></li>
+						<li><a href="https://yandex.com/support/metrica/general/opt-out.html"
+							   className="underline text-blue-600 dark:text-blue-400">Yandex Metrica Opt-out</a></li>
+					</ul>
+				</section>
+
+				<section className="space-y-2 text-sm">
+					<h2 className="text-lg font-semibold">6. Data Retention</h2>
+					<p>
+						We retain anonymized usage data collected via Google Analytics and Yandex Metrika
+						for up to <span className="font-medium">24 months</span>. After this period, the data is automatically deleted.
+					</p>
+					<p>
+						We do not store any personally identifiable information on our servers.
+					</p>
+				</section>
+
+				<section className="space-y-2 text-sm">
+					<h2 className="text-lg font-semibold">7. GDPR Compliance (EU Users)</h2>
+					<p>
+						If you are located in the European Economic Area (EEA), we collect and process your data
+						only after obtaining your explicit consent via our cookie banner. The data collected
+						(e.g. IP address, device information, user behavior) is considered personal information
+						under the GDPR and is handled accordingly.
+					</p>
+					<p>
+						You have the right to access, correct, delete, or restrict the use of your data.
+						You can revoke consent at any time.
+					</p>
+					<p>
+						Data is processed by Google Analytics (USA) and Yandex Metrika (Russia), which may
+						involve international data transfers.
+					</p>
+					<p>
+						If you have GDPR-related concerns, please contact us at{' '}
+						<a href="mailto:socket.someone@gmail.com" className="underline text-blue-600 dark:text-blue-400">
+							socket.someone@gmail.com
+						</a>.
+					</p>
+				</section>
+
+				<section className="space-y-2 text-sm">
+					<h2 className="text-lg font-semibold">8. Transborder Data Transfers</h2>
+					<p>
+						In the course of website operation and analytics, user data may be transferred to servers located outside your country,
+						including the United States and other jurisdictions. These transfers are conducted via the following third-party services:
+					</p>
+					<ul className="list-disc list-inside space-y-1">
+						<li><span className="font-medium">Google LLC (USA)</span> — for Google Analytics</li>
+						<li><span className="font-medium">Cloudflare Inc. (USA)</span> — for content delivery and security</li>
+						<li><span className="font-medium">Yandex LLC (Russia / EEA)</span> — for Yandex Metrika</li>
+					</ul>
+					<p>
+						Transfers are based on user consent and are conducted solely for analytics, performance monitoring, and security purposes.
+					</p>
+				</section>
+
+				<section className="space-y-2 text-sm">
+					<h2 className="text-lg font-semibold">9. Contact Information</h2>
 					<p>
 						If you have any questions or concerns regarding this policy, feel
 						free to contact us at{' '}
@@ -233,7 +262,23 @@ export default function PrivacyPolicyPage() {
 				</section>
 
 				<section className="space-y-2 text-sm">
-					<h2 className="text-lg font-semibold">9. Changes to This Policy</h2>
+					<h2 className="text-lg font-semibold">10. Data Controller</h2>
+					<p>
+						The data controller responsible for processing your personal information on{' '}
+						<span className="font-medium">socketsomeone.me</span> and{' '}
+						<span className="font-medium">socketsomeone.dev</span> is:
+					</p>
+					<p className="mt-2">
+						Filippov Alexey Nikolaevich<br/>
+						Email:{' '}
+						<a href="mailto:socket.someone@gmail.com" className="underline text-blue-600 dark:text-blue-400">
+							socket.someone@gmail.com
+						</a>
+					</p>
+				</section>
+
+				<section className="space-y-2 text-sm">
+					<h2 className="text-lg font-semibold">11. Changes to This Policy</h2>
 					<p>
 						We reserve the right to update or modify this Privacy Policy at any time.
 						When changes are made, we will update the &#34;Effective Date&#34; at the top of the policy.
@@ -247,8 +292,11 @@ export default function PrivacyPolicyPage() {
 				<p className="text-sm text-muted-foreground mt-4">
 					By continuing to use this website, you acknowledge that you have read and agree to our
 					<Link href="/privacy" className="underline text-blue-600 dark:text-blue-400 ml-1">Privacy Policy</Link>,
-					including the use of cookies and tracking technologies as described above.
+					including the use of cookies, third-party analytics (Google Analytics, Yandex Metrika),
+					and infrastructure services such as Cloudflare. Continued usage implies consent to data collection
+					and transborder data transfers as outlined in this policy.
 				</p>
+
 			</div>
 
 		</Page>
