@@ -7,11 +7,12 @@ export default function TermsPage() {
 		<Page
 			title="Terms of Service"
 			description="Terms of Service for socketsomeone.me and socketsomeone.dev"
+			className="px-4 xs:px-0 pt-20"
 		>
-			<div className="md:container my-8 py-8 px-4 md:px-0! space-y-4 text-sm">
-				<div className="text-sm mb-1">
+			<div className="md:container my-8 px-0! space-y-4 text-sm">
+				<div className="text-sm mb-2">
 					<Link href="/" className="text-blue-600 hover:underline flex items-center">
-						<ChevronLeftIcon width={16} height={16} />
+						<ChevronLeftIcon width={14} height={14} />
 						Back to Home
 					</Link>
 				</div>

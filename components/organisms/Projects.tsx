@@ -1,11 +1,12 @@
-'use client'
+'use client';
 
-import { JSX } from "react";
-import SectionHeader from "../atoms/SectionHeader";
-import LaurelIcon from "../icons/LaurelIcon";
-import Loader from "../atoms/Loader";
-import MarqueeProjectsHorizontal from "./MarqueeProjectsHorizontal";
-import { LinkIcon } from "@heroicons/react/24/solid";
+import { JSX } from 'react';
+import SectionHeader from '../atoms/SectionHeader';
+import LaurelIcon from '../icons/LaurelIcon';
+import Loader from '../atoms/Loader';
+import MarqueeProjectsHorizontal from './MarqueeProjectsHorizontal';
+import { LinkIcon } from '@heroicons/react/24/solid';
+import { cn } from '@/utils';
 
 interface ProjectsProps {
 	projects: any[];
@@ -20,16 +21,10 @@ export default function Projects({
 								 }: ProjectsProps): JSX.Element {
 
 
-	if (projects.length === 0) {
-		return <></>
-	}
-
 	return (
 		<div
 			id={'projects'}
-			className="flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1 print:hidden">
-
-
+			className={cn('flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1 print:hidden')}>
 			<SectionHeader
 				before={
 					<div className="flex flex-row items-center space-x-0 ">
@@ -65,5 +60,5 @@ export default function Projects({
 			</a>
 
 		</div>
-	)
+	);
 }

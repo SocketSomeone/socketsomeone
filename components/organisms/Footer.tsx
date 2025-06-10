@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 export default function Footer() {
 	return (
-		<footer className="px-0! py-6 text-center print:hidden md:container bg-background/60 dark:bg-gray-900/60 backdrop-blur-xs border border-b-0 sm:rounded-t-lg border-gray-200 dark:border-gray-700">
+		<footer
+			className="px-0! mt-10 xs:px-6 py-6 text-center print:hidden md:container bg-background/60 dark:bg-gray-900/60 backdrop-blur-xs border border-b-0 sm:rounded-t-xl border-gray-200 dark:border-gray-700">
 			<div className="flex flex-col items-center mb-3">
 				<Link href="/">
 					<Logo className="w-12 opacity-70 hover:opacity-100 hover:scale-110 duration-300"/>

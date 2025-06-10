@@ -1,13 +1,14 @@
 import ProjectCard from '@/components/molecules/ProjectCard';
 import { Carousel, CarouselContent, CarouselItem } from '../magicui/carousel';
 import AutoScroll from 'embla-carousel-auto-scroll';
+import Placeholder from '../molecules/Placeholder';
 
 export interface MarqueeProjectsHorizontalProps {
 	projects: any;
 	rows: number;
 }
 
-export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProjectsHorizontalProps) {
+export default function MarqueeProjectsHorizontal({ projects, rows }: MarqueeProjectsHorizontalProps) {
 	const projectsRows = projects.reduce((resultArray: any[], item: any, index: number) => {
 		const chunkIndex = index % rows;
 
@@ -27,46 +28,55 @@ export default function MarqueeProjectsHorizontal({projects, rows}: MarqueeProje
 		.map((project: any) => project.id);
 	const threeMonthsAgo = new Date(new Date().setMonth(new Date().getMonth() - 6));
 
+
 	return (
 		<div
 			className="flex flex-col flex-wrap rounded-lg border bg-gray-100/80 border-gray-300 backdrop-blur-xs dark:bg-gray-800/40 dark:border-gray-800">
 			{
-				projectsRows.map((row: any[], index: number) => (
-					<Carousel key={index}
-							  opts={{
-								  loop: true,
-								  dragFree: true
-							  }}
-							  plugins={[AutoScroll({
-								  speed: 2,
-								  direction: index % 2 === 0 ? 'backward' : 'forward',
-								  stopOnInteraction: false,
-								  startDelay: 1
-							  })]}
-							  className={'w-[100vw]'}
-					>
-						<CarouselContent>
-							{row.map((project: any, i: number) => (
+				projects.length === 0 ? (
+						<Placeholder
+							className={'w-[100vw] h-[400px]'}
+							image="gifs/duck-haha-classic.gif"
+							header={'No projects found'}
+							description={'It seems like there are no projects to display at the moment. Please check back later or explore my other work on GitHub.'}
+						/>
+					) :
+					projectsRows.map((row: any[], index: number) => (
+						<Carousel key={index}
+								  opts={{
+									  loop: true,
+									  dragFree: true
+								  }}
+								  plugins={[AutoScroll({
+									  speed: 2,
+									  direction: index % 2 === 0 ? 'backward' : 'forward',
+									  stopOnInteraction: false,
+									  startDelay: 1
+								  })]}
+								  className={'w-[100vw]'}
+						>
+							<CarouselContent>
+								{row.map((project: any, i: number) => (
 
-								<CarouselItem className={'basis-auto'} key={i}>
-									<ProjectCard url={project.html_url || project.homepage}
-												 thumbnail={project.owner.login !== 'SocketSomeone' ? project.owner.avatar_url : 'icons/github_gradient.svg'}
-												 title={project.name} description={project.description}
-												 metrics={{
-													 forks: project.forks,
-													 stars: project.stargazers_count,
-													 issues: project.open_issues,
-													 language: project.language
-												 }}
-												 newest={new Date(project.created_at) > threeMonthsAgo}
-												 hotest={mostPopularProjects.includes(project.id)}/>
-								</CarouselItem>
+									<CarouselItem className={'basis-auto'} key={i}>
+										<ProjectCard url={project.html_url || project.homepage}
+													 thumbnail={project.owner.login !== 'SocketSomeone' ? project.owner.avatar_url : 'icons/github_gradient.svg'}
+													 title={project.name} description={project.description}
+													 metrics={{
+														 forks: project.forks,
+														 stars: project.stargazers_count,
+														 issues: project.open_issues,
+														 language: project.language
+													 }}
+													 newest={new Date(project.created_at) > threeMonthsAgo}
+													 hotest={mostPopularProjects.includes(project.id)}/>
+									</CarouselItem>
 
-							))}
-						</CarouselContent>
+								))}
+							</CarouselContent>
 
-					</Carousel>
-				))
+						</Carousel>
+					))
 			}
 
 			<div

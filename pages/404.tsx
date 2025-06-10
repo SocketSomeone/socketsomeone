@@ -1,24 +1,29 @@
 import Link from 'next/link';
+import Placeholder from '@/components/molecules/Placeholder';
+import { useRouter } from 'next/router';
 
 export default function FourZeroFour() {
-    return (
-        <div className="flex px-8 justify-center align-center min-h-[100vh]">
-            <div className="flex flex-1 items-center justify-center">
-                <div className="flex w-full max-w-2xl flex-col items-center px-6 text-center md:px-10">
-                    <h1 className="text-9xl font-bold text-heading">oops...</h1>
-                    <h2
-                        className="mt-6 text-2xl font-semibold text-heading">The page your were looking for could not be
-                        found.
-                    </h2>
-                    <p className="mt-4 font-medium text-text">It seems this page is missing. Please check the
-                        URL or go home.
-                    </p>
-                    <Link href="/"
-                          className="mt-8 inline-flex cursor-pointer items-center justify-center rounded-xl border-2 border-blue-500 bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:border-blue-400 hover:bg-blue-400 disabled:opacity-30 disabled:hover:border-primary disabled:hover:bg-primary disabled:hover:text-white">Go
-                        Home
-                    </Link>
-                </div>
-            </div>
-        </div>
-    )
+	const router = useRouter();
+
+	return (
+		<div className="flex px-8 justify-center align-center grow pt-30 pb-10">
+			<div className="flex flex-1 items-center justify-center">
+				<Placeholder
+					className="max-w-2xl"
+					image="/gifs/duck-sad.gif"
+					header="Page Not Found"
+					description="The page you are looking for does not exist or has been moved. It seems this page is missing. Please check the
+                        URL or go home."
+					button={
+						<button
+							className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400 transition-colors duration-300 cursor-pointer"
+							onClick={() => router.back()}
+						>
+							Go Back
+						</button>
+					}
+				/>
+			</div>
+		</div>
+	);
 }

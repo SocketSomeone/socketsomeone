@@ -1,18 +1,15 @@
 import { PropsWithChildren } from 'react';
 import Footer from './organisms/Footer';
-import ThemeSwitcher from './molecules/ThemeSwitcher';
-import CVDownloader from './molecules/CVDownloader';
+import Header from './organisms/Header';
 
-export default function Layout({children}: PropsWithChildren) {
+export default function Layout({ children }: PropsWithChildren) {
 	return (
-		<div className="p-0 relative flex flex-col min-h-screen overflow-hidden">
-			<CVDownloader/>
-
-			<ThemeSwitcher/>
+		<div className="p-0 relative flex flex-col min-h-screen overflow-hidden print:overflow-visible!">
+			<Header/>
 
 			{children}
 
 			<Footer/>
 		</div>
-	)
+	);
 }
