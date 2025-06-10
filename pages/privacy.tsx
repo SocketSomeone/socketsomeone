@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
 				className="md:container my-8 px-0! space-y-4">
 				<div className="text-sm mb-2">
 					<Link href="/" className="text-blue-600 hover:underline flex items-center">
-						<ChevronLeftIcon width={14} height={14} />
+						<ChevronLeftIcon width={14} height={14}/>
 						Back to Home
 					</Link>
 				</div>
@@ -132,7 +132,8 @@ export default function PrivacyPolicyPage() {
 						that help us understand how you use our sites and improve functionality.
 
 						For more information on how to manage cookies, please refer to the help section of your browser or visit
-						<a href="https://www.allaboutcookies.org/" className="underline ml-1 text-blue-600 dark:text-blue-400" target="_blank"
+						<a href="https://www.allaboutcookies.org/" className="underline ml-1 text-blue-600 dark:text-blue-400"
+						   target="_blank"
 						   rel="noopener noreferrer">
 							AllAboutCookies.org
 						</a>.
@@ -140,11 +141,22 @@ export default function PrivacyPolicyPage() {
 
 					<h3 className="text-md font-semibold">Types of Cookies We Use</h3>
 					<ul className="list-disc list-inside space-y-1">
-						<li><strong>Essential Cookies:</strong> These are necessary for the website to function properly. They enable core functionality such as page navigation and access to secure areas.</li>
-						<li><strong>Analytics Cookies:</strong> We use services like Google Analytics and Yandex Metrica to collect anonymous data about how visitors interact with our websites. This helps us improve performance and user experience.</li>
-						<li><strong>Performance Cookies:</strong> These cookies help us understand how our services are used by measuring the performance of different pages and features.</li>
-						<li><strong>Security Cookies:</strong> Used to detect and mitigate potential security risks, such as unauthorized access or abuse.</li>
-						<li><strong>Functionality Cookies:</strong> These cookies allow us to remember your preferences and provide enhanced, more personalized features.</li>
+						<li><strong>Essential Cookies:</strong> These are necessary for the website to function properly. They enable core
+							functionality such as page navigation and access to secure areas.
+						</li>
+						<li><strong>Analytics Cookies:</strong> We use services like Google Analytics and Yandex Metrica to collect
+							anonymous data about how visitors interact with our websites. This helps us improve performance and user
+							experience.
+						</li>
+						<li><strong>Performance Cookies:</strong> These cookies help us understand how our services are used by measuring
+							the performance of different pages and features.
+						</li>
+						<li><strong>Security Cookies:</strong> Used to detect and mitigate potential security risks, such as unauthorized
+							access or abuse.
+						</li>
+						<li><strong>Functionality Cookies:</strong> These cookies allow us to remember your preferences and provide
+							enhanced, more personalized features.
+						</li>
 					</ul>
 
 					<h3 className="text-md font-semibold mt-6">Cookies Overview</h3>
@@ -154,7 +166,8 @@ export default function PrivacyPolicyPage() {
 
 					<div className="overflow-x-auto">
 						<table className="w-full text-sm text-left text-gray-700 dark:text-gray-200 border-separate border-spacing-y-2">
-							<thead className="hidden sm:table-header-group bg-gray-100 dark:bg-gray-800 text-xs uppercase text-gray-600 dark:text-gray-300">
+							<thead
+								className="hidden sm:table-header-group bg-gray-100 dark:bg-gray-800 text-xs uppercase text-gray-600 dark:text-gray-300">
 							<tr>
 								<th className="px-4 py-2">Cookie Name</th>
 								<th className="px-4 py-2">Provider</th>
@@ -164,12 +177,33 @@ export default function PrivacyPolicyPage() {
 							</thead>
 							<tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-800">
 							{[
-								{ name: "_ga, _gid", provider: "Google Analytics", purpose: "User behavior analytics", expiration: "1–2 years" },
-								{ name: "_ym_uid, _ym_d", provider: "Yandex Metrica", purpose: "Visitor session tracking", expiration: "1 year" },
-								{ name: "__cf_bm", provider: "Cloudflare", purpose: "Bot mitigation and security", expiration: "30 minutes" },
-								{ name: "cf_clearance", provider: "Cloudflare", purpose: "CAPTCHA & access persistence", expiration: "30 days" },
+								{
+									name: '_ga, _gid',
+									provider: 'Google Analytics',
+									purpose: 'User behavior analytics',
+									expiration: '1–2 years'
+								},
+								{
+									name: '_ym_uid, _ym_d',
+									provider: 'Yandex Metrica',
+									purpose: 'Visitor session tracking',
+									expiration: '1 year'
+								},
+								{
+									name: '__cf_bm',
+									provider: 'Cloudflare',
+									purpose: 'Bot mitigation and security',
+									expiration: '30 minutes'
+								},
+								{
+									name: 'cf_clearance',
+									provider: 'Cloudflare',
+									purpose: 'CAPTCHA & access persistence',
+									expiration: '30 days'
+								},
 							].map((cookie, i) => (
-								<tr key={i} className="sm:table-row block mb-4 sm:mb-0 border rounded sm:border-none p-4 sm:p-0 shadow-sm sm:shadow-none">
+								<tr key={i}
+									className="sm:table-row block mb-4 sm:mb-0 border rounded sm:border-none p-4 sm:p-0 shadow-sm sm:shadow-none">
 									<td className="px-4 py-2 font-semibold sm:font-normal sm:table-cell block before:content-['Cookie:'] before:font-semibold before:mr-1 sm:before:hidden">{cookie.name}</td>
 									<td className="px-4 py-2 sm:table-cell block before:content-['Provider:'] before:font-semibold before:mr-1 sm:before:hidden">{cookie.provider}</td>
 									<td className="px-4 py-2 sm:table-cell block before:content-['Purpose:'] before:font-semibold before:mr-1 sm:before:hidden">{cookie.purpose}</td>
@@ -182,7 +216,8 @@ export default function PrivacyPolicyPage() {
 
 					<h3 className="text-md font-semibold">Managing Cookies</h3>
 					<p>
-						You can choose to disable or delete cookies through your browser settings. Please note that disabling cookies may affect the functionality of some parts of the site.
+						You can choose to disable or delete cookies through your browser settings. Please note that disabling cookies may
+						affect the functionality of some parts of the site.
 					</p>
 				</section>
 
