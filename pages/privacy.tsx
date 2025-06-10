@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
 	return (
 		<Page title="Privacy Policy | SocketSomeone"
 			  description="Learn about our privacy practices and how we handle your personal information. Read our Privacy Policy for details on data collection, usage, and your rights."
-			  className="px-4 xs:px-0 pt-20"
+			  className="px-4 xs:px-0 pt-10 md:pt-20"
 		>
 			<div
 				className="md:container my-8 px-0! space-y-4">
