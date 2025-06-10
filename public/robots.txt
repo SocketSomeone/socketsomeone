@@ -1,5 +1,7 @@
 # *
 User-agent: *
+Disallow: /privacy
+Disallow: /terms
 Allow: /
 
 # Host
