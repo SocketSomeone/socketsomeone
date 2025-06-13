@@ -1,6 +1,6 @@
-import { lanyard, LanyardPresence } from "../../utils";
-import { useEffect, useState, } from "react";
-import Image from "next/image";
+import { useState, } from 'react';
+import Image from 'next/image';
+import { useLanyard } from 'react-use-lanyard';
 
 enum StatusColor {
 	ONLINE = "bg-green-500",
@@ -24,26 +24,9 @@ function getStatusColor(status: string = 'offline'): string {
 
 export default function Avatar() {
 	const [avatar /*, setAvatar */] = useState<string>("https://github.com/SocketSomeone.png");
-	const [presence, setPresence] = useState<LanyardPresence>();
-	const [loading, setLoading] = useState<boolean>(true);
-
-	const setAvatarAndPresence = (presence: LanyardPresence) => {
-		// const user = presence?.discord_user;
-
-		// TODO: Disabled due sanctions from Discord
-		// setAvatar(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`);
-		setPresence(presence);
-	}
-
-	useEffect(() => {
-		if (loading) {
-			lanyard?.fetch().then((data) => {
-				setAvatarAndPresence(data);
-				setLoading(false)
-			})
-
-			lanyard?.on('presence', (data) => setAvatarAndPresence(data));
-		}
+	const { status } = useLanyard({
+		userId: '235413185639874561',
+		socket: true,
 	});
 
 	return (
@@ -55,11 +38,11 @@ export default function Avatar() {
 
 				<span className="flex print:hidden">
                     <span
-						className={"animate-ping bottom-0 right-5 absolute inline-flex h-7 w-7 rounded-full opacity-75 " + getStatusColor(presence?.discord_status)}>
+						className={"animate-ping bottom-0 right-5 absolute inline-flex h-7 w-7 rounded-full opacity-75 " + getStatusColor(status?.discord_status)}>
 
 					</span>
                     <span
-						className={"bottom-0 right-5 absolute w-7 h-7 border-2 border-white dark:border-gray-800 rounded-full " + getStatusColor(presence?.discord_status)}>
+						className={"bottom-0 right-5 absolute w-7 h-7 border-2 border-white dark:border-gray-800 rounded-full " + getStatusColor(status?.discord_status)}>
 
 					</span>
 				</span>

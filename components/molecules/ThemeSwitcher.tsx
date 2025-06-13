@@ -1,15 +1,16 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { ComputerDesktopIcon, MoonIcon, SunIcon } from '@heroicons/react/24/solid';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
 import { useEffect, useState } from 'react';
+import { IoIosContrast } from 'react-icons/io';
 
 interface ThemeSwitcherProps {
 	className?: string;
 }
 
-export default function ThemeSwitcher({className}: ThemeSwitcherProps) {
+export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 	const { theme, setTheme } = useTheme();
 	const [isMounted, setIsMounted] = useState(false);
 
@@ -36,7 +37,7 @@ export default function ThemeSwitcher({className}: ThemeSwitcherProps) {
 			case 'dark':
 				return <SunIcon className="w-6 h-6 text-yellow-400"/>;
 			case 'system':
-				return <ComputerDesktopIcon
+				return <IoIosContrast
 					className={cn('w-6 h-6 text-black dark:text-white')}/>;
 		}
 	};

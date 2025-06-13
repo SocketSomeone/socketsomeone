@@ -23,9 +23,9 @@ export default function Logo({ width = 64, height = 64, className = '' }: LogoPr
 				fill="url(#paint0_linear_421_139)"/>
 			<defs>
 				<linearGradient id="paint0_linear_421_139" x1="-69.5" y1="568.122" x2="776.06" y2="-181.012" gradientUnits="userSpaceOnUse">
-					<stop offset="0.104835" stop-color="#0A56D3"/>
-					<stop offset="0.480769" stop-color="#82D0F4"/>
-					<stop offset="0.884615" stop-color="white"/>
+					<stop offset="0.104835" stopColor="#0A56D3"/>
+					<stop offset="0.480769" stopColor="#82D0F4"/>
+					<stop offset="0.884615" stopColor="white"/>
 				</linearGradient>
 			</defs>
 		</svg>

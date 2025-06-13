@@ -135,7 +135,7 @@ export default function Toast() {
 									<div className="text-sm font-normal break-words">{activity.details}</div>
 								)}
 								{activity.state && (
-									<div className="text-sm font-normal break-words">{activity.state}</div>
+									<div className="text-sm font-normal truncate">{activity.state}</div>
 								)}
 								{(elapsed || left) && (
 									<div className="flex items-center text-blue-600 dark:text-blue-500">
