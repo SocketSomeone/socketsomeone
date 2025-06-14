@@ -116,7 +116,7 @@ export default function Technologies() {
 	}, [data, resolvedTheme]);
 
 	return (
-		<ul className="z-[-1] hidden sm:flex print:hidden">
+		<ul className="-z-1 hidden sm:flex print:hidden absolute bottom-0 w-full h-[100vh] overflow-hidden">
 			{renderedIcons.map((icon, index) => (
 				<li
 					key={`technology-${index}`}
