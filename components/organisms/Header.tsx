@@ -13,7 +13,7 @@ export default function Header() {
 					<Logo width={32} height={32}/>
 
 					<div className="flex flex-col">
-						<small className='text-sm'>SocketSomeone</small>
+						<small className="text-sm">SocketSomeone</small>
 						<small className="text-xs text-muted-foreground">
 							Alexey Filippov
 						</small>
@@ -22,21 +22,21 @@ export default function Header() {
 
 			</div>
 
-			<nav className="space-x-4 text-md font-medium text-gray-600 dark:text-gray-300 hidden md:flex">
-				<Link href="/" className="hover:underline">
+			<nav className="space-x-4 text-md font-medium text-gray-700 dark:text-gray-200 hidden md:flex">
+				<Link href="/" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
 					About
 				</Link>
-				<a href="https://t.me/socketsomeoneshit" className="hover:underline">Blog</a>
-				<Link href="/#projects" className="hover:underline">
+				<a href="https://t.me/socketsomeoneshit" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">Blog</a>
+				<Link href="/#projects" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
 					Projects
 				</Link>
-				<Link href="/#contact" className="hover:underline">
+				<Link href="/#contact" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
 					Contact
 				</Link>
 			</nav>
 
 			<div className="flex items-center space-x-4">
-				<CVDownloader className='hidden md:flex'/>
+				<CVDownloader className="hidden md:flex"/>
 				<ThemeSwitcher/>
 			</div>
 		</header>

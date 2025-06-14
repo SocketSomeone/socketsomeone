@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BriefcaseIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';
+import Image from 'next/image';
 
 export interface ExperienceEntry {
 	name: string;
@@ -16,9 +17,11 @@ export interface ExperienceEntry {
 	endDate?: string;
 }
 
-const WorkIcon = <BriefcaseIcon width={36}/>;
-const OpenSourceIcon = <HeartIcon width={36}/>;
-const OrderIcon = <BoltIcon width={36}/>;
+const styleOfIcon = 'rounded-md bg-blue-500/10 text-blue-500 dark:bg-blue-500/20 dark:text-blue-500/80 w-full h-full p-1';
+
+const WorkIcon = <BriefcaseIcon width={36} className={styleOfIcon}/>;
+const OpenSourceIcon = <HeartIcon width={36} className={styleOfIcon}/>;
+const OrderIcon = <BoltIcon width={36} className={styleOfIcon}/>;
 
 
 export function getExperienceEntries(): ExperienceEntry[] {
@@ -58,7 +61,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'Developed a benchmarking and metrics system to evaluate neural network quality',
 				'Contributed to hiring top talent into core business teams'
 			],
-			icon: WorkIcon,
+			icon: ImageOrIcon('/images/x5.png', WorkIcon),
 		},
 		{
 			name: 'Necord',
@@ -80,7 +83,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'Gained a community of 100+ developers using the package',
 				'More 400 stars on GitHub'
 			],
-			icon: OpenSourceIcon,
+			icon: ImageOrIcon('https://necord.org/img/favicon.ico', OpenSourceIcon),
 		},
 		{
 			name: 'Yahont',
@@ -100,7 +103,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'Wrote a significant part of the BFF in Node.js, reducing the workload on backend developers',
 				'Reduced the time needed to identify backend-related bugs'
 			],
-			icon: WorkIcon,
+			icon: ImageOrIcon('https://yahont.online/favicon.ico', WorkIcon),
 		},
 		{
 			name: 'STC',
@@ -116,18 +119,18 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'UML'
 			],
 			responsibilities: [
-				"Designed the overall platform architecture: created an infrastructure diagram and described key components",
-				"Prepared technical documentation: functional diagrams for modules, API specifications, user permissions documentation",
-				"Developed CI/CD processes (GitLab CI, Docker) for automated build, test, and deployment of services",
-				"Collaborated with the development team and stakeholders to clarify requirements and coordinate changes"
+				'Designed the overall platform architecture: created an infrastructure diagram and described key components',
+				'Prepared technical documentation: functional diagrams for modules, API specifications, user permissions documentation',
+				'Developed CI/CD processes (GitLab CI, Docker) for automated build, test, and deployment of services',
+				'Collaborated with the development team and stakeholders to clarify requirements and coordinate changes'
 			],
 			achievements: [
-				"Analyzed the existing system, identified bottlenecks, and provided recommendations to improve fault tolerance and security",
-				"Performed performance profiling of key modules: reduced average response time by 40% by optimizing resource-intensive processes",
-				"Designed and implemented migration from a monolithic application to a microservices architecture (using message queues and caching), improving scalability and maintainability",
-				"Set up automated monitoring and metrics collection (log aggregation, load monitoring), enabling rapid response to system anomalies"
+				'Analyzed the existing system, identified bottlenecks, and provided recommendations to improve fault tolerance and security',
+				'Performed performance profiling of key modules: reduced average response time by 40% by optimizing resource-intensive processes',
+				'Designed and implemented migration from a monolithic application to a microservices architecture (using message queues and caching), improving scalability and maintainability',
+				'Set up automated monitoring and metrics collection (log aggregation, load monitoring), enabling rapid response to system anomalies'
 			],
-			icon: WorkIcon,
+			icon: ImageOrIcon('https://stc-groups.ru/favicon.ico', WorkIcon),
 		},
 		{
 			name: 'Fotrum',
@@ -168,7 +171,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'Introduced Domain-Driven Design (DDD) and Command Query Responsibility Segregation (CQRS)',
 				'Conducted a full development audit and documentation process'
 			],
-			icon: WorkIcon,
+			icon: ImageOrIcon('/images/fotrum.jpg', WorkIcon),
 		},
 		{
 			name: 'ZEN.CAR',
@@ -204,7 +207,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'Designed and implemented analytics algorithms to optimize order processing times, improving service efficiency',
 				'Successfully refactored the legacy codebase to improve readability, scalability, and maintainability'
 			],
-			icon: WorkIcon,
+			icon: ImageOrIcon('https://zencar.tech/favicon.ico', WorkIcon),
 		},
 		{
 			name: 'Burger Club',
@@ -258,7 +261,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'Achieved over 500,000 customers in a year with high conversion rates',
 				'Gained consistent organic traffic of 100+ unique visitors per day through SEO optimization'
 			],
-			icon: OrderIcon,
+			icon: ImageOrIcon('https://nipbox.ru/favicon.ico', OrderIcon),
 		},
 		{
 			name: 'Freelance',
@@ -270,7 +273,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 			skills: [],
 			responsibilities: [],
 			achievements: [],
-			icon: OrderIcon,
+			icon: ImageOrIcon('https://upwork.com/favicon.ico', OrderIcon),
 		}
 	].sort((a, b) => {
 		const aEndDate = a.endDate ? new Date(a.endDate) : currentDate;
@@ -286,4 +289,24 @@ export function getExperienceEntries(): ExperienceEntry[] {
 
 		return bEndDate.getTime() - aEndDate.getTime();
 	});
+}
+
+
+function ImageOrIcon(url: string, icon: React.ReactNode) {
+	const [hasError, setHasError] = useState(false);
+
+	if (url && !hasError) {
+		return (
+			<Image
+				src={url}
+				alt={`${url} Logo`}
+				width={36}
+				height={36}
+				className="w-full h-full rounded-md object-contain"
+				onError={() => setHasError(true)}
+			/>
+		);
+	}
+
+	return <>{icon}</>;
 }

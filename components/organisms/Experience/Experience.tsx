@@ -69,8 +69,7 @@ function ExperienceCard({ entry }: { entry: ExperienceEntry }) {
 		<div className="flex flex-row items-center text-blue-500 print:break-inside-avoid">
 			{entry.icon && (
 				<div className={cn(
-					'flex justify-center items-center w-12 h-12 rounded-md bg-blue-500/10 text-blue-500',
-					'dark:bg-blue-500/20 dark:text-blue-500/80',
+					'flex justify-center items-center w-12 h-12'
 				)}>
 					{entry.icon}
 				</div>
