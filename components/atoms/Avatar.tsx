@@ -1,6 +1,6 @@
 import { useState, } from 'react';
 import Image from 'next/image';
-import { useLanyard } from 'react-use-lanyard';
+import { useLanyardContext } from '../providers/LanyardProvider';
 
 enum StatusColor {
 	ONLINE = "bg-green-500",
@@ -24,10 +24,7 @@ function getStatusColor(status: string = 'offline'): string {
 
 export default function Avatar() {
 	const [avatar /*, setAvatar */] = useState<string>("https://github.com/SocketSomeone.png");
-	const { status } = useLanyard({
-		userId: '235413185639874561',
-		socket: true,
-	});
+	const { status } = useLanyardContext();
 
 	return (
 		<div className="flex flex-col items-center justify-center select-none">

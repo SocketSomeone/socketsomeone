@@ -2,16 +2,12 @@ import { useCallback, useEffect, useState } from 'react';
 import { cn } from '@/utils';
 import Image from 'next/image';
 import { ClockIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import { useLanyard } from 'react-use-lanyard';
-import { Activity } from 'react-use-lanyard/dist/types';
+import { Activity } from 'react-use-lanyard';
+import { useLanyardContext } from '@/components/providers/LanyardProvider';
 
 export default function Toast() {
 	const [closed, setClosed] = useState<boolean>(false);
-	const { status } = useLanyard({
-		userId: '235413185639874561',
-		socket: true,
-	});
-
+	const { status } = useLanyardContext();
 
 	const [activity, setActivity] = useState<Activity>();
 	const [elapsed, setElapsed] = useState<string>('');
@@ -69,6 +65,7 @@ export default function Toast() {
 	}, [assetURL, largeImage, smallImage]);
 
 	useEffect(() => {
+		console.log('Status updated:', status);
 		setActivity(status?.activities.find((activity) => activity.type === 0));
 	}, [status]);
 
@@ -123,7 +120,8 @@ export default function Toast() {
 										<div
 											role="tooltip"
 											className={cn(
-												'absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none whitespace-nowrap',
+												'absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 px-3 py-2 text-sm font-medium rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none whitespace-nowrap',
+												'bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900',
 												{ 'hidden': !activity.assets?.large_text }
 											)}
 										>
@@ -147,7 +145,8 @@ export default function Toast() {
 										<div
 											role="tooltip"
 											className={cn(
-												'absolute bottom-full left-1/2 -translate-x-1/2 mb-0.5 z-50 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none whitespace-nowrap',
+												'absolute bottom-full left-1/2 -translate-x-1/2 mb-0.5 z-50 px-3 py-2 text-sm font-medium rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none whitespace-nowrap',
+												'bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900',
 												{ 'hidden': !activity.assets?.small_text }
 											)}
 										>
@@ -157,7 +156,7 @@ export default function Toast() {
 								)}
 							</div>
 
-							<div className="text-sm font-normal whitespace-pre-line max-w-[220px]">
+							<div className="text-sm font-normal whitespace-pre-line min-w-[120px] max-w-[220px]">
 								<div className="text-sm font-semibold text-gray-900 dark:text-white space-y-0.5">
 									{activity.name}
 								</div>
@@ -177,6 +176,8 @@ export default function Toast() {
 								)}
 							</div>
 						</div>
+
+						<ActivityButton activity={activity} />
 					</div>
 
 					<CloseButton
@@ -188,13 +189,40 @@ export default function Toast() {
 	);
 }
 
+function ActivityButton({ activity }: { activity: Activity }) {
+	let url = '';
+	let buttonText = 'Open Activity';
+
+	if (activity?.name === 'Spotify' && activity?.sync_id) {
+		url = `https://open.spotify.com/track/${activity.sync_id}`;
+		buttonText = 'Listen on Spotify';
+	}
+
+	if (!url) {
+		return null;
+	}
+
+	return (
+		<div className="mt-2">
+			<a
+				href={url}
+				target="_blank"
+				rel="noopener noreferrer"
+				className="flex w-full justify-center items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-center"
+			>
+				{buttonText}
+			</a>
+		</div>
+	)
+}
+
 
 function CloseButton({ onClick, ariaLabel = 'Close' }: { onClick: () => void; ariaLabel?: string }) {
 	return (
 		<button
 			onClick={onClick}
 			type="button"
-			className="ml-auto -mx-1.5 -my-1.5 bg-white justify-center items-center shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer"
+			className="ml-auto absolute right-5 -mx-1.5 -my-1.5 bg-white justify-center items-center shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer"
 			aria-label={ariaLabel}
 		>
 			<span className="sr-only">{ariaLabel}</span>

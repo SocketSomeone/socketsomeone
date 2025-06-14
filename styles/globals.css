@@ -40,6 +40,9 @@
     --animate-gradient: gradient 8s linear infinite;
     --animate-float: floating 20s linear infinite;
 
+	--breakpoint-xl1440: 1440px;
+	--breakpoint-desktop-lg: 1440px;
+
     @keyframes accordion-down {
         from {
             height: 0;
