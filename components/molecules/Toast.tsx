@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ClockIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { Activity } from 'react-use-lanyard';
 import { useLanyardContext } from '@/components/providers/LanyardProvider';
+import { dateToDuration } from '@/utils';
 
 export default function Toast() {
 	const [closed, setClosed] = useState<boolean>(false);
@@ -44,8 +45,8 @@ export default function Toast() {
 			const start = timestamps?.start;
 			const end = timestamps?.end;
 
-			setElapsed(start ? formatTime(activity?.timestamps?.start) : '');
-			setLeft(end ? formatTime(activity?.timestamps?.end) : '');
+			setElapsed(start ? dateToDuration(activity?.timestamps?.start) : '');
+			setLeft(end ? dateToDuration(activity?.timestamps?.end) : '');
 		}, 1000);
 
 		return () => clearInterval(interval);
@@ -65,25 +66,8 @@ export default function Toast() {
 	}, [assetURL, largeImage, smallImage]);
 
 	useEffect(() => {
-		console.log('Status updated:', status);
 		setActivity(status?.activities.find((activity) => activity.type === 0));
 	}, [status]);
-
-
-	function formatTime(time?: number) {
-		const diff = Math.abs(Date.now() - (time ?? 0));
-
-		const seconds = Math.floor((diff / 1000) % 60);
-		const minutes = Math.floor((diff / 1000 / 60) % 60);
-		const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-
-		return [days, hours, minutes, seconds]
-			.map((v) => v.toString().padStart(2, '0'))
-			.filter((v, index) => v !== '00' || index > 1)
-			.join(':');
-	}
 
 
 	if (closed || !activity) {
