@@ -4,7 +4,7 @@ import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 
 export default function PrivacyPolicyPage() {
 	return (
-		<Page title="Privacy Policy | SocketSomeone"
+		<Page title="Privacy Policy"
 			  description="Learn about our privacy practices and how we handle your personal information. Read our Privacy Policy for details on data collection, usage, and your rights."
 			  className="px-4 xs:px-0 pt-10 md:pt-20"
 		>

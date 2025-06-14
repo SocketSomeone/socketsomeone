@@ -24,7 +24,7 @@ export default function Intro() {
 
 			<BlurFade delay={calculateDelay(2)} className={'print:blur-none! print:opacity-100! print:animate-none! lg:w-2/3'}>
 				<h1
-					className="ext-3xl text-center subpixel-antialiased sm:text-2xl md:text-4xl xl:text-6xl xl:leading-[70px] font-extrabold text-gray-900 dark:text-white print:hidden">Hello,
+					className="text-2xl text-center subpixel-antialiased sm:text-3xl md:text-4xl xl:text-6xl xl:leading-[70px] font-extrabold text-gray-900 dark:text-white print:hidden">Hello,
 					I’m <span
 						className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-300">SocketSomeone</span> your <span
 						className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Software Engineer</span>
