@@ -36,14 +36,17 @@ export default function Avatar() {
 					   quality={100}
 					   alt="avatar"/>
 
-				<span className="flex print:hidden">
+				<span className="flex print:hidden group">
                     <span
 						className={"animate-ping bottom-0 right-5 absolute inline-flex h-7 w-7 rounded-full opacity-75 " + getStatusColor(status?.discord_status)}>
 
 					</span>
                     <span
 						className={"bottom-0 right-5 absolute w-7 h-7 border-2 border-white dark:border-gray-800 rounded-full " + getStatusColor(status?.discord_status)}>
+					</span>
 
+					<span className="absolute bottom-0 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none whitespace-nowrap">
+						{status?.activities?.find(activity => activity.id === 'custom')?.state || status?.discord_status || 'offline'}
 					</span>
 				</span>
 			</div>

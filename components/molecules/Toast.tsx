@@ -1,11 +1,19 @@
 import { useCallback, useEffect, useState } from 'react';
-import { cn, lanyard, LanyardActivity } from '@/utils';
+import { cn } from '@/utils';
 import Image from 'next/image';
-import { ClockIcon } from '@heroicons/react/24/solid';
+import { ClockIcon, XMarkIcon } from '@heroicons/react/24/solid';
+import { useLanyard } from 'react-use-lanyard';
+import { Activity } from 'react-use-lanyard/dist/types';
 
 export default function Toast() {
 	const [closed, setClosed] = useState<boolean>(false);
-	const [activity, setActivity] = useState<LanyardActivity>();
+	const { status } = useLanyard({
+		userId: '235413185639874561',
+		socket: true,
+	});
+
+
+	const [activity, setActivity] = useState<Activity>();
 	const [elapsed, setElapsed] = useState<string>('');
 	const [left, setLeft] = useState<string>('');
 	const [largeImage, setLargeImage] = useState<string>('');
@@ -61,10 +69,8 @@ export default function Toast() {
 	}, [assetURL, largeImage, smallImage]);
 
 	useEffect(() => {
-		lanyard?.on('presence', (data) => {
-			setActivity(data.activities.find((activity) => activity.type === 0));
-		});
-	}, []);
+		setActivity(status?.activities.find((activity) => activity.type === 0));
+	}, [status]);
 
 
 	function formatTime(time?: number) {
@@ -103,27 +109,51 @@ export default function Toast() {
 								hidden: !largeImage && !smallImage,
 							})}>
 								{largeImage && (
-									<Image
-										className="h-full w-auto max-h-[80px] rounded-md object-contain"
-										onError={({ currentTarget }) => currentTarget.style.display = 'none'}
-										width={4096}
-										height={4096}
-										quality={100}
-										src={largeImage}
-										alt="Large Image"
-									/>
+									<div className="relative inline-block group">
+										<Image
+											className="h-full w-auto max-h-[80px] rounded-md object-contain"
+											onError={({ currentTarget }) => currentTarget.style.display = 'none'}
+											width={4096}
+											height={4096}
+											quality={100}
+											src={largeImage}
+											alt="Large Image"
+										/>
+
+										<div
+											role="tooltip"
+											className={cn(
+												'absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none whitespace-nowrap',
+												{ 'hidden': !activity.assets?.large_text }
+											)}
+										>
+											{activity.assets?.large_text || 'Unknown Application'}
+										</div>
+									</div>
 								)}
 
 								{smallImage && (
-									<Image
-										className="absolute -bottom-1 -right-1 max-w-[28px] w-auto h-auto border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full"
-										onError={({ currentTarget }) => currentTarget.style.display = 'none'}
-										width={4096}
-										height={4096}
-										quality={100}
-										src={smallImage}
-										alt="Small Icon"
-									/>
+									<div className="absolute group -bottom-1 -right-1">
+										<Image
+											className="max-w-[28px] w-auto h-auto border-2 border-white bg-white dark:border-gray-800 dark:bg-gray-800 rounded-full"
+											onError={({ currentTarget }) => currentTarget.style.display = 'none'}
+											width={4096}
+											height={4096}
+											quality={100}
+											src={smallImage}
+											alt="Small Icon"
+										/>
+
+										<div
+											role="tooltip"
+											className={cn(
+												'absolute bottom-full left-1/2 -translate-x-1/2 mb-0.5 z-50 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none whitespace-nowrap',
+												{ 'hidden': !activity.assets?.small_text }
+											)}
+										>
+											{activity.assets?.small_text}
+										</div>
+									</div>
 								)}
 							</div>
 
@@ -168,21 +198,7 @@ function CloseButton({ onClick, ariaLabel = 'Close' }: { onClick: () => void; ar
 			aria-label={ariaLabel}
 		>
 			<span className="sr-only">{ariaLabel}</span>
-			<svg
-				className="w-3 h-3"
-				aria-hidden="true"
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 14 14"
-			>
-				<path
-					stroke="currentColor"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					strokeWidth="2"
-					d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-				/>
-			</svg>
+			<XMarkIcon/>
 		</button>
 	);
 }
