@@ -10,7 +10,7 @@ type Props = {
 	children?: React.ReactNode;
 }
 
-export default function SectionHeader({className, before, head, title, description, children}: Props) {
+export default function SectionHeader({ className, before, head, title, description, children }: Props) {
 	return (
 		<div
 			className={cn('flex flex-col items-center justify-center text-center space-y-2 max-w-2xl',

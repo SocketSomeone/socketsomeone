@@ -237,8 +237,10 @@ export default function PrivacyPolicyPage() {
 				<section className="space-y-2 text-sm">
 					<h2 className="text-lg font-semibold">8. Transborder Data Transfers</h2>
 					<p>
-						In the course of website operation and analytics, user data may be transferred to servers located outside your country,
-						including the United States and other jurisdictions. These transfers are conducted via the following third-party services:
+						In the course of website operation and analytics, user data may be transferred to servers located outside your
+						country,
+						including the United States and other jurisdictions. These transfers are conducted via the following third-party
+						services:
 					</p>
 					<ul className="list-disc list-inside space-y-1">
 						<li><span className="font-medium">Google LLC (USA)</span> — for Google Analytics</li>
@@ -246,7 +248,8 @@ export default function PrivacyPolicyPage() {
 						<li><span className="font-medium">Yandex LLC (Russia / EEA)</span> — for Yandex Metrika</li>
 					</ul>
 					<p>
-						Transfers are based on user consent and are conducted solely for analytics, performance monitoring, and security purposes.
+						Transfers are based on user consent and are conducted solely for analytics, performance monitoring, and security
+						purposes.
 					</p>
 				</section>
 

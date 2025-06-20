@@ -38,7 +38,9 @@ export default function Footer() {
 					  className={cn(styleOfLink)}>Contacts</Link>
 				<Link href="/privacy" className={cn(styleOfLink)}>Privacy Policy</Link>
 				<Link href="/terms" className={cn(styleOfLink)}>Terms of Service</Link>
-				<button type="button" data-cc="show-preferencesModal" onClick={openCookieManager} className={cn(styleOfLink, 'cursor-pointer')}>Manage Cookies</button>
+				<button type="button" data-cc="show-preferencesModal" onClick={openCookieManager}
+						className={cn(styleOfLink, 'cursor-pointer')}>Manage Cookies
+				</button>
 			</div>
 
 			<Divider className="mb-4"/>

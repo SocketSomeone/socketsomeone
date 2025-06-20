@@ -1,10 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import { cn } from '@/utils';
+import { cn, dateToDuration } from '@/utils';
 import Image from 'next/image';
 import { ClockIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { Activity } from 'react-use-lanyard';
 import { useLanyardContext } from '@/components/providers/LanyardProvider';
-import { dateToDuration } from '@/utils';
 
 export default function Toast() {
 	const [closed, setClosed] = useState<boolean>(false);
@@ -161,7 +160,7 @@ export default function Toast() {
 							</div>
 						</div>
 
-						<ActivityButton activity={activity} />
+						<ActivityButton activity={activity}/>
 					</div>
 
 					<CloseButton
@@ -197,7 +196,7 @@ function ActivityButton({ activity }: { activity: Activity }) {
 				{buttonText}
 			</a>
 		</div>
-	)
+	);
 }
 
 

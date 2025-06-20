@@ -64,7 +64,7 @@ const borderColorVariants = (type: ChipType, color: ChipColor) => {
 	return `border ${colors[color] || 'border-white'}`;
 };
 
-export default function Badge({children, className, size, type, color, icon, iconPosition, ...props}: ChipProps) {
+export default function Badge({ children, className, size, type, color, icon, iconPosition, ...props }: ChipProps) {
 	size ??= 'md';
 	type ??= 'outlined';
 	color ??= 'white';

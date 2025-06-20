@@ -22,7 +22,7 @@ export default function ProjectCard({
 										url,
 										title,
 										description,
-										metrics: {forks, stars, issues, language},
+										metrics: { forks, stars, issues, language },
 										hotest, newest
 									}: ProjectCardProps) {
 
@@ -30,7 +30,7 @@ export default function ProjectCard({
 		need: hotest || newest,
 		text: hotest ? 'HOT' : 'NEW',
 		color: hotest ? 'red' : 'blue' as 'red' | 'blue',
-		icon: hotest ? <FireIcon  width={'14px'} /> : <BoltIcon width={'14px'} />,
+		icon: hotest ? <FireIcon width={'14px'}/> : <BoltIcon width={'14px'}/>,
 	};
 
 

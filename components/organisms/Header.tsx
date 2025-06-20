@@ -26,7 +26,8 @@ export default function Header() {
 				<Link href="/" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
 					About
 				</Link>
-				<a href="https://t.me/socketsomeoneshit" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">Blog</a>
+				<a href="https://t.me/socketsomeoneshit"
+				   className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">Blog</a>
 				<Link href="/#projects" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
 					Projects
 				</Link>

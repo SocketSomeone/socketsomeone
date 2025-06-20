@@ -5,8 +5,8 @@ import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 export default function TermsPage() {
 	return (
 		<Page title="Terms of Service"
-			description="Terms of Service for socketsomeone.me and socketsomeone.dev"
-			className="px-4 xs:px-0 pt-10 md:pt-20"
+			  description="Terms of Service for socketsomeone.me and socketsomeone.dev"
+			  className="px-4 xs:px-0 pt-10 md:pt-20"
 		>
 			<div className="md:container my-8 px-0! space-y-4 text-sm">
 				<div className="text-sm mb-2">

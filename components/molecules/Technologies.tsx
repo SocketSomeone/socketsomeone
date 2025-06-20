@@ -40,7 +40,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 
 export default function Technologies() {
 	const [data, setData] = useState<IconData | null>(null);
-	const {resolvedTheme} = useTheme();
+	const { resolvedTheme } = useTheme();
 
 	const iconSlugs = [
 		'nestjs',
@@ -61,7 +61,7 @@ export default function Technologies() {
 	];
 
 	useEffect(() => {
-		fetchSimpleIcons({slugs: iconSlugs}).then(setData);
+		fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
 	}, []);
 
 	const renderedIcons = useMemo(() => {

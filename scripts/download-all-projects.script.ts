@@ -2,7 +2,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as process from 'node:process';
 
-const approvedUsers = ['SocketSomeone']
+const approvedUsers = ['SocketSomeone'];
 const approvedOrgs = ['necordjs', 'miko-org', 'burger-club', 'Fotrum', 'VENOM-MULTICHEAT', 'noiro-org', 'External-Wallhack'];
 
 
