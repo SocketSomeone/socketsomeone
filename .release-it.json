@@ -10,7 +10,9 @@
 		"publish": false
 	},
 	"hooks": {
-		"before:init": ["npx lint-staged"]
+		"before:init": [
+			"npx lint-staged"
+		]
 	},
 	"plugins": {
 		"@release-it/conventional-changelog": {
