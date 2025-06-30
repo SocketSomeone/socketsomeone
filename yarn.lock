@@ -4587,12 +4587,12 @@ for-each@^0.3.3, for-each@^0.3.5:
   dependencies:
     is-callable "^1.2.7"
 
-framer-motion@^12.19.2:
-  version "12.19.2"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.19.2.tgz#19e7f0ccff98c769ba2cafff24ba97d1bb6701a5"
-  integrity sha512-0cWMLkYr+i0emeXC4hkLF+5aYpzo32nRdQ0D/5DI460B3O7biQ3l2BpDzIGsAHYuZ0fpBP0DC8XBkVf6RPAlZw==
+framer-motion@^12.19.2, framer-motion@^12.20.0:
+  version "12.20.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.20.0.tgz#f0fb45ff341c43f1bbad52820ff0ee410d6f3a8b"
+  integrity sha512-RDGhDfJa/7yhlosYDOenPoEhNvfWN7rcIzoPy0weFF4d61gMJAjGa2f6d3f+4s6eD7vm3PEmlBQZxrjymwYH0A==
   dependencies:
-    motion-dom "^12.19.0"
+    motion-dom "^12.19.3"
     motion-utils "^12.19.0"
     tslib "^2.4.0"
 
@@ -6096,10 +6096,10 @@ mkdirp@^3.0.1:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-3.0.1.tgz#e44e4c5607fb279c168241713cc6e0fea9adcb50"
   integrity sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==
 
-motion-dom@^12.19.0:
-  version "12.19.0"
-  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.19.0.tgz#c31c943bd1e9a48a641f2e57e2ed96d5f48f3d8e"
-  integrity sha512-m96uqq8VbwxFLU0mtmlsIVe8NGGSdpBvBSHbnnOJQxniPaabvVdGgxSamhuDwBsRhwX7xPxdICgVJlOpzn/5bw==
+motion-dom@^12.19.3:
+  version "12.19.3"
+  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.19.3.tgz#5ea90e0ff8c39eecf9c4e2ce1ceb2ef44b3ca8f6"
+  integrity sha512-uAKtDg5i3CNhvL3vdWKDgZqqtWEy15lZGhq5FE2VMYMlloNlsgQjdOWMeMrU/UCjE8yx/8662pB/zWo7QTiE+A==
   dependencies:
     motion-utils "^12.19.0"
 
