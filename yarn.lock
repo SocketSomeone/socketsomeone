@@ -1903,10 +1903,10 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-15.3.4.tgz#a652327782d838c2b875eaf216187c51b8409775"
   integrity sha512-4kDt31Bc9DGyYs41FTL1/kNpDeHyha2TC0j5sRRoKCyrhNcfZ/nRQkAUlF27mETwm8QyHqIjHJitfcza2Iykfg==
 
-"@next/third-parties@^15.3.4":
-  version "15.3.4"
-  resolved "https://registry.yarnpkg.com/@next/third-parties/-/third-parties-15.3.4.tgz#030d614919321f05c1a7e0690488634699696705"
-  integrity sha512-jOvAsd0Yoq/eZ3/M+X/y/539/M6Up2xPE/aOr23CGXKinhfK2kscGP4uhtwlS0FZyHvU7ud9HTTt7G3D5G5BkA==
+"@next/third-parties@^15.3.5":
+  version "15.3.5"
+  resolved "https://registry.yarnpkg.com/@next/third-parties/-/third-parties-15.3.5.tgz#4877a3df5baf2969d814df40b575af153ef498a4"
+  integrity sha512-ef2tj6caWSoUy9yM7bGA0uDECJbru8XALIukOn1ZXBeSlOq8+5TTVEB0+xyJVpEDPXIB9w/CVIQw0e0cRIJHVQ==
   dependencies:
     third-party-capital "1.0.20"
 
@@ -4587,7 +4587,7 @@ for-each@^0.3.3, for-each@^0.3.5:
   dependencies:
     is-callable "^1.2.7"
 
-framer-motion@^12.22.0, framer-motion@^12.23.0:
+framer-motion@^12.23.0:
   version "12.23.0"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.23.0.tgz#220d5ab0ca9b3e2d10d69a5aa5f6d7badcbf328e"
   integrity sha512-xf6NxTGAyf7zR4r2KlnhFmsRfKIbjqeBupEDBAaEtVIBJX96sAon00kMlsKButSIRwPSHjbRrAPnYdJJ9kyhbA==
