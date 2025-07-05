@@ -39,7 +39,7 @@ export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'chil
 							href="https://t.me/tribute/app?startapp=dsH2"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-blue-600 hover:underline border-r border-gray-300 pr-2"
+							className="text-blue-600 hover:underline border-r border-gray-300 dark:border-gray-600 pr-2"
 						>
 							EUR
 						</a>
