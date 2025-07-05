@@ -9,6 +9,12 @@ type GitHubCalendarProps = {
 	className?: string;
 };
 
+const formatter = new Intl.DateTimeFormat('en-US', {
+	year: 'numeric',
+	month: 'short',
+	day: 'numeric'
+});
+
 export default function GithubActivity({ username = 'SocketSomeone', className }: GitHubCalendarProps) {
 	const { resolvedTheme } = useTheme();
 
@@ -43,10 +49,11 @@ export default function GithubActivity({ username = 'SocketSomeone', className }
 										'#39d353',
 									],
 								}}
+
 								renderBlock={(block, activity) =>
 									React.cloneElement(block, {
 										'data-tooltip-id': 'react-tooltip',
-										'data-tooltip-html': `${activity.count} activities on ${activity.date}`,
+										'data-tooltip-html': `${activity.count} activities on ${formatter.format(new Date(activity.date))}`,
 									})
 								}
 								renderColorLegend={
