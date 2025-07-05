@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import 'react-tooltip/dist/react-tooltip.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 import { DefaultSeo } from 'next-seo';

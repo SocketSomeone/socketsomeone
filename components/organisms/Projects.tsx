@@ -7,6 +7,8 @@ import Loader from '../atoms/Loader';
 import MarqueeProjectsHorizontal from './MarqueeProjectsHorizontal';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
+import GitHubCalendar from 'react-github-calendar';
+import GithubActivity from '../molecules/GithubActivity';
 
 interface ProjectsProps {
 	projects: any[];
@@ -24,7 +26,7 @@ export default function Projects({
 	return (
 		<div
 			id={'projects'}
-			className={cn('flex flex-col justify-center items-center w-full mx-auto py-20 space-y-4 px-1 print:hidden')}>
+			className={cn('flex flex-col justify-center items-center w-full py-20 space-y-6 px-0! xl-wide:px-1 print:hidden')}>
 			<SectionHeader
 				before={
 					<div className="flex flex-row items-center space-x-0 ">
@@ -41,7 +43,8 @@ export default function Projects({
 				title={'Check out my latest work'}
 				description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}/>
 
-			<div className="flex flex-row justify-center py-16 w-full">
+			<div
+				className="flex flex-row justify-center w-full rounded-lg border bg-gray-100/80 border-gray-300 backdrop-blur-xs dark:bg-gray-800/40 dark:border-gray-800 overflow-hidden">
 				{
 					loading || error
 						? <Loader/>
@@ -49,14 +52,17 @@ export default function Projects({
 				}
 			</div>
 
+
+			<GithubActivity/>
+
 			<a href="https://github.com/SocketSomeone"
 			   className="flex items-center justify-center truncate mb-3 py-3 px-4 bg-white shadow-xl shadow-black/5 ring-1 ring-slate-600/10 hover:bg-slate-50 dark:bg-gray-800 dark:ring-gray-800 rounded-xl">
 
 				<LinkIcon className="w-4 h-4 mr-2"/>
 
 				<span className="truncate text-lg font-regular">
-                                More projects on my GitHub
-                                </span>
+					More projects on my GitHub
+				</span>
 			</a>
 
 		</div>

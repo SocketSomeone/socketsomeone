@@ -31,11 +31,11 @@ export default function MarqueeProjectsHorizontal({ projects, rows }: MarqueePro
 
 	return (
 		<div
-			className="flex flex-col flex-wrap rounded-lg border bg-gray-100/80 border-gray-300 backdrop-blur-xs dark:bg-gray-800/40 dark:border-gray-800">
+			className="flex flex-col flex-wrap w-full overflow-hidden">
 			{
 				projects.length === 0 ? (
 						<Placeholder
-							className={'w-[100vw] h-[400px]'}
+							className={'w-full h-[400px]'}
 							image="gifs/duck-haha-classic.gif"
 							header={'No projects found'}
 							description={'It seems like there are no projects to display at the moment. Please check back later or explore my other work on GitHub.'}
@@ -53,7 +53,7 @@ export default function MarqueeProjectsHorizontal({ projects, rows }: MarqueePro
 									  stopOnInteraction: false,
 									  startDelay: 1
 								  })]}
-								  className={'w-[100vw]'}
+								  className={'w-full'}
 						>
 							<CarouselContent>
 								{row.map((project: any, i: number) => (
