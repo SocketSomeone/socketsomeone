@@ -7,7 +7,6 @@ import Loader from '../atoms/Loader';
 import MarqueeProjectsHorizontal from './MarqueeProjectsHorizontal';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
-import GitHubCalendar from 'react-github-calendar';
 import GithubActivity from '../molecules/GithubActivity';
 
 interface ProjectsProps {
