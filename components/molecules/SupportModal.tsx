@@ -71,7 +71,7 @@ export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'chil
 											setCopied(wallet.address);
 											setTimeout(() => setCopied(null), 1500);
 										}}
-										className="text-xs text-blue-600 hover:underline bg-blue-600/10 dark:bg-blue-400/10 p-1 rounded"
+										className="text-xs text-blue-600 hover:underline bg-blue-600/10 dark:bg-blue-400/10 p-1 rounded cursor-pointer"
 									>
 										<CopyIcon className="inline-block w-4 h-4" />
 									</button>
