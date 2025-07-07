@@ -1,4 +1,4 @@
-import { JSX, useEffect, useMemo, useState } from 'react';
+import React, { JSX, useEffect, useMemo, useState } from 'react';
 import { fetchSimpleIcons, renderSimpleIcon, SimpleIcon, } from 'react-icon-cloud';
 import { useTheme } from 'next-themes';
 
@@ -38,33 +38,33 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 	return rendered;
 };
 
-export default function Technologies() {
+function Technologies() {
 	const [data, setData] = useState<IconData | null>(null);
 	const { resolvedTheme } = useTheme();
 
-	const iconSlugs = [
-		'nestjs',
-		'javascript',
-		'typescript',
-		'docker',
-		'githubactions',
-		'kubernetes',
-		'python',
-		'sharp',
-		'cplusplus',
-		'react',
-		'tailwindcss',
-		'postgresql',
-		'redis',
-		'rabbitmq',
-		'nginx'
-	];
-
 	useEffect(() => {
+		const iconSlugs = [
+			'nestjs',
+			'javascript',
+			'typescript',
+			'docker',
+			'githubactions',
+			'kubernetes',
+			'python',
+			'sharp',
+			'cplusplus',
+			'react',
+			'tailwindcss',
+			'postgresql',
+			'redis',
+			'rabbitmq',
+			'nginx'
+		];
+
 		fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
 	}, []);
 
-	const renderedIcons = useMemo(() => {
+	const iconPositions = useMemo(() => {
 		if (!data) return [];
 
 		type IconTiming = { left: number; start: number; end: number };
@@ -95,25 +95,38 @@ export default function Technologies() {
 			const start = delaySec;
 			const end = delaySec + durationSec;
 			const left = getNonOverlappingLeft(start, end);
-			const width = getRandomInt(30, 70);
-			const height = width;
-			const delay = `${delaySec}s`;
-			const duration = `${durationSec}s`;
+			const size = getRandomInt(30, 70);
+			const [width, height] = [size, size];
 
 			return {
-				element: renderCustomIcon(icon, resolvedTheme || 'light'),
-				style: {
-					position: 'absolute',
-					bottom: '-100px',
-					left,
-					width,
-					height,
-					animationDelay: delay,
-					animationDuration: duration,
-				},
+				icon,
+				left,
+				start,
+				end,
+				delay: `${delaySec}s`,
+				duration: `${durationSec}s`,
+				width,
+				height,
 			};
 		});
-	}, [data, resolvedTheme]);
+	}, [data]);
+
+	const renderedIcons = useMemo(() => {
+		if (!data) return [];
+
+		return iconPositions.map(({ icon, left, delay, duration, width, height }) => ({
+			element: renderCustomIcon(icon, resolvedTheme || 'light'),
+			style: {
+				position: 'absolute',
+				bottom: '-100px',
+				left,
+				width,
+				height,
+				animationDelay: delay,
+				animationDuration: duration,
+			},
+		}));
+	}, [data, iconPositions, resolvedTheme]);
 
 	return (
 		<ul className="-z-1 hidden sm:flex print:hidden absolute bottom-0 w-full h-[100vh] overflow-hidden">
@@ -129,3 +142,5 @@ export default function Technologies() {
 		</ul>
 	);
 }
+
+export default React.memo(Technologies);
