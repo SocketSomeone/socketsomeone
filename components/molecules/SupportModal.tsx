@@ -2,6 +2,7 @@
 import Modal, { ModalProps } from '../atoms/Modal';
 import { CopyIcon } from 'lucide-react';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'children'>) {
 	const [copied, setCopied] = useState<string | null>(null);
@@ -76,12 +77,19 @@ export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'chil
 										<CopyIcon className="inline-block w-4 h-4" />
 									</button>
 
-									{copied === wallet.address && (
-										<span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-xs text-white bg-green-600 dark:bg-green-500 px-2 py-0.5 rounded shadow-lg whitespace-nowrap">
-											Copied!
-										</span>
-									)}
-
+									<AnimatePresence>
+										{copied === wallet.address && (
+											<motion.span
+												initial={{ opacity: 0, y: -5 }}
+												animate={{ opacity: 1, y: 0 }}
+												exit={{ opacity: 0, y: -5 }}
+												transition={{ duration: 0.3 }}
+												className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-xs text-white bg-green-600 dark:bg-green-500 px-2 py-0.5 rounded shadow-lg whitespace-nowrap"
+											>
+												Copied!
+											</motion.span>
+										)}
+									</AnimatePresence>
 								</div>
 							</div>
 						</div>
