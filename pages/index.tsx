@@ -2,7 +2,7 @@
 
 import Light from '../components/atoms/Light';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect } from 'react';
 import Technologies from '../components/molecules/Technologies';
 import Toast from '../components/molecules/Toast';
 import Intro from '@/components/organisms/Intro';
@@ -17,11 +17,11 @@ export default function Home() {
 	const searchParams = useSearchParams();
 	const isPrintMode = searchParams.has('view', 'cv');
 
-	// useEffect(() => {
-	// 	if (isPrintMode && !loading) {
-	// 		window.print();
-	// 	}
-	// }, [isPrintMode, loading]);
+	useEffect(() => {
+		if (isPrintMode) {
+			window.print();
+		}
+	}, [isPrintMode]);
 
 	return (
 		<Page
