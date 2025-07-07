@@ -1,6 +1,7 @@
 import Metrics from './Metrics';
 import Badge from '../atoms/Badge';
 import { BoltIcon, FireIcon } from '@heroicons/react/20/solid';
+import Image from 'next/image';
 
 export interface ProjectCardProps {
 	thumbnail?: string;
@@ -39,9 +40,11 @@ export default function ProjectCard({
 			href={url}
 			className="flex flex-row h-[160px] sm:h-[180px] pointer-events-auto py-2 px-4 mx-2 my-4 w-[18rem] sm:w-[26rem] md:w-[24rem] lg:w-[26rem] xl:w-[30rem] rounded-xl
 			bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50 dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer">
-			<img
-				src={thumbnail}
-				alt={title}
+			<Image
+				src={thumbnail ?? '/icons/github_gradient.svg'}
+				alt={title ?? 'Project Thumbnail'}
+				width={4096}
+				height={4096}
 				className="w-16 sm:w-20 md:w-20 lg:w-28 xl:w-32 hidden sm:flex self-center rounded-2xl mr-4 object-contain"/>
 
 			<div className="flex flex-col justify-between overflow-hidden w-full p-4">

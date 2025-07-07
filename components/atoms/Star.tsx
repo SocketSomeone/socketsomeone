@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Star() {
 	const [x, setX] = useState(0);
@@ -15,11 +16,20 @@ export default function Star() {
 		}
 	}, [radius]);
 
-	return <div className="absolute dark:bg-white rounded-full opacity-100 animate-pulse hidden dark:flex" style={{
-		top: y + 'px',
-		left: x + 'px',
-		height: radius + 'px',
-		width: radius + 'px',
-		animationDuration: duration + 's',
-	}}/>;
+	return (
+		<motion.div
+			className="absolute dark:bg-white rounded-full opacity-100 hidden dark:flex animate-pulse"
+			style={{
+				top: y + 'px',
+				left: x + 'px',
+				height: radius + 'px',
+				width: radius + 'px',
+				animationDuration: duration + 's',
+			}}
+			initial={{ opacity: 0, scale: 0.5 }}
+			animate={{ opacity: 1, scale: 1 }}
+			exit={{ opacity: 0, scale: 0.5 }}
+			transition={{ duration: 1 }}
+		/>
+	);
 }

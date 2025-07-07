@@ -8,19 +8,20 @@ import MarqueeProjectsHorizontal from './MarqueeProjectsHorizontal';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
 import GithubActivity from '../molecules/GithubActivity';
+import { useQuery } from '@tanstack/react-query';
 
-interface ProjectsProps {
-	projects: any[];
-	loading: boolean;
-	error: any;
-}
 
-export default function Projects({
-									 projects,
-									 loading,
-									 error,
-								 }: ProjectsProps): JSX.Element {
-
+export default function Projects(): JSX.Element {
+	const { isLoading: loading, error, data: projects } = useQuery({
+		queryKey: ['projects'],
+		queryFn: async () => {
+			const response = await fetch('https://raw.githubusercontent.com/SocketSomeone/socketsomeone/refs/heads/master/assets/projects.json');
+			if (!response.ok) {
+				throw new Error('Failed to fetch projects');
+			}
+			return response.json();
+		}
+	})
 
 	return (
 		<div
@@ -46,7 +47,7 @@ export default function Projects({
 				className="flex flex-row justify-center w-full rounded-lg border bg-gray-100/80 border-gray-300 backdrop-blur-xs dark:bg-gray-800/40 dark:border-gray-800 overflow-hidden">
 				{
 					loading || error
-						? <Loader/>
+						? (<div className='h-[400px] w-full justify-center items-center flex'><Loader /></div>)
 						: <MarqueeProjectsHorizontal projects={projects} rows={3}/>
 				}
 			</div>

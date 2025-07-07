@@ -1,3 +1,4 @@
+'use client';
 import GitHubCalendar from 'react-github-calendar';
 import { cn } from '@/utils';
 import { useTheme } from 'next-themes';
@@ -17,6 +18,13 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 
 export default function GithubActivity({ username = 'SocketSomeone', className }: GitHubCalendarProps) {
 	const { resolvedTheme } = useTheme();
+	const [mounted, setMounted] = React.useState(false);
+
+	React.useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	if (!mounted) return null;
 
 	return (
 		<div

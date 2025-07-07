@@ -12,44 +12,16 @@ import Page from '@/components/Page';
 import Projects from '@/components/organisms/Projects';
 import { useSearchParams } from 'next/navigation';
 import Contact from '@/components/organisms/Contact';
-import { useFetch } from 'use-http';
 
 export default function Home() {
-	const [projects, setProjects] = useState<any>([]);
-	const [starsCount, setStarsCount] = useState(0);
-	const stars = useMemo(() => starsCount, [starsCount]);
 	const searchParams = useSearchParams();
 	const isPrintMode = searchParams.has('view', 'cv');
-	const {
-		get,
-		response,
-		loading,
-		error
-	} = useFetch('https://raw.githubusercontent.com');
 
-	useEffect(() => {
-		initialProjects().then();
-	}, [initialProjects, projects]);
-
-
-	async function initialProjects() {
-		if (projects.length !== 0) {
-			return;
-		}
-
-		const initialProjects = await get('SocketSomeone/socketsomeone/refs/heads/master/assets/projects.json');
-		if (response.ok) {
-			setProjects(initialProjects);
-		}
-
-		setStarsCount(80);
-	}
-
-	useEffect(() => {
-		if (isPrintMode && !loading) {
-			window.print();
-		}
-	}, [isPrintMode, loading]);
+	// useEffect(() => {
+	// 	if (isPrintMode && !loading) {
+	// 		window.print();
+	// 	}
+	// }, [isPrintMode, loading]);
 
 	return (
 		<Page
@@ -76,11 +48,7 @@ export default function Home() {
 				</div>
 			</div>
 
-			<Projects
-				projects={projects}
-				loading={loading}
-				error={error}
-			/>
+			<Projects/>
 
 			<Experience/>
 
@@ -90,7 +58,7 @@ export default function Home() {
 
 			<Toast/>
 
-			<StarsGrid stars={stars}/>
+			<StarsGrid stars={80}/>
 		</Page>
 	);
 }
