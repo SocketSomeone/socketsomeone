@@ -42,7 +42,7 @@ export default function Header() {
 				<div className="flex items-center space-x-4">
 					<Link href="/"
 						  className="text-xl flex flex-row items-center space-x-2 text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
-						<Logo className='hover:-rotate-6 flex-shrink-0' width={32} height={32}/>
+						<Logo className='transition-transform sm:transform hover:-rotate-6 flex-shrink-0' width={32} height={32}/>
 
 						<div className="flex flex-col">
 							<small className="text-sm">SocketSomeone</small>
