@@ -75,8 +75,6 @@ export default function Toast() {
 			{!closed && activity && (
 				<motion.div
 					key="toast"
-					layout
-					layoutId="toast"
 					initial={{ opacity: 0, y: 50 }}
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: 50 }}
