@@ -39,7 +39,6 @@
 	--animate-shimmer: shimmer 8s infinite;
 	--animate-gradient: gradient 8s linear infinite;
 	--animate-float: floating 20s linear infinite;
-	--animate-slide-up: slideUp 0.3s ease-out;
 
 	--breakpoint-xl-wide: 1440px;
 	--breakpoint-xl1440: 1440px;
