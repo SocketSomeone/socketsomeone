@@ -25,7 +25,7 @@ export default function SectionHeader({ className, before, head, title, descript
 			<h1 className="text-3xl font-bold tracking-tighter sm:text-5xl print:hidden">{title}</h1>
 
 			{description && (
-				<p className={'text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed print:hidden'}>
+				<p className={'text-muted-foreground text-sm/relaxed sm:text-lg/relaxed md:text-xl/relaxed print:hidden'}>
 					{description}
 				</p>
 			)}

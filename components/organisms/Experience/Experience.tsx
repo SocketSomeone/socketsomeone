@@ -24,7 +24,7 @@ export default function Experience() {
 			<SectionHeader head={'Experience'} title={'My professional journey'}
 						   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
 
-			<div className="md:container text-muted-foreground pt-10 relative flex flex-col items-center print:pt-0 print:px-0">
+			<div className="md:container text-muted-foreground relative flex flex-col items-center print:pt-0 print:px-0">
 				{experienceEntries.map((entry, entryIndex) => (
 					<ExperienceItem
 						key={`timeline-${entryIndex}`}

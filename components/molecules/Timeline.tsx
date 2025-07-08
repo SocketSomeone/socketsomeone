@@ -12,7 +12,7 @@ type TimelineEventProps = {
 export const TimelineEvent = ({ active, last, children, onClick, className }: TimelineEventProps) => {
 	return (
 		<div
-			className={cn('relative w-full lg:w-2/3 xl:w-1/2 border-b print:pb-0 before:-ml-6 before:w-px before:bg-border before:h-full before:mt-2 print:before:hidden before:absolute print:w-full! print:before:ml-0', {
+			className={cn('relative w-full lg:w-3xl border-b print:pb-0 before:-ml-6 before:w-px before:bg-border before:h-full before:mt-2 print:before:hidden before:absolute print:w-full! print:before:ml-0', {
 				'border-none': last,
 				'py-2': !last,
 				'pt-2': last,
