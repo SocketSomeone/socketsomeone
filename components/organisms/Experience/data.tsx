@@ -29,8 +29,8 @@ export function getExperienceEntries(): ExperienceEntry[] {
 
 	return [
 		{
-			name: 'X5 Tech',
-			url: 'https://x5.tech/',
+			name: 'X5 Digital',
+			url: 'https://www.x5.ru',
 			location: 'Russia, Moscow - Remote',
 			startDate: 'Apr. 2024',
 			endDate: 'Present',
@@ -61,7 +61,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'Developed a benchmarking and metrics system to evaluate neural network quality',
 				'Contributed to hiring top talent into core business teams'
 			],
-			icon: ImageOrIcon('/images/x5.png', WorkIcon),
+			icon: ImageOrIcon('https://www.x5.ru/wp-content/themes/x5/assets/img/favicon/favicon.ico', WorkIcon),
 		},
 		{
 			name: 'Necord',
