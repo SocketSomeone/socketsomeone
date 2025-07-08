@@ -61,7 +61,7 @@ export function getExperienceEntries(): ExperienceEntry[] {
 				'Developed a benchmarking and metrics system to evaluate neural network quality',
 				'Contributed to hiring top talent into core business teams'
 			],
-			icon: ImageOrIcon('https://www.x5.ru/wp-content/themes/x5/assets/img/favicon/favicon.ico', WorkIcon),
+			icon: ImageOrIcon('https://www.x5.ru/wp-content/themes/x5/assets/img/favicon/favicon.svg', WorkIcon),
 		},
 		{
 			name: 'Necord',
