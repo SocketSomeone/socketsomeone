@@ -1,7 +1,7 @@
 import Star from '@/components/atoms/Star';
 import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 
 type Props = {
 	stars?: number;

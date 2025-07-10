@@ -2497,11 +2497,6 @@
   dependencies:
     tslib "^2.4.0"
 
-"@types/canvas-confetti@^1.9.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@types/canvas-confetti/-/canvas-confetti-1.9.0.tgz#d1077752e046413c9881fbb2ba34a70ebe3c1773"
-  integrity sha512-aBGj/dULrimR1XDZLtG9JwxX1b4HPRF6CX9Yfwh3NvstZEm1ZL7RBnel4keCPSqs1ANRu1u2Aoz9R+VmtjYuTg==
-
 "@types/conventional-commits-parser@^5.0.0":
   version "5.0.1"
   resolved "https://registry.npmjs.org/@types/conventional-commits-parser/-/conventional-commits-parser-5.0.1.tgz#8cb81cf170853496cbc501a3b32dcf5e46ffb61a"
@@ -3176,11 +3171,6 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001688, can
   version "1.0.30001717"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001717.tgz#5d9fec5ce09796a1893013825510678928aca129"
   integrity sha512-auPpttCq6BDEG8ZAuHJIplGw6GODhjw+/11e7IjpnYCxZcW/ONgPs0KVBJ0d1bY3e2+7PRe5RCLyP+PfwVgkYw==
-
-canvas-confetti@^1.9.3:
-  version "1.9.3"
-  resolved "https://registry.npmjs.org/canvas-confetti/-/canvas-confetti-1.9.3.tgz"
-  integrity sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"

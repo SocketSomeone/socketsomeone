@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { cn, dateToDuration } from '@/utils';
 import Image from 'next/image';
 import { ClockIcon, XMarkIcon } from '@heroicons/react/24/solid';

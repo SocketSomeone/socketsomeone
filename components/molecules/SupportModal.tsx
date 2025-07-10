@@ -2,7 +2,7 @@
 import Modal, { ModalProps } from '../atoms/Modal';
 import { CopyIcon } from 'lucide-react';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'children'>) {
 	const [copied, setCopied] = useState<string | null>(null);
