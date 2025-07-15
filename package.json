@@ -34,7 +34,7 @@
 		"eslint": "9.31.0",
 		"eslint-config-next": "15.4.1",
 		"lucide-react": "^0.525.0",
-		"motion": "^12.23.5",
+		"motion": "^12.23.6",
 		"next": "^15.4.1",
 		"next-pwa": "^5.6.0",
 		"next-sitemap": "^4.2.3",
