@@ -12,7 +12,7 @@ export default function Page({ children, className, ...rest }: Props) {
 		<>
 			<NextSeo {...rest}/>
 			<main
-				className={cn('flex flex-col items-center flex-grow justify-center font-Poppins h-full  print:overflow-visible!', className)}>
+				className={cn('print:overflow-visible!', className)}>
 				{children}
 			</main>
 		</>

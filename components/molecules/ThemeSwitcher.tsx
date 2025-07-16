@@ -45,7 +45,7 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 	return (
 		<button
 			className={cn(
-				'flex items-center justify-center p-2 rounded-full bg-transparent hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-200 select-none cursor-pointer',
+				'flex items-center justify-center select-none cursor-pointer',
 				'print:hidden',
 				className
 			)}

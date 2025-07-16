@@ -12,6 +12,9 @@ import Page from '@/components/Page';
 import Projects from '@/components/organisms/Projects';
 import { useSearchParams } from 'next/navigation';
 import Contact from '@/components/organisms/Contact';
+import { cn } from '@/utils';
+import SectionHeader from '@/components/atoms/SectionHeader';
+import LaurelIcon from '@/components/icons/LaurelIcon';
 
 export default function Home() {
 	const searchParams = useSearchParams();
@@ -26,6 +29,7 @@ export default function Home() {
 	return (
 		<Page
 			title="Alexey Filippov - Software Engineer"
+			description="Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building."
 		>
 			<Light/>
 
@@ -48,7 +52,28 @@ export default function Home() {
 				</div>
 			</div>
 
-			<Projects/>
+			<div
+				id={'projects'}
+				className={cn('flex flex-col justify-center items-center w-full py-20 space-y-6 px-0! xl-wide:px-1 print:hidden')}>
+				<SectionHeader
+					before={
+						<div className="flex flex-row items-center space-x-0 ">
+							<LaurelIcon
+								className="w-8 h-8 -scale-x-100 text-yellow-500"/>
+							<div
+								className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+								My Projects
+							</div>
+
+							<LaurelIcon className="w-8 h-8 text-yellow-500"/>
+						</div>
+					}
+					title={'Check out my latest work'}
+					description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}
+				/>
+				<Projects background={true} type="marquee"/>
+			</div>
+
 
 			<Experience/>
 

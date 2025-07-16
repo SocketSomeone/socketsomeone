@@ -1,19 +1,18 @@
-import Metrics from './Metrics';
 import Badge from '../atoms/Badge';
 import { BoltIcon, FireIcon } from '@heroicons/react/20/solid';
-import Image from 'next/image';
+import { BeakerIcon, LanguageIcon, StarIcon } from '@heroicons/react/24/solid';
 
 export interface ProjectCardProps {
 	thumbnail?: string;
 	url?: string;
+	owner?: string;
 	title?: string;
 	description?: string;
 	metrics: {
 		stars: number;
-		forks: number;
-		issues?: number;
 		language?: string
 	};
+	license?: string;
 	newest: boolean;
 	hotest: boolean;
 }
@@ -21,9 +20,11 @@ export interface ProjectCardProps {
 export default function ProjectCard({
 										thumbnail,
 										url,
+										owner,
 										title,
 										description,
-										metrics: { forks, stars, issues, language },
+										metrics: { stars, language },
+										license,
 										hotest, newest
 									}: ProjectCardProps) {
 
@@ -38,33 +39,54 @@ export default function ProjectCard({
 	return (
 		<a
 			href={url}
-			className="flex flex-row h-[160px] sm:h-[180px] pointer-events-auto py-2 px-4 mx-2 my-4 w-[18rem] sm:w-[26rem] md:w-[24rem] lg:w-[26rem] xl:w-[30rem] rounded-xl
+			className="flex flex-row h-[160px] sm:h-[180px] pointer-events-auto py-4 px-4 w-[18rem] sm:w-[26rem] md:w-[24rem] lg:w-[26rem] xl:w-[27.1rem] rounded-xl
 			bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50 dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer">
-			<Image
-				src={thumbnail ?? '/icons/github_gradient.svg'}
-				alt={title ?? 'Project Thumbnail'}
-				width={4096}
-				height={4096}
-				className="w-16 sm:w-20 md:w-20 lg:w-28 xl:w-32 hidden sm:flex self-center rounded-2xl mr-4 object-contain"/>
 
-			<div className="flex flex-col justify-between overflow-hidden w-full p-4">
-				<div className="flex flex-row">
-					<h1 className="text-lg sm:text-2xl break-words w-fit font-medium dark:text-white ">{title}</h1>
+			<div className="flex flex-col justify-between overflow-hidden w-full">
+				<div className="flex flex-col space-y-2">
+					<div className="flex flex-row justify-between space-x-2 items-start">
+						<h3 className="text-black/90 dark:text-white/90 items-center truncate space-x-1">
+							<span className="text-black/50 dark:text-white/30">{owner}/</span>
+							<span className="text-black/90 dark:text-white/90">{title}</span>
+						</h3>
 
-					{
-						chipData.need && <>
-							<Badge size={'xs'} color={chipData.color} type={'outlined'}
-								   icon={chipData.icon} iconPosition={'right'}
-								   className={'ml-2 mt-2 rounded-lg text-xs py-[0.15rem]'}>{chipData.text}</Badge>
-						</>
-					}
+						{
+							chipData.need && <>
+								<Badge size={'xs'} color={chipData.color} type={'outlined'}
+									   icon={chipData.icon} iconPosition={'right'}
+									   className={'rounded-lg text-xs py-[0.15rem]'}>{chipData.text}</Badge>
+							</>
+						}
+					</div>
+
+					<p className="text-gray-500 grow text-sm font-normal dark:text-gray-300 line-clamp-2">{description ?? 'No description'}</p>
 				</div>
 
+				<div className="mt-2 justify-start text-black/50 dark:text-white/30">
+					<div className="flex items-center justify-between">
+						<span>Stars:</span>
+						<span className="flex items-center space-x-1">
+							<span>{stars.toLocaleString()}</span>
+							<StarIcon className="w-4 h-4 text-blue-500"/>
+						</span>
+					</div>
 
-				<p className="text-gray-500 grow text-sm font-normal dark:text-gray-300">{description ?? 'No description'}</p>
+					<div className="flex items-center justify-between ">
+						<span>Language:</span>
+						<span className="flex items-center space-x-1">
+							<span>{language ?? 'Unknown'}</span>
+							<LanguageIcon className="w-4 h-4 text-blue-500"/>
+						</span>
+					</div>
 
-				<Metrics style={'mt-2 justify-start dark:text-blue-500'} forks={forks} stars={stars}
-						 issues={issues ?? 0} language={language ?? 'Unknown'}/>
+					<div className="flex items-center justify-between ">
+						<span>License:</span>
+						<span className="flex items-center space-x-1">
+							<span>{license ?? 'N/A'}</span>
+							<BeakerIcon className="w-4 h-4 text-blue-500"/>
+						</span>
+					</div>
+				</div>
 			</div>
 		</a>
 	);

@@ -8,14 +8,22 @@ type Props = {
 	title: string;
 	description?: string;
 	children?: React.ReactNode;
+	align?: 'left' | 'center' | 'right';
 }
 
-export default function SectionHeader({ className, before, head, title, description, children }: Props) {
+export default function SectionHeader({ className, before, head, title, description, children, align = 'center' }: Props) {
 	return (
 		<div
-			className={cn('flex flex-col items-center justify-center text-center space-y-2 max-w-2xl',
+			className={cn(
+				'flex flex-col space-y-2 max-w-2xl',
 				'print:justify-start print:text-start print:items-start print:pb-0',
-				className)}>
+				{
+					'items-center justify-center text-center': align === 'center',
+					'items-start justify-start text-left': align === 'left',
+					'items-end justify-end text-right': align === 'right',
+				},
+				className
+			)}>
 			{before}
 
 			{head && <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm

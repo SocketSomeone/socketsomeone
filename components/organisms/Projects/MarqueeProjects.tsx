@@ -1,14 +1,14 @@
 import ProjectCard from '@/components/molecules/ProjectCard';
-import { Carousel, CarouselContent, CarouselItem } from '../magicui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from '../../magicui/carousel';
 import AutoScroll from 'embla-carousel-auto-scroll';
-import Placeholder from '../molecules/Placeholder';
+import Placeholder from '../../molecules/Placeholder';
 
 export interface MarqueeProjectsHorizontalProps {
 	projects: any;
 	rows: number;
 }
 
-export default function MarqueeProjectsHorizontal({ projects, rows }: MarqueeProjectsHorizontalProps) {
+export default function MarqueeProjects({ projects, rows }: MarqueeProjectsHorizontalProps) {
 	const projectsRows = projects.reduce((resultArray: any[], item: any, index: number) => {
 		const chunkIndex = index % rows;
 
@@ -53,21 +53,21 @@ export default function MarqueeProjectsHorizontal({ projects, rows }: MarqueePro
 									  stopOnInteraction: false,
 									  startDelay: 1
 								  })]}
-								  className={'w-full'}
+								  className={'w-full py-2'}
 						>
 							<CarouselContent>
 								{row.map((project: any, i: number) => (
 
 									<CarouselItem className={'basis-auto'} key={i}>
 										<ProjectCard url={project.html_url || project.homepage}
+													 owner={project.owner.login}
 													 thumbnail={project.owner.login !== 'SocketSomeone' ? project.owner.avatar_url : 'icons/github_gradient.svg'}
 													 title={project.name} description={project.description}
 													 metrics={{
-														 forks: project.forks,
 														 stars: project.stargazers_count,
-														 issues: project.open_issues,
-														 language: project.language
+														 language: project.language,
 													 }}
+													 license={project.license?.spdx_id}
 													 newest={new Date(project.created_at) > threeMonthsAgo}
 													 hotest={mostPopularProjects.includes(project.id)}/>
 									</CarouselItem>
