@@ -35,7 +35,7 @@ export default function Projects({ type, background }: ProjectsProps): JSX.Eleme
 		<>
 
 			<div
-				className={cn('flex flex-row justify-center w-full rounded-lg', {
+				className={cn('flex flex-row justify-center w-full', {
 					'bg-gray-100/80 border-gray-300 backdrop-blur-xs dark:bg-gray-800/40 dark:border-gray-800 border overflow-hidden': background,
 					'bg-transparent dark:bg-transparent': !background
 				})}>
