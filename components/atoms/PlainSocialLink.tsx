@@ -1,15 +1,10 @@
 import { cn } from '@/utils';
 import Image from 'next/image';
+import { SocialLink } from '../../interfaces';
 
-export interface SocialLinkProps {
-	href: string;
-	alt?: string;
-	icon: string;
-	name: string;
-	isPrintable?: boolean;
-}
+type SocialLinkProps = SocialLink
 
-export default function SocialLink(props: SocialLinkProps) {
+export default function PlainSocialLink(props: SocialLinkProps) {
 	return <a
 		className={cn('flex items-center justify-center rounded-sm border-blue-500 dark:border-blue-900 border-none bg-transparent hover:scale-110 easy-in duration-200 text-blue-500 p-3 md:p-4 print:p-0',
 			'print:text-blue-700 print:border-none print:underline print:ml-0 print:bg-transparent print:dark:bg-transparent print:dark:text-blue-700 print:hover:scale-100 print:justify-start print:w-full print:h-fit print:text-left',
@@ -20,7 +15,7 @@ export default function SocialLink(props: SocialLinkProps) {
 			   alt={props.alt ?? ''}/>
 
 		<span className="hidden ml-2 print:block text-sm text-blue-500 dark:text-blue-500 hover:underline">
-			{props.name}
+			{props.description}
 		</span>
 	</a>;
 }

@@ -1,7 +1,7 @@
 import Avatar from '@/components/atoms/Avatar';
 import Banner from '@/components/organisms/Banner';
-import SocialLinksGroup from '@/components/molecules/SocialLinksGroup';
 import BlurFade from '@/components/magicui/blur-fade';
+import SocialLinks from './SocialLinks';
 
 export default function Intro() {
 	const animationStep = 0.05;
@@ -58,7 +58,7 @@ export default function Intro() {
 			</BlurFade>
 
 			<BlurFade delay={calculateDelay(4)} className={'print:blur-none! print:opacity-100! print:animate-none!'}>
-				<SocialLinksGroup/>
+				<SocialLinks type={'plain'} />
 			</BlurFade>
 		</div>
 	);

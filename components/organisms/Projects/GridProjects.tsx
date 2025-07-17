@@ -1,6 +1,6 @@
 import Placeholder from '../../molecules/Placeholder';
-import ProjectCard from '../../molecules/ProjectCard';
 import { cn } from '@/utils';
+import ProjectCard from '../../molecules/Card/ProjectCard';
 
 export interface GridProjectsProps {
 	projects: any;

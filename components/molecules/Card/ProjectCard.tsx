@@ -1,4 +1,4 @@
-import Badge from '../atoms/Badge';
+import Badge from '@/components/atoms/Badge';
 import { BoltIcon, FireIcon } from '@heroicons/react/20/solid';
 import { BeakerIcon, LanguageIcon, StarIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';

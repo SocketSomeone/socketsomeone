@@ -8,20 +8,15 @@ export default function ProjectsPage() {
 		<Page
 			title="Projects"
 			description="Explore the projects of Alexey Filippov, a software engineer specializing in web development, open source, and community building."
+			className={cn('w-full xl-wide:container flex flex-col items-center px-4 py-20 md:pt-40 space-y-6')}
 		>
-
-			<div className="w-full xl-wide:container px-4 pt-6 md:pt-20">
-				<div
-					className={cn('flex flex-col justify-center items-center w-full py-20 space-y-6 print:hidden')}>
-					<SectionHeader title={'Check out my latest work'}
-								   description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}
-								   align={'center'}
-					/>
+			<SectionHeader title={'Check out my latest work'}
+						   description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}
+						   align={'center'}
+			/>
 
 
-					<Projects background={false} type="grid"/>
-				</div>
-			</div>
+			<Projects background={false} type="grid"/>
 		</Page>
 	);
 }
