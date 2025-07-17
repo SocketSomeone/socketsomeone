@@ -44,7 +44,7 @@ export default function StarsGrid({ stars }: Props) {
 	if (!mounted || resolvedTheme !== 'dark') return null;
 
 	return (
-		<div className="z-[-1] print:hidden">
+		<div className="-z-1 print:hidden">
 			<AnimatePresence>
 				{Array.from({ length: starsCount }, (_, i) => (
 					<Star key={`star-${starsCount}-${i}-${currentWidth}`} />

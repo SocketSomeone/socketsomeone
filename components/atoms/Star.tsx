@@ -18,7 +18,7 @@ export default function Star() {
 
 	return (
 		<motion.div
-			className="absolute dark:bg-white rounded-full opacity-100 hidden dark:flex animate-pulse"
+			className="absolute dark:bg-white rounded-full opacity-100 hidden dark:flex animate-pulse -z-1"
 			style={{
 				top: y + 'px',
 				left: x + 'px',
