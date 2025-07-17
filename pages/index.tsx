@@ -30,11 +30,11 @@ export default function Home() {
 		<Page
 			title="Alexey Filippov - Software Engineer"
 			description="Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building."
+			className={'grow'}
 		>
 			<Light/>
 
-			<div
-				className="md:container w-full h-screen flex flex-col print:h-fit px-4 pt-6 md:pt-0">
+			<div className="md:container w-full flex flex-col print:h-fit px-4 pt-6 md:pt-0 h-screen relative -top-16 xl-wide:-top-20">
 				<Intro/>
 
 				<div className="justify-center mb-5 print:hidden">

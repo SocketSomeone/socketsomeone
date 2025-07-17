@@ -11,7 +11,7 @@ import SupportModal from '../molecules/SupportModal';
 export default function Header() {
 	const [supportModalOpen, setSupportModalOpen] = useState(false);
 	const navLinks = [
-		{ href: '/', label: 'About', isExternal: false },
+		{ href: '/#', label: 'About', isExternal: false },
 		{ href: 'https://t.me/socketsomeoneshit', label: 'Blog', isExternal: true },
 		{ href: '/#projects', label: 'Projects', isExternal: false },
 		{ href: '/#contact', label: 'Contact', isExternal: false },
@@ -65,6 +65,7 @@ export default function Header() {
 					<MobileDropdown/>
 				</div>
 			</header>
+			<div className="h-16 xl-wide:h-20"></div>
 		</>
 
 	);

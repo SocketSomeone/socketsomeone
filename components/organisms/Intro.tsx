@@ -11,7 +11,7 @@ export default function Intro() {
 
 	return (
 		<div
-			className="relative h-full flex flex-col text-center items-center justify-center w-full space-y-4 print:justify-start print:text-start print:items-start print:space-y-2 print:w-full print:px-0">
+			className="h-full flex flex-col text-center items-center justify-center w-full space-y-4 print:justify-start print:text-start print:items-start print:space-y-2 print:w-full print:px-0">
 
 			<BlurFade delay={calculateDelay()} className={'print:blur-none! print:opacity-100! print:animate-none!'}>
 				<Avatar/>

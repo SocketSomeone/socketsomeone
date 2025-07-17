@@ -6,7 +6,7 @@ export default function TermsPage() {
 	return (
 		<Page title="Terms of Service"
 			  description="Terms of Service for socketsomeone.me and socketsomeone.dev"
-			  className="py-10 md:py-20 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4 text-base"
+			  className="py-10 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4 text-base"
 		>
 			<div className="text-sm mb-2">
 				<Link href="/" className="text-blue-600 hover:underline flex items-center">

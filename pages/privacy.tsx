@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
 	return (
 		<Page title="Privacy Policy"
 			  description="Learn about our privacy practices and how we handle your personal information. Read our Privacy Policy for details on data collection, usage, and your rights."
-			  className="py-10 md:py-20 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4"
+			  className="py-10 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4"
 		>
 			<div className="text-sm mb-2">
 				<Link href="/" className="text-blue-600 hover:underline flex items-center">
