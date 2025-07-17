@@ -71,7 +71,7 @@ export default function ProjectCard({
 						</span>
 					</div>
 
-					<div className="flex items-center justify-between ">
+					<div className="flex items-center justify-between">
 						<span>Language:</span>
 						<span className="flex items-center space-x-1">
 							<span>{language ?? 'Unknown'}</span>
@@ -79,7 +79,7 @@ export default function ProjectCard({
 						</span>
 					</div>
 
-					<div className="flex items-center justify-between ">
+					<div className="flex items-center justify-between">
 						<span>License:</span>
 						<span className="flex items-center space-x-1">
 							<span>{license ?? 'N/A'}</span>
