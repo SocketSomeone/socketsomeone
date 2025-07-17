@@ -45,7 +45,7 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 	return (
 		<button
 			className={cn(
-				'flex items-center justify-center select-none cursor-pointer',
+				'flex items-center justify-center select-none cursor-pointer md:mr-0!',
 				'print:hidden',
 				className
 			)}

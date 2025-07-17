@@ -69,7 +69,9 @@ export default function MarqueeProjects({ projects, rows }: MarqueeProjectsHoriz
 													 }}
 													 license={project.license?.spdx_id}
 													 newest={new Date(project.created_at) > threeMonthsAgo}
-													 hotest={mostPopularProjects.includes(project.id)}/>
+													 hotest={mostPopularProjects.includes(project.id)}
+													 className="w-[18rem] md:w-[24rem] lg:w-[26rem] xl:w-[27.1rem]"
+										/>
 									</CarouselItem>
 
 								))}

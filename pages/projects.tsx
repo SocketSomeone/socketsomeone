@@ -13,17 +13,10 @@ export default function ProjectsPage() {
 			<div className="w-full xl-wide:container px-4 pt-6 md:pt-20">
 				<div
 					className={cn('flex flex-col justify-center items-center w-full py-20 space-y-6 print:hidden')}>
-					<div className={cn('flex flex-row justify-between items-start w-full')}>
-						<SectionHeader title={'Check out my latest work'}
-									   description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}
-									   align={'left'}
-									   className={'self-end'}
-						/>
-
-						<img src={'https://media.tenor.com/GK-qmS9zYeQAAAAi/buggs-buggy-gifs-skeleton.gif'}
-							 alt="skeleton"
-							 className="w-24 h-24 object-cover hidden md:block animate-pulse"/>
-					</div>
+					<SectionHeader title={'Check out my latest work'}
+								   description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}
+								   align={'center'}
+					/>
 
 
 					<Projects background={false} type="grid"/>

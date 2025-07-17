@@ -1,5 +1,6 @@
 import Placeholder from '../../molecules/Placeholder';
 import ProjectCard from '../../molecules/ProjectCard';
+import { cn } from '@/utils';
 
 export interface GridProjectsProps {
 	projects: any;
@@ -14,7 +15,7 @@ export default function GridProjects({ projects }: GridProjectsProps) {
 	const threeMonthsAgo = new Date(new Date().setMonth(new Date().getMonth() - 6));
 
 	return (
-		<div className="flex flex-col flex-wrap justify-center py-8">
+		<>
 			{
 				projects.length === 0 ? (
 					<Placeholder
@@ -24,9 +25,10 @@ export default function GridProjects({ projects }: GridProjectsProps) {
 						description={'It seems like there are no projects to display at the moment. Please check back later or explore my other work on GitHub.'}
 					/>
 				) : (
-					<div className="flex flex-wrap justify-center items-start gap-4">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 						{projects.map((project: any, index: number) => (
 							<ProjectCard key={index}
+										 className={cn('w-full')}
 										 url={project.html_url || project.homepage}
 										 owner={project.owner.login}
 										 thumbnail={project.owner.login !== 'SocketSomeone' ? project.owner.avatar_url : 'icons/github_gradient.svg'}
@@ -38,10 +40,11 @@ export default function GridProjects({ projects }: GridProjectsProps) {
 										 license={project.license?.spdx_id}
 										 newest={new Date(project.created_at) > threeMonthsAgo}
 										 hotest={mostPopularProjects.includes(project.id)}/>
+
 						))}
 					</div>
 				)
 			}
-		</div>
+		</>
 	);
 }

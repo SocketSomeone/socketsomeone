@@ -1,8 +1,10 @@
 import Badge from '../atoms/Badge';
 import { BoltIcon, FireIcon } from '@heroicons/react/20/solid';
 import { BeakerIcon, LanguageIcon, StarIcon } from '@heroicons/react/24/solid';
+import { cn } from '@/utils';
 
 export interface ProjectCardProps {
+	className?: string;
 	thumbnail?: string;
 	url?: string;
 	owner?: string;
@@ -18,6 +20,7 @@ export interface ProjectCardProps {
 }
 
 export default function ProjectCard({
+										className,
 										thumbnail,
 										url,
 										owner,
@@ -39,8 +42,8 @@ export default function ProjectCard({
 	return (
 		<a
 			href={url}
-			className="flex flex-row h-[160px] sm:h-[180px] pointer-events-auto py-4 px-4 w-[18rem] sm:w-[26rem] md:w-[24rem] lg:w-[26rem] xl:w-[27.1rem] rounded-xl
-			bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50 dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer">
+			className={cn('flex flex-row h-[160px] sm:h-[180px] pointer-events-auto p-4 w-full rounded-xl ' +
+				'bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10 hover:bg-slate-50 dark:ring-gray-800 dark:hover:ring-gray-700 cursor-pointer', className)}>
 
 			<div className="flex flex-col justify-between overflow-hidden w-full">
 				<div className="flex flex-col space-y-2">
