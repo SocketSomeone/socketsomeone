@@ -1935,10 +1935,10 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-15.4.2.tgz#c23402879f14a0647a9e6890537fa07068452912"
   integrity sha512-FxwauyexSFu78wEqR/+NB9MnqXVj6SxJKwcVs2CRjeSX/jBagDCgtR2W36PZUYm0WPgY1pQ3C1+nn7zSnwROuw==
 
-"@next/third-parties@^15.4.1":
-  version "15.4.1"
-  resolved "https://registry.yarnpkg.com/@next/third-parties/-/third-parties-15.4.1.tgz#787e2e284500987ff65f09e56d9ce6c02c1414de"
-  integrity sha512-ENGZ3GesgOeESV7NiC+JJMfdiY602ApqgcVihm0a8TYn5B2RxB93lQzFlUaAv1KlUGiKsSnZBlE6tdB2QIxWFQ==
+"@next/third-parties@^15.4.2":
+  version "15.4.2"
+  resolved "https://registry.yarnpkg.com/@next/third-parties/-/third-parties-15.4.2.tgz#f430f3788a21de60ccc77f9a55a0b58037460bc5"
+  integrity sha512-ncm6RqzJnEo+cjILGo4Ql1/qmf0vaB8LpEkDCu5/XpOoNyynkYFC3GGuOTVJGsRQc7FxRQifbh3F+wHUK/5Dtg==
   dependencies:
     third-party-capital "1.0.20"
 
