@@ -46,10 +46,17 @@ export default function Footer() {
 			<Divider className="mb-4"/>
 
 			<p className="text-xs font-medium mb-2 text-muted-foreground">
-				SocketSomeone • {new Date().getFullYear()}
-			</p>
-			<p className="text-xs font-medium text-muted-foreground">
 				ИП: Филиппов А.Н. • ИНН: 391105816033 • ОГРНИП: 324390000002554
+			</p>
+
+			<p className="text-xs font-medium mb-2 text-muted-foreground">
+				© 2020 - {new Date().getFullYear()} • Built by Alexey Filippov •{' '}
+				<a
+					href="https://github.com/SocketSomeone/socketsomeone"
+					className="border-b border-transparent hover:border-black/10 dark:hover:border-white/10 transition-colors"
+				>
+					View source on GitHub
+				</a>
 			</p>
 		</footer>
 	);
