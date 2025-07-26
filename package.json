@@ -28,7 +28,7 @@
 		"cssnano": "^7.1.0",
 		"embla-carousel-auto-scroll": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
-		"eslint": "9.31.0",
+		"eslint": "9.32.0",
 		"eslint-config-next": "15.4.4",
 		"lucide-react": "^0.525.0",
 		"motion": "^12.23.9",
