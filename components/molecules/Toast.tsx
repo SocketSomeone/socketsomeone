@@ -15,6 +15,7 @@ export default function Toast() {
 	const [left, setLeft] = useState<string>('');
 	const [largeImage, setLargeImage] = useState<string>('');
 	const [smallImage, setSmallImage] = useState<string>('');
+	const [imageNotLoaded, setImageNotLoaded] = useState<boolean>(false);
 
 	const assetURL = useCallback((field: 'small_image' | 'large_image' = 'large_image') => {
 		const asset = activity?.assets?.[field];
@@ -57,7 +58,7 @@ export default function Toast() {
 		const smallURL = assetURL('small_image');
 
 		if (largeURL !== largeImage) {
-			setLargeImage(largeURL);
+			// setLargeImage(largeURL);
 		}
 
 		if (smallURL !== smallImage) {
@@ -87,38 +88,45 @@ export default function Toast() {
 					>
 						<div className="flex">
 							<div className="flex flex-col">
-								<div className="mb-2 text-sm font-semibold text-gray-900 dark:text-blue-500">
-									My current activity
+								<div className="flex items-center justify-between space-x-2 mb-2">
+									<div className="text-sm font-semibold text-gray-900 dark:text-blue-500">
+										My current activity
+									</div>
+
+									<CloseButton
+										onClick={() => setClosed(true)}
+									/>
 								</div>
 
 								<div className="flex items-center gap-3">
-									<div className={cn('relative flex h-max items-center', {
-										hidden: !largeImage && !smallImage,
-									})}>
-										{largeImage && (
-											<div className="relative inline-block group">
-												<Image
-													className="h-full w-auto max-h-[80px] rounded-md object-contain"
-													onError={({ currentTarget }) => currentTarget.style.display = 'none'}
-													width={4096}
-													height={4096}
-													quality={100}
-													src={largeImage}
-													alt="Large Image"
-												/>
-
-												<div
-													role="tooltip"
-													className={cn(
-														'absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 px-3 py-2 text-sm font-medium rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none whitespace-nowrap',
-														'bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900',
-														{ 'hidden': !activity.assets?.large_text }
-													)}
-												>
-													{activity.assets?.large_text || 'Unknown Application'}
-												</div>
-											</div>
-										)}
+									<div className={cn('relative flex h-max items-center')}>
+										<div className="relative inline-block group">
+											{!largeImage || imageNotLoaded ? (
+												<div className="h-[80px] w-[80px] rounded-md bg-gray-200 dark:bg-gray-700 animate-pulse" />
+											) : (
+												<>
+													<Image
+														className="h-full w-auto max-h-[80px] rounded-md object-contain"
+														onError={() => setImageNotLoaded(true)}
+														width={4096}
+														height={4096}
+														quality={100}
+														src={largeImage}
+														alt="Large Image"
+													/>
+													<div
+														role="tooltip"
+														className={cn(
+															'absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 px-3 py-2 text-sm font-medium rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-none whitespace-nowrap',
+															'bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900',
+															{ 'hidden': !activity.assets?.large_text }
+														)}
+													>
+														{activity.assets?.large_text || 'Unknown Application'}
+													</div>
+												</>
+											)}
+										</div>
 
 										{smallImage && (
 											<div className="absolute group -bottom-1 -right-1">
@@ -169,10 +177,6 @@ export default function Toast() {
 
 								<ActivityButton activity={activity}/>
 							</div>
-
-							<CloseButton
-								onClick={() => setClosed(true)}
-							/>
 						</div>
 					</div>
 				</motion.div>
@@ -214,7 +218,7 @@ function CloseButton({ onClick, ariaLabel = 'Close' }: { onClick: () => void; ar
 		<button
 			onClick={onClick}
 			type="button"
-			className="ml-auto absolute right-5 -mx-1.5 -my-1.5 bg-white justify-center items-center shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer"
+			className="flex right-5 bg-white justify-center items-center shrink-0 text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer"
 			aria-label={ariaLabel}
 		>
 			<span className="sr-only">{ariaLabel}</span>
