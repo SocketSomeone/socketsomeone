@@ -9,7 +9,9 @@
 		"lint": "next lint",
 		"lint:fix": "next lint --fix",
 		"prepare": "husky",
-		"publish:git": "release-it"
+		"publish:git": "release-it",
+		"test": "echo \"No tests specified\" && exit 0",
+		"test:ci": "echo \"No tests specified\" && exit 0"
 	},
 	"dependencies": {
 		"@eslint/eslintrc": "^3.3.1",
