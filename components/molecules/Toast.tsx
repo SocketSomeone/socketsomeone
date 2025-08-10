@@ -58,7 +58,7 @@ export default function Toast() {
 		const smallURL = assetURL('small_image');
 
 		if (largeURL !== largeImage) {
-			// setLargeImage(largeURL);
+			setLargeImage(largeURL);
 		}
 
 		if (smallURL !== smallImage) {

@@ -31,7 +31,7 @@ export default function Avatar() {
 	const activityText = status?.activities?.find(activity => activity.id === 'custom')?.state || status?.discord_status || 'offline';
 
 	return (
-		<div className="flex flex-col items-center justify-center select-none">
+		<div className="flex flex-col items-center justify-center select-none relative">
 			<Image className="h-40 w-40 rounded-full object-contain" width={4096} height={4096} src={avatar}
 				   quality={100}
 				   alt="avatar"/>
