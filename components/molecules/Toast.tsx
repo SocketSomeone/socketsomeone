@@ -88,7 +88,7 @@ export default function Toast() {
 					>
 						<div className="flex">
 							<div className="flex flex-col">
-								<div className="flex items-center justify-between space-x-2 mb-2">
+								<div className="flex items-center justify-between space-x-2 mb-2 relative">
 									<div className="text-sm font-semibold text-gray-900 dark:text-blue-500">
 										My current activity
 									</div>
