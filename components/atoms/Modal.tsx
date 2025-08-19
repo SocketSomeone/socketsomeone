@@ -50,7 +50,7 @@ export default function Modal({ isOpen, onClose, children, title, className, ...
 						</Sheet.Scroller>
 					</Sheet.Content>
 				</Sheet.Container>
-				<Sheet.Backdrop className="bg-black/50" onTap={onClose} />
+				<Sheet.Backdrop className="bg-black/50!" onTap={onClose} />
 			</Sheet>
 		);
 	}
