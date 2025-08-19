@@ -44,6 +44,14 @@ export const LINKS: SocialLink[] = [
 		isPrintable: false
 	},
 	{
+		href: 'https://www.linkedin.com/in/socketsomeone/',
+		icon: '/icons/linkedin.svg',
+		alt: 'LinkedIn',
+		name: 'LinkedIn',
+		description: 'Connect with me on LinkedIn',
+		isPrintable: true
+	},
+	{
 		href: 'mailto:socket.someone@gmail.com',
 		icon: '/icons/email.svg',
 		alt: 'Email',
