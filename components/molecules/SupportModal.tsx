@@ -2,27 +2,54 @@
 import Modal, { ModalProps } from '../atoms/Modal';
 import { CopyIcon } from 'lucide-react';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 
 export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'children'>) {
 	const [copied, setCopied] = useState<string | null>(null);
 
-	const wallets = [
+	type Wallet = {
+		symbol: string;
+		name: string;
+		chain: string; // e.g., TRC20, TON, BTC, ETH, SOL
+		address: string;
+	};
+
+	const wallets: Wallet[] = [
 		{
-			currency: 'USDT',
-			network: 'TRC20',
-			address: 'TD1jeMXpdyv3Hk7swBPdrHgV4FYPH9SBaa',
+			symbol: 'USDT',
+			name: 'Tether',
+			chain: 'TRC20',
+			address: 'TD1jeMXpdyv3Hk7swBPdrHgV4FYPH9SBaa'
 		},
 		{
-			currency: 'USDT',
-			network: 'TON',
-			address: 'UQAgo5PKp7htvQebEbECsukmdrny-TfrkmQHvaUI2ewC4iae',
+			symbol: 'TON',
+			name: 'Toncoin',
+			chain: 'TON',
+			address: 'UQAgo5PKp7htvQebEbECsukmdrny-TfrkmQHvaUI2ewC4iae'
 		},
+		{
+			symbol: 'BTC',
+			name: 'Bitcoin',
+			chain: 'BTC',
+			address: '1L5qNsqh5zToxyHGSu1PrhM6PJ21GkCBQ4'
+		},
+		{
+			symbol: 'ETH',
+			name: 'Ethereum',
+			chain: 'ETH',
+			address: '0xe8EE73E47b8ba3e44d25F1566fEbd53dFf844cC3'
+		},
+		{
+			symbol: 'SOL',
+			name: 'Solana',
+			chain: 'SOL',
+			address: 'FAPYqgbvyf3p9VCxFzyGNYEJutZpE9DHPRbwvNXtV7Gx'
+		}
 	];
 
 	return (
-		<Modal title="Support me" isOpen={isOpen} onClose={onClose} className="space-y-4">
-			<p className="text-muted-foreground text-left">
+		<Modal title="Support me" isOpen={isOpen} onClose={onClose} className="space-y-4" snapPoints={[1, 0.75, 0]}>
+			<p className="text-muted-foreground text-left mb-2">
 				If you find my projects useful, consider supporting my work. Your support helps me maintain and improve the projects.
 			</p>
 
@@ -60,8 +87,8 @@ export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'chil
 					{wallets.map((wallet) => (
 						<div key={wallet.address} className="bg-gray-100 dark:bg-gray-500/10 p-3 rounded">
 							<div className="font-medium text-sm text-gray-700 dark:text-gray-200 ">
-								<span className="font-bold">{wallet.currency}</span>{' '}
-								<span className="text-muted-foreground">({wallet.network})</span>
+								<span className="font-bold">{wallet.name}</span>{' '}
+								<span className="text-muted-foreground">({wallet.chain})</span>
 							</div>
 							<div className="flex items-center gap-2 mt-1 justify-between">
 								<code className="break-all text-xs">{wallet.address}</code>
@@ -73,8 +100,9 @@ export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'chil
 											setTimeout(() => setCopied(null), 1500);
 										}}
 										className="text-xs text-blue-600 hover:underline bg-blue-600/10 dark:bg-blue-400/10 p-1 rounded cursor-pointer"
+										title="Copy"
 									>
-										<CopyIcon className="inline-block w-4 h-4" />
+										<CopyIcon className="inline-block w-4 h-4"/>
 									</button>
 
 									<AnimatePresence>

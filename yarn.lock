@@ -7129,6 +7129,11 @@ react-is@^16.13.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-modal-sheet@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/react-modal-sheet/-/react-modal-sheet-4.4.0.tgz#f19cd4c1624ff779d4dcd3e556e3799cc64a23f2"
+  integrity sha512-ub42vR7iwjdM/2Zl6uZoH5M5Dcb6KTuVaOQ+uQCIlo10SdlYAhksb6u3eIFSLohFrX5q03rgFnR6Y0PKhjjl/Q==
+
 react-remove-scroll-bar@^2.3.7:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz#99c20f908ee467b385b68a3469b4a3e750012223"
