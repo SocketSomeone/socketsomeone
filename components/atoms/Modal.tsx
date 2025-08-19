@@ -42,10 +42,10 @@ export default function Modal({ isOpen, onClose, children, title, className, ...
 				<Sheet.Container className="bg-white! dark:bg-gray-900!">
 					<Sheet.Header></Sheet.Header>
 
-					<Sheet.Content className={cn('px-6 pb-6 overflow-y-auto', className)}>
+					<Sheet.Content>
 						{title && <h1 className="text-xl text-center font-semibold mb-2">{title}</h1>}
 
-						<Sheet.Scroller>
+						<Sheet.Scroller className='px-6 pb-6'>
 							{children}
 						</Sheet.Scroller>
 					</Sheet.Content>
