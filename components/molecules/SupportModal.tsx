@@ -53,7 +53,7 @@ export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'chil
 				If you find my projects useful, consider supporting my work. Your support helps me maintain and improve the projects.
 			</p>
 
-			<div className="grid grid-cols-1 gap-4 py-2">
+			<div className="grid grid-cols-1 gap-4 py-2 md:py-0">
 				<div className="bg-gray-100 dark:bg-gray-500/10 p-3 rounded">
 					<div className="font-medium text-md text-gray-700 dark:text-gray-200">
 						Buy me a coffee via Tribute
