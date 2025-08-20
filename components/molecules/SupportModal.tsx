@@ -11,41 +11,41 @@ type Wallet = {
 	address: string;
 };
 
+const wallets: Wallet[] = [
+	{
+		symbol: 'USDT',
+		name: 'Tether',
+		chain: 'TRC20',
+		address: 'TD1jeMXpdyv3Hk7swBPdrHgV4FYPH9SBaa'
+	},
+	{
+		symbol: 'TON',
+		name: 'Toncoin',
+		chain: 'TON',
+		address: 'UQAgo5PKp7htvQebEbECsukmdrny-TfrkmQHvaUI2ewC4iae'
+	},
+	{
+		symbol: 'BTC',
+		name: 'Bitcoin',
+		chain: 'BTC',
+		address: '1L5qNsqh5zToxyHGSu1PrhM6PJ21GkCBQ4'
+	},
+	{
+		symbol: 'ETH',
+		name: 'Ethereum',
+		chain: 'ETH',
+		address: '0xe8EE73E47b8ba3e44d25F1566fEbd53dFf844cC3'
+	},
+	{
+		symbol: 'SOL',
+		name: 'Solana',
+		chain: 'SOL',
+		address: 'FAPYqgbvyf3p9VCxFzyGNYEJutZpE9DHPRbwvNXtV7Gx'
+	}
+];
+
 export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'children'>) {
 	const [copied, setCopied] = useState<string | null>(null);
-
-	const wallets: Wallet[] = [
-		{
-			symbol: 'USDT',
-			name: 'Tether',
-			chain: 'TRC20',
-			address: 'TD1jeMXpdyv3Hk7swBPdrHgV4FYPH9SBaa'
-		},
-		{
-			symbol: 'TON',
-			name: 'Toncoin',
-			chain: 'TON',
-			address: 'UQAgo5PKp7htvQebEbECsukmdrny-TfrkmQHvaUI2ewC4iae'
-		},
-		{
-			symbol: 'BTC',
-			name: 'Bitcoin',
-			chain: 'BTC',
-			address: '1L5qNsqh5zToxyHGSu1PrhM6PJ21GkCBQ4'
-		},
-		{
-			symbol: 'ETH',
-			name: 'Ethereum',
-			chain: 'ETH',
-			address: '0xe8EE73E47b8ba3e44d25F1566fEbd53dFf844cC3'
-		},
-		{
-			symbol: 'SOL',
-			name: 'Solana',
-			chain: 'SOL',
-			address: 'FAPYqgbvyf3p9VCxFzyGNYEJutZpE9DHPRbwvNXtV7Gx'
-		}
-	];
 
 	return (
 		<Modal title="Support me" isOpen={isOpen} onClose={onClose} className="space-y-4" snapPoints={[1, 0.75, 0]}>
