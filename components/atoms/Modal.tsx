@@ -43,9 +43,9 @@ export default function Modal({ isOpen, onClose, children, title, className, ...
 					<Sheet.Header></Sheet.Header>
 
 					<Sheet.Content>
-						{title && <h1 className="text-xl text-center font-semibold mb-2">{title}</h1>}
+						{title && <h1 className="text-xl text-center font-semibold">{title}</h1>}
 
-						<Sheet.Scroller className='px-6'>
+						<Sheet.Scroller className='px-4 py-2!'>
 							{children}
 						</Sheet.Scroller>
 					</Sheet.Content>
