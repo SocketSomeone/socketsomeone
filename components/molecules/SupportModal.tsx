@@ -4,15 +4,15 @@ import { CopyIcon } from 'lucide-react';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 
+type Wallet = {
+	symbol: string;
+	name: string;
+	chain: string; // e.g., TRC20, TON, BTC, ETH, SOL
+	address: string;
+};
+
 export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'children'>) {
 	const [copied, setCopied] = useState<string | null>(null);
-
-	type Wallet = {
-		symbol: string;
-		name: string;
-		chain: string; // e.g., TRC20, TON, BTC, ETH, SOL
-		address: string;
-	};
 
 	const wallets: Wallet[] = [
 		{
