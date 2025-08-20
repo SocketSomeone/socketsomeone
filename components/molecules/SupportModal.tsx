@@ -49,11 +49,11 @@ export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'chil
 
 	return (
 		<Modal title="Support me" isOpen={isOpen} onClose={onClose} className="space-y-4" snapPoints={[1, 0.75, 0]}>
-			<p className="text-muted-foreground text-left mb-2">
+			<p className="text-muted-foreground text-left">
 				If you find my projects useful, consider supporting my work. Your support helps me maintain and improve the projects.
 			</p>
 
-			<div className="grid grid-cols-1 gap-4">
+			<div className="grid grid-cols-1 gap-4 py-2">
 				<div className="bg-gray-100 dark:bg-gray-500/10 p-3 rounded">
 					<div className="font-medium text-md text-gray-700 dark:text-gray-200">
 						Buy me a coffee via Tribute
