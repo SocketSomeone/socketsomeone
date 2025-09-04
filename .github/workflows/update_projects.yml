@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install Node.js
-        uses: actions/setup-node@v4.4.0
+        uses: actions/setup-node@v5
 
       - name: Download projects
         run: npx tsx scripts/download-all-projects.script.ts
