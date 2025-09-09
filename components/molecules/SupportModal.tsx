@@ -48,7 +48,7 @@ export default function SupportModal({ isOpen, onClose }: Omit<ModalProps, 'chil
 	const [copied, setCopied] = useState<string | null>(null);
 
 	return (
-		<Modal title="Support me" isOpen={isOpen} onClose={onClose} className="space-y-4" snapPoints={[1, 0.75, 0]}>
+		<Modal title="Support me" isOpen={isOpen} onClose={onClose} className="space-y-4" snapPoints={[0, 0.5, 0.75, 1]} initialSnap={3}>
 			<p className="text-muted-foreground text-left mb-2">
 				If you find my projects useful, consider supporting my work. Your support helps me maintain and improve the projects.
 			</p>
