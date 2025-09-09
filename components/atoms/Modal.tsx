@@ -38,19 +38,17 @@ export default function Modal({ isOpen, onClose, children, title, className, ...
 
 	if (isMobile) {
 		return (
-			<Sheet isOpen={isOpen} onClose={onClose} detent={'content-height'} {...sheetProps}>
+			<Sheet isOpen={isOpen} onClose={onClose} detent={'content'} {...sheetProps}>
 				<Sheet.Container className="bg-white! dark:bg-gray-900!">
-					<Sheet.Header></Sheet.Header>
+					<Sheet.Header/>
 
-					<Sheet.Content>
-						{title && <h1 className="text-xl text-center font-semibold">{title}</h1>}
+					{title && <h1 className="text-xl text-center font-semibold">{title}</h1>}
 
-						<Sheet.Scroller className='px-4 py-2!'>
-							{children}
-						</Sheet.Scroller>
+					<Sheet.Content className="px-4 py-2!">
+						{children}
 					</Sheet.Content>
 				</Sheet.Container>
-				<Sheet.Backdrop className="bg-black/50!" onTap={onClose} />
+				<Sheet.Backdrop className="bg-black/50!" onTap={onClose}/>
 			</Sheet>
 		);
 	}
