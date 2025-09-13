@@ -22,7 +22,7 @@ const wallets: Wallet[] = [
 		symbol: 'TON',
 		name: 'Toncoin',
 		chain: 'TON',
-		address: 'UQAgo5PKp7htvQebEbECsukmdrny-TfrkmQHvaUI2ewC4iae'
+		address: 'UQBUu-CxUCZx0jvd-EJiguHHWA5pafpdXutHEBuExHoR-tMz'
 	},
 	{
 		symbol: 'BTC',
