@@ -10,7 +10,7 @@ const withPWA = createPWAPlugin({
 /** @type {import('next').NextConfig} */
 const nextConfig = withPWA({
 	reactStrictMode: true,
-	output: 'export',
+	// output: 'export',
 	images: {
 		qualities: [25, 50, 75, 100],
 		unoptimized: true,
@@ -28,6 +28,11 @@ const nextConfig = withPWA({
 				hostname: 'avatars.githubusercontent.com'
 			}
 		]
+	},
+	i18n: {
+		locales: ['en', 'ru'],
+		defaultLocale: 'en',
+		localeDetection: false,
 	}
 })
 

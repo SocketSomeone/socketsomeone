@@ -4,6 +4,7 @@ import { cn } from '@/utils';
 import { useTheme } from 'next-themes';
 import React from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
+import {useTranslations} from "next-intl";
 
 type GitHubCalendarProps = {
 	username?: string;
@@ -19,6 +20,7 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 export default function GithubActivity({ username = 'SocketSomeone', className }: GitHubCalendarProps) {
 	const { resolvedTheme } = useTheme();
 	const [mounted, setMounted] = React.useState(false);
+	const t = useTranslations('home.sections.git');
 
 	React.useEffect(() => {
 		setMounted(true);
@@ -31,11 +33,11 @@ export default function GithubActivity({ username = 'SocketSomeone', className }
 			className={cn('w-full xl:w-2/3 px-2 lg:px-0  flex flex-col items-center space-y-2 justify-center py-8 print:hidden', className)}>
 
 			<h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-0!">
-				Recent Contributions
+				{t('title')}
 			</h2>
 
 			<p className="text-sm text-gray-500 dark:text-gray-400 mb-2!">
-				See my recent contributions on GitHub
+				{t('subtitle')}
 			</p>
 
 			<>
@@ -83,7 +85,7 @@ export default function GithubActivity({ username = 'SocketSomeone', className }
 
 
 			<small className="text-xs text-gray-500 dark:text-gray-400">
-				Contributions are updating automatically every 24 hours
+				{t('update')}
 			</small>
 		</div>
 	);

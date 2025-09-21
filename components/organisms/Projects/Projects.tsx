@@ -8,6 +8,7 @@ import { cn } from "@/utils";
 import GithubActivity from "../../molecules/GithubActivity";
 import { useQuery } from "@tanstack/react-query";
 import GridProjects from "./GridProjects";
+import {useTranslations} from "next-intl";
 
 interface ProjectsProps {
 	type: "marquee" | "grid";
@@ -31,6 +32,9 @@ export default function Projects({ type, background }: ProjectsProps): JSX.Eleme
 			return response.json();
 		},
 	});
+
+	const t = useTranslations('home.sections.git');
+
 
 	const isMarquee = type === "marquee";
 	const Component = isMarquee ? MarqueeProjects : GridProjects;
@@ -61,7 +65,7 @@ export default function Projects({ type, background }: ProjectsProps): JSX.Eleme
 			>
 				<LinkIcon className="w-4 h-4 mr-2" />
 
-				<span className="truncate text-lg font-regular">More projects on my GitHub</span>
+				<span className="truncate text-lg font-regular">{t('button')}</span>
 			</a>
 		</>
 	);
