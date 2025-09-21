@@ -1,8 +1,8 @@
 import Page from '@/components/Page';
 import Link from 'next/link';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
-import {GetStaticPropsContext} from "next";
-import {useTranslations} from "next-intl";
+import { useTranslations } from 'next-intl';
+import { createGenerateStaticParamsWithLocalization, createGetStaticPropsWithLocalization } from '../lib/getStatic';
 
 export default function PrivacyPolicyPage() {
 
@@ -308,10 +308,5 @@ export default function PrivacyPolicyPage() {
 	);
 }
 
-export async function getStaticProps({locale}: GetStaticPropsContext) {
-	return {
-		props: {
-			messages: (await import(`../messages/${locale}.json`)).default
-		}
-	};
-}
+export const generateStaticParams = createGenerateStaticParamsWithLocalization();
+export const getStaticProps = createGetStaticPropsWithLocalization();

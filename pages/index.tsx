@@ -15,8 +15,9 @@ import Contact from '@/components/organisms/Contact';
 import { cn } from '@/utils';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import LaurelIcon from '@/components/icons/LaurelIcon';
-import {GetStaticPropsContext} from "next";
-import {useTranslations} from 'next-intl';
+import { GetStaticPropsContext } from 'next';
+import { useTranslations } from 'next-intl';
+import { createGenerateStaticParamsWithLocalization, createGetStaticPropsWithLocalization } from '../lib/getStatic';
 
 export default function Home() {
 	const searchParams = useSearchParams();
@@ -91,10 +92,6 @@ export default function Home() {
 	);
 }
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-	return {
-		props: {
-			messages: (await import(`../messages/${locale}.json`)).default
-		}
-	};
-}
+
+export const getStaticProps = createGetStaticPropsWithLocalization();
+export const generateStaticParams = createGenerateStaticParamsWithLocalization();

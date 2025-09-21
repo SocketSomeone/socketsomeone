@@ -11,18 +11,19 @@ import Layout from '@/components/Layout';
 import { LanyardProvider } from '@/components/providers/LanyardProvider';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { QueryClient } from '@tanstack/query-core';
-import {useRouter} from "next/router";
-import {NextIntlClientProvider} from "next-intl";
+import { NextIntlClientProvider } from 'next-intl';
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
+const DEFAULT_LOCALE = 'en';
 
 export default function App({ Component, pageProps }: AppProps) {
-	const router = useRouter();
+	const locale = pageProps.locale || DEFAULT_LOCALE;
 	const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
 	return (
 		<Fragment>
 			<NextIntlClientProvider
-				locale={router.locale}
+				locale={locale}
 				messages={pageProps.messages || {}}
 				timeZone={timeZone}
 			>
