@@ -6,7 +6,6 @@
 		"build": "next build",
 		"postbuild": "next-sitemap --config next-sitemap.config.js",
 		"start": "npx serve@latest out",
-		"format": "prettier --write \"{src,apps,libs,test}/**/*.ts\"",
 		"lint": "next lint",
 		"lint:fix": "next lint --fix",
 		"prepare": "husky",
