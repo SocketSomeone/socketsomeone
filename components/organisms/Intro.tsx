@@ -2,8 +2,10 @@ import Avatar from '@/components/atoms/Avatar';
 import Banner from '@/components/organisms/Banner';
 import BlurFade from '@/components/magicui/blur-fade';
 import SocialLinks from './SocialLinks';
+import {useTranslations} from "next-intl";
 
 export default function Intro() {
+	const t = useTranslations('home.sections.intro');
 	const animationStep = 0.05;
 	const animationDelay = 0.25;
 
@@ -23,11 +25,15 @@ export default function Intro() {
 
 
 			<BlurFade delay={calculateDelay(2)} className={'print:blur-none! print:opacity-100! print:animate-none! lg:w-2/3'}>
-				<h1
-					className="text-2xl text-center subpixel-antialiased sm:text-3xl md:text-4xl xl:text-6xl xl:leading-[70px] font-extrabold text-gray-900 dark:text-white print:hidden">Hello,
-					I’m <span
-						className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-300">SocketSomeone</span> your <span
-						className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">Software Engineer</span>
+				<h1 className="text-2xl text-center subpixel-antialiased sm:text-3xl md:text-4xl xl:text-6xl xl:leading-[70px] font-extrabold text-gray-900 dark:text-white print:hidden">
+					{t.rich('greeting', {
+						name: (chunks: React.ReactNode) => (
+							<span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-300">{chunks}</span>
+						),
+						role: (chunks: React.ReactNode) => (
+							<span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">{chunks}</span>
+						)
+					})}
 				</h1>
 				<div className="hidden print:flex flex-col mt-0 mb-0">
 					<h1 className="subpixel-antialiased font-extrabold text-gray-900 dark:text-white flex-col text-3xl mb-0">
@@ -44,11 +50,8 @@ export default function Intro() {
 
 			<BlurFade delay={calculateDelay(3)} className={'print:blur-none! print:opacity-100! print:animate-none!'}>
 				<p
-					className="text-base md:text-xl subpixel-antialiased font-medium text-gray-500 dark:text-gray-300 leading-relaxed print:hidden">You
-					just
-					found my profile! I&apos;m a
-					kitten who loves coffee and bugs! <span
-						className="whitespace-nowrap">( •̀ ω •́ )✧</span>
+					className="text-base md:text-xl subpixel-antialiased font-medium text-gray-500 dark:text-gray-300 leading-relaxed print:hidden">
+					{t('subtitle')}
 				</p>
 				<p className="hidden print:block text-base md:text-xl subpixel-antialiased font-medium text-gray-500 dark:text-gray-300 leading-relaxed pb-1 mb-0">
 					Software Engineer, Open-Source Enthusiast (OSS), and Tech Lead specializing in Backend development with over 5 years of

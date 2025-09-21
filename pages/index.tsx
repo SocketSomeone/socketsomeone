@@ -15,10 +15,13 @@ import Contact from '@/components/organisms/Contact';
 import { cn } from '@/utils';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import LaurelIcon from '@/components/icons/LaurelIcon';
+import {GetStaticPropsContext} from "next";
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
 	const searchParams = useSearchParams();
 	const isPrintMode = searchParams.has('view', 'cv');
+	const t = useTranslations('home.sections');
 
 	useEffect(() => {
 		if (isPrintMode) {
@@ -28,7 +31,7 @@ export default function Home() {
 
 	return (
 		<Page
-			title="Alexey Filippov - Software Engineer"
+			title={t('projects.name')}
 			description="Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building."
 			className={'grow'}
 		>
@@ -62,14 +65,14 @@ export default function Home() {
 								className="w-8 h-8 -scale-x-100 text-yellow-500"/>
 							<div
 								className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-								My Projects
+								{t('projects.name')}
 							</div>
 
 							<LaurelIcon className="w-8 h-8 text-yellow-500"/>
 						</div>
 					}
-					title={'Check out my latest work'}
-					description={'I\'ve worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites.'}
+					title={t('projects.title')}
+					description={t('projects.subtitle')}
 				/>
 				<Projects background={true} type="marquee"/>
 			</div>
@@ -86,4 +89,12 @@ export default function Home() {
 			<StarsGrid stars={80}/>
 		</Page>
 	);
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+	return {
+		props: {
+			messages: (await import(`../messages/${locale}.json`)).default
+		}
+	};
 }

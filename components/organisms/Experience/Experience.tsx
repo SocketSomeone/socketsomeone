@@ -8,11 +8,11 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
 import { cn } from '@/utils';
 import { ExternalLinkIcon, LucideGraduationCap } from 'lucide-react';
-import { ExperienceEntry, getExperienceEntries } from './data';
+import {ExperienceEntry, icons, ImageOrIcon, useExperienceEntries} from './data';
 
 
 export default function Experience() {
-	const experienceEntries = getExperienceEntries();
+	const experienceEntries = useExperienceEntries();
 
 	return (
 		<div
@@ -71,7 +71,10 @@ function ExperienceCard({ entry }: { entry: ExperienceEntry }) {
 				<div className={cn(
 					'flex justify-center items-center w-12 h-12'
 				)}>
-					{entry.icon}
+					{ImageOrIcon(
+						(entry.icon?.url || ''),
+						(entry.icon?.fallback || entry.icon?.url)
+					)}
 				</div>
 			)}
 

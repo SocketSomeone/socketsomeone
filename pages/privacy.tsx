@@ -1,10 +1,16 @@
 import Page from '@/components/Page';
 import Link from 'next/link';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
+import {GetStaticPropsContext} from "next";
+import {useTranslations} from "next-intl";
 
 export default function PrivacyPolicyPage() {
+
+	const t = useTranslations('privacy');
+	console.log(t('title'));
+
 	return (
-		<Page title="Privacy Policy"
+		<Page title={t('title')}
 			  description="Learn about our privacy practices and how we handle your personal information. Read our Privacy Policy for details on data collection, usage, and your rights."
 			  className="py-10 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4"
 		>
@@ -300,4 +306,12 @@ export default function PrivacyPolicyPage() {
 
 		</Page>
 	);
+}
+
+export async function getStaticProps({locale}: GetStaticPropsContext) {
+	return {
+		props: {
+			messages: (await import(`../messages/${locale}.json`)).default
+		}
+	};
 }

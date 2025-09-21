@@ -7,14 +7,17 @@ import { cn } from '@/utils';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import SupportModal from '../molecules/SupportModal';
+import {useTranslations} from "next-intl";
+import LanguageSwitch from "@/components/molecules/LanguageSwitch";
 
 export default function Header() {
 	const [supportModalOpen, setSupportModalOpen] = useState(false);
+	const t = useTranslations('navigation')
 	const navLinks = [
-		{ href: '/#', label: 'About', isExternal: false },
-		{ href: 'https://t.me/socketsomeoneshit', label: 'Blog', isExternal: true },
-		{ href: '/#projects', label: 'Projects', isExternal: false },
-		{ href: '/#contact', label: 'Contact', isExternal: false },
+		{ href: '/#', label: `${t('about')}`, isExternal: false },
+		{ href: 'https://t.me/socketsomeoneshit', label: `${t('blog')}`, isExternal: true },
+		{ href: '/#projects', label: `${t('projects')}`, isExternal: false },
+		{ href: '/#contact', label: `${t('contact')}`, isExternal: false },
 	];
 	const openSupportModal = () => setSupportModalOpen(true);
 
@@ -22,14 +25,14 @@ export default function Header() {
 	const supportButton = (
 		<button className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 cursor-pointer"
 				onClick={openSupportModal}>
-			Support me
+			{t('support')}
 		</button>
 	);
 	const supportDropdownButton = (
 		<button
 			className="text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex flex-row items-center space-x-1 text-gray-700 dark:text-gray-200"
 			onClick={openSupportModal}>
-			Support me <HeartIcon className="w-4 h-4 ml-1 text-red-500"/>
+			{t('support')} <HeartIcon className="w-4 h-4 ml-1 text-red-500"/>
 		</button>
 	);
 
@@ -62,6 +65,7 @@ export default function Header() {
 				<div className="flex items-center space-x-2 md:space-x-4">
 					<CVDownloader className="hidden md:flex"/>
 					<ThemeSwitcher/>
+					<LanguageSwitch/>
 					<MobileDropdown/>
 				</div>
 			</header>

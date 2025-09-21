@@ -3,10 +3,12 @@ import Divider from '../atoms/Divider';
 import Link from 'next/link';
 import { cn } from '@/utils';
 import { useCallback } from 'react';
+import {useTranslations} from "next-intl";
 
 const styleOfLink = 'hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300';
 
 export default function Footer() {
+	const t = useTranslations('navigation')
 	const openCookieManager = useCallback(() => {
 		const plugin = window.CookieConsentWrapper?.unwrap();
 
@@ -28,18 +30,18 @@ export default function Footer() {
 
 
 			<div className="flex flex-wrap justify-center gap-6 gap-y-2 text-sm font-medium mb-6 text-gray-600 dark:text-gray-300">
-				<Link href="/" className={cn(styleOfLink)}>About</Link>
+				<Link href="/" className={cn(styleOfLink)}>{t("about")}</Link>
 				<button className={cn(styleOfLink, 'cursor-pointer')}
-						onClick={() => window.print()}>Resume
+						onClick={() => window.print()}>{t("resume")}
 				</button>
 				<Link href="/#projects"
-					  className={cn(styleOfLink)}>Projects</Link>
+					  className={cn(styleOfLink)}>{t("projects")}</Link>
 				<Link href="/#contact"
-					  className={cn(styleOfLink)}>Contacts</Link>
-				<Link href="/privacy" className={cn(styleOfLink)}>Privacy Policy</Link>
-				<Link href="/terms" className={cn(styleOfLink)}>Terms of Service</Link>
+					  className={cn(styleOfLink)}>{t("contact")}</Link>
+				<Link href="/privacy" className={cn(styleOfLink)}>{t("privacy_policy")}</Link>
+				<Link href="/terms" className={cn(styleOfLink)}>{t("terms_of_service")}</Link>
 				<button type="button" data-cc="show-preferencesModal" onClick={openCookieManager}
-						className={cn(styleOfLink, 'cursor-pointer')}>Manage Cookies
+						className={cn(styleOfLink, 'cursor-pointer')}>{t("manage_cookies")}
 				</button>
 			</div>
 
