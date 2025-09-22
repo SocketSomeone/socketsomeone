@@ -35,4 +35,4 @@ jobs:
         run: yarn build
 
       - name: Run Tests
-        run: yarn [locale]:ci
+        run: yarn test:ci
