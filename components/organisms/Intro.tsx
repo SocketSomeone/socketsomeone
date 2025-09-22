@@ -1,3 +1,4 @@
+'use client';
 import Avatar from '@/components/atoms/Avatar';
 import Banner from '@/components/organisms/Banner';
 import BlurFade from '@/components/magicui/blur-fade';

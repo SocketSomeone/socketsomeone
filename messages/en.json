@@ -193,7 +193,7 @@
 							"url": "/images/fotrum.jpg"
 						}
 					},
-					"ZEN.CAR": {
+					"ZENCAR": {
 						"name": "ZEN.CAR",
 						"description": "Contributed to the development of a service for selecting auto repair shops.",
 						"location": "Russia, Innopolis - Remote",
@@ -317,5 +317,8 @@
 				"subtitleEnd": "and I'll respond whenever I can. I'm always open to new opportunities."
 			}
 		}
+	},
+	"privacy": {
+		"title": "Privacy Policy"
 	}
 }

@@ -1,3 +1,4 @@
+'use client';
 import React, { JSX, useEffect, useMemo, useState } from 'react';
 import { fetchSimpleIcons, renderSimpleIcon, SimpleIcon, } from 'react-icon-cloud';
 import { useTheme } from 'next-themes';

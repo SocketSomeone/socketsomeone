@@ -1,3 +1,4 @@
+'use client';
 import { SocialLink } from '../../../interfaces';
 
 export default function SocialCard({

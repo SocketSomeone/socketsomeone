@@ -1,3 +1,4 @@
+'use client';
 import { cn } from '@/utils';
 import Image from 'next/image';
 import { SocialLink } from '../../interfaces';

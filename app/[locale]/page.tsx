@@ -1,27 +1,24 @@
 'use client';
-
-import Light from '../components/atoms/Light';
+import Light from '@/components/atoms/Light';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { useEffect } from 'react';
-import Technologies from '../components/molecules/Technologies';
-import Toast from '../components/molecules/Toast';
+import Technologies from '@/components/molecules/Technologies';
+import Toast from '@/components/molecules/Toast';
 import Intro from '@/components/organisms/Intro';
 import StarsGrid from '@/components/molecules/StarsGrid';
 import Experience from '@/components/organisms/Experience/Experience';
 import Page from '@/components/Page';
 import Projects from '@/components/organisms/Projects';
-import { useSearchParams } from 'next/navigation';
 import Contact from '@/components/organisms/Contact';
 import { cn } from '@/utils';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import LaurelIcon from '@/components/icons/LaurelIcon';
-import { GetStaticPropsContext } from 'next';
 import { useTranslations } from 'next-intl';
-import { createGenerateStaticParamsWithLocalization, createGetStaticPropsWithLocalization } from '../lib/getStatic';
+import { useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Home() {
 	const searchParams = useSearchParams();
-	const isPrintMode = searchParams.has('view', 'cv');
+	const isPrintMode = searchParams?.has('view', 'cv') ?? false;
 	const t = useTranslations('home.sections');
 
 	useEffect(() => {
@@ -93,5 +90,3 @@ export default function Home() {
 }
 
 
-export const getStaticProps = createGetStaticPropsWithLocalization();
-export const generateStaticParams = createGenerateStaticParamsWithLocalization();

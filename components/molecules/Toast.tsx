@@ -1,3 +1,4 @@
+'use client';
 import { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { cn, dateToDuration } from '@/utils';

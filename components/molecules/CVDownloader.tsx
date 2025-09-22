@@ -1,7 +1,8 @@
+'use client';
 import { useCallback } from 'react';
 import { cn } from '@/utils';
 import { DownloadIcon } from 'lucide-react';
-import { useRouter } from 'next/router';
+import { usePathname, useRouter } from 'next/navigation';
 
 type Props = {
 	className?: string;
@@ -9,15 +10,16 @@ type Props = {
 
 export default function CVDownloader({ className }: Props) {
 	const router = useRouter();
+	const pathname = usePathname();
 	const openPrintMode = useCallback(async () => {
-		if (router.pathname === '/') {
+		if (pathname === '/') {
 			window.print();
 		} else {
-			await router.push('/');
+			router.push('/');
 
 			setTimeout(() => window.print(), 1000);
 		}
-	}, [router]);
+	}, [pathname, router]);
 
 	return (
 		<button

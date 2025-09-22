@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { BriefcaseIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';

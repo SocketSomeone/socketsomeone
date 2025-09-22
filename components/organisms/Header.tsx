@@ -1,18 +1,19 @@
+'use client';
 import CVDownloader from '@/components/molecules/CVDownloader';
 import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Logo from '@/components/atoms/Logo';
 import { HeartIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import SupportModal from '../molecules/SupportModal';
-import {useTranslations} from "next-intl";
-import LanguageSwitch from "@/components/molecules/LanguageSwitch";
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from '@/components/molecules/LanguageSwitch';
 
 export default function Header() {
 	const [supportModalOpen, setSupportModalOpen] = useState(false);
-	const t = useTranslations('navigation')
+	const t = useTranslations('navigation');
 	const navLinks = [
 		{ href: '/#', label: `${t('about')}`, isExternal: false },
 		{ href: 'https://t.me/socketsomeoneshit', label: `${t('blog')}`, isExternal: true },
@@ -64,8 +65,8 @@ export default function Header() {
 
 				<div className="flex items-center space-x-2 md:space-x-4">
 					<CVDownloader className="hidden md:flex"/>
+					<LanguageSwitcher/>
 					<ThemeSwitcher/>
-					<LanguageSwitch/>
 					<MobileDropdown/>
 				</div>
 			</header>

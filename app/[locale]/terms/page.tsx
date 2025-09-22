@@ -1,6 +1,7 @@
+'use client';
 import Page from '@/components/Page';
-import Link from 'next/link';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
+import { Link } from '@/i18n/navigation';
 
 export default function TermsPage() {
 	return (

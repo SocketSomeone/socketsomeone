@@ -1,3 +1,4 @@
+'use client';
 import './styles.module.css';
 
 import React from 'react';
@@ -8,7 +9,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
 import { cn } from '@/utils';
 import { ExternalLinkIcon, LucideGraduationCap } from 'lucide-react';
-import {ExperienceEntry, icons, ImageOrIcon, useExperienceEntries} from './data';
+import { ExperienceEntry, ImageOrIcon, useExperienceEntries } from './data';
 
 
 export default function Experience() {

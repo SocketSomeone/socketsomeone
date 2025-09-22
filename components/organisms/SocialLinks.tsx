@@ -1,3 +1,4 @@
+'use client';
 import PlainSocialLink from '../atoms/PlainSocialLink';
 import { SocialLink } from '../../interfaces';
 import SocialCard from '../molecules/Card/SocialCard';

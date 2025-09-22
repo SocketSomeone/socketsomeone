@@ -21,7 +21,6 @@ export interface ProjectCardProps {
 
 export default function ProjectCard({
 										className,
-										thumbnail,
 										url,
 										owner,
 										title,

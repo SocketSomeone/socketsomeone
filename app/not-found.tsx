@@ -1,5 +1,6 @@
+'use client';
 import Placeholder from '@/components/molecules/Placeholder';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function FourZeroFour() {
 	const router = useRouter();

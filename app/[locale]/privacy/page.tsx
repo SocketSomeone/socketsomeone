@@ -1,13 +1,11 @@
 import Page from '@/components/Page';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 import { useTranslations } from 'next-intl';
-import { createGenerateStaticParamsWithLocalization, createGetStaticPropsWithLocalization } from '../lib/getStatic';
 
 export default function PrivacyPolicyPage() {
 
 	const t = useTranslations('privacy');
-	console.log(t('title'));
 
 	return (
 		<Page title={t('title')}
@@ -307,6 +305,3 @@ export default function PrivacyPolicyPage() {
 		</Page>
 	);
 }
-
-export const generateStaticParams = createGenerateStaticParamsWithLocalization();
-export const getStaticProps = createGetStaticPropsWithLocalization();

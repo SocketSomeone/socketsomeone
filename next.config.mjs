@@ -1,4 +1,5 @@
-import createPWAPlugin from 'next-pwa';
+import createPWAPlugin      from 'next-pwa';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const withPWA = createPWAPlugin({
 	dest: 'public',
@@ -7,8 +8,10 @@ const withPWA = createPWAPlugin({
 	disable: process.env.NODE_ENV === 'development'
 })
 
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
-const nextConfig = withPWA({
+const nextConfig = {
 	reactStrictMode: true,
 	output: 'export',
 	images: {
@@ -29,6 +32,8 @@ const nextConfig = withPWA({
 			}
 		]
 	}
-})
+}
 
-export default nextConfig;
+const PLUGINS = [withPWA, withNextIntl];
+
+export default PLUGINS.reduce((acc, plugin) => plugin(acc), nextConfig);

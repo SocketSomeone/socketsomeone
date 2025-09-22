@@ -1,3 +1,4 @@
+'use client';
 import { cn } from '@/utils';
 import React from 'react';
 

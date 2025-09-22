@@ -1,3 +1,4 @@
+'use client';
 import { PropsWithChildren } from 'react';
 import { cn } from '@/utils';
 import { NextSeo } from 'next-seo';
@@ -10,7 +11,7 @@ type Props = NextSeoProps & PropsWithChildren<any> & {
 export default function Page({ children, className, ...rest }: Props) {
 	return (
 		<>
-			<NextSeo {...rest}/>
+			{/*<NextSeo {...rest} useAppDir={true}/>*/}
 			<main
 				className={cn('print:overflow-visible!', className)}>
 				{children}

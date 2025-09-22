@@ -1,18 +1,23 @@
-import { useRouter } from "next/router";
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { useLocale } from 'use-intl';
 
 export default function LanguageSwitcher() {
 	const router = useRouter();
-	const { locale, asPath } = router;
-
-	const toggleLanguage = () => {
-		const newLocale = locale === "en" ? "ru" : "en";
-
-		router.push(asPath, asPath, { locale: newLocale });
-	};
+	const locale = useLocale();
+	const pathname = usePathname();
 
 	return (
-		<button className='ml-4' onClick={toggleLanguage}>
-			{locale === "en" ? "Русский" : "English"}
-		</button>
+		<select
+			className="border rounded p-1 bg-white dark:bg-gray-800"
+			value={locale}
+			onChange={(e) => {
+				const newLocale = e.target.value;
+
+				router.replace(pathname, { locale: newLocale });
+			}}
+		>
+			<option value="en">🇬🇧 English</option>
+			<option value="ru">🇷🇺 Русский</option>
+		</select>
 	);
 }

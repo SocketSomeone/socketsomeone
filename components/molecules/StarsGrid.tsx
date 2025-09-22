@@ -1,3 +1,4 @@
+'use client';
 import Star from '@/components/atoms/Star';
 import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';
