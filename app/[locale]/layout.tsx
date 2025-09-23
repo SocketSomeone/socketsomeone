@@ -18,6 +18,7 @@ export function generateStaticParams() {
 export default async function LocaleLayout({ children, params }: Props) {
 	const { locale } = await params;
 	if (!hasLocale(routing.locales, locale)) {
+		console.log('Locale not found, returning 404');
 		notFound();
 	}
 
@@ -28,7 +29,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 	return (
 		<Suspense>
 			<NextIntlClientProvider locale={locale} messages={messages}>
-				<div className="relative flex flex-col min-h-screen overflow-hidden print:overflow-visible! font-Poppins">
+				<div className="relative flex flex-col min-h-screen overflow-hidden print:overflow-visible!">
 					<Header/>
 
 					{children}

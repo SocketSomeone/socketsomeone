@@ -1,4 +1,3 @@
-'use client';
 import Light from '@/components/atoms/Light';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import Technologies from '@/components/molecules/Technologies';
@@ -15,17 +14,38 @@ import LaurelIcon from '@/components/icons/LaurelIcon';
 import { useTranslations } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
+import ScrollDownButton from '@/components/molecules/ScrollDownButton';
 
-export default function Home() {
-	const searchParams = useSearchParams();
-	const isPrintMode = searchParams?.has('view', 'cv') ?? false;
+type Props = {
+	params: Promise<{ locale: string }>;
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({
+		locale,
+		namespace: 'home'
+	});
+
+	return {
+		title: t('title'),
+		description: t('description')
+	};
+}
+
+export default function HomePage() {
+	// const searchParams = useSearchParams();
+	// const isPrintMode = searchParams?.has('view', 'cv') ?? false;
 	const t = useTranslations('home.sections');
-
-	useEffect(() => {
-		if (isPrintMode) {
-			window.print();
-		}
-	}, [isPrintMode]);
+	//
+	// useEffect(() => {
+	// 	if (isPrintMode) {
+	// 		window.print();
+	// 	}
+	// }, [isPrintMode]);
 
 	return (
 		<Page
@@ -38,17 +58,10 @@ export default function Home() {
 			<div className="md:container w-full flex flex-col print:h-fit px-4 pt-6 md:pt-0 h-screen relative -top-16 xl-wide:-top-20">
 				<Intro/>
 
+
 				<div className="justify-center mb-5 print:hidden">
-					<ChevronDownIcon
-						className="animate-bounce cursor-pointer w-8 h-8 mx-auto text-gray-500 dark:text-gray-300"
-						onClick={() => {
-							window.scrollTo({
-								top: ['projects', 'experience'].map((id) => document.getElementById(id))
-									.find(Boolean)
-									?.offsetTop,
-								behavior: 'smooth'
-							});
-						}}
+					<ScrollDownButton className="animate-bounce w-8 h-8 mx-auto"
+									  targetIds={['projects', 'experience']}
 					/>
 				</div>
 			</div>

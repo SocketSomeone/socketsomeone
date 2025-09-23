@@ -5,7 +5,7 @@ import Header from './organisms/Header';
 
 export default function Layout({ children }: PropsWithChildren) {
 	return (
-		<div className="relative flex flex-col min-h-screen overflow-hidden print:overflow-visible! font-Poppins">
+		<div className="relative flex flex-col min-h-screen overflow-hidden print:overflow-visible! font-inter">
 			<Header/>
 
 			{children}

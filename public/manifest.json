@@ -24,7 +24,7 @@
   "related_applications": [
      {
        "platform": "webapp",
-       "url": "https://socketsomeone.me/favicons/site.webmanifest"
+       "url": "https://socketsomeone.me/manifest.json"
      }
   ]
 }

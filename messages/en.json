@@ -12,9 +12,11 @@
 		"manage_cookies": "Manage cookies"
 	},
 	"home": {
+		"title": "Alexey Filippov - Software Engineer",
+		"description": "Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building.",
 		"sections": {
 			"intro": {
-				"greeting": "Hello, I'm <name>SocketSomeone</name> your <role>software developer</role>",
+				"greeting": "Hello, I'm <name>SocketSomeone</name> your <role>Software Engineer</role>",
 				"subtitle": "You just found my profile! I'm a kitten who loves coffee and bugs! ( •̀ ω •́ )✧"
 			},
 			"projects": {
@@ -28,7 +30,7 @@
 				"update": "Contributions are updating automatically every 24 hours",
 				"button": "More projects on my GitHub"
 			},
-			"professions":{
+			"professions": {
 				"name": "Experience",
 				"title": "A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.",
 				"subtitle": "My professional journey",
@@ -77,10 +79,14 @@
 						"location": "Open Source - Remote",
 						"startDate": "Oct. 2021",
 						"endDate": "Present",
-						"description":
-						"This module provides fast and easy way for creating Discord bots and deep integration with your NestJS application.",
+						"description": "This module provides fast and easy way for creating Discord bots and deep integration with your NestJS application.",
 						"role": "Maintainer",
-						"skills": ["Node.js", "TypeScript", "Discord.js", "Nest.js"],
+						"skills": [
+							"Node.js",
+							"TypeScript",
+							"Discord.js",
+							"Nest.js"
+						],
 						"responsibilities": [
 							"Created a package for creating Discord bots with Nest.js",
 							"Provided support for the package users",
@@ -104,7 +110,12 @@
 						"role": "Software Engineer",
 						"startDate": "Feb. 2024",
 						"endDate": "Jan. 2025",
-						"skills": ["Node.js", "JavaScript", "TypeScript", "Nest.js"],
+						"skills": [
+							"Node.js",
+							"JavaScript",
+							"TypeScript",
+							"Nest.js"
+						],
 						"responsibilities": [
 							"Developed the Backend-for-Frontend (BFF) using Node.js",
 							"Collaborated closely with backend and frontend developers",

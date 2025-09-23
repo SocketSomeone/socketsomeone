@@ -12,6 +12,8 @@
 		"manage_cookies": "Manage cookies"
 	},
 	"home": {
+		"title": "Alexey Filippov - Software Engineer",
+		"description": "Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building.",
 		"sections": {
 			"projects": {
 				"name": "My Projects",
@@ -19,7 +21,7 @@
 				"subtitle": "I've worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites."
 			},
 			"intro": {
-				"greeting": "Hello, I'm <name>SocketSomeone</name> your <role>software developer</role>",
+				"greeting": "Hello, I'm <name>SocketSomeone</name> your <role>Software Engineer</role>",
 				"subtitle": "You just found my profile! I'm a kitten who loves coffee and bugs! ( •̀ ω •́ )✧"
 			},
 			"git": {
