@@ -2,16 +2,28 @@ import Page from '@/components/Page';
 import { Link } from '@/i18n/navigation';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+
+type Props = {
+	params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: 'privacy' });
+
+	return {
+		title: t('title'),
+		description: t('description')
+	};
+}
 
 export default function PrivacyPolicyPage() {
-
 	const t = useTranslations('privacy');
 
 	return (
-		<Page title={t('title')}
-			  description="Learn about our privacy practices and how we handle your personal information. Read our Privacy Policy for details on data collection, usage, and your rights."
-			  className="py-10 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4"
-		>
+		<Page className="py-10 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4">
 			<div className="text-sm mb-2">
 				<Link href="/" className="text-blue-600 hover:underline flex items-center">
 					<ChevronLeftIcon width={14} height={14}/>

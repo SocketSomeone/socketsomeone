@@ -1,5 +1,4 @@
 import Light from '@/components/atoms/Light';
-import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import Technologies from '@/components/molecules/Technologies';
 import Toast from '@/components/molecules/Toast';
 import Intro from '@/components/organisms/Intro';
@@ -12,15 +11,13 @@ import { cn } from '@/utils';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import LaurelIcon from '@/components/icons/LaurelIcon';
 import { useTranslations } from 'next-intl';
-import { useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import ScrollDownButton from '@/components/molecules/ScrollDownButton';
+import PrintMode from '@/components/atoms/PrintMode';
 
 type Props = {
 	params: Promise<{ locale: string }>;
-	searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -37,22 +34,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function HomePage() {
-	// const searchParams = useSearchParams();
-	// const isPrintMode = searchParams?.has('view', 'cv') ?? false;
 	const t = useTranslations('home.sections');
-	//
-	// useEffect(() => {
-	// 	if (isPrintMode) {
-	// 		window.print();
-	// 	}
-	// }, [isPrintMode]);
 
 	return (
-		<Page
-			title={t('projects.name')}
-			description="Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building."
-			className={'grow'}
-		>
+		<Page className={'grow'}>
 			<Light/>
 
 			<div className="md:container w-full flex flex-col print:h-fit px-4 pt-6 md:pt-0 h-screen relative -top-16 xl-wide:-top-20">
@@ -98,6 +83,8 @@ export default function HomePage() {
 			<Toast/>
 
 			<StarsGrid stars={80}/>
+
+			<PrintMode/>
 		</Page>
 	);
 }
