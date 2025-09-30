@@ -51,7 +51,7 @@ export default function Footer() {
 			title: 'Поддержка',
 			items: [
 				{ type: 'link', href: 'https://t.me/socketsomeoneshit', label: t('blog') },
-				{ type: 'link', href: 'https://crowdin.com/project/socketsomeone', label: t('translate') },
+				{ type: 'link', href: 'https://crowdin.com/project/socketsomeone', label: 'Translate' },
 			]
 		},
 		{
