@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { useLocale } from 'use-intl';
 import { IS_DEV } from '@/utils/config';
+import { cn } from '@/utils';
 
 type LocaleOption = {
 	value: string;
@@ -25,7 +26,11 @@ const CROWDIN_LINK = 'https://crowdin.com/project/socketsomeone';
 const HOVER_COLOR = 'rgba(14, 165, 233, 0.08)';
 const CHEVRON_SYMBOL = '\u25BC';
 
-export default function LanguageSwitcher() {
+type LanguageSwitcherProps = {
+	className?: string;
+};
+
+export default function LanguageSwitcher({ className }: LanguageSwitcherProps = {}) {
 	const router = useRouter();
 	const locale = useLocale();
 	const pathname = usePathname();
@@ -58,14 +63,14 @@ export default function LanguageSwitcher() {
 	};
 
 	return (
-		<div ref={containerRef} className="relative text-sm">
+		<div ref={containerRef} className={cn('relative w-full text-sm', className)}>
 			<motion.button
 				type="button"
 				onClick={() => setIsOpen((prev) => !prev)}
 				whileTap={{ scale: 0.97 }}
 				aria-haspopup="listbox"
 				aria-expanded={isOpen}
-				className="flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-2 font-medium text-slate-700 backdrop-blur transition hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:bg-slate-800/80 dark:focus-visible:ring-offset-slate-900"
+				className="flex w-full h-full items-center gap-2 rounded-lg border border-slate-200 bg-white/80 px-3 py-2 font-medium text-slate-700 backdrop-blur transition hover:border-slate-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:bg-slate-800/80 dark:focus-visible:ring-offset-slate-900"
 			>
 				<span>{activeLocale.label}</span>
 				<motion.span
@@ -86,7 +91,7 @@ export default function LanguageSwitcher() {
 						animate={{ opacity: 1, y: 0, scale: 1 }}
 						exit={{ opacity: 0, y: -8, scale: 0.96 }}
 						transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-						className="absolute right-0 z-50 mt-2 w-52 overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 shadow-2xl backdrop-blur-xl dark:border-slate-700/80 dark:bg-slate-900/90"
+						className="absolute right-0 z-50 mt-2 w-full min-w-[12rem] overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 shadow-2xl backdrop-blur-xl dark:border-slate-700/80 dark:bg-slate-900/90"
 					>
 						<ul role="listbox" aria-activedescendant={activeLocale.value}>
 							{localeOptions.map((option) => {

@@ -9,7 +9,6 @@ import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import SupportModal from '../molecules/SupportModal';
 import { useTranslations } from 'next-intl';
-import LanguageSwitcher from '../molecules/LanguageSwitcher';
 
 export default function Header() {
 	const [supportModalOpen, setSupportModalOpen] = useState(false);
@@ -65,7 +64,6 @@ export default function Header() {
 
 				<div className="flex items-center space-x-2 md:space-x-4">
 					<CVDownloader className="hidden md:flex"/>
-					<LanguageSwitcher/>
 					<ThemeSwitcher/>
 					<MobileDropdown/>
 				</div>

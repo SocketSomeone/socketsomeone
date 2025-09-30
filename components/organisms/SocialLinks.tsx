@@ -2,6 +2,7 @@
 import PlainSocialLink from '../atoms/PlainSocialLink';
 import { SocialLink } from '../../interfaces';
 import SocialCard from '../molecules/Card/SocialCard';
+import { cn } from '@/utils';
 
 export const LINKS: SocialLink[] = [
 	{
@@ -64,9 +65,10 @@ export const LINKS: SocialLink[] = [
 
 interface SocialLinksProps {
 	type: 'card' | 'plain';
+	className?: string;
 }
 
-export default function SocialLinks({ type }: SocialLinksProps) {
+export default function SocialLinks({ type, className }: SocialLinksProps) {
 	const variants = {
 		card: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full',
 		plain: 'flex flex-row justify-center flex-wrap gap-x-0 gap-y-2 print:flex-col print:space-y-2 print:space-x-0 print:items-start'
@@ -74,7 +76,7 @@ export default function SocialLinks({ type }: SocialLinksProps) {
 
 	return (
 		<div
-			className={variants[type]}>
+			className={cn(variants[type], className)}>
 			{LINKS.map((link, index) => (
 				type === 'plain' ? (
 
