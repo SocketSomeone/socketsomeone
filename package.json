@@ -14,9 +14,14 @@
 		"test:watch": "echo \"No tests specified\" && exit 0",
 		"test:cov": "echo \"No tests specified\" && exit 0",
 		"test:debug": "echo \"No tests specified\" && exit 0",
-		"test:ci": "echo \"No tests specified\" && exit 0"
+		"test:ci": "echo \"No tests specified\" && exit 0",
+		"crowdin": "crowdin",
+		"translations:upload": "yarn crowdin upload",
+		"translations:download": "yarn crowdin download",
+		"translations:sync": "yarn translations:upload && yarn translations:download"
 	},
 	"dependencies": {
+		"@crowdin/cli": "^4.11.0",
 		"@eslint/eslintrc": "^3.3.1",
 		"@heroicons/react": "^2.2.0",
 		"@next/third-parties": "^15.5.4",
