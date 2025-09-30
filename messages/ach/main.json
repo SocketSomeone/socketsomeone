@@ -1,0 +1,336 @@
+{
+	"navigation": {
+		"about": "crwdns7038:0crwdne7038:0",
+		"blog": "crwdns7040:0crwdne7040:0",
+		"projects": "crwdns7042:0crwdne7042:0",
+		"contact": "crwdns7044:0crwdne7044:0",
+		"support": "crwdns7046:0crwdne7046:0",
+		"download_cv": "crwdns7048:0crwdne7048:0",
+		"resume": "crwdns7050:0crwdne7050:0",
+		"privacy_policy": "crwdns6598:0crwdne6598:0",
+		"terms_of_service": "crwdns6600:0crwdne6600:0",
+		"manage_cookies": "crwdns6602:0crwdne6602:0"
+	},
+	"home": {
+		"title": "crwdns7052:0crwdne7052:0",
+		"description": "crwdns7054:0crwdne7054:0",
+		"sections": {
+			"intro": {
+				"greeting": "crwdns6614:0crwdne6614:0",
+				"subtitle": "crwdns6616:0crwdne6616:0"
+			},
+			"projects": {
+				"name": "crwdns6608:0crwdne6608:0",
+				"title": "crwdns6610:0crwdne6610:0",
+				"subtitle": "crwdns6612:0crwdne6612:0"
+			},
+			"git": {
+				"title": "crwdns6618:0crwdne6618:0",
+				"subtitle": "crwdns6620:0crwdne6620:0",
+				"update": "crwdns6622:0crwdne6622:0",
+				"button": "crwdns6624:0crwdne6624:0"
+			},
+			"professions": {
+				"name": "crwdns6626:0crwdne6626:0",
+				"title": "crwdns6628:0crwdne6628:0",
+				"subtitle": "crwdns6630:0crwdne6630:0",
+				"experience": {
+					"X5": {
+						"name": "crwdns6632:0crwdne6632:0",
+						"url": "crwdns6634:0crwdne6634:0",
+						"location": "crwdns6636:0crwdne6636:0",
+						"startDate": "crwdns6638:0crwdne6638:0",
+						"endDate": "crwdns6640:0crwdne6640:0",
+						"description": "crwdns6642:0crwdne6642:0",
+						"role": "crwdns6644:0crwdne6644:0",
+						"skills": [
+							"crwdns6646:0crwdne6646:0",
+							"crwdns6648:0crwdne6648:0",
+							"crwdns6650:0crwdne6650:0",
+							"crwdns6652:0crwdne6652:0",
+							"crwdns6654:0crwdne6654:0"
+						],
+						"responsibilities": [
+							"crwdns6656:0crwdne6656:0",
+							"crwdns6658:0crwdne6658:0",
+							"crwdns6660:0crwdne6660:0",
+							"crwdns6662:0crwdne6662:0",
+							"crwdns6664:0crwdne6664:0",
+							"crwdns6666:0crwdne6666:0",
+							"crwdns6668:0crwdne6668:0",
+							"crwdns6670:0crwdne6670:0"
+						],
+						"achievements": [
+							"crwdns6672:0crwdne6672:0",
+							"crwdns6674:0crwdne6674:0",
+							"crwdns6676:0crwdne6676:0",
+							"crwdns6678:0crwdne6678:0",
+							"crwdns6680:0crwdne6680:0",
+							"crwdns6682:0crwdne6682:0"
+						],
+						"icon": {
+							"type": "crwdns6684:0crwdne6684:0",
+							"url": "crwdns6686:0crwdne6686:0"
+						}
+					},
+					"Necord": {
+						"name": "crwdns6688:0crwdne6688:0",
+						"url": "crwdns6690:0crwdne6690:0",
+						"location": "crwdns6692:0crwdne6692:0",
+						"startDate": "crwdns6694:0crwdne6694:0",
+						"endDate": "crwdns6696:0crwdne6696:0",
+						"description": "crwdns6698:0crwdne6698:0",
+						"role": "crwdns6700:0crwdne6700:0",
+						"skills": [
+							"crwdns6702:0crwdne6702:0",
+							"crwdns6704:0crwdne6704:0",
+							"crwdns6706:0crwdne6706:0",
+							"crwdns6708:0crwdne6708:0"
+						],
+						"responsibilities": [
+							"crwdns6710:0crwdne6710:0",
+							"crwdns6712:0crwdne6712:0",
+							"crwdns6714:0crwdne6714:0"
+						],
+						"achievements": [
+							"crwdns6716:0crwdne6716:0",
+							"crwdns6718:0crwdne6718:0",
+							"crwdns6720:0crwdne6720:0"
+						],
+						"icon": {
+							"type": "crwdns6722:0crwdne6722:0",
+							"url": "crwdns6724:0crwdne6724:0"
+						}
+					},
+					"Yahont": {
+						"name": "crwdns6726:0crwdne6726:0",
+						"description": "crwdns6728:0crwdne6728:0",
+						"location": "crwdns6730:0crwdne6730:0",
+						"url": "crwdns6732:0crwdne6732:0",
+						"role": "crwdns6734:0crwdne6734:0",
+						"startDate": "crwdns6736:0crwdne6736:0",
+						"endDate": "crwdns6738:0crwdne6738:0",
+						"skills": [
+							"crwdns6740:0crwdne6740:0",
+							"crwdns6742:0crwdne6742:0",
+							"crwdns6744:0crwdne6744:0",
+							"crwdns6746:0crwdne6746:0"
+						],
+						"responsibilities": [
+							"crwdns6748:0crwdne6748:0",
+							"crwdns6750:0crwdne6750:0",
+							"crwdns6752:0crwdne6752:0"
+						],
+						"achievements": [
+							"crwdns6754:0crwdne6754:0",
+							"crwdns6756:0crwdne6756:0"
+						],
+						"icon": {
+							"type": "crwdns6758:0crwdne6758:0",
+							"url": "crwdns6760:0crwdne6760:0"
+						}
+					},
+					"STC": {
+						"name": "crwdns6762:0crwdne6762:0",
+						"description": "crwdns6764:0crwdne6764:0",
+						"location": "crwdns6766:0crwdne6766:0",
+						"url": "crwdns6768:0crwdne6768:0",
+						"role": "crwdns6770:0crwdne6770:0",
+						"startDate": "crwdns6772:0crwdne6772:0",
+						"endDate": "crwdns6774:0crwdne6774:0",
+						"skills": [
+							"crwdns6776:0crwdne6776:0",
+							"crwdns6778:0crwdne6778:0",
+							"crwdns6780:0crwdne6780:0"
+						],
+						"responsibilities": [
+							"crwdns6782:0crwdne6782:0",
+							"crwdns6784:0crwdne6784:0",
+							"crwdns6786:0crwdne6786:0",
+							"crwdns6788:0crwdne6788:0"
+						],
+						"achievements": [
+							"crwdns6790:0crwdne6790:0",
+							"crwdns6792:0crwdne6792:0",
+							"crwdns6794:0crwdne6794:0",
+							"crwdns6796:0crwdne6796:0"
+						],
+						"icon": {
+							"type": "crwdns6798:0crwdne6798:0",
+							"url": "crwdns6800:0crwdne6800:0"
+						}
+					},
+					"Fotrum": {
+						"name": "crwdns6802:0crwdne6802:0",
+						"description": "crwdns6804:0crwdne6804:0",
+						"location": "crwdns6806:0crwdne6806:0",
+						"url": "crwdns6808:0crwdne6808:0",
+						"role": "crwdns6810:0crwdne6810:0",
+						"startDate": "crwdns6812:0crwdne6812:0",
+						"endDate": "crwdns6814:0crwdne6814:0",
+						"skills": [
+							"crwdns6816:0crwdne6816:0",
+							"crwdns6818:0crwdne6818:0",
+							"crwdns6820:0crwdne6820:0",
+							"crwdns6822:0crwdne6822:0",
+							"crwdns6824:0crwdne6824:0",
+							"crwdns6826:0crwdne6826:0",
+							"crwdns6828:0crwdne6828:0",
+							"crwdns6830:0crwdne6830:0",
+							"crwdns6832:0crwdne6832:0",
+							"crwdns6834:0crwdne6834:0",
+							"crwdns6836:0crwdne6836:0"
+						],
+						"responsibilities": [
+							"crwdns6838:0crwdne6838:0",
+							"crwdns6840:0crwdne6840:0",
+							"crwdns6842:0crwdne6842:0",
+							"crwdns6844:0crwdne6844:0",
+							"crwdns6846:0crwdne6846:0",
+							"crwdns6848:0crwdne6848:0",
+							"crwdns6850:0crwdne6850:0"
+						],
+						"achievements": [
+							"crwdns6852:0crwdne6852:0",
+							"crwdns6854:0crwdne6854:0",
+							"crwdns6856:0crwdne6856:0",
+							"crwdns6858:0crwdne6858:0",
+							"crwdns6860:0crwdne6860:0",
+							"crwdns6862:0crwdne6862:0",
+							"crwdns6864:0crwdne6864:0"
+						],
+						"icon": {
+							"type": "crwdns6866:0crwdne6866:0",
+							"url": "crwdns6868:0crwdne6868:0"
+						}
+					},
+					"ZENCAR": {
+						"name": "crwdns6870:0crwdne6870:0",
+						"description": "crwdns6872:0crwdne6872:0",
+						"location": "crwdns6874:0crwdne6874:0",
+						"url": "crwdns6876:0crwdne6876:0",
+						"role": "crwdns6878:0crwdne6878:0",
+						"startDate": "crwdns6880:0crwdne6880:0",
+						"endDate": "crwdns6882:0crwdne6882:0",
+						"skills": [
+							"crwdns6884:0crwdne6884:0",
+							"crwdns6886:0crwdne6886:0",
+							"crwdns6888:0crwdne6888:0",
+							"crwdns6890:0crwdne6890:0",
+							"crwdns6892:0crwdne6892:0",
+							"crwdns6894:0crwdne6894:0",
+							"crwdns6896:0crwdne6896:0",
+							"crwdns6898:0crwdne6898:0",
+							"crwdns6900:0crwdne6900:0",
+							"crwdns6902:0crwdne6902:0"
+						],
+						"responsibilities": [
+							"crwdns6904:0crwdne6904:0",
+							"crwdns6906:0crwdne6906:0",
+							"crwdns6908:0crwdne6908:0",
+							"crwdns6910:0crwdne6910:0",
+							"crwdns6912:0crwdne6912:0",
+							"crwdns6914:0crwdne6914:0",
+							"crwdns6916:0crwdne6916:0"
+						],
+						"achievements": [
+							"crwdns6918:0crwdne6918:0",
+							"crwdns6920:0crwdne6920:0",
+							"crwdns6922:0crwdne6922:0"
+						],
+						"icon": {
+							"type": "crwdns6924:0crwdne6924:0",
+							"url": "crwdns6926:0crwdne6926:0"
+						}
+					},
+					"BurgerClub": {
+						"name": "crwdns6928:0crwdne6928:0",
+						"description": "crwdns6930:0crwdne6930:0",
+						"location": "crwdns6932:0crwdne6932:0",
+						"role": "crwdns6934:0crwdne6934:0",
+						"startDate": "crwdns6936:0crwdne6936:0",
+						"endDate": "crwdns6938:0crwdne6938:0",
+						"skills": [
+							"crwdns6940:0crwdne6940:0",
+							"crwdns6942:0crwdne6942:0",
+							"crwdns6944:0crwdne6944:0",
+							"crwdns6946:0crwdne6946:0",
+							"crwdns6948:0crwdne6948:0"
+						],
+						"responsibilities": [
+							"crwdns6950:0crwdne6950:0",
+							"crwdns6952:0crwdne6952:0",
+							"crwdns6954:0crwdne6954:0"
+						],
+						"achievements": [
+							"crwdns6956:0crwdne6956:0",
+							"crwdns6958:0crwdne6958:0",
+							"crwdns6960:0crwdne6960:0"
+						],
+						"icon": {
+							"type": "crwdns6962:0crwdne6962:0",
+							"url": "crwdns6964:0crwdne6964:0"
+						}
+					},
+					"NIPBOX": {
+						"name": "crwdns6966:0crwdne6966:0",
+						"description": "crwdns6968:0crwdne6968:0",
+						"location": "crwdns6970:0crwdne6970:0",
+						"url": "crwdns6972:0crwdne6972:0",
+						"role": "crwdns6974:0crwdne6974:0",
+						"startDate": "crwdns6976:0crwdne6976:0",
+						"endDate": "crwdns6978:0crwdne6978:0",
+						"skills": [
+							"crwdns6980:0crwdne6980:0",
+							"crwdns6982:0crwdne6982:0",
+							"crwdns6984:0crwdne6984:0",
+							"crwdns6986:0crwdne6986:0",
+							"crwdns6988:0crwdne6988:0"
+						],
+						"responsibilities": [
+							"crwdns6990:0crwdne6990:0",
+							"crwdns6992:0crwdne6992:0",
+							"crwdns6994:0crwdne6994:0",
+							"crwdns6996:0crwdne6996:0"
+						],
+						"achievements": [
+							"crwdns6998:0crwdne6998:0",
+							"crwdns7000:0crwdne7000:0",
+							"crwdns7002:0crwdne7002:0"
+						],
+						"icon": {
+							"type": "crwdns7004:0crwdne7004:0",
+							"url": "crwdns7006:0crwdne7006:0"
+						}
+					},
+					"Freelance": {
+						"name": "crwdns7008:0crwdne7008:0",
+						"description": "crwdns7010:0crwdne7010:0",
+						"location": "crwdns7012:0crwdne7012:0",
+						"role": "crwdns7014:0crwdne7014:0",
+						"startDate": "crwdns7016:0crwdne7016:0",
+						"endDate": "crwdns7018:0crwdne7018:0",
+						"skills": [],
+						"responsibilities": [],
+						"achievements": [],
+						"icon": {
+							"type": "crwdns7020:0crwdne7020:0",
+							"url": "crwdns7022:0crwdne7022:0"
+						}
+					}
+				}
+			},
+			"contacts": {
+				"name": "crwdns7024:0crwdne7024:0",
+				"title": "crwdns7026:0crwdne7026:0",
+				"tg": "crwdns7028:0crwdne7028:0",
+				"subtitleStart": "crwdns7030:0crwdne7030:0",
+				"subtitleEnd": "crwdns7032:0crwdne7032:0"
+			}
+		}
+	},
+	"privacy": {
+		"title": "crwdns7056:0crwdne7056:0",
+		"description": "crwdns7058:0crwdne7058:0"
+	}
+}
