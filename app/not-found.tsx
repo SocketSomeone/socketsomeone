@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import NotFoundPlaceholder from '@/components/molecules/Placeholder/NotFoundPlaceholder';
+import Document from '@/components/Document';
 
 export const metadata: Metadata = {
 	title: 'Page Not Found - 404',
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
 	return (
-		<NotFoundPlaceholder/>
+		<Document>
+			<NotFoundPlaceholder/>
+		</Document>
 	);
 }

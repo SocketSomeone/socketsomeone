@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { redirect } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { hasLocale } from 'next-intl';
+import Document from '@/components/Document';
 
 export default function Page() {
 	useEffect(() => {
@@ -20,5 +21,5 @@ export default function Page() {
 		});
 	}, []);
 
-	return null; // пока редирект не сработает
+	return <Document/>; // пока редирект не сработает
 }

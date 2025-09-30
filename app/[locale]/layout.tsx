@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import React, { Suspense } from 'react';
+import Document from '@/components/Document';
 
 type Props = {
 	children: React.ReactNode;
@@ -27,16 +28,18 @@ export default async function LocaleLayout({ children, params }: Props) {
 	const messages = await getMessages({ locale });
 
 	return (
-		<Suspense>
-			<NextIntlClientProvider locale={locale} messages={messages}>
-				<div className="relative flex flex-col min-h-screen overflow-hidden print:overflow-visible!">
-					<Header/>
+		<Document locale={locale} enableCrowdin={locale === 'ach'}>
+			<Suspense>
+				<NextIntlClientProvider locale={locale} messages={messages}>
+					<div className="relative flex flex-col min-h-screen overflow-hidden print:overflow-visible!">
+						<Header/>
 
-					{children}
+						{children}
 
-					<Footer/>
-				</div>
-			</NextIntlClientProvider>
-		</Suspense>
+						<Footer/>
+					</div>
+				</NextIntlClientProvider>
+			</Suspense>
+		</Document>
 	);
 }

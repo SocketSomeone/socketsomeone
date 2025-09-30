@@ -2,32 +2,8 @@ import '../styles/globals.css';
 import 'react-tooltip/dist/react-tooltip.css';
 
 import React from 'react';
-import { Inter } from 'next/font/google';
-import { cn } from '@/utils';
-import { GoogleTagManager } from '@next/third-parties/google';
 import { Metadata, Viewport } from 'next';
-import Providers from '@/components/providers/Providers';
 
-const inter = Inter({
-	subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
-	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-	style: ['normal', 'italic'],
-	display: 'swap',
-	fallback: [
-		'-apple-system',
-		'BlinkMacSystemFont',
-		'Segoe UI',
-		'Roboto',
-		'Oxygen',
-		'Ubuntu',
-		'Cantarell',
-		'Fira Sans',
-		'Droid Sans',
-		'Helvetica Neue',
-		'sans-serif'
-	],
-	variable: '--font-inter',
-});
 
 type Props = {
 	children: React.ReactNode
@@ -147,15 +123,5 @@ export const viewport: Viewport = {
 export default function RootLayout({
 									   children,
 								   }: Props) {
-	return (
-		<html lang="en" className={cn('scroll-smooth', inter.variable)} suppressHydrationWarning>
-		<head/>
-		<GoogleTagManager gtmId="GTM-W3MWWW92"/>
-		<body className="bg-white text-foreground dark:bg-gray-900 antialiased ">
-		<Providers>
-			{children}
-		</Providers>
-		</body>
-		</html>
-	);
+	return children;
 }
