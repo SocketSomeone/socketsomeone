@@ -1,7 +1,6 @@
 import Page from '@/components/Page';
 import { Link } from '@/i18n/navigation';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
-import { useTranslations } from 'next-intl';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
@@ -20,8 +19,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function PrivacyPolicyPage() {
-	const t = useTranslations('privacy');
-
 	return (
 		<Page className="py-10 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4">
 			<div className="text-sm mb-2">

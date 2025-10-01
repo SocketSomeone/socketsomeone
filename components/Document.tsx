@@ -36,8 +36,7 @@ type Props = {
 export default function Document({ children, locale, enableCrowdin }: Props) {
 	return (
 		<html lang={locale ?? 'en'} className={cn('scroll-smooth', inter.variable)} suppressHydrationWarning>
-		<head>
-		</head>
+		<head />
 		<CrowdinInContext enable={enableCrowdin} />
 		<GoogleTagManager gtmId="GTM-W3MWWW92"/>
 		<body className="bg-white text-foreground dark:bg-gray-900 antialiased ">

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { BriefcaseIcon, HeartIcon } from '@heroicons/react/24/solid';
 import { BoltIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
-import {useTranslations} from "next-intl";
+import { useTranslations } from 'next-intl';
 
 export interface ExperienceEntry {
 	name: string;
@@ -36,7 +36,8 @@ export const icons = {
 export function useExperienceEntries():ExperienceEntry[] {
 	const t = useTranslations();
 	const experienceData = t.raw('home.sections.professions.experience');
-	const entries = Object.keys(experienceData).map(key => {
+
+	return Object.keys(experienceData).map(key => {
 		const exp = experienceData[key] as any;
 		return {
 			...exp,
@@ -51,7 +52,6 @@ export function useExperienceEntries():ExperienceEntry[] {
 			achievements: exp.achievements || [],
 		};
 	});
-	return entries;
 }
 
 

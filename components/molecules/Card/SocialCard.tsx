@@ -1,5 +1,6 @@
 'use client';
 import { SocialLink } from '../../../interfaces';
+import Image from 'next/image';
 
 export default function SocialCard({
 									   href,
@@ -23,7 +24,12 @@ export default function SocialCard({
 			</div>
 
 			<div className="flex-shrink-0">
-				<img src={icon} alt={alt || name} className="w-9 h-9"/>
+				<Image
+					src={icon}
+					alt={alt || name}
+					className="w-9 h-9"
+					width={36} height={36}
+				/>
 			</div>
 		</a>
 	);
