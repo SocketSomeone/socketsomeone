@@ -6,6 +6,7 @@ import { usePathname, useRouter } from '@/i18n/navigation';
 import { useLocale } from 'use-intl';
 import { IS_DEV } from '@/utils/config';
 import { cn } from '@/utils';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
 type LocaleOption = {
 	value: string;
@@ -24,7 +25,6 @@ const CROWDIN_LOCALE: LocaleOption = {
 
 const CROWDIN_LINK = 'https://crowdin.com/project/socketsomeone';
 const HOVER_COLOR = 'rgba(14, 165, 233, 0.08)';
-const CHEVRON_SYMBOL = '\u25BC';
 
 type LanguageSwitcherProps = {
 	className?: string;
@@ -79,7 +79,7 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps = 
 					transition={{ duration: 0.2, ease: 'easeOut' }}
 					aria-hidden="true"
 				>
-					{CHEVRON_SYMBOL}
+					<ChevronDownIcon width={16} height={16} />
 				</motion.span>
 			</motion.button>
 
