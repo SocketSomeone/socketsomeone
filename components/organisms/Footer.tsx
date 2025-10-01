@@ -89,7 +89,7 @@ export default function Footer() {
 		<footer
 			className="px-0! mt-10 py-6 print:hidden md:container bg-background/60 dark:bg-gray-900/60 backdrop-blur-xs border border-b-0 sm:rounded-t-xl border-gray-200 dark:border-gray-700">
 			<div className="md:container pt-6 px-2 md:px-10">
-				<div className="mb-10 w-full px-4 text-sm text-gray-600 dark:text-gray-300 md:mb-12 md:max-w-6xl">
+				<div className="mb-10 w-full px-4 text-sm text-gray-600 dark:text-gray-300 md:mb-12 md:max-w-6xl md:mx-auto">
 					<div className="flex flex-col gap-10 md:hidden">
 						<div className="flex flex-col items-start gap-6 text-left">
 							<Link href="/" className="inline-flex">
@@ -180,7 +180,7 @@ export default function Footer() {
 								</div>
 							</div>
 						</div>
-						<div className="col-span-3 grid grid-cols-1 gap-10 font-medium text-gray-600 dark:text-gray-300 md:grid-cols-2 lg:grid-cols-3">
+						<div className="col-span-3 grid grid-cols-1 gap-10 font-medium text-gray-600 dark:text-gray-300 md:grid-cols-2 lg:grid-cols-3 ">
 							{linkColumns.map((column) => (
 								<div key={column.title} className="flex flex-col gap-3">
 									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{column.title}</h3>
