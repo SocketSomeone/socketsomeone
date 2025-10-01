@@ -108,8 +108,12 @@ export default function Header() {
 			<div className="md:hidden relative">
 				<details className="group">
 					<summary
-						className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 cursor-pointer list-none">
-						<Bars3Icon className="w-6 h-6 text-gray-800 dark:text-gray-200"/>
+						role="button"
+						aria-label="Open menu"
+						className="marker:hidden hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300 cursor-pointer list-none">
+						<span>
+							<Bars3Icon className="w-6 h-6 text-gray-800 dark:text-gray-200"/>
+						</span>
 					</summary>
 					<div
 						className="absolute right-0 mt-2 w-36 bg-background dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-50 flex flex-col text-sm text-gray-700 dark:text-gray-200">
