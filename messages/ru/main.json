@@ -1,6 +1,6 @@
 {
 	"navigation": {
-		"about": "About",
+		"about": "Обо мне",
 		"blog": "Блог",
 		"projects": "Projects",
 		"contact": "Contact",
@@ -20,7 +20,7 @@
 				"subtitle": "You just found my profile! I'm a kitten who loves coffee and bugs! ( •̀ ω •́ )✧"
 			},
 			"projects": {
-				"name": "Мои проекты",
+				"name": "My Projects",
 				"title": "Check out my latest work",
 				"subtitle": "I've worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites."
 			},
