@@ -1,12 +1,17 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import Placeholder from './Placeholder';
+import { cn } from '@/utils';
 
-export default function NotFoundPlaceholder() {
+type Props = {
+	className?: string;
+};
+
+export default function NotFoundPlaceholder({ className }: Props) {
 	const router = useRouter();
 
 	return (
-		<div className="flex px-8 justify-center align-center grow pt-30 pb-10">
+		<div className={cn('flex px-8 justify-center align-center grow', className)}>
 			<div className="flex flex-1 items-center justify-center">
 				<Placeholder
 					className="max-w-2xl"
