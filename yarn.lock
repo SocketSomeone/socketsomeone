@@ -6634,10 +6634,10 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-modal-sheet@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/react-modal-sheet/-/react-modal-sheet-5.1.2.tgz#7c2282defb224751bfbf980cda6416d2e87ce6a9"
-  integrity sha512-urMCm9Yihouv4yaiJBucw3jLcK3o1tfgBQx2kOvniX8T//FpU+xMBD1nD3iCgnvANbEriSEMx18nLsJNdIcZvQ==
+react-modal-sheet@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-modal-sheet/-/react-modal-sheet-5.2.0.tgz#45f7bfa6e84ff12fb10e9a6d1d7a44e9a3703bbb"
+  integrity sha512-I+u5CIgBBmqE0JR0VfRk6dj2PTOMH8+ksa381SdIBUMT55WRIm1gHA7QIFmNHXNvG+BNGXW2pMWRSGqEO+Ofkg==
   dependencies:
     react-use-measure "2.1.7"
 
