@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 		'react',
 		'personal website'
 	],
-	manifest: '/manifest.json',
+	manifest: '/manifest.webmanifest',
 	icons: {
 		icon: [
 			{ url: '/favicons/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
