@@ -12,9 +12,7 @@ export default function robots(): MetadataRoute.Robots {
 		'/_next',
 		'/static',
 		'/404',
-		'/500',
-		'/_error',
-		'/favicon.ico'
+		'/500'
 	];
 
 	const indexedPaths = ['', '/projects', '/contacts', '/terms', '/privacy'] as const;
