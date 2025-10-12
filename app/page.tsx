@@ -5,6 +5,7 @@ import { redirect } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { hasLocale } from 'next-intl';
 import Document from '@/components/Document';
+import Loader from '@/components/atoms/Loader';
 
 export default function Page() {
 	useEffect(() => {
@@ -21,5 +22,11 @@ export default function Page() {
 		});
 	}, []);
 
-	return <Document/>; // пока редирект не сработает
+	return (
+		<Document>
+			<div className="w-full h-full min-h-screen flex justify-center items-center">
+				<Loader/>
+			</div>
+		</Document>
+	);
 }
