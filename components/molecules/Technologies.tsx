@@ -31,6 +31,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 			href: undefined,
 			target: undefined,
 			rel: undefined,
+			style: { cursor: 'default' },
 			onClick: (e: any) => e.preventDefault(),
 		},
 	});

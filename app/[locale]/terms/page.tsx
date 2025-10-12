@@ -1,14 +1,29 @@
-'use client';
 import Page from '@/components/Page';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 import { Link } from '@/i18n/navigation';
+import { Metadata } from 'next';
+import { createLocaleAlternates } from '@/utils/seo';
+
+const PAGE_TITLE = 'Terms of Service';
+const PAGE_DESCRIPTION = 'Terms of Service for socketsomeone.me and socketsomeone.dev';
+
+type Props = {
+	params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { locale } = await params;
+
+	return {
+		title: PAGE_TITLE,
+		description: PAGE_DESCRIPTION,
+		alternates: createLocaleAlternates(locale, 'terms')
+	};
+}
 
 export default function TermsPage() {
 	return (
-		<Page title="Terms of Service"
-			  description="Terms of Service for socketsomeone.me and socketsomeone.dev"
-			  className="py-10 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4 text-base"
-		>
+		<Page className="py-10 xl-wide:container px-4! xl-wide:px-8! my-8 space-y-4 text-base">
 			<div className="text-sm mb-2">
 				<Link href="/" className="text-blue-600 hover:underline flex items-center">
 					<ChevronLeftIcon width={14} height={14}/>

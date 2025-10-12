@@ -10,6 +10,7 @@ import Contact from '@/components/organisms/Contact';
 import { cn } from '@/utils';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import LaurelIcon from '@/components/icons/LaurelIcon';
+import { createLocaleAlternates } from '@/utils/seo';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
@@ -29,7 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 	return {
 		title: t('title'),
-		description: t('description')
+		description: t('description'),
+		alternates: createLocaleAlternates(locale)
 	};
 }
 
@@ -88,5 +90,4 @@ export default function HomePage() {
 		</Page>
 	);
 }
-
 

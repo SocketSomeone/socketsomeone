@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { createLocaleAlternates } from '@/utils/seo';
 
 type Props = {
 	params: Promise<{ locale: string }>;
@@ -14,7 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 	return {
 		title: t('title'),
-		description: t('description')
+		description: t('description'),
+		alternates: createLocaleAlternates(locale, 'privacy')
 	};
 }
 

@@ -54,11 +54,6 @@ export const metadata: Metadata = {
 		title: 'SocketSomeone',
 	},
 	alternates: {
-		canonical: '/',
-		languages: {
-			'en': '/en',
-			'ru': '/ru',
-		},
 		types: {
 			'application/rss+xml': '/rss.xml',
 		}
