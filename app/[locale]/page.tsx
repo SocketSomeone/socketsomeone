@@ -31,7 +31,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t('title'),
 		description: t('description'),
-		alternates: createLocaleAlternates(locale)
+		alternates: createLocaleAlternates(locale),
+		openGraph: {
+			title: t('title'),
+			description: t('description'),
+			type: 'website',
+			url: `/${locale}`,
+		},
+		twitter: {
+			title: t('title'),
+			description: t('description'),
+		}
 	};
 }
 
@@ -90,4 +100,3 @@ export default function HomePage() {
 		</Page>
 	);
 }
-

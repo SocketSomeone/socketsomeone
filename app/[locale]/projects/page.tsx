@@ -18,7 +18,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: PAGE_TITLE,
 		description: PAGE_DESCRIPTION,
-		alternates: createLocaleAlternates(locale, 'projects')
+		alternates: createLocaleAlternates(locale, 'projects'),
+		openGraph: {
+			title: PAGE_TITLE,
+			description: PAGE_DESCRIPTION,
+			type: 'website',
+			url: `/${locale}/projects`,
+		},
+		twitter: {
+			title: PAGE_TITLE,
+			description: PAGE_DESCRIPTION,
+		}
 	};
 }
 
