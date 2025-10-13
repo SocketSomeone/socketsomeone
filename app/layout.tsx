@@ -71,40 +71,22 @@ export const metadata: Metadata = {
 		locale: 'en_US',
 		url: 'https://socketsomeone.me',
 		siteName: 'Alexey Filippov (SocketSomeone)',
-		title: 'Building the Future, One Line of Code at a Time',
+		title: 'Engineering by Heart, Open Source by Choice',
 		description: 'Hi, I’m Alexey (aka SocketSomeone). I specialize in backend engineering, open source, and leading technical teams. Explore my work and projects.',
 		firstName: 'Alexey',
 		lastName: 'Filippov',
 		gender: 'Male',
 		username: 'SocketSomeone',
-		images: [
-			{
-				url: 'https://socketsomeone.me/og.png',
-				alt: 'Open Graph preview of Alexey Filippov (SocketSomeone)',
-				width: 1200,
-				height: 640,
-				type: 'image/png',
-			}
-		],
 		emails: [
 			'socket.someone@gmail.com'
 		]
 	},
 	twitter: {
-		title: 'Alexey Filippov (aka SocketSomeone) – Software Engineer & OSS Enthusiast',
-		description: 'Personal website of Alexey Filippov, also known as SocketSomeone. A Software Engineer, Open-Source Enthusiast (OSS), and Tech Lead specializing in Backend development with over 5 years of experience.',
+		title: 'Engineering by Heart, Open Source by Choice',
+		description: 'Hi, I’m Alexey (aka SocketSomeone). I specialize in backend engineering, open source, and leading technical teams. Explore my work and projects.',
 		creator: '@SocketSomeone',
 		site: 'https://socketsomeone.me',
-		card: 'summary_large_image',
-		images: [
-			{
-				url: 'https://socketsomeone.me/og.png',
-				alt: 'Open Graph preview of Alexey Filippov (SocketSomeone)',
-				width: 1200,
-				height: 640,
-				type: 'image/png',
-			}
-		]
+		card: 'summary_large_image'
 	}
 };
 
