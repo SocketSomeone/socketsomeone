@@ -15,15 +15,6 @@ const nextConfig = {
 	output: 'export',
 	reactStrictMode: true,
 	trailingSlash: false,
-	redirects: async () => {
-		return [
-			{
-				source: '/:path*/',
-				destination: '/:path*',
-				permanent: true
-			},
-		]
-	},
 	images: {
 		qualities: [25, 50, 75, 100],
 		unoptimized: true,
