@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { useLocale } from 'use-intl';
-import { IS_DEV } from '@/utils/config';
+import { CROWDIN_PROJECT_URL, IS_DEV } from '@/utils/config';
 import { cn } from '@/utils';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
@@ -23,7 +23,7 @@ const CROWDIN_LOCALE: LocaleOption = {
 	label: 'Translate with Crowdin',
 };
 
-const CROWDIN_LINK = 'https://crowdin.com/project/socketsomeone';
+const CROWDIN_LINK = CROWDIN_PROJECT_URL;
 const HOVER_COLOR = 'rgba(14, 165, 233, 0.08)';
 
 type LanguageSwitcherProps = {

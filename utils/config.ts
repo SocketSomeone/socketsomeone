@@ -7,3 +7,4 @@ const SITE_URLS: Record<string, string> = {
 }
 
 export const SITE_URL = SITE_URLS[process.env.NODE_ENV || 'development'].replace(/\/+$/, '');
+export const CROWDIN_PROJECT_URL = 'https://i18n.socketsomeone.me';

@@ -9,6 +9,7 @@ import LanguageSwitcher from '../molecules/LanguageSwitcher';
 import SocialLinks from './SocialLinks';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import { CROWDIN_PROJECT_URL } from '@/utils/config';
 
 const styleOfLink = 'hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300';
 
@@ -51,7 +52,7 @@ export default function Footer() {
 			title: 'Поддержка',
 			items: [
 				{ type: 'link', href: 'https://t.me/socketsomeoneshit', label: t('blog') },
-				{ type: 'link', href: 'https://crowdin.com/project/socketsomeone', label: 'Translate' },
+				{ type: 'link', href: CROWDIN_PROJECT_URL, label: 'Translate' },
 			]
 		},
 		{
@@ -66,7 +67,7 @@ export default function Footer() {
 			title: 'Партнеры',
 			items: [
 				{ type: 'link', href: 'https://www.jetbrains.com/?from=SocketSomeone', label: 'JetBrains' },
-				{ type: 'link', href: 'https://crowdin.com/project/socketsomeone', label: 'Crowdin' },
+				{ type: 'link', href: CROWDIN_PROJECT_URL, label: 'Crowdin' },
 			],
 		}
 	];
