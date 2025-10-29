@@ -5,13 +5,13 @@
 		"projects": "Projects",
 		"contact": "Contact",
 		"support": "Support me",
-		"download_cv": "Download CV"
+		"downloadCv": "Download CV"
 	},
 	"footer": {
 		"resume": "Resume",
-		"privacy_policy": "Privacy Policy",
-		"terms_of_service": "Terms of Service",
-		"manage_cookies": "Manage cookies",
+		"privacyPolicy": "Privacy Policy",
+		"termsOfService": "Terms of Service",
+		"manageCookies": "Manage cookies",
 		"navigation": "Navigation",
 		"support": "Support",
 		"information": "Information",

@@ -5,13 +5,13 @@
 		"projects": "Проекты",
 		"contact": "Контакты",
 		"support": "Поддержите меня",
-		"download_cv": "Download CV"
+		"downloadCv": "Download CV"
 	},
 	"footer": {
 		"resume": "Резюме",
-		"privacy_policy": "Политика конфиденциальности",
-		"terms_of_service": "Условия использования",
-		"manage_cookies": "Управление файлами cookie",
+		"privacyPolicy": "Политика конфиденциальности",
+		"termsOfService": "Условия использования",
+		"manageCookies": "Управление файлами cookie",
 		"navigation": "Навигация",
 		"support": "Поддержка",
 		"information": "Информация",

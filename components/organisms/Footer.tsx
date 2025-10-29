@@ -59,9 +59,9 @@ export default function Footer() {
 		{
 			title: t('information'),
 			items: [
-				{ type: 'link', href: '/privacy', label: t('privacy_policy') },
-				{ type: 'link', href: '/terms', label: t('terms_of_service') },
-				{ type: 'button', onClick: openCookieManager, label: t('manage_cookies') },
+				{ type: 'link', href: '/privacy', label: t('privacyPolicy') },
+				{ type: 'link', href: '/terms', label: t('termsOfService') },
+				{ type: 'button', onClick: openCookieManager, label: t('manageCookies') },
 			],
 		},
 		{
