@@ -7,8 +7,7 @@ type Messages = Record<string, any>
 
 const messagesFile = [
 	'common',
-	'home',
-	'experience'
+	'home'
 ];
 
 async function loadMessage(locale: string): Promise<Messages> {
