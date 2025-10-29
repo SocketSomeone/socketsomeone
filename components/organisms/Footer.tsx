@@ -23,8 +23,10 @@ type LinkColumn = {
 };
 
 export default function Footer() {
-	const t = useTranslations('footer');
-	const t2 = useTranslations('navigation');
+	const t = {
+		footer: useTranslations('footer'),
+		nav: useTranslations('navigation'),
+	}
 	const openCookieManager = useCallback(() => {
 		const plugin = window.CookieConsentWrapper?.unwrap();
 
@@ -41,31 +43,31 @@ export default function Footer() {
 
 	const linkColumns: LinkColumn[] = [
 		{
-			title: t('navigation'),
+			title: t.footer('navigation'),
 			items: [
-				{ type: 'link', href: '/', label: t2('about') },
-				{ type: 'button', onClick: handlePrint, label: t('resume') },
-				{ type: 'link', href: '/#projects', label: t2('projects') },
-				{ type: 'link', href: '/#contact', label: t2('contact') },
+				{ type: 'link', href: '/', label: t.nav('about') },
+				{ type: 'button', onClick: handlePrint, label: t.footer('resume') },
+				{ type: 'link', href: '/#projects', label: t.nav('projects') },
+				{ type: 'link', href: '/#contact', label: t.nav('contact') },
 			],
 		},
 		{
-			title: t('support'),
+			title: t.footer('support'),
 			items: [
-				{ type: 'link', href: 'https://t.me/socketsomeoneshit', label: t2('blog') },
-				{ type: 'link', href: CROWDIN_PROJECT_URL, label: t('translate') },
+				{ type: 'link', href: 'https://t.me/socketsomeoneshit', label: t.nav('blog') },
+				{ type: 'link', href: CROWDIN_PROJECT_URL, label: t.footer('translate') },
 			]
 		},
 		{
-			title: t('information'),
+			title: t.footer('information'),
 			items: [
-				{ type: 'link', href: '/privacy', label: t('privacyPolicy') },
-				{ type: 'link', href: '/terms', label: t('termsOfService') },
-				{ type: 'button', onClick: openCookieManager, label: t('manageCookies') },
+				{ type: 'link', href: '/privacy', label: t.footer('privacyPolicy') },
+				{ type: 'link', href: '/terms', label: t.footer('termsOfService') },
+				{ type: 'button', onClick: openCookieManager, label: t.footer('manageCookies') },
 			],
 		},
 		{
-			title: t('partners'),
+			title: t.footer('partners'),
 			items: [
 				{ type: 'link', href: 'https://www.jetbrains.com/?from=SocketSomeone', label: 'JetBrains' },
 				{ type: 'link', href: CROWDIN_PROJECT_URL, label: 'Crowdin' },
@@ -99,7 +101,7 @@ export default function Footer() {
 							</Link>
 							<div className="flex w-full flex-col gap-6">
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('language')}</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t.footer('language')}</h3>
 									<LanguageSwitcher className="h-14 w-full"/>
 								</div>
 							</div>
@@ -161,7 +163,7 @@ export default function Footer() {
 							})}
 						</div>
 						<div className="flex flex-col gap-3">
-							<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('social')}</h3>
+							<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t.footer('social')}</h3>
 							<SocialLinks className="justify-start!" type="plain"/>
 						</div>
 					</div>
@@ -173,11 +175,11 @@ export default function Footer() {
 							</Link>
 							<div className="flex w-full flex-col gap-6">
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('language')}</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t.footer('language')}</h3>
 									<LanguageSwitcher className="h-14 w-full"/>
 								</div>
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('social')}</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t.footer('social')}</h3>
 									<SocialLinks className="justify-start!" type="plain"/>
 								</div>
 							</div>
