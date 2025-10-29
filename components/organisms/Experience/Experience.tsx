@@ -10,7 +10,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
 import { ExternalLinkIcon, LucideGraduationCap } from 'lucide-react';
 import { ExperienceEntry, ImageOrIcon, useExperienceEntries } from './data';
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 
 export default function Experience() {
 	const experienceEntries = useExperienceEntries();

@@ -53,7 +53,7 @@ export default function Footer() {
 			title: t('support'),
 			items: [
 				{ type: 'link', href: 'https://t.me/socketsomeoneshit', label: t2('blog') },
-				{ type: 'link', href: CROWDIN_PROJECT_URL, label: t('translate')},
+				{ type: 'link', href: CROWDIN_PROJECT_URL, label: t('translate') },
 			]
 		},
 		{

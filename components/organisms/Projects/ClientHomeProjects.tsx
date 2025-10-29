@@ -1,10 +1,10 @@
 'use client'
 
-import {cn} from "@/utils";
+import { cn } from "@/utils";
 import SectionHeader from "@/components/atoms/SectionHeader";
 import LaurelIcon from "@/components/icons/LaurelIcon";
 import Projects from "@/components/organisms/Projects/index";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 
 export function ClientHomeProjects() {
 	const t = useTranslations('home.sections');
