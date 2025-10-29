@@ -4,7 +4,7 @@ import { cn } from '@/utils';
 import { useTheme } from 'next-themes';
 import React from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
-import {useTranslations} from "next-intl";
+import { useTranslations } from 'next-intl';
 
 type GitHubCalendarProps = {
 	username?: string;

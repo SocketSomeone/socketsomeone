@@ -16,5 +16,7 @@ export const routing = defineRouting({
 	// Whether or not to prefix the default locale
 	localePrefix: 'always',
 	// Whether or not to automatically detect the user's locale
-	localeDetection: false
+	localeDetection: false,
+	// Whether or not to store the user's locale in a cookie
+	localeCookie: false,
 });
