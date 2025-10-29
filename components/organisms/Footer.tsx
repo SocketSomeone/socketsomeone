@@ -9,6 +9,7 @@ import LanguageSwitcher from '../molecules/LanguageSwitcher';
 import SocialLinks from './SocialLinks';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import { CROWDIN_PROJECT_URL } from '@/utils/config';
 
 const styleOfLink = 'hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300';
 
@@ -22,7 +23,8 @@ type LinkColumn = {
 };
 
 export default function Footer() {
-	const t = useTranslations('navigation');
+	const t = useTranslations('footer');
+	const t2 = useTranslations('navigation');
 	const openCookieManager = useCallback(() => {
 		const plugin = window.CookieConsentWrapper?.unwrap();
 
@@ -39,23 +41,23 @@ export default function Footer() {
 
 	const linkColumns: LinkColumn[] = [
 		{
-			title: t('navigation_footer'),
+			title: t('navigation'),
 			items: [
-				{ type: 'link', href: '/', label: t('about') },
+				{ type: 'link', href: '/', label: t2('about') },
 				{ type: 'button', onClick: handlePrint, label: t('resume') },
-				{ type: 'link', href: '/#projects', label: t('projects') },
-				{ type: 'link', href: '/#contact', label: t('contact') },
+				{ type: 'link', href: '/#projects', label: t2('projects') },
+				{ type: 'link', href: '/#contact', label: t2('contact') },
 			],
 		},
 		{
-			title: t('support_footer'),
+			title: t('support'),
 			items: [
-				{ type: 'link', href: 'https://t.me/socketsomeoneshit', label: t('blog') },
-				{ type: 'link', href: 'https://crowdin.com/project/socketsomeone', label: t('translate_footer')},
+				{ type: 'link', href: 'https://t.me/socketsomeoneshit', label: t2('blog') },
+				{ type: 'link', href: CROWDIN_PROJECT_URL, label: t('translate')},
 			]
 		},
 		{
-			title: t('information_footer'),
+			title: t('information'),
 			items: [
 				{ type: 'link', href: '/privacy', label: t('privacy_policy') },
 				{ type: 'link', href: '/terms', label: t('terms_of_service') },
@@ -63,10 +65,10 @@ export default function Footer() {
 			],
 		},
 		{
-			title: t('partners_footer'),
+			title: t('partners'),
 			items: [
 				{ type: 'link', href: 'https://www.jetbrains.com/?from=SocketSomeone', label: 'JetBrains' },
-				{ type: 'link', href: 'https://crowdin.com/project/socketsomeone', label: 'Crowdin' },
+				{ type: 'link', href: CROWDIN_PROJECT_URL, label: 'Crowdin' },
 			],
 		}
 	];
@@ -97,7 +99,7 @@ export default function Footer() {
 							</Link>
 							<div className="flex w-full flex-col gap-6">
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('language_footer')}</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('language')}</h3>
 									<LanguageSwitcher className="h-14 w-full"/>
 								</div>
 							</div>
@@ -159,7 +161,7 @@ export default function Footer() {
 							})}
 						</div>
 						<div className="flex flex-col gap-3">
-							<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('social_footer')}</h3>
+							<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('social')}</h3>
 							<SocialLinks className="justify-start!" type="plain"/>
 						</div>
 					</div>
@@ -171,11 +173,11 @@ export default function Footer() {
 							</Link>
 							<div className="flex w-full flex-col gap-6">
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('language_footer')}</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('language')}</h3>
 									<LanguageSwitcher className="h-14 w-full"/>
 								</div>
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('social_footer')}</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('social')}</h3>
 									<SocialLinks className="justify-start!" type="plain"/>
 								</div>
 							</div>

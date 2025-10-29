@@ -10,15 +10,12 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
 import { ExternalLinkIcon, LucideGraduationCap } from 'lucide-react';
 import { ExperienceEntry, ImageOrIcon, useExperienceEntries } from './data';
+import {useTranslations} from "next-intl";
 
-type Props = {
-	name?: string;
-	title: string;
-	subtitle?: string;
-}
-
-export default function Experience({name, title, subtitle}: Props) {
+export default function Experience() {
 	const experienceEntries = useExperienceEntries();
+
+	const t = useTranslations('home.sections.professions');
 
 	return (
 		<div
@@ -27,8 +24,8 @@ export default function Experience({name, title, subtitle}: Props) {
 
 			<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500 print:hidden"/>
 
-			<SectionHeader head={name} title={title}
-						   description={subtitle}/>
+			<SectionHeader head={t('name')} title={t('title')}
+						   description={t('subtitle')}/>
 
 			<div className="md:container text-muted-foreground relative flex flex-col items-center print:pt-0 print:px-0">
 				{experienceEntries.map((entry, entryIndex) => (

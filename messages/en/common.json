@@ -5,22 +5,19 @@
 		"projects": "Projects",
 		"contact": "Contact",
 		"support": "Support me",
-		"download_cv": "Download CV",
+		"download_cv": "Download CV"
+	},
+	"footer": {
 		"resume": "Resume",
 		"privacy_policy": "Privacy Policy",
 		"terms_of_service": "Terms of Service",
 		"manage_cookies": "Manage cookies",
-		"navigation_footer": "Navigation",
-		"support_footer": "Support",
-		"information_footer": "Information",
-		"partners_footer": "Partners",
-		"language_footer": "Language",
-		"social_footer": "Social",
-		"translate_footer": "Translate"
-
-	},
-	"privacy": {
-		"title": "Privacy Policy",
-		"description": "This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website."
+		"navigation": "Navigation",
+		"support": "Support",
+		"information": "Information",
+		"partners": "Partners",
+		"language": "Language",
+		"social": "Social",
+		"translate": "Translate"
 	}
 }

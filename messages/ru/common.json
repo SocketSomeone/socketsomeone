@@ -5,23 +5,20 @@
 		"projects": "Проекты",
 		"contact": "Контакты",
 		"support": "Поддержите меня",
-		"download_cv": "Download CV",
+		"download_cv": "Download CV"
+	},
+	"footer": {
 		"resume": "Резюме",
 		"privacy_policy": "Политика конфиденциальности",
 		"terms_of_service": "Условия использования",
 		"manage_cookies": "Управление файлами cookie",
-		"navigation_footer": "Навигация",
-		"support_footer": "Поддержка",
-		"information_footer": "Информация",
-		"partners_footer": "Партнеры",
-		"language_footer": "Язык",
-		"social_footer": "Социальные сети",
-		"translate_footer": "Перевод"
-
-	},
-	"privacy": {
-		"title": "Privacy Policy",
-		"description": "This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website."
+		"navigation": "Навигация",
+		"support": "Поддержка",
+		"information": "Информация",
+		"partners": "Партнеры",
+		"language": "Язык",
+		"social": "Социальные сети",
+		"translate": "Перевод"
 	}
 }
 
