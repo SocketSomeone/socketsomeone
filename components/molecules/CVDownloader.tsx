@@ -3,6 +3,7 @@ import { useCallback } from 'react';
 import { cn } from '@/utils';
 import { DownloadIcon } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
+import { useTranslations } from "next-intl";
 
 type Props = {
 	className?: string;
@@ -11,6 +12,7 @@ type Props = {
 export default function CVDownloader({ className }: Props) {
 	const router = useRouter();
 	const pathname = usePathname();
+	const t = useTranslations('navigation')
 	const openPrintMode = useCallback(async () => {
 		if (pathname === '/') {
 			window.print();
@@ -34,7 +36,7 @@ export default function CVDownloader({ className }: Props) {
 					`truncate text-sm inline animate-gradient text-foreground`,
 				)}
 			>
-				  Download CV
+				  {t('downloadCv')}
 				</span>
 		</button>
 	);

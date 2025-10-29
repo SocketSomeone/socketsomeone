@@ -1,0 +1,23 @@
+{
+	"navigation": {
+		"about": "About",
+		"blog": "Blog",
+		"projects": "Projects",
+		"contact": "Contact",
+		"support": "Support me",
+		"downloadCv": "Download CV"
+	},
+	"footer": {
+		"resume": "Resume",
+		"privacyPolicy": "Privacy Policy",
+		"termsOfService": "Terms of Service",
+		"manageCookies": "Manage cookies",
+		"navigation": "Navigation",
+		"support": "Support",
+		"information": "Information",
+		"partners": "Partners",
+		"language": "Language",
+		"social": "Social",
+		"translate": "Translate"
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"navigation": {
+		"about": "Обо мне",
+		"blog": "Блог",
+		"projects": "Проекты",
+		"contact": "Контакты",
+		"support": "Поддержите меня",
+		"downloadCv": "Download CV"
+	},
+	"footer": {
+		"resume": "Резюме",
+		"privacyPolicy": "Политика конфиденциальности",
+		"termsOfService": "Условия использования",
+		"manageCookies": "Управление файлами cookie",
+		"navigation": "Навигация",
+		"support": "Поддержка",
+		"information": "Информация",
+		"partners": "Партнеры",
+		"language": "Язык",
+		"social": "Социальные сети",
+		"translate": "Перевод"
+	}
+}
+

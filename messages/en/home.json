@@ -1,0 +1,30 @@
+{
+	"home": {
+		"title": "Alexey Filippov - Software Engineer",
+		"description": "Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building.",
+		"sections": {
+			"intro": {
+				"greeting": "Hello, I'm <name>SocketSomeone</name> your <role>Software Engineer</role>",
+				"subtitle": "You just found my profile! I'm a kitten who loves coffee and bugs! ( •̀ ω •́ )✧"
+			},
+			"projects": {
+				"name": "My Projects",
+				"title": "Check out my latest work",
+				"subtitle": "I've worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites."
+			},
+			"git": {
+				"title": "Recent Contributions",
+				"subtitle": "See my recent contributions on GitHub",
+				"update": "Contributions are updating automatically every 24 hours",
+				"button": "More projects on my GitHub"
+			},
+			"contacts": {
+				"name": "Contact",
+				"title": "Get in Touch",
+				"tg": " with a direct question on telegram ",
+				"subtitleStart": "Have a question or want to work together? Just shoot me a dm",
+				"subtitleEnd": "and I'll respond whenever I can. I'm always open to new opportunities."
+			}
+		}
+	}
+}

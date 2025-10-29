@@ -1,39 +1,10 @@
 {
-	"navigation": {
-		"about": "About",
-		"blog": "Blog",
-		"projects": "Projects",
-		"contact": "Contact",
-		"support": "Support me",
-		"download_cv": "Download CV",
-		"resume": "Resume",
-		"privacy_policy": "Privacy Policy",
-		"terms_of_service": "Terms of Service",
-		"manage_cookies": "Manage cookies"
-	},
 	"home": {
-		"title": "Alexey Filippov - Software Engineer",
-		"description": "Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building.",
 		"sections": {
-			"intro": {
-				"greeting": "Hello, I'm <name>SocketSomeone</name> your <role>Software Engineer</role>",
-				"subtitle": "You just found my profile! I'm a kitten who loves coffee and bugs! ( •̀ ω •́ )✧"
-			},
-			"projects": {
-				"name": "My Projects",
-				"title": "Check out my latest work",
-				"subtitle": "I've worked on a variety of projects, ranging from web development to machine learning. Here are a few of my favorites."
-			},
-			"git": {
-				"title": "Recent Contributions",
-				"subtitle": "See my recent contributions on GitHub",
-				"update": "Contributions are updating automatically every 24 hours",
-				"button": "More projects on my GitHub"
-			},
 			"professions": {
 				"name": "Experience",
-				"title": "A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.",
-				"subtitle": "My professional journey",
+				"title": "My professional journey",
+				"subtitle": "A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.",
 				"experience": {
 					"X5": {
 						"name": "X5 Digital",
@@ -319,18 +290,8 @@
 						}
 					}
 				}
-			},
-			"contacts": {
-				"name": "Contact",
-				"title": "Get in Touch",
-				"tg": "with a direct question on telegram",
-				"subtitleStart": "Have a question or want to work together? Just shoot me a dm ",
-				"subtitleEnd": "and I'll respond whenever I can. I'm always open to new opportunities."
 			}
 		}
-	},
-	"privacy": {
-		"title": "Privacy Policy",
-		"description": "This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website."
 	}
 }
+
