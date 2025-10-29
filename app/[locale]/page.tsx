@@ -11,7 +11,6 @@ import { cn } from '@/utils';
 import SectionHeader from '@/components/atoms/SectionHeader';
 import LaurelIcon from '@/components/icons/LaurelIcon';
 import { createLocaleAlternates } from '@/utils/seo';
-import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import ScrollDownButton from '@/components/molecules/ScrollDownButton';
@@ -45,8 +44,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	};
 }
 
-export default function HomePage() {
-	const t = useTranslations('home.sections');
+export default async function HomePage({ params }: Props) {
+	const {locale} = await params;
+
+	const t = await getTranslations({
+		locale,
+		namespace: 'home.sections'
+	});
 
 	return (
 		<Page className={'grow'}>
@@ -86,9 +90,12 @@ export default function HomePage() {
 			</div>
 
 
-			<Experience/>
+			<Experience name={t('professions.name')} title={t('professions.title')}
+						subtitle={t('professions.subtitle')}/>
 
-			<Contact/>
+			<Contact name={t('contacts.name')} title={t('contacts.title')}
+					 subtitleStart={t('contacts.subtitleStart')} tg={t('contacts.tg')}
+					 subtitleEnd={t('contacts.subtitleEnd')}/>
 
 			<Technologies/>
 

@@ -9,7 +9,6 @@ import LanguageSwitcher from '../molecules/LanguageSwitcher';
 import SocialLinks from './SocialLinks';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { CROWDIN_PROJECT_URL } from '@/utils/config';
 
 const styleOfLink = 'hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300';
 
@@ -40,7 +39,7 @@ export default function Footer() {
 
 	const linkColumns: LinkColumn[] = [
 		{
-			title: 'Навигация',
+			title: t('navigation_footer'),
 			items: [
 				{ type: 'link', href: '/', label: t('about') },
 				{ type: 'button', onClick: handlePrint, label: t('resume') },
@@ -49,14 +48,14 @@ export default function Footer() {
 			],
 		},
 		{
-			title: 'Поддержка',
+			title: t('support_footer'),
 			items: [
 				{ type: 'link', href: 'https://t.me/socketsomeoneshit', label: t('blog') },
-				{ type: 'link', href: CROWDIN_PROJECT_URL, label: 'Translate' },
+				{ type: 'link', href: 'https://crowdin.com/project/socketsomeone', label: t('translate_footer')},
 			]
 		},
 		{
-			title: 'Информация',
+			title: t('information_footer'),
 			items: [
 				{ type: 'link', href: '/privacy', label: t('privacy_policy') },
 				{ type: 'link', href: '/terms', label: t('terms_of_service') },
@@ -64,10 +63,10 @@ export default function Footer() {
 			],
 		},
 		{
-			title: 'Партнеры',
+			title: t('partners_footer'),
 			items: [
 				{ type: 'link', href: 'https://www.jetbrains.com/?from=SocketSomeone', label: 'JetBrains' },
-				{ type: 'link', href: CROWDIN_PROJECT_URL, label: 'Crowdin' },
+				{ type: 'link', href: 'https://crowdin.com/project/socketsomeone', label: 'Crowdin' },
 			],
 		}
 	];
@@ -98,7 +97,7 @@ export default function Footer() {
 							</Link>
 							<div className="flex w-full flex-col gap-6">
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Language</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('language_footer')}</h3>
 									<LanguageSwitcher className="h-14 w-full"/>
 								</div>
 							</div>
@@ -160,7 +159,7 @@ export default function Footer() {
 							})}
 						</div>
 						<div className="flex flex-col gap-3">
-							<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Social</h3>
+							<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('social_footer')}</h3>
 							<SocialLinks className="justify-start!" type="plain"/>
 						</div>
 					</div>
@@ -172,11 +171,11 @@ export default function Footer() {
 							</Link>
 							<div className="flex w-full flex-col gap-6">
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Language</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('language_footer')}</h3>
 									<LanguageSwitcher className="h-14 w-full"/>
 								</div>
 								<div className="flex flex-col gap-3">
-									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Social</h3>
+									<h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t('social_footer')}</h3>
 									<SocialLinks className="justify-start!" type="plain"/>
 								</div>
 							</div>

@@ -11,8 +11,13 @@ import { cn } from '@/utils';
 import { ExternalLinkIcon, LucideGraduationCap } from 'lucide-react';
 import { ExperienceEntry, ImageOrIcon, useExperienceEntries } from './data';
 
+type Props = {
+	name?: string;
+	title: string;
+	subtitle?: string;
+}
 
-export default function Experience() {
+export default function Experience({name, title, subtitle}: Props) {
 	const experienceEntries = useExperienceEntries();
 
 	return (
@@ -22,8 +27,8 @@ export default function Experience() {
 
 			<LucideGraduationCap width={24} className="self-center text-gray-400 dark:text-gray-500 print:hidden"/>
 
-			<SectionHeader head={'Experience'} title={'My professional journey'}
-						   description={'A showcase of my career journey — the roles, responsibilities, and achievements that define my professional growth.'}/>
+			<SectionHeader head={name} title={title}
+						   description={subtitle}/>
 
 			<div className="md:container text-muted-foreground relative flex flex-col items-center print:pt-0 print:px-0">
 				{experienceEntries.map((entry, entryIndex) => (
