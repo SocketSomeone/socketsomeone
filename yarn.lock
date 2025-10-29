@@ -2184,6 +2184,11 @@
   resolved "https://registry.yarnpkg.com/@rtsao/scc/-/scc-1.1.0.tgz#927dd2fae9bc3361403ac2c7a00c32ddce9ad7e8"
   integrity sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==
 
+"@rushstack/eslint-patch@^1.10.3":
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.14.1.tgz#5f7c5c335643cff62ad8e6a9432d708a9c51e98c"
+  integrity sha512-jGTk8UD/RdjsNZW8qq10r0RBvxL8OWtoT+kImlzPDFilmozzM+9QmIJsmze9UiSBrFU45ZxhTYBypn9q9z/VfQ==
+
 "@schummar/icu-type-parser@1.21.5":
   version "1.21.5"
   resolved "https://registry.yarnpkg.com/@schummar/icu-type-parser/-/icu-type-parser-1.21.5.tgz#75989085bbbf80ee325874a0137437bde77e9baf"
@@ -2429,7 +2434,7 @@
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.7.tgz#baccb07a970b91707df3a3e8ba6896c57ead2d11"
   integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
 
-"@typescript-eslint/eslint-plugin@8.46.2":
+"@typescript-eslint/eslint-plugin@^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0":
   version "8.46.2"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.46.2.tgz#dc4ab93ee3d7e6c8e38820a0d6c7c93c7183e2dc"
   integrity sha512-ZGBMToy857/NIPaaCucIUQgqueOiq7HeAKkhlvqVV4lm089zUFW6ikRySx2v+cAhKeUCPuWVHeimyk6Dw1iY3w==
@@ -2444,7 +2449,7 @@
     natural-compare "^1.4.0"
     ts-api-utils "^2.1.0"
 
-"@typescript-eslint/parser@8.46.2":
+"@typescript-eslint/parser@^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0":
   version "8.46.2"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-8.46.2.tgz#dd938d45d581ac8ffa9d8a418a50282b306f7ebf"
   integrity sha512-BnOroVl1SgrPLywqxyqdJ4l3S2MsKVLDVxZvjI1Eoe8ev2r3kGDo+PcMihNmDE+6/KjkTubSJnmqGZZjQSBq/g==

@@ -1,5 +1,7 @@
 import { getRequestConfig } from 'next-intl/server';
-import {deepmerge} from "deepmerge-ts";
+import { hasLocale } from 'next-intl';
+import { routing } from './routing';
+import { deepmerge } from "deepmerge-ts";
 
 type Messages = Record<string, any>
 
@@ -22,7 +24,10 @@ async function loadMessage(locale: string): Promise<Messages> {
 }
 
 export default getRequestConfig(async ({ locale }) => {
-	const currentLocale = locale ?? 'en';
+	const requested = locale;
+	const currentLocale = hasLocale(routing.locales, requested)
+		? requested
+		: routing.defaultLocale;
 
 	const allMessages = await loadMessage(currentLocale);
 
