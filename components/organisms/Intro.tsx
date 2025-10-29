@@ -3,7 +3,7 @@ import Avatar from '@/components/atoms/Avatar';
 import Banner from '@/components/organisms/Banner';
 import BlurFade from '@/components/magicui/blur-fade';
 import SocialLinks from './SocialLinks';
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 
 export default function Intro() {
 	const t = useTranslations('home.sections.intro');

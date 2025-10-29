@@ -8,7 +8,7 @@ import { cn } from "@/utils";
 import GithubActivity from "../../molecules/GithubActivity";
 import { useQuery } from "@tanstack/react-query";
 import GridProjects from "./GridProjects";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 
 interface ProjectsProps {
 	type: "marquee" | "grid";
