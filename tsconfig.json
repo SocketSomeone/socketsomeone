@@ -29,6 +29,12 @@
 			"@/components/*": [
 				"./components/*"
 			],
+			"@/interfaces": [
+				"./interfaces"
+			],
+			"@/interfaces/*": [
+				"./interfaces/*"
+			],
 			"@/utils": [
 				"./utils"
 			],

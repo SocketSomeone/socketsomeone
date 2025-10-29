@@ -30,7 +30,7 @@ export default function GithubActivity({ username = 'SocketSomeone', className }
 
 	return (
 		<div
-			className={cn('w-full xl:w-2/3 px-2 lg:px-0  flex flex-col items-center space-y-2 justify-center py-8 print:hidden', className)}>
+			className={cn('w-full  px-2 lg:px-0  flex flex-col items-center space-y-2 justify-center py-8 print:hidden', className)}>
 
 			<h2 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-0!">
 				{t('title')}

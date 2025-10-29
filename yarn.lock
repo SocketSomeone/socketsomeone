@@ -4697,6 +4697,16 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+highcharts-react-official@^3.3.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/highcharts-react-official/-/highcharts-react-official-3.2.3.tgz#9496db4a5bb0cf916e8b44a88bb41e66483ae6f1"
+  integrity sha512-2gL8bVGe6Pf75tSe6IB5Ucd0nIOJX7ZrpttQBZVrjN2J9StdVZ12aOinXHIOFvlc6EzP8CbN13WS8NUq+9mptA==
+
+highcharts@^11.4.8:
+  version "11.4.8"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-11.4.8.tgz#252e71b81c24ec9f99e756b76dbebd7546e18dda"
+  integrity sha512-5Tke9LuzZszC4osaFisxLIcw7xgNGz4Sy3Jc9pRMV+ydm6sYqsPYdU8ELOgpzGNrbrRNDRBtveoR5xS3SzneEA==
+
 hosted-git-info@^7.0.0:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-7.0.2.tgz#9b751acac097757667f30114607ef7b661ff4f17"
