@@ -140,7 +140,7 @@ export default function WakatimeStats({ data }: Props) {
 						useHTML: true,
 						formatter: function () {
 							return `
-								<span class=" block font-bold text-foreground">${this.point.name}</span>
+								<span class="block font-bold text-foreground">${this.name}</span>
 								<span class='block text-muted-foreground'>${this.y?.toFixed(1)}h</span>
 							`;
 						},
@@ -183,7 +183,7 @@ export default function WakatimeStats({ data }: Props) {
 						useHTML: true,
 						formatter: function () {
 							return `
-								<span class=" block font-bold text-foreground">${this.point.name}</span>
+								<span class=" block font-bold text-foreground">${this.name}</span>
 								<span class='block text-muted-foreground'>${this.y?.toFixed(1)}h</span>
 							`;
 						},

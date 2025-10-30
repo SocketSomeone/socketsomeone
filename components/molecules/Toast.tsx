@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { cn, dateToDuration } from '@/utils';
 import Image from 'next/image';
@@ -11,12 +11,14 @@ export default function Toast() {
 	const [closed, setClosed] = useState<boolean>(false);
 	const { status } = useLanyardContext();
 
-	const [activity, setActivity] = useState<Activity>();
 	const [elapsed, setElapsed] = useState<string>('');
 	const [left, setLeft] = useState<string>('');
-	const [largeImage, setLargeImage] = useState<string>('');
-	const [smallImage, setSmallImage] = useState<string>('');
-	const [imageNotLoaded, setImageNotLoaded] = useState<boolean>(false);
+	const [failedLargeImage, setFailedLargeImage] = useState<string | null>(null);
+
+	const activity = useMemo(
+		() => status?.activities.find((activity) => activity.type === 0),
+		[status]
+	);
 
 	const assetURL = useCallback((field: 'small_image' | 'large_image' = 'large_image') => {
 		const asset = activity?.assets?.[field];
@@ -54,23 +56,9 @@ export default function Toast() {
 		return () => clearInterval(interval);
 	}, [activity?.timestamps]);
 
-	useEffect(() => {
-		const largeURL = assetURL('large_image');
-		const smallURL = assetURL('small_image');
-
-		if (largeURL !== largeImage) {
-			setLargeImage(largeURL);
-		}
-
-		if (smallURL !== smallImage) {
-			setSmallImage(smallURL);
-		}
-	}, [assetURL, largeImage, smallImage]);
-
-	useEffect(() => {
-		setActivity(status?.activities.find((activity) => activity.type === 0));
-	}, [status]);
-
+	const largeImage = assetURL('large_image');
+	const smallImage = assetURL('small_image');
+	const isLargeImageUnavailable = !largeImage || failedLargeImage === largeImage;
 
 	return (
 		<AnimatePresence>
@@ -102,13 +90,13 @@ export default function Toast() {
 								<div className="flex items-center gap-3">
 									<div className={cn('relative flex h-max items-center')}>
 										<div className="relative inline-block group">
-											{!largeImage || imageNotLoaded ? (
+											{isLargeImageUnavailable ? (
 												<div className="h-[80px] w-[80px] rounded-md bg-gray-200 dark:bg-gray-700 animate-pulse" />
 											) : (
 												<>
 													<Image
 														className="h-full w-auto max-h-[80px] rounded-md object-contain"
-														onError={() => setImageNotLoaded(true)}
+														onError={() => setFailedLargeImage(largeImage)}
 														width={4096}
 														height={4096}
 														quality={100}

@@ -1,6 +1,6 @@
 'use client';
 import React, { JSX, useEffect, useMemo, useState } from 'react';
-import { fetchSimpleIcons, renderSimpleIcon, SimpleIcon, } from 'react-icon-cloud';
+import { fetchSimpleIcons, renderSimpleIcon, SimpleIcon } from 'react-icon-cloud';
 import { useTheme } from 'next-themes';
 
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
@@ -9,6 +9,62 @@ const iconCache = new Map<string, JSX.Element>();
 
 const getRandomInt = (min: number, max: number) =>
 	Math.floor(Math.random() * (max - min + 1)) + min;
+
+type IconPosition = {
+	icon: SimpleIcon;
+	left: string;
+	start: number;
+	end: number;
+	delay: string;
+	duration: string;
+	width: number;
+	height: number;
+};
+
+const createIconPositions = (icons: SimpleIcon[]): IconPosition[] => {
+	type IconTiming = { left: number; start: number; end: number };
+	const usedPositions: IconTiming[] = [];
+
+	const isOverlapping = (left: number, start: number, end: number) => {
+		return usedPositions.some(pos =>
+			Math.abs(pos.left - left) < 8 &&
+			!(end <= pos.start || start >= pos.end)
+		);
+	};
+
+	const getNonOverlappingLeft = (start: number, end: number) => {
+		let left: number;
+		let attempts = 0;
+		do {
+			left = getRandomInt(5, 95);
+			attempts++;
+			if (attempts > 30) break;
+		} while (isOverlapping(left, start, end));
+		usedPositions.push({ left, start, end });
+		return `${left}%`;
+	};
+
+	return icons.map((icon) => {
+		const delaySec = Math.random() * 10;
+		const durationSec = getRandomInt(15, 30);
+		const start = delaySec;
+		const end = delaySec + durationSec;
+		const left = getNonOverlappingLeft(start, end);
+		const size = getRandomInt(30, 70);
+		const [width, height] = [size, size];
+
+		return {
+			icon,
+			left,
+			start,
+			end,
+			delay: `${delaySec}s`,
+			duration: `${durationSec}s`,
+			width,
+			height,
+		};
+	});
+};
 
 export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 	const cacheKey = `${icon.slug}-${theme}`;
@@ -41,7 +97,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 };
 
 function Technologies() {
-	const [data, setData] = useState<IconData | null>(null);
+	const [iconPositions, setIconPositions] = useState<IconPosition[]>([]);
 	const { resolvedTheme } = useTheme();
 
 	useEffect(() => {
@@ -63,58 +119,14 @@ function Technologies() {
 			'nginx'
 		];
 
-		fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+		fetchSimpleIcons({ slugs: iconSlugs }).then((iconData: IconData) => {
+			const icons = Object.values(iconData.simpleIcons);
+			setIconPositions(createIconPositions(icons));
+		});
 	}, []);
 
-	const iconPositions = useMemo(() => {
-		if (!data) return [];
-
-		type IconTiming = { left: number; start: number; end: number };
-		const usedPositions: IconTiming[] = [];
-
-		const isOverlapping = (left: number, start: number, end: number) => {
-			return usedPositions.some(pos =>
-				Math.abs(pos.left - left) < 8 &&
-				!(end <= pos.start || start >= pos.end)
-			);
-		};
-
-		const getNonOverlappingLeft = (start: number, end: number) => {
-			let left: number;
-			let attempts = 0;
-			do {
-				left = getRandomInt(5, 95);
-				attempts++;
-				if (attempts > 30) break;
-			} while (isOverlapping(left, start, end));
-			usedPositions.push({ left, start, end });
-			return `${left}%`;
-		};
-
-		return Object.values(data.simpleIcons).map((icon) => {
-			const delaySec = Math.random() * 10;
-			const durationSec = getRandomInt(15, 30);
-			const start = delaySec;
-			const end = delaySec + durationSec;
-			const left = getNonOverlappingLeft(start, end);
-			const size = getRandomInt(30, 70);
-			const [width, height] = [size, size];
-
-			return {
-				icon,
-				left,
-				start,
-				end,
-				delay: `${delaySec}s`,
-				duration: `${durationSec}s`,
-				width,
-				height,
-			};
-		});
-	}, [data]);
-
 	const renderedIcons = useMemo(() => {
-		if (!data) return [];
+		if (iconPositions.length === 0) return [];
 
 		return iconPositions.map(({ icon, left, delay, duration, width, height }) => ({
 			element: renderCustomIcon(icon, resolvedTheme || 'light'),
@@ -128,7 +140,7 @@ function Technologies() {
 				animationDuration: duration,
 			},
 		}));
-	}, [data, iconPositions, resolvedTheme]);
+	}, [iconPositions, resolvedTheme]);
 
 	return (
 		<ul className="-z-1 hidden sm:flex print:hidden absolute bottom-0 w-full h-[100vh] overflow-hidden">
