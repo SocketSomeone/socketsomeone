@@ -3,26 +3,24 @@
 import { useTheme } from 'next-themes';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 import { cn } from '@/utils';
-import { useEffect, useState } from 'react';
 import { IoIosContrast } from 'react-icons/io';
+import { useMounted } from '@/hooks/useMounted';
 
 interface ThemeSwitcherProps {
 	className?: string;
 }
 
 export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
-	const { theme, setTheme } = useTheme();
-	const [isMounted, setIsMounted] = useState(false);
+	const { theme, resolvedTheme, setTheme } = useTheme();
+	const mounted = useMounted();
 
-	useEffect(() => {
-		setIsMounted(true);
-	}, []);
+	if (!mounted) return null;
 
-	if (!isMounted) return null;
+	const currentTheme = theme ?? resolvedTheme ?? 'system';
 
-	const nextTheme = theme === 'light'
+	const nextTheme = currentTheme === 'light'
 		? 'dark'
-		: theme === 'dark'
+		: currentTheme === 'dark'
 			? 'system'
 			: 'light';
 
@@ -31,7 +29,11 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 	};
 
 	const renderIcon = () => {
-		switch (theme) {
+		const displayTheme = currentTheme === 'system'
+			? resolvedTheme ?? 'system'
+			: currentTheme;
+
+		switch (displayTheme) {
 			case 'light':
 				return <MoonIcon className="w-6 h-6 text-black"/>;
 			case 'dark':

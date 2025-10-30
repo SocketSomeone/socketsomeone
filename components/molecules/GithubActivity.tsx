@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import React from 'react';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import { useTranslations } from 'next-intl';
+import { useMounted } from '@/hooks/useMounted';
 
 type GitHubCalendarProps = {
 	username?: string;
@@ -19,12 +20,8 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 
 export default function GithubActivity({ username = 'SocketSomeone', className }: GitHubCalendarProps) {
 	const { resolvedTheme } = useTheme();
-	const [mounted, setMounted] = React.useState(false);
 	const t = useTranslations('home.sections.git');
-
-	React.useEffect(() => {
-		setMounted(true);
-	}, []);
+	const mounted = useMounted();
 
 	if (!mounted) return null;
 
