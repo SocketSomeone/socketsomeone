@@ -18,7 +18,7 @@ export interface ExperienceEntry {
 	icon?: {
 		url?: string;
 		fallback: React.ReactNode;
-	}
+	};
 	startDate: string;
 	endDate?: string;
 }
@@ -27,13 +27,13 @@ const styleOfIcon = 'rounded-md bg-blue-500/10 text-blue-500 dark:bg-blue-500/20
 
 
 export const icons = {
-	work: <BriefcaseIcon width={36} className={styleOfIcon} />,
-	openSource: <HeartIcon width={36} className={styleOfIcon} />,
+	work: <BriefcaseIcon width={36} className={styleOfIcon}/>,
+	openSource: <HeartIcon width={36} className={styleOfIcon}/>,
 	order: <BoltIcon width={36} className={styleOfIcon}/>
 };
 
 
-export function useExperienceEntries():ExperienceEntry[] {
+export function useExperienceEntries(): ExperienceEntry[] {
 	const t = useTranslations();
 	const experienceData = t.raw('home.sections.professions.experience');
 

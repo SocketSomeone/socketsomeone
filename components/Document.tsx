@@ -4,6 +4,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 import Providers from './providers/Providers';
 import { Inter } from 'next/font/google';
 import CrowdinInContext from './providers/CrowdinInContext';
+import Head from 'next/head';
 
 const inter = Inter({
 	subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
@@ -36,7 +37,17 @@ type Props = {
 export default function Document({ children, locale, enableCrowdin }: Props) {
 	return (
 		<html lang={locale ?? 'en'} className={cn('scroll-smooth', inter.variable)} suppressHydrationWarning>
-		<CrowdinInContext enable={enableCrowdin} />
+		<Head>
+			<link rel="dns-prefetch" href="https://github.githubassets.com"/>
+			<link rel="dns-prefetch" href="https://avatars.githubusercontent.com"/>
+			<link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com"/>
+			<link rel="dns-prefetch" href="https://user-images.githubusercontent.com/"/>
+			<link rel="preconnect" href="https://fonts.googleapis.com"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
+			<link rel="preconnect" href="https://github.githubassets.com" crossOrigin="anonymous"/>
+			<link rel="preconnect" href="https://avatars.githubusercontent.com"/>
+		</Head>
+		<CrowdinInContext enable={enableCrowdin}/>
 		<GoogleTagManager gtmId="GTM-W3MWWW92"/>
 		<body className="bg-white text-foreground dark:bg-gray-900 antialiased ">
 		<Providers>
