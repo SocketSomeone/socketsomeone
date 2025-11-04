@@ -36,7 +36,7 @@
     "deepmerge-ts": "^7.1.5",
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
-    "eslint": "^9.39.0",
+    "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.1",
     "highcharts": "^12.4.0",
     "highcharts-react-official": "^3.2.3",
