@@ -67,7 +67,7 @@
     "@types/minimatch": "^6.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
-    "release-it": "^19.0.5",
+    "release-it": "^19.0.6",
     "tsx": "^4.20.6"
   }
 }
