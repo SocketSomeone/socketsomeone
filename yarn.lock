@@ -2418,17 +2418,17 @@
     postcss "^8.4.41"
     tailwindcss "4.1.17"
 
-"@tanstack/query-core@5.90.8":
-  version "5.90.8"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.90.8.tgz#4a2600a5acf403494e4d5a3fcfac038ed84c5db7"
-  integrity sha512-4E0RP/0GJCxSNiRF2kAqE/LQkTJVlL/QNU7gIJSptaseV9HP6kOuA+N11y4bZKZxa3QopK3ZuewwutHx6DqDXQ==
+"@tanstack/query-core@5.90.9":
+  version "5.90.9"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.90.9.tgz#ce3ad3045a168683d15322598e95a9146c73f84c"
+  integrity sha512-UFOCQzi6pRGeVTVlPNwNdnAvT35zugcIydqjvFUzG62dvz2iVjElmNp/hJkUoM5eqbUPfSU/GJIr/wbvD8bTUw==
 
-"@tanstack/react-query@^5.90.8":
-  version "5.90.8"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.90.8.tgz#c9b8bdbffd2df4b023094c3da144324a9daa5cef"
-  integrity sha512-/3b9QGzkf4rE5/miL6tyhldQRlLXzMHcySOm/2Tm2OLEFE9P1ImkH0+OviDBSvyAvtAOJocar5xhd7vxdLi3aQ==
+"@tanstack/react-query@^5.90.9":
+  version "5.90.9"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.90.9.tgz#798915eddb6a32c0702e1f6b88e7b7578d0182a9"
+  integrity sha512-Zke2AaXiaSfnG8jqPZR52m8SsclKT2d9//AgE/QIzyNvbpj/Q2ln+FsZjb1j69bJZUouBvX2tg9PHirkTm8arw==
   dependencies:
-    "@tanstack/query-core" "5.90.8"
+    "@tanstack/query-core" "5.90.9"
 
 "@tootallnate/quickjs-emscripten@^0.23.0":
   version "0.23.0"
@@ -6024,15 +6024,15 @@ new-github-release-url@2.0.0:
   dependencies:
     type-fest "^2.5.1"
 
-next-intl@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-4.5.2.tgz#a59a41d29fa23971a2b47e3732f9bbf120dd7d74"
-  integrity sha512-njv6ZPzBmnn33fjQDcMCqYhb4zw9HANruDYB8zNLHTG+bhBfLIjvzdL/XbUBlg8ByK0QI/Qqmpmet0b1eSTL8A==
+next-intl@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-4.5.3.tgz#00f9b5e2da2d1e59f08b30ff2b6b55fdf3e473dc"
+  integrity sha512-/omQgD0JyewIwJa0F5/HPRe5LYAVBNcGDgZvnv6hul8lI1KMcCcxErMXUiNjyc5kuQqLQeWUa2e4ICx09uL8FA==
   dependencies:
     "@formatjs/intl-localematcher" "^0.5.4"
     "@swc/core" "^1.13.19"
     negotiator "^1.0.0"
-    use-intl "^4.5.2"
+    use-intl "^4.5.3"
 
 next-pwa@^5.6.0:
   version "5.6.0"
@@ -8060,10 +8060,10 @@ use-callback-ref@^1.3.3:
   dependencies:
     tslib "^2.0.0"
 
-use-intl@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-4.5.2.tgz#86eea3a835a961cd749402053c0d20da65292a84"
-  integrity sha512-f9erBQDCk7uuu4vqqrUNffnvRv0a00cnWNEm1EtLnTleoM/cdNnFmXu3hcBXpUVwBdCoX07WD90dLeg7lzfhlw==
+use-intl@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-4.5.3.tgz#4fca379a1016367d70186611e0b9e8491f380113"
+  integrity sha512-vO2csOEc+xpi5PdvjTKORR4ZZQE6mz2jheefOszLOjppWx8SATC2XkmxUYwSHz1HIrcW6alUsj9qfPa6ZFhTNA==
   dependencies:
     "@formatjs/fast-memoize" "^2.2.0"
     "@schummar/icu-type-parser" "1.21.5"
