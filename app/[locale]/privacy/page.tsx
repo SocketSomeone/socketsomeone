@@ -4,6 +4,7 @@ import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { createLocaleAlternates } from '@/utils/seo';
+import { EMAILS } from '@/utils/config';
 
 type Props = {
 	params: Promise<{ locale: string }>;
@@ -251,8 +252,8 @@ export default function PrivacyPolicyPage() {
 				</p>
 				<p>
 					If you have GDPR-related concerns, please contact us at{' '}
-					<a href="mailto:socket.someone@gmail.com" className="underline text-blue-600 dark:text-blue-400">
-						socket.someone@gmail.com
+					<a href={`mailto:${EMAILS.LEGAL}`} className="underline text-blue-600 dark:text-blue-400">
+						{EMAILS.LEGAL}
 					</a>.
 				</p>
 			</section>
@@ -281,8 +282,8 @@ export default function PrivacyPolicyPage() {
 				<p>
 					If you have any questions or concerns regarding this policy, feel
 					free to contact us at{' '}
-					<a href="mailto:socket.someone@gmail.com" className="underline text-blue-600 dark:text-blue-400">
-						socket.someone@gmail.com
+					<a href={`mailto:${EMAILS.LEGAL}`} className="underline text-blue-600 dark:text-blue-400">
+						{EMAILS.LEGAL}
 					</a>.
 				</p>
 			</section>
@@ -297,8 +298,8 @@ export default function PrivacyPolicyPage() {
 				<p className="mt-2">
 					Filippov Alexey Nikolaevich<br/>
 					Email:{' '}
-					<a href="mailto:socket.someone@gmail.com" className="underline text-blue-600 dark:text-blue-400">
-						socket.someone@gmail.com
+					<a href={`mailto:${EMAILS.CONTACT}`} className="underline text-blue-600 dark:text-blue-400">
+						{EMAILS.CONTACT}
 					</a>
 				</p>
 			</section>

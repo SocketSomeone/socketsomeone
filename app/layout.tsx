@@ -3,6 +3,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 
 import React from 'react';
 import { Metadata, Viewport } from 'next';
+import { EMAILS } from '@/utils/config';
 
 
 type Props = {
@@ -78,7 +79,7 @@ export const metadata: Metadata = {
 		gender: 'Male',
 		username: 'SocketSomeone',
 		emails: [
-			'socket.someone@gmail.com'
+			EMAILS.CONTACT,
 		]
 	},
 	twitter: {

@@ -1,8 +1,9 @@
 'use client';
 import PlainSocialLink from '../atoms/PlainSocialLink';
-import { SocialLink } from '../../interfaces';
+import { SocialLink } from '@/interfaces';
 import SocialCard from '../molecules/Card/SocialCard';
 import { cn } from '@/utils';
+import { EMAILS } from '@/utils/config';
 
 export const LINKS: SocialLink[] = [
 	{
@@ -54,7 +55,7 @@ export const LINKS: SocialLink[] = [
 		isPrintable: true
 	},
 	{
-		href: 'mailto:socket.someone@gmail.com',
+		href: `mailto:${EMAILS.CONTACT}`,
 		icon: '/icons/email.svg',
 		alt: 'Email',
 		name: 'Email',

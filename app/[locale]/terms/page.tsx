@@ -3,6 +3,7 @@ import { ChevronLeftIcon } from '@heroicons/react/24/solid';
 import { Link } from '@/i18n/navigation';
 import { Metadata } from 'next';
 import { createLocaleAlternates } from '@/utils/seo';
+import { EMAILS } from '@/utils/config';
 
 const PAGE_TITLE = 'Terms of Service';
 const PAGE_DESCRIPTION = 'Terms of Service for socketsomeone.me and socketsomeone.dev';
@@ -93,8 +94,8 @@ export default function TermsPage() {
 			<section className="space-y-1 text-base">
 				<h2 className="text-xl font-semibold">5. Contact</h2>
 				<p>
-					For any questions regarding these Terms, please contact: <a href="mailto:socket.someone@gmail.com"
-																				className="underline text-blue-600">socket.someone@gmail.com</a>
+					For any questions regarding these Terms, please contact: <a href={`mailto:${EMAILS.LEGAL}`}
+																				className="underline text-blue-600">{EMAILS.LEGAL}</a>
 				</p>
 			</section>
 

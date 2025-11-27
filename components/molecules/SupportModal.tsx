@@ -28,7 +28,7 @@ const wallets: Wallet[] = [
 		symbol: 'BTC',
 		name: 'Bitcoin',
 		chain: 'BTC',
-		address: '1L5qNsqh5zToxyHGSu1PrhM6PJ21GkCBQ4'
+		address: 'bc1qu5hpfns9x6ygfnulnhxedkdp26l3wkdunkuz6h'
 	},
 	{
 		symbol: 'ETH',
