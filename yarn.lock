@@ -5968,22 +5968,22 @@ new-github-release-url@2.0.0:
   dependencies:
     type-fest "^2.5.1"
 
-next-intl-swc-plugin-extractor@^4.5.5:
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/next-intl-swc-plugin-extractor/-/next-intl-swc-plugin-extractor-4.5.5.tgz#fd2717b5dc653b19df689cd59eb32574e777ae89"
-  integrity sha512-mcq/Eag0SXR1Zcerc4TQxTc4QJdt+5uhLLI7VI1mCbArG/QVsbXcCqd72dKSQpEfz8q0yuTJIlddBs54fT4lkw==
+next-intl-swc-plugin-extractor@^4.5.6:
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/next-intl-swc-plugin-extractor/-/next-intl-swc-plugin-extractor-4.5.6.tgz#f4041dd8c466f4cde8f9d302654b5a0431a6289f"
+  integrity sha512-ApB3wGYqni8lks90UuaslnCK4a+q8I6ajEafSpknN6RDrs2hUwNuWVrjKhOuhLqNLn4kBKl+Zi5c0WKpL968ag==
 
-next-intl@^4.5.5:
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-4.5.5.tgz#ca3c9ff9fae9c50cd4aa4c521b534903330ac673"
-  integrity sha512-BVAcZP603tZ83c5b/qHaJt5g2/y6YaxQwc8xAlqE9VGf+q5Uc32rpRTlmqCZB8OhcPCO7L6opL47obXJh3uYTw==
+next-intl@^4.5.6:
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-4.5.6.tgz#58a2133aa0121bbc085c19d8d3adde2eee05ed0e"
+  integrity sha512-LD1mM9HL44NGqDus3cpIE8wqRU87GWf7rdy1g7UHceT9KJvvjER/jlmIRt3GHaoOiln16K4IbHpO2ZI6jiqiDQ==
   dependencies:
     "@formatjs/intl-localematcher" "^0.5.4"
     "@swc/core" "^1.15.2"
     negotiator "^1.0.0"
-    next-intl-swc-plugin-extractor "^4.5.5"
-    po-parser "^0.1.2"
-    use-intl "^4.5.5"
+    next-intl-swc-plugin-extractor "^4.5.6"
+    po-parser "^1.0.2"
+    use-intl "^4.5.6"
 
 next-pwa@^5.6.0:
   version "5.6.0"
@@ -6444,10 +6444,10 @@ pkg-types@^2.3.0:
     exsolve "^1.0.7"
     pathe "^2.0.3"
 
-po-parser@^0.1.2:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/po-parser/-/po-parser-0.1.3.tgz#df94402513ef563f39a92060c9676aeef365d198"
-  integrity sha512-VYuhQ4HpLgEvoHryBLSNRx9vI5gcfWKufw7Nv/uMHefQYFferxEtiC9afF7STeOQetIHMYMkrvHxs+H7OERQSw==
+po-parser@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/po-parser/-/po-parser-1.0.2.tgz#042566bceba39c151a1f73d5c8c7a03541a135c3"
+  integrity sha512-yTIQL8PZy7V8c0psPoJUx7fayez+Mo/53MZgX9MPuPHx+Dt+sRPNuRbI+6Oqxnddhkd68x4Nlgon/zizL1Xg+w==
 
 possible-typed-array-names@^1.0.0:
   version "1.1.0"
@@ -7998,10 +7998,10 @@ use-callback-ref@^1.3.3:
   dependencies:
     tslib "^2.0.0"
 
-use-intl@^4.5.5:
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-4.5.5.tgz#e04d0ee66879b3d65e838f944cadff79938020dd"
-  integrity sha512-MUIOVDmZipK23Y2jrVgl/3w15nGcV9nNiz6FNfBFCdgbglOmjB9O7AegZcNFYGXUs5W+vYQYYsQCjmWW/NbhRQ==
+use-intl@^4.5.6:
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-4.5.6.tgz#2d758dc1a90b4990ebb83724cfbfcb00a4350c5e"
+  integrity sha512-SzxrUH/X3LatVcgWVqz8ifoBK01LC3fzc8Y29Vj0QfrjLIXfGwxvJ3aapyWumBIIHsZmCR0Rx5FpKDWCc9JiOg==
   dependencies:
     "@formatjs/fast-memoize" "^2.2.0"
     "@schummar/icu-type-parser" "1.21.5"
