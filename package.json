@@ -40,7 +40,7 @@
     "eslint-config-next": "^16.0.7",
     "highcharts": "^12.4.0",
     "highcharts-react-official": "^3.2.3",
-    "lucide-react": "^0.555.0",
+    "lucide-react": "^0.556.0",
     "motion": "^12.23.25",
     "next": "^16.0.7",
     "next-intl": "^4.5.8",
