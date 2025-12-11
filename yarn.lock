@@ -2506,10 +2506,10 @@
   dependencies:
     minimatch "*"
 
-"@types/node@*", "@types/node@24.10.2":
-  version "24.10.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.10.2.tgz#82a57476a19647d8f2c7750d0924788245e39b26"
-  integrity sha512-WOhQTZ4G8xZ1tjJTvKOpyEVSGgOTvJAfDK3FNFgELyaTpzhdgHVHeqW8V+UJvzF5BT+/B54T/1S2K6gd9c7bbA==
+"@types/node@*", "@types/node@25.0.0":
+  version "25.0.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.0.tgz#c0e0022c3c7b41635c49322e6b3a0279fffa7d62"
+  integrity sha512-rl78HwuZlaDIUSeUKkmogkhebA+8K1Hy7tddZuJ3D0xV8pZSfsYGTsliGUol1JPzu9EKnTxPC4L1fiWouStRew==
   dependencies:
     undici-types "~7.16.0"
 
@@ -5775,10 +5775,10 @@ lru-cache@^7.14.1:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.18.3.tgz#f793896e0fd0e954a59dfdd82f0773808df6aa89"
   integrity sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==
 
-lucide-react@^0.559.0:
-  version "0.559.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.559.0.tgz#e9a642975c11663286fe4251bb723aa6ac6b1842"
-  integrity sha512-3ymrkBPXWk3U2bwUDg6TdA6hP5iGDMgPEAMLhchEgTQmA+g0Zk24tOtKtXMx35w1PizTmsBC3RhP88QYm+7mHQ==
+lucide-react@^0.560.0:
+  version "0.560.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.560.0.tgz#961bdce8e4e7a42da017c6c663d37217138e1194"
+  integrity sha512-NwKoUA/aBShsdL8WE5lukV2F/tjHzQRlonQs7fkNGI1sCT0Ay4a9Ap3ST2clUUkcY+9eQ0pBe2hybTQd2fmyDA==
 
 macos-release@^3.3.0:
   version "3.4.0"
