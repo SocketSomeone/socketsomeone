@@ -14,7 +14,8 @@ export default function SnowfallBackground() {
 		return null;
 	}
 
-	const color = resolvedTheme === 'dark' ? 'rgba(148, 167, 200, 0.35)' : '#dfe7f2';
+	const color =
+		resolvedTheme === 'dark' ? 'rgba(148, 167, 200, 0.35)' : 'rgba(200, 220, 245, 0.75)';
 
 	return (
 		<Snowfall color={color}/>
