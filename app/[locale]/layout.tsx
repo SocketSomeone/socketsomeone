@@ -6,6 +6,8 @@ import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import React, { Suspense } from 'react';
 import Document from '@/components/Document';
+import { Snowfall } from 'react-snowfall';
+import SnowfallBackground from '@/components/organisms/SnowfallBackground';
 
 type Props = {
 	children: React.ReactNode;
@@ -32,6 +34,8 @@ export default async function LocaleLayout({ children, params }: Props) {
 			<Suspense>
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<div className="relative flex flex-col min-h-screen overflow-hidden print:overflow-visible!">
+						<SnowfallBackground/>
+
 						<Header/>
 
 						{children}

@@ -16,7 +16,7 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 
 	if (!mounted) return null;
 
-	const currentTheme = theme ?? resolvedTheme ?? 'system';
+	const currentTheme = theme ?? 'system';
 
 	const nextTheme = currentTheme === 'light'
 		? 'dark'
@@ -29,11 +29,7 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 	};
 
 	const renderIcon = () => {
-		const displayTheme = currentTheme === 'system'
-			? resolvedTheme ?? 'system'
-			: currentTheme;
-
-		switch (displayTheme) {
+		switch (currentTheme) {
 			case 'light':
 				return <MoonIcon className="w-6 h-6 text-black"/>;
 			case 'dark':
@@ -42,6 +38,8 @@ export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 				return <IoIosContrast
 					className={cn('w-6 h-6 text-black dark:text-white')}/>;
 		}
+
+		return null;
 	};
 
 	return (

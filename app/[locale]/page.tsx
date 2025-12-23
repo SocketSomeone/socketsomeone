@@ -11,7 +11,10 @@ import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import ScrollDownButton from '@/components/molecules/ScrollDownButton';
 import PrintMode from '@/components/atoms/PrintMode';
-import { ClientHomeProjects } from "@/components/organisms/Projects/ClientHomeProjects";
+import { ClientHomeProjects } from '@/components/organisms/Projects/ClientHomeProjects';
+import { Snowfall } from 'react-snowfall';
+import React from 'react';
+import SnowfallBackground from '@/components/organisms/SnowfallBackground';
 
 type Props = {
 	params: Promise<{ locale: string }>;
