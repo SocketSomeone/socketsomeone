@@ -6892,10 +6892,10 @@ rc9@^2.1.2:
     defu "^6.1.4"
     destr "^2.0.3"
 
-react-activity-calendar@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/react-activity-calendar/-/react-activity-calendar-3.0.4.tgz#6e8e345c395da37b1678fcd9dc3c2a67e3e2aad8"
-  integrity sha512-buCiBiD95UGfOJs9DZKuJX5fvrcSWBd7xNhLDtwhOz9yvkziWZ2zqPm8FtMIZV5HVHnVo/3gHBMUfcRzXHPPyA==
+react-activity-calendar@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/react-activity-calendar/-/react-activity-calendar-3.0.5.tgz#420524f4c573b56a8962c9136cc8bf9c5df250c9"
+  integrity sha512-OwySecGFNRq5uuIenBOHGyzFXiHbwD/hHobX0HTJt3G60/FZWKDd+v7uchS/62GznVrXoiY47vAXOxJrAcnW8A==
   dependencies:
     "@floating-ui/react" "^0.27.12"
     date-fns "^4.1.0"
@@ -6912,12 +6912,12 @@ react-fast-compare@^3.2.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.2.tgz#929a97a532304ce9fee4bcae44234f1ce2c21d49"
   integrity sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==
 
-react-github-calendar@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-5.0.3.tgz#9da926de33e4251264298e2b4a7868a12ff78147"
-  integrity sha512-CSFqdKB25SvNSbc0BG0ceLYNDa4E61NTZdjEfZDOvpLL9Rv7wbmFqsr8a7mFow57K+q7kzx1nJ1+oyhVITkp2A==
+react-github-calendar@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-5.0.4.tgz#7f884e938b7510a7828f100a077f97ca07e60139"
+  integrity sha512-fhX2DnpiIwQFDbld9lBPMUMkPkJjVI/1Hju2pmQzNRKHBwvEf60mBCKC7Uz2Vi2BBd7DcH4bvJDUG5BWNh9T4g==
   dependencies:
-    react-activity-calendar "^3.0.4"
+    react-activity-calendar "^3.0.5"
 
 react-icon-cloud@^4.1.7:
   version "4.1.7"
