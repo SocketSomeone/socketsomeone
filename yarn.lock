@@ -2595,10 +2595,10 @@
   dependencies:
     minimatch "*"
 
-"@types/node@*", "@types/node@25.0.9":
-  version "25.0.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.9.tgz#81ce3579ddf67cae812a9d49c8a0ab90c82e7782"
-  integrity sha512-/rpCXHlCWeqClNBwUhDcusJxXYDjZTyE8v5oTO7WbL8eij2nKhUeU89/6xgjU7N4/Vh3He0BtyhJdQbDyhiXAw==
+"@types/node@*", "@types/node@25.0.10":
+  version "25.0.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.10.tgz#4864459c3c9459376b8b75fd051315071c8213e7"
+  integrity sha512-zWW5KPngR/yvakJgGOmZ5vTBemDoSqF3AcV/LrO5u5wTWyEAVVh+IT39G4gtyAkh3CtTZs8aX/yRM82OfzHJRg==
   dependencies:
     undici-types "~7.16.0"
 
@@ -4644,12 +4644,12 @@ for-each@^0.3.3, for-each@^0.3.5:
   dependencies:
     is-callable "^1.2.7"
 
-framer-motion@^12.28.1:
-  version "12.28.1"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.28.1.tgz#450b7b41e6653dabcfc61b9d8aedcdde780193e3"
-  integrity sha512-72GkO7DS4FfcSjf26wx0v+rzkW8Fhn4Djh04aDbuEg7NYG8X8MhJZc6/5weG/YeEgIP+fCo8FS2y1HnXH8k8fQ==
+framer-motion@^12.28.2:
+  version "12.28.2"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.28.2.tgz#277ce1afcdba0d69d389b96df05c2a8421f8a422"
+  integrity sha512-LNzKJo1VWz3RqNSeBzMbDIdLLpUw7hp/PpsvOpDlLqT1KlAAGsoSZ3OxNAKmS89AUeRv0rBbYgFLAWzO33xzDw==
   dependencies:
-    motion-dom "^12.28.1"
+    motion-dom "^12.28.2"
     motion-utils "^12.27.2"
     tslib "^2.4.0"
 
@@ -6015,10 +6015,10 @@ minizlib@^3.1.0:
   dependencies:
     minipass "^7.1.2"
 
-motion-dom@^12.28.1:
-  version "12.28.1"
-  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.28.1.tgz#aa241636eaf79c6e560d2f13ebf97ae463b67666"
-  integrity sha512-xqgID69syDvXwFJnUd5bW6ajGUAr/qevRoUe/EqpsXUbVIopyWrAOiwQOhpgVQD+B7Ra60zTdj5gVkmwncebMg==
+motion-dom@^12.28.2:
+  version "12.28.2"
+  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.28.2.tgz#cb2cd7a7700775c93acbdfc7bdfbdf223973ebf7"
+  integrity sha512-Lu+N4CSyc0JZlssX1OvdAgHanP8SuXCa4ZU/dEjGbtwZOjC2BH5e7MfDDi/Kgnzsu+Oyw4QYKhgFici4LlLiyg==
   dependencies:
     motion-utils "^12.27.2"
 
@@ -6027,12 +6027,12 @@ motion-utils@^12.27.2:
   resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-12.27.2.tgz#cd3038236ae2dc3d643bdb272ed831fd6d8ab616"
   integrity sha512-B55gcoL85Mcdt2IEStY5EEAsrMSVE2sI14xQ/uAdPL+mfQxhKKFaEag9JmfxedJOR4vZpBGoPeC/Gm13I/4g5Q==
 
-motion@^12.28.1:
-  version "12.28.1"
-  resolved "https://registry.yarnpkg.com/motion/-/motion-12.28.1.tgz#8f845fa20df89e4a4e44532faa0454deaa64dff0"
-  integrity sha512-qGq5+6r4IMivHbT2EUhCwxz2NgFBuba3sWDrxcHt06+nYqKMevYJiVh/N90nMRof+vIUpiq8C22ZeOXwkWWiZg==
+motion@^12.28.2:
+  version "12.28.2"
+  resolved "https://registry.yarnpkg.com/motion/-/motion-12.28.2.tgz#129d032be7471c23ed0cd972d213de33871bec99"
+  integrity sha512-xxw8z0mMTcy4LWFC1iS4+pu7GJGT3P7+bmk7A3ABzPexuTCX+9sH4lCmZVTd3tSLjyHbFHgcJgNY2h9nOQlVqg==
   dependencies:
-    framer-motion "^12.28.1"
+    framer-motion "^12.28.2"
     tslib "^2.4.0"
 
 ms@^2.1.1, ms@^2.1.3:
