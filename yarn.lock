@@ -5027,10 +5027,10 @@ iconv-lite@^0.7.0:
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
-icu-minify@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/icu-minify/-/icu-minify-4.8.0.tgz#ff11fea00bb9ba8516c0c891a2fa87f1d8827df5"
-  integrity sha512-CY90QvJwc5ghNW+2gepxz4RWogCnM0ynHEFWSDTfGmE4ZPCPDQfkU36AntjbLcwv1Js2AofIGkxNq/LVVpCCbQ==
+icu-minify@^4.8.1:
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/icu-minify/-/icu-minify-4.8.1.tgz#93eb1191f891a843556b318e80cc5d4e23390cc9"
+  integrity sha512-RhXrTA19/PUt5/xs3B/eyx3DCjnMmcfdgqNYBE5vdrEqM4PQK2GWjHa1zdArTxPGgEc4jfuDMH1LkKhmIxwLFw==
   dependencies:
     "@formatjs/icu-messageformat-parser" "^3.4.0"
 
@@ -6095,24 +6095,24 @@ new-github-release-url@2.0.0:
   dependencies:
     type-fest "^2.5.1"
 
-next-intl-swc-plugin-extractor@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/next-intl-swc-plugin-extractor/-/next-intl-swc-plugin-extractor-4.8.0.tgz#879c647f80b1e4c09cbd4d1f5cf781f14ab47f78"
-  integrity sha512-+uooJAaUUnctq/IZrKJrpoA8yB6/z5kDeraySZlT1+XaoU1i+Onaimo2y/vwlqSKPHVRdqx3aqhwRZPuh71LAw==
+next-intl-swc-plugin-extractor@^4.8.1:
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/next-intl-swc-plugin-extractor/-/next-intl-swc-plugin-extractor-4.8.1.tgz#e9dba4a4f7b3751b88f993e7a092375fb6eefae0"
+  integrity sha512-4RXyce0ZrQl/6lkfwvDpP8r5B7wbAQakCW9BuMPh+7/DgXFyE+cBXxcmfDkxFDkpXvBFqBZ2HsN4pav49reAZQ==
 
-next-intl@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-4.8.0.tgz#e4f30de3e15f6c7e2fbb793063bc1af75280d82d"
-  integrity sha512-HiKCfG0pQMJ2GhtkQur6C7mpMUBs6lc0+HAZTUDm/5Nwh3dSYi/uAcAl0SiQTd01GmDou6dobd2th4U802lxOg==
+next-intl@^4.8.1:
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-4.8.1.tgz#f6b22c8c17f5c62f4ba38eb9301774c04b2963c2"
+  integrity sha512-7V0Ewm6bP12Lgn6cjcKi6NbVy0JeIp1K9EzHfTIsuLAUn4NuH8dhon2WYJywHCyWnxKepm34xF6G1fR2dsNoqA==
   dependencies:
     "@formatjs/intl-localematcher" "^0.5.4"
     "@parcel/watcher" "^2.4.1"
     "@swc/core" "^1.15.2"
-    icu-minify "^4.8.0"
+    icu-minify "^4.8.1"
     negotiator "^1.0.0"
-    next-intl-swc-plugin-extractor "^4.8.0"
+    next-intl-swc-plugin-extractor "^4.8.1"
     po-parser "^2.1.1"
-    use-intl "^4.8.0"
+    use-intl "^4.8.1"
 
 next-pwa@^5.6.0:
   version "5.6.0"
@@ -8156,14 +8156,14 @@ use-callback-ref@^1.3.3:
   dependencies:
     tslib "^2.0.0"
 
-use-intl@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-4.8.0.tgz#7c16462dcfd10a798950cad259644ae58a9a159c"
-  integrity sha512-IH56txyiaW26QQzneQf/0PWTa1Os3BMZvwbyDiS8cBjl6mm8dlhlKsgSU6TiSZjV6ZhMv763584jNBEyQV8vtQ==
+use-intl@^4.8.1:
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-4.8.1.tgz#1d03fe9f1958c59c926db79190c391683d281392"
+  integrity sha512-wH85ro36JAw9NrtogpEsqHghD21Ul6/zAKxTqHktnO6WTQzqhbcfPkO5iXu3YOnJBA8Anm7IvWSTqSzRE+2PsA==
   dependencies:
     "@formatjs/fast-memoize" "^3.1.0"
     "@schummar/icu-type-parser" "1.21.5"
-    icu-minify "^4.8.0"
+    icu-minify "^4.8.1"
     intl-messageformat "^11.1.0"
 
 use-sidecar@^1.1.3:
