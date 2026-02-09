@@ -6,7 +6,6 @@ import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import React, { Suspense } from 'react';
 import Document from '@/components/Document';
-import { Snowfall } from 'react-snowfall';
 import SnowfallBackground from '@/components/organisms/SnowfallBackground';
 
 type Props = {

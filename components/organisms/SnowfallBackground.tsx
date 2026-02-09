@@ -18,6 +18,14 @@ export default function SnowfallBackground() {
 		resolvedTheme === 'dark' ? 'rgba(148, 167, 200, 0.35)' : 'rgba(200, 220, 245, 0.75)';
 
 	return (
-		<Snowfall color={color}/>
+		<Snowfall
+			style={{
+				position: 'fixed',
+				width: '100vw',
+				height: '100vh',
+			}}
+			color={color}
+			snowflakeCount={50}
+		/>
 	);
 }
