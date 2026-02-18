@@ -41,7 +41,7 @@
     "highcharts": "^12.5.0",
     "highcharts-react-official": "^3.2.3",
     "lucide-react": "^0.574.0",
-    "motion": "^12.34.1",
+    "motion": "^12.34.2",
     "next": "^16.1.6",
     "next-intl": "^4.8.3",
     "next-pwa": "^5.6.0",
