@@ -2587,10 +2587,10 @@
   dependencies:
     minimatch "*"
 
-"@types/node@*", "@types/node@25.3.3":
-  version "25.3.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.3.3.tgz#605862544ee7ffd7a936bcbf0135a14012f1e549"
-  integrity sha512-DpzbrH7wIcBaJibpKo9nnSQL0MTRdnWttGyE5haGwK86xgMOkFLp7vEyfQPGLOJh5wNYiJ3V9PmUMDhV9u8kkQ==
+"@types/node@*", "@types/node@25.3.5":
+  version "25.3.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.3.5.tgz#beccb5915561f7a9970ace547ad44d6cdbf39b46"
+  integrity sha512-oX8xrhvpiyRCQkG1MFchB09f+cXftgIXb3a7UUa4Y3wpmZPw5tyZGTLWhlESOLq1Rq6oDlc8npVU2/9xiCuXMA==
   dependencies:
     undici-types "~7.18.0"
 
@@ -6889,10 +6889,10 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-modal-sheet@^5.2.3:
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/react-modal-sheet/-/react-modal-sheet-5.2.3.tgz#d28b0f111273055a51bb69a2bdf00876525f9881"
-  integrity sha512-5hXFTXiF69ciJxgE8CZft34EicOXaXeBgB8lWOz9AJOvr8j8dlATs/3uotM2Bwvkr5OnpTjDqGJ2ftUIyTuK3g==
+react-modal-sheet@^5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/react-modal-sheet/-/react-modal-sheet-5.3.1.tgz#8fc9be47fae2a457b396ed37e7de0e5f7e096af2"
+  integrity sha512-LEu0mFBAvAFU5x+63AFH3bGSeKO+R+py1v2w8Ck1P7PF4tPXLNYP+8LjVbOxo8J50zHF3vjXnvDq1au81UYxTw==
   dependencies:
     react-use-measure "2.1.7"
 
