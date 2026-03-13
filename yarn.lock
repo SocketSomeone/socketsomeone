@@ -1044,10 +1044,10 @@
     "@simple-libs/stream-utils" "^1.2.0"
     semver "^7.5.2"
 
-"@crowdin/cli@^4.14.0":
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-4.14.0.tgz#36ee00e2626196ed9c172fa1f2cf903446555ac6"
-  integrity sha512-sN3puFcyPWbG9kffuOBqkrcNv/retP6ai12DcY6Qz934JUVaz4xQOipz6XsxKYCctgJQRkyGDDSgwh+vYD897A==
+"@crowdin/cli@^4.14.1":
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-4.14.1.tgz#1239922681235b6b14bcacd4fd622bc2217dd6c5"
+  integrity sha512-kPhXW4Cw8feITgN1ymH9UPScKoFj5IwIL3PbKSeF/UhQW9jjVsjlGVO5WM0QYy5kZYJWQ+4e81ciXFr5vyflqQ==
   dependencies:
     command-exists-promise "^2.0.2"
     node-fetch "2.7.0"
@@ -2596,10 +2596,10 @@
   dependencies:
     minimatch "*"
 
-"@types/node@*", "@types/node@25.4.0":
-  version "25.4.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.4.0.tgz#f25d8467984d6667cc4c1be1e2f79593834aaedb"
-  integrity sha512-9wLpoeWuBlcbBpOY3XmzSTG3oscB6xjBEEtn+pYXTfhyXhIxC5FsBer2KTopBlvKEiW9l13po9fq+SJY/5lkhw==
+"@types/node@*", "@types/node@25.5.0":
+  version "25.5.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.5.0.tgz#5c99f37c443d9ccc4985866913f1ed364217da31"
+  integrity sha512-jp2P3tQMSxWugkCUKLRPVUpGaL5MVFwF8RDuSRztfwgN1wmqJeMSbKlnEtQqU8UrhTmzEmZdu2I6v2dpp7XIxw==
   dependencies:
     undici-types "~7.18.0"
 
@@ -4645,13 +4645,13 @@ for-each@^0.3.3, for-each@^0.3.5:
   dependencies:
     is-callable "^1.2.7"
 
-framer-motion@^12.35.2:
-  version "12.35.2"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.35.2.tgz#add40fe8cdb8eb553feb9dd17525c93b51e6f67c"
-  integrity sha512-dhfuEMaNo0hc+AEqyHiIfiJRNb9U9UQutE9FoKm5pjf7CMitp9xPEF1iWZihR1q86LBmo6EJ7S8cN8QXEy49AA==
+framer-motion@^12.36.0:
+  version "12.36.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.36.0.tgz#ab5cfa0722ec7e2fb5b5be8e5ff795ac287e3a91"
+  integrity sha512-4PqYHAT7gev0ke0wos+PyrcFxI0HScjm3asgU8nSYa8YzJFuwgIvdj3/s3ZaxLq0bUSboIn19A2WS/MHwLCvfw==
   dependencies:
-    motion-dom "^12.35.2"
-    motion-utils "^12.29.2"
+    motion-dom "^12.36.0"
+    motion-utils "^12.36.0"
     tslib "^2.4.0"
 
 fs-extra@^9.0.1:
@@ -6004,24 +6004,24 @@ minizlib@^3.1.0:
   dependencies:
     minipass "^7.1.2"
 
-motion-dom@^12.35.2:
-  version "12.35.2"
-  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.35.2.tgz#489b9eb7206dbac3d6087aae584f08e78c16cfbd"
-  integrity sha512-pWXFMTwvGDbx1Fe9YL5HZebv2NhvGBzRtiNUv58aoK7+XrsuaydQ0JGRKK2r+bTKlwgSWwWxHbP5249Qr/BNpg==
+motion-dom@^12.36.0:
+  version "12.36.0"
+  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.36.0.tgz#fc83e66466d819f90cc7a46137f67dfa5fe054da"
+  integrity sha512-Ep1pq8P88rGJ75om8lTCA13zqd7ywPGwCqwuWwin6BKc0hMLkVfcS6qKlRqEo2+t0DwoUcgGJfXwaiFn4AOcQA==
   dependencies:
-    motion-utils "^12.29.2"
+    motion-utils "^12.36.0"
 
-motion-utils@^12.29.2:
-  version "12.29.2"
-  resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-12.29.2.tgz#8fdd28babe042c2456b078ab33b32daa3bf5938b"
-  integrity sha512-G3kc34H2cX2gI63RqU+cZq+zWRRPSsNIOjpdl9TN4AQwC4sgwYPl/Q/Obf/d53nOm569T0fYK+tcoSV50BWx8A==
+motion-utils@^12.36.0:
+  version "12.36.0"
+  resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-12.36.0.tgz#cff2df2a28c3fe53a3de7e0103ba7f73ff7d77a7"
+  integrity sha512-eHWisygbiwVvf6PZ1vhaHCLamvkSbPIeAYxWUuL3a2PD/TROgE7FvfHWTIH4vMl798QLfMw15nRqIaRDXTlYRg==
 
-motion@^12.35.2:
-  version "12.35.2"
-  resolved "https://registry.yarnpkg.com/motion/-/motion-12.35.2.tgz#e71676c977f4f5cca5a28c71f0dd69f7cbc1d90d"
-  integrity sha512-8zCi1DkNyU6a/tgEHn/GnnXZDcaMpDHbDOGORY1Rg/6lcNMSOuvwDB3i4hMSOvxqMWArc/vrGaw/Xek1OP69/A==
+motion@^12.36.0:
+  version "12.36.0"
+  resolved "https://registry.yarnpkg.com/motion/-/motion-12.36.0.tgz#3ffc5440bd686b842052406b17bfd43beaa84012"
+  integrity sha512-5BMQuktYUX8aEByKWYx5tR4X3G08H2OMgp46wTxZ4o7CDDstyy4A0fe9RLNMjZiwvntCWGDvs16sC87/emz4Yw==
   dependencies:
-    framer-motion "^12.35.2"
+    framer-motion "^12.36.0"
     tslib "^2.4.0"
 
 ms@^2.1.1, ms@^2.1.3:
@@ -6905,10 +6905,10 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-modal-sheet@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/react-modal-sheet/-/react-modal-sheet-5.3.1.tgz#8fc9be47fae2a457b396ed37e7de0e5f7e096af2"
-  integrity sha512-LEu0mFBAvAFU5x+63AFH3bGSeKO+R+py1v2w8Ck1P7PF4tPXLNYP+8LjVbOxo8J50zHF3vjXnvDq1au81UYxTw==
+react-modal-sheet@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/react-modal-sheet/-/react-modal-sheet-5.4.0.tgz#d4c583c9eddb68609a7657960829b5a5f2d30b1b"
+  integrity sha512-W9lgty3PdksaancFJbNIifvYoGYnRORPpJzrbuQJlZvg+VjFLe57tKx21BzCjfHLxUZtHBNIGwb3dERMxomL6g==
   dependencies:
     react-use-measure "2.1.7"
 
