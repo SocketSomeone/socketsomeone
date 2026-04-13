@@ -1300,6 +1300,13 @@
   dependencies:
     "@floating-ui/utils" "^0.2.10"
 
+"@floating-ui/core@^1.7.5":
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.7.5.tgz#d4af157a03330af5a60e69da7a4692507ada0622"
+  integrity sha512-1Ih4WTWyw0+lKyFMcBHGbb5U5FtuHJuujoyyr5zTaWS5EYMeT6Jb2AuDeftsCsEuchO+mM2ij5+q9crhydzLhQ==
+  dependencies:
+    "@floating-ui/utils" "^0.2.11"
+
 "@floating-ui/dom@^1.6.1", "@floating-ui/dom@^1.7.4":
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.4.tgz#ee667549998745c9c3e3e84683b909c31d6c9a77"
@@ -1308,26 +1315,46 @@
     "@floating-ui/core" "^1.7.3"
     "@floating-ui/utils" "^0.2.10"
 
-"@floating-ui/react-dom@^2.0.0", "@floating-ui/react-dom@^2.1.6":
+"@floating-ui/dom@^1.7.6":
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.6.tgz#f915bba5abbb177e1f227cacee1b4d0634b187bf"
+  integrity sha512-9gZSAI5XM36880PPMm//9dfiEngYoC6Am2izES1FF406YFsjvyBMmeJ2g4SAju3xWwtuynNRFL2s9hgxpLI5SQ==
+  dependencies:
+    "@floating-ui/core" "^1.7.5"
+    "@floating-ui/utils" "^0.2.11"
+
+"@floating-ui/react-dom@^2.0.0":
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/@floating-ui/react-dom/-/react-dom-2.1.6.tgz#189f681043c1400561f62972f461b93f01bf2231"
   integrity sha512-4JX6rEatQEvlmgU80wZyq9RT96HZJa88q8hp0pBd+LrczeDI4o6uA2M+uvxngVHo4Ihr8uibXxH6+70zhAFrVw==
   dependencies:
     "@floating-ui/dom" "^1.7.4"
 
-"@floating-ui/react@^0.27.12":
-  version "0.27.16"
-  resolved "https://registry.yarnpkg.com/@floating-ui/react/-/react-0.27.16.tgz#6e485b5270b7a3296fdc4d0faf2ac9abf955a2f7"
-  integrity sha512-9O8N4SeG2z++TSM8QA/KTeKFBVCNEz/AGS7gWPJf6KFRzmRWixFRnCnkPHRDwSVZW6QPDO6uT0P2SpWNKCc9/g==
+"@floating-ui/react-dom@^2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@floating-ui/react-dom/-/react-dom-2.1.8.tgz#5fb5a20d10aafb9505f38c24f38d00c8e1598893"
+  integrity sha512-cC52bHwM/n/CxS87FH0yWdngEZrjdtLW/qVruo68qg+prK7ZQ4YGdut2GyDVpoGeAYe/h899rVeOVm6Oi40k2A==
   dependencies:
-    "@floating-ui/react-dom" "^2.1.6"
-    "@floating-ui/utils" "^0.2.10"
+    "@floating-ui/dom" "^1.7.6"
+
+"@floating-ui/react@^0.27.19":
+  version "0.27.19"
+  resolved "https://registry.yarnpkg.com/@floating-ui/react/-/react-0.27.19.tgz#d8d5d895b7cb97dac370bfbf55f3e630878fdf1f"
+  integrity sha512-31B8h5mm8YxotlE7/AU/PhNAl8eWxAmjL/v2QOxroDNkTFLk3Uu82u63N3b6TXa4EGJeeZLVcd/9AlNlVqzeog==
+  dependencies:
+    "@floating-ui/react-dom" "^2.1.8"
+    "@floating-ui/utils" "^0.2.11"
     tabbable "^6.0.0"
 
 "@floating-ui/utils@^0.2.10":
   version "0.2.10"
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.10.tgz#a2a1e3812d14525f725d011a73eceb41fef5bc1c"
   integrity sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==
+
+"@floating-ui/utils@^0.2.11":
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.11.tgz#a269e055e40e2f45873bae9d1a2fdccbd314ea3f"
+  integrity sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==
 
 "@formatjs/ecma402-abstract@3.1.0":
   version "3.1.0"
@@ -2552,17 +2579,17 @@
     postcss "^8.5.6"
     tailwindcss "4.2.2"
 
-"@tanstack/query-core@5.97.0":
-  version "5.97.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.97.0.tgz#538c66b9290cd57771c2e198c9d8f89d89299943"
-  integrity sha512-QdpLP5VzVMgo4VtaPppRA2W04UFjIqX+bxke/ZJhE5cfd5UPkRzqIAJQt9uXkQJjqE8LBOMbKv7f8HCsZltXlg==
+"@tanstack/query-core@5.99.0":
+  version "5.99.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.99.0.tgz#d45dca04cdf8bc68ba4f02e11a6a7e00cc04f79b"
+  integrity sha512-3Jv3WQG0BCcH7G+7lf/bP8QyBfJOXeY+T08Rin3GZ1bshvwlbPt7NrDHMEzGdKIOmOzvIQmxjk28YEQX60k7pQ==
 
-"@tanstack/react-query@^5.97.0":
-  version "5.97.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.97.0.tgz#0df5f6320a4b62ae8ed5042bb59166b6426624ad"
-  integrity sha512-y4So4eGcQoK2WVMAcDNZE9ofB/p5v1OlKvtc1F3uqHwrtifobT7q+ZnXk2mRkc8E84HKYSlAE9z6HXl2V0+ySQ==
+"@tanstack/react-query@^5.99.0":
+  version "5.99.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.99.0.tgz#ac58c112aa77c8172b7c81bcd1cef3df89eece72"
+  integrity sha512-OY2bCqPemT1LlqJ8Y2CUau4KELnIhhG9Ol3ZndPbdnB095pRbPo1cHuXTndg8iIwtoHTgwZjyaDnQ0xD0mYwAw==
   dependencies:
-    "@tanstack/query-core" "5.97.0"
+    "@tanstack/query-core" "5.99.0"
 
 "@tootallnate/quickjs-emscripten@^0.23.0":
   version "0.23.0"
@@ -4976,10 +5003,10 @@ highcharts-react-official@^3.2.3:
   resolved "https://registry.yarnpkg.com/highcharts-react-official/-/highcharts-react-official-3.2.3.tgz#9496db4a5bb0cf916e8b44a88bb41e66483ae6f1"
   integrity sha512-2gL8bVGe6Pf75tSe6IB5Ucd0nIOJX7ZrpttQBZVrjN2J9StdVZ12aOinXHIOFvlc6EzP8CbN13WS8NUq+9mptA==
 
-highcharts@^12.5.0:
-  version "12.5.0"
-  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-12.5.0.tgz#1cf5bc1214bb7bbd717096420089d130e84847ff"
-  integrity sha512-uNSSv1KqRLNvkyXlf1FbeGWB1mJ/8/IYpVeqYiTIop5Wo8peUvNyzUfLa58vILsmXyz+XrETtgKIEOcSgBBKuQ==
+highcharts@^12.6.0:
+  version "12.6.0"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-12.6.0.tgz#5e527c3cc41b858edf8d72f129808a167604a939"
+  integrity sha512-zWwoXECOakJT2huBMqIZOjDNLLgyZFCcfZqTj2g6cvYOGxjF3nvooC+rIaF5aKiharluyGKNflfRNrzOAIjdRg==
 
 hosted-git-info@^8.0.0:
   version "8.1.0"
@@ -5026,10 +5053,10 @@ iconv-lite@^0.7.0:
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
-icu-minify@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/icu-minify/-/icu-minify-4.9.0.tgz#c0b3dcb2f2e88b85f8316d9dcd8cef4616df4e8d"
-  integrity sha512-9ev7MqkN29jcIelUAqJRfNCxzGOEkBJPnr+scYATMp2bfpU4Bm1eIwYU0/o5xRy8BBnSWMUjK58WTB3132P0bg==
+icu-minify@^4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/icu-minify/-/icu-minify-4.9.1.tgz#95504d2147713e851755ef810234cf4f4d5457e7"
+  integrity sha512-6NkfF9GHHFouqnz+wuiLjCWQiyxoEyJ5liUv4Jxxo/8wyhV7MY0L0iTEGDAVEa4aAD58WqTxFMa20S5nyMjwNw==
   dependencies:
     "@formatjs/icu-messageformat-parser" "^3.4.0"
 
@@ -6076,24 +6103,24 @@ new-github-release-url@2.0.0:
   dependencies:
     type-fest "^2.5.1"
 
-next-intl-swc-plugin-extractor@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/next-intl-swc-plugin-extractor/-/next-intl-swc-plugin-extractor-4.9.0.tgz#cf56367514a048e2a1d0a1e170a10d3036335a17"
-  integrity sha512-CAu6Qy6XiCenKsvzyCPm2cZFkGfcvhJi8N93TCnOowmzD4Br3ked7QdROusRRp4MQ1iG9u+KCLgVcM9CLDUOIQ==
+next-intl-swc-plugin-extractor@^4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/next-intl-swc-plugin-extractor/-/next-intl-swc-plugin-extractor-4.9.1.tgz#29f8583ec6777a1b79888d045978d8f037e3c03f"
+  integrity sha512-8whJJ6oxJz8JqkHarggmmuEDyXgC7nEnaPhZD91CJwEWW4xp0AST3Mw17YxvHyP2vAF3taWfFbs1maD+WWtz3w==
 
-next-intl@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-4.9.0.tgz#6cc53606be955aad53a804a974580a4deb7ddfaa"
-  integrity sha512-MMNAjewHUw9Ke93E5/Yzhf8lqesesaXJTPlrK3FwECgn4EXG9m7Tuzy4rnDes0ogjDhQIa/Ksj/qmFnHJAOluw==
+next-intl@^4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-4.9.1.tgz#0f75c85e1157d468b8b0d51de0ae30cee51fc6a2"
+  integrity sha512-N7ga0CjtYcdxNvaKNIi6eJ2mmatlHK5hp8rt0YO2Omoc1m0gean242/Ukdj6+gJNiReBVcYIjK0HZeNx7CV1ug==
   dependencies:
     "@formatjs/intl-localematcher" "^0.8.1"
     "@parcel/watcher" "^2.4.1"
     "@swc/core" "^1.15.2"
-    icu-minify "^4.9.0"
+    icu-minify "^4.9.1"
     negotiator "^1.0.0"
-    next-intl-swc-plugin-extractor "^4.9.0"
+    next-intl-swc-plugin-extractor "^4.9.1"
     po-parser "^2.1.1"
-    use-intl "^4.9.0"
+    use-intl "^4.9.1"
 
 next-pwa@^5.6.0:
   version "5.6.0"
@@ -6866,12 +6893,12 @@ rc9@^2.1.2:
     defu "^6.1.4"
     destr "^2.0.3"
 
-react-activity-calendar@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/react-activity-calendar/-/react-activity-calendar-3.0.6.tgz#dabeada28ba3fee0079b6528557d6a94567c4c7c"
-  integrity sha512-apMWdhCuK5LBjKJdWdSrKL7xU1+KsO5PCTIu0SmuAzpN5qTFfoHUu3846eVofj8ook40gRm2gIcsSspjbaSgjw==
+react-activity-calendar@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-activity-calendar/-/react-activity-calendar-3.1.2.tgz#efeee2a7eee96cb0809541d30f057ec7c457ced5"
+  integrity sha512-tKJZ4aU+WVp4exBKmeji+umiElnvfiZc39Tq3c9SI9j+Qzplri5hIAedMjBRFMkwUSL7BrsG4gUx9n/o1EtMzQ==
   dependencies:
-    "@floating-ui/react" "^0.27.12"
+    "@floating-ui/react" "^0.27.19"
     date-fns "^4.1.0"
 
 react-dom@19.2.5:
@@ -6886,12 +6913,12 @@ react-fast-compare@^3.2.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.2.tgz#929a97a532304ce9fee4bcae44234f1ce2c21d49"
   integrity sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==
 
-react-github-calendar@^5.0.5:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-5.0.5.tgz#070a4f6402ef7cfcdc632cb83a4a58fce0cefe66"
-  integrity sha512-eZ7aSI626nY9ni/lr7ygkqD6c2adPKRb+hr7yzF+BKxKs0VBJ2FPC0EFRthk8mQQSlfzTJrbUA/uR2/ZOIAs0Q==
+react-github-calendar@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-5.0.6.tgz#3d55156a6ac6a416b6d0023d2cf204f198658009"
+  integrity sha512-BXgk1blzmkXjzc3CJRtSxscNuL0y/pHHVihmY+H+8bak0Syg2G/7gCM4Ja6CzE5wtABDv6N97kKSufWqMazq/g==
   dependencies:
-    react-activity-calendar "^3.0.6"
+    react-activity-calendar "^3.1.2"
 
 react-icon-cloud@^4.1.7:
   version "4.1.7"
@@ -8103,14 +8130,14 @@ use-callback-ref@^1.3.3:
   dependencies:
     tslib "^2.0.0"
 
-use-intl@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-4.9.0.tgz#bd3b79f38e58e7531e2e11c4bacebe90128b34e5"
-  integrity sha512-GehJvP7gu8SvmaDHNDNrRHt2TCNSZt4l1cGJMpUX77TGeZPAQKVQokAVvoYkeTT1UWPtv9RJ6N16UJNButzrgg==
+use-intl@^4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-4.9.1.tgz#230eea8bb62cfb2ab021ba9c65e546b8f92b07de"
+  integrity sha512-iGVV/xFYlhe3btafRlL8RPLD2Jsuet4yqn9DR6LWWbMhULsJnXgLonDkzDmsAIBIwFtk02oJuX/Ox2vwHKF+UQ==
   dependencies:
     "@formatjs/fast-memoize" "^3.1.0"
     "@schummar/icu-type-parser" "1.21.5"
-    icu-minify "^4.9.0"
+    icu-minify "^4.9.1"
     intl-messageformat "^11.1.0"
 
 use-sidecar@^1.1.3:
