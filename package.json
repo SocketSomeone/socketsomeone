@@ -59,7 +59,7 @@
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.1.13",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "6.0.2"
+    "typescript": "6.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "20.5.0",
