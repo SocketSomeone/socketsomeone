@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { createLocaleAlternates } from '@/utils/seo';
 import Placeholder from '@/components/molecules/Placeholder';
 import { fetchWakatimeData } from '@/utils/wakatime';
+import ProjectsTechStackSection from '@/components/organisms/Projects/ProjectsTechStackSection';
 
 const PAGE_TITLE = 'Projects';
 const PAGE_DESCRIPTION = 'Explore the projects of Alexey Filippov, a software engineer specializing in web development, open source, and community building.';
@@ -52,6 +53,8 @@ export default async function ProjectsPage() {
 			<div className="w-full max-w-6xl flex flex-col items-center">
 				<Projects background={false} type="grid"/>
 			</div>
+
+			<ProjectsTechStackSection />
 
 			<div className="w-full max-w-6xl">
 				{wakatimeData ? (
