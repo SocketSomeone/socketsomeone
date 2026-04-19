@@ -255,17 +255,9 @@ export default function WakatimeStats({ data }: Props) {
 						<h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">Recent coding activity</h2>
 						<p className="text-sm text-muted-foreground md:text-base">
 							Tracking with{' '}
-							<span className="font-medium text-foreground">WakaTime</span>. All-time total:{' '}
-							<span className="font-medium text-foreground">{totalLabel}</span>.
+							<span className="font-medium text-foreground">WakaTime</span>, a tool that automatically records time spent on
+							coding projects, providing insights into productivity and habits.
 						</p>
-						<div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground md:text-sm">
-							{startedAtLabel && (
-								<span
-									className="inline-flex items-center gap-2 rounded-full border border-border/40 px-3 py-1 text-muted-foreground/80">
-									Tracking since {startedAtLabel}
-								</span>
-							)}
-						</div>
 					</div>
 
 					<div className="flex flex-col items-start gap-3 text-left md:items-end md:text-right">
