@@ -4,8 +4,8 @@
 		"description": "Портфолио Алексея Филиппова, программного инженера, специализирующегося на веб-разработке, открытом исходном коде и развитии сообществ.",
 		"sections": {
 			"intro": {
-				"greeting": "Привет, я <name>SocketSomeone</name>, ваш <role>Программный инженер</role>",
-				"subtitle": "Вы только что нашли мой профиль! Я котёнок, который любит кофе и баги! ( •̀ ω •́ )✧"
+				"greeting": "Привет, я <name>SocketSomeone</name> — <role>Software Engineer и OSS Enthusiast</role>",
+				"subtitle": "Я Алексей Филиппов, software engineer и tech lead с фокусом на backend-разработке. Уже более 5 лет я работаю с Node.js и TypeScript, развиваю open-source проекты и решаю сложные инженерные задачи кодом."
 			},
 			"projects": {
 				"name": "Мои проекты",

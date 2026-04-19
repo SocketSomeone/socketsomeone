@@ -4,8 +4,8 @@
 		"description": "Portfolio of Alexey Filippov, a software engineer specializing in web development, open source, and community building.",
 		"sections": {
 			"intro": {
-				"greeting": "Hello, I'm <name>SocketSomeone</name> your <role>Software Engineer</role>",
-				"subtitle": "You just found my profile! I'm a kitten who loves coffee and bugs! ( •̀ ω •́ )✧"
+				"greeting": "Hi, I'm <name>SocketSomeone</name> — <role>Software Engineer & OSS Enthusiast</role>",
+				"subtitle": "I'm Alexey Filippov, a software engineer and tech lead focused on backend development. For over 5 years, I've been building with Node.js and TypeScript, contributing to open source, and solving complex engineering problems with pragmatic code."
 			},
 			"projects": {
 				"name": "My Projects",
