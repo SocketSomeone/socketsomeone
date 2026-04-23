@@ -1040,10 +1040,10 @@
     "@simple-libs/stream-utils" "^1.2.0"
     semver "^7.5.2"
 
-"@crowdin/cli@^4.14.1":
-  version "4.14.1"
-  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-4.14.1.tgz#1239922681235b6b14bcacd4fd622bc2217dd6c5"
-  integrity sha512-kPhXW4Cw8feITgN1ymH9UPScKoFj5IwIL3PbKSeF/UhQW9jjVsjlGVO5WM0QYy5kZYJWQ+4e81ciXFr5vyflqQ==
+"@crowdin/cli@^4.14.2":
+  version "4.14.2"
+  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-4.14.2.tgz#fc2240c02901a104b21a2ec33b5bd0fe31fdc76d"
+  integrity sha512-JRrHvitc0w+r/h6XXSOq917HxsjRoxPEtyNYSmylKirjiPNrRx84VKtqFlOIWIFCOZI5BoXg6hNpE0Zq7CwVBA==
   dependencies:
     command-exists-promise "^2.0.2"
     node-fetch "2.7.0"
@@ -1293,13 +1293,6 @@
     "@eslint/core" "^1.2.1"
     levn "^0.4.1"
 
-"@floating-ui/core@^1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.7.3.tgz#462d722f001e23e46d86fd2bd0d21b7693ccb8b7"
-  integrity sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==
-  dependencies:
-    "@floating-ui/utils" "^0.2.10"
-
 "@floating-ui/core@^1.7.5":
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.7.5.tgz#d4af157a03330af5a60e69da7a4692507ada0622"
@@ -1307,15 +1300,7 @@
   dependencies:
     "@floating-ui/utils" "^0.2.11"
 
-"@floating-ui/dom@^1.6.1", "@floating-ui/dom@^1.7.4":
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.4.tgz#ee667549998745c9c3e3e84683b909c31d6c9a77"
-  integrity sha512-OOchDgh4F2CchOX94cRVqhvy7b3AFb+/rQXyswmzmGakRfkMgoWVjfnLWkRirfLEfuD4ysVW16eXzwt3jHIzKA==
-  dependencies:
-    "@floating-ui/core" "^1.7.3"
-    "@floating-ui/utils" "^0.2.10"
-
-"@floating-ui/dom@^1.7.6":
+"@floating-ui/dom@1.7.6", "@floating-ui/dom@^1.7.4", "@floating-ui/dom@^1.7.6":
   version "1.7.6"
   resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.6.tgz#f915bba5abbb177e1f227cacee1b4d0634b187bf"
   integrity sha512-9gZSAI5XM36880PPMm//9dfiEngYoC6Am2izES1FF406YFsjvyBMmeJ2g4SAju3xWwtuynNRFL2s9hgxpLI5SQ==
@@ -1345,11 +1330,6 @@
     "@floating-ui/react-dom" "^2.1.8"
     "@floating-ui/utils" "^0.2.11"
     tabbable "^6.0.0"
-
-"@floating-ui/utils@^0.2.10":
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.10.tgz#a2a1e3812d14525f725d011a73eceb41fef5bc1c"
-  integrity sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==
 
 "@floating-ui/utils@^0.2.11":
   version "0.2.11"
@@ -2573,17 +2553,17 @@
     postcss "^8.5.6"
     tailwindcss "4.2.4"
 
-"@tanstack/query-core@5.99.2":
-  version "5.99.2"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.99.2.tgz#5895a4a269ae9e438aacf873657ea28d466c6fc4"
-  integrity sha512-1HunU0bXVsR1ZJMZbcOPE6VtaBJxsW809RE9xPe4Gz7MlB0GWwQvuTPhMoEmQ/hIzFKJ/DWAuttIe7BOaWx0tA==
+"@tanstack/query-core@5.100.0":
+  version "5.100.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.100.0.tgz#5239c064445fc44e159d9b0edddb099c5b6ab0d6"
+  integrity sha512-h/t4uMeXCDkpLR9W3esf1QAwdnFNIkdUiWcGbbMC32ncS2MoIxrImxaJJFRa5asHMDL14ef3wskUH7pt0hyvwg==
 
-"@tanstack/react-query@^5.99.2":
-  version "5.99.2"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.99.2.tgz#083cd4639b291a4ff00605f515b6f6352a1d881c"
-  integrity sha512-vM91UEe45QUS9ED6OklsVL15i8qKcRqNwpWzPTVWvRPRSEgDudDgHpvyTjcdlwHcrKNa80T+xXYcchT2noPnZA==
+"@tanstack/react-query@^5.100.0":
+  version "5.100.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.100.0.tgz#39b15913d18cac89ed59d2994e26e5f7cfdabfa2"
+  integrity sha512-UKENFXttzk3vQgMxiWHXHsD5biQc5B+YRdMRY6nXtT3KapOu/EgJ2wZKx8IBORQiUVe6b/GiwNeImCXuiN6XyQ==
   dependencies:
-    "@tanstack/query-core" "5.99.2"
+    "@tanstack/query-core" "5.100.0"
 
 "@tybys/wasm-util@^0.10.0", "@tybys/wasm-util@^0.10.1":
   version "0.10.1"
@@ -3395,11 +3375,6 @@ class-variance-authority@^0.7.1:
   dependencies:
     clsx "^2.1.1"
 
-classnames@^2.3.0:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
-  integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
-
 clean-webpack-plugin@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-4.0.0.tgz#72947d4403d452f38ed61a9ff0ada8122aacd729"
@@ -3446,7 +3421,7 @@ cliui@^8.0.1:
     strip-ansi "^6.0.1"
     wrap-ansi "^7.0.0"
 
-clsx@^2.1.1:
+clsx@2.1.1, clsx@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
   integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
@@ -6942,13 +6917,13 @@ react-style-singleton@^2.2.2, react-style-singleton@^2.2.3:
     get-nonce "^1.0.0"
     tslib "^2.0.0"
 
-react-tooltip@^5.30.1:
-  version "5.30.1"
-  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-5.30.1.tgz#d69168af4c3c104193d018ad3e2dd31ed2653262"
-  integrity sha512-1lSPLQXuVooePxadUpmcwLgOsF1mIty7UZTJ9XnyfX4drOzStYs4JMXnazcDLguQr41W5OUZddOp9kfvArdpEQ==
+react-tooltip@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-6.0.0.tgz#bd9882bebf7ead6ecbdf48ad8204c89eda011ec4"
+  integrity sha512-J7m56tmdmhpjHz8YsQXGNaJdsYtrByKQvKj/Vcd0GBru1fcGRP2yv0ehCEuJbKTirlt3iBg9W5gcMWnM1dj67w==
   dependencies:
-    "@floating-ui/dom" "^1.6.1"
-    classnames "^2.3.0"
+    "@floating-ui/dom" "1.7.6"
+    clsx "2.1.1"
 
 react-use-lanyard@^0.3.6:
   version "0.3.6"
