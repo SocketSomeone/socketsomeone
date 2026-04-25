@@ -64,11 +64,11 @@
   "devDependencies": {
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-angular": "20.5.0",
-    "@release-it/conventional-changelog": "^10.0.6",
+    "@release-it/conventional-changelog": "^11.0.0",
     "@types/minimatch": "^6.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
-    "release-it": "^20.0.0",
+    "release-it": "^20.0.1",
     "tsx": "^4.21.0"
   }
 }
