@@ -1040,10 +1040,10 @@
     "@simple-libs/stream-utils" "^1.2.0"
     semver "^7.5.2"
 
-"@crowdin/cli@^4.14.1":
-  version "4.14.1"
-  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-4.14.1.tgz#1239922681235b6b14bcacd4fd622bc2217dd6c5"
-  integrity sha512-kPhXW4Cw8feITgN1ymH9UPScKoFj5IwIL3PbKSeF/UhQW9jjVsjlGVO5WM0QYy5kZYJWQ+4e81ciXFr5vyflqQ==
+"@crowdin/cli@^4.14.2":
+  version "4.14.2"
+  resolved "https://registry.yarnpkg.com/@crowdin/cli/-/cli-4.14.2.tgz#fc2240c02901a104b21a2ec33b5bd0fe31fdc76d"
+  integrity sha512-JRrHvitc0w+r/h6XXSOq917HxsjRoxPEtyNYSmylKirjiPNrRx84VKtqFlOIWIFCOZI5BoXg6hNpE0Zq7CwVBA==
   dependencies:
     command-exists-promise "^2.0.2"
     node-fetch "2.7.0"
@@ -1293,13 +1293,6 @@
     "@eslint/core" "^1.2.1"
     levn "^0.4.1"
 
-"@floating-ui/core@^1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.7.3.tgz#462d722f001e23e46d86fd2bd0d21b7693ccb8b7"
-  integrity sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==
-  dependencies:
-    "@floating-ui/utils" "^0.2.10"
-
 "@floating-ui/core@^1.7.5":
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.7.5.tgz#d4af157a03330af5a60e69da7a4692507ada0622"
@@ -1307,15 +1300,7 @@
   dependencies:
     "@floating-ui/utils" "^0.2.11"
 
-"@floating-ui/dom@^1.6.1", "@floating-ui/dom@^1.7.4":
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.4.tgz#ee667549998745c9c3e3e84683b909c31d6c9a77"
-  integrity sha512-OOchDgh4F2CchOX94cRVqhvy7b3AFb+/rQXyswmzmGakRfkMgoWVjfnLWkRirfLEfuD4ysVW16eXzwt3jHIzKA==
-  dependencies:
-    "@floating-ui/core" "^1.7.3"
-    "@floating-ui/utils" "^0.2.10"
-
-"@floating-ui/dom@^1.7.6":
+"@floating-ui/dom@1.7.6", "@floating-ui/dom@^1.7.4", "@floating-ui/dom@^1.7.6":
   version "1.7.6"
   resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.7.6.tgz#f915bba5abbb177e1f227cacee1b4d0634b187bf"
   integrity sha512-9gZSAI5XM36880PPMm//9dfiEngYoC6Am2izES1FF406YFsjvyBMmeJ2g4SAju3xWwtuynNRFL2s9hgxpLI5SQ==
@@ -1345,11 +1330,6 @@
     "@floating-ui/react-dom" "^2.1.8"
     "@floating-ui/utils" "^0.2.11"
     tabbable "^6.0.0"
-
-"@floating-ui/utils@^0.2.10":
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.10.tgz#a2a1e3812d14525f725d011a73eceb41fef5bc1c"
-  integrity sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==
 
 "@floating-ui/utils@^0.2.11":
   version "0.2.11"
@@ -2566,17 +2546,17 @@
     postcss "^8.5.6"
     tailwindcss "4.2.4"
 
-"@tanstack/query-core@5.99.2":
-  version "5.99.2"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.99.2.tgz#5895a4a269ae9e438aacf873657ea28d466c6fc4"
-  integrity sha512-1HunU0bXVsR1ZJMZbcOPE6VtaBJxsW809RE9xPe4Gz7MlB0GWwQvuTPhMoEmQ/hIzFKJ/DWAuttIe7BOaWx0tA==
+"@tanstack/query-core@5.100.5":
+  version "5.100.5"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.100.5.tgz#90808dd097896ab62cfdfb5cf997564f602cf3ad"
+  integrity sha512-t20KrhKkf0HXzqQkPbJ5erhFesup68BAbwFgYmTrS7bxMF7O5MdmL8jUkik4thsG7Hg00fblz30h6yF1d5TxGg==
 
-"@tanstack/react-query@^5.99.2":
-  version "5.99.2"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.99.2.tgz#083cd4639b291a4ff00605f515b6f6352a1d881c"
-  integrity sha512-vM91UEe45QUS9ED6OklsVL15i8qKcRqNwpWzPTVWvRPRSEgDudDgHpvyTjcdlwHcrKNa80T+xXYcchT2noPnZA==
+"@tanstack/react-query@^5.100.5":
+  version "5.100.5"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.100.5.tgz#3381992ff863827278ac97c432fa1f08893b78cd"
+  integrity sha512-aNwj1mi2v2bQ9IxkyR1grLOUkv3BYWoykHy9KDyLNbjC3tsahbOHJibK+Wjtr1wRhG59/AvJhiJG5OlthaCgJA==
   dependencies:
-    "@tanstack/query-core" "5.99.2"
+    "@tanstack/query-core" "5.100.5"
 
 "@tybys/wasm-util@^0.10.0", "@tybys/wasm-util@^0.10.1":
   version "0.10.1"
@@ -3388,11 +3368,6 @@ class-variance-authority@^0.7.1:
   dependencies:
     clsx "^2.1.1"
 
-classnames@^2.3.0:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
-  integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
-
 clean-webpack-plugin@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-4.0.0.tgz#72947d4403d452f38ed61a9ff0ada8122aacd729"
@@ -3439,7 +3414,7 @@ cliui@^8.0.1:
     strip-ansi "^6.0.1"
     wrap-ansi "^7.0.0"
 
-clsx@^2.1.1:
+clsx@2.1.1, clsx@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
   integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
@@ -5858,10 +5833,10 @@ lru-cache@^7.14.1:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.18.3.tgz#f793896e0fd0e954a59dfdd82f0773808df6aa89"
   integrity sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==
 
-lucide-react@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-1.8.0.tgz#107f8d8df0914dc5f8d037b948159d6cce86b9f5"
-  integrity sha512-WuvlsjngSk7TnTBJ1hsCy3ql9V9VOdcPkd3PKcSmM34vJD8KG6molxz7m7zbYFgICwsanQWmJ13JlYs4Zp7Arw==
+lucide-react@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-1.11.0.tgz#f8499142d785e1635d062daeae50bed6a8c307a8"
+  integrity sha512-UOhjdztXCgdBReRcIhsvz2siIBogfv/lhJEIViCpLt924dO+GDms9T7DNoucI23s6kEPpe988m5N0D2ajnzb2g==
 
 macos-release@^3.4.0:
   version "3.4.0"
@@ -6758,10 +6733,10 @@ postcss@8.4.31:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@^8.5.10, postcss@^8.5.6:
-  version "8.5.10"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.10.tgz#8992d8c30acf3f12169e7c09514a12fed7e48356"
-  integrity sha512-pMMHxBOZKFU6HgAZ4eyGnwXF/EvPGGqUr0MnZ5+99485wwW41kW91A4LOGxSHhgugZmSChL5AlElNdwlNgcnLQ==
+postcss@^8.5.12, postcss@^8.5.6:
+  version "8.5.12"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.12.tgz#cd0c0f667f7cb0521e2313234ea6e707a9ec1ddb"
+  integrity sha512-W62t/Se6rA0Az3DfCL0AqJwXuKwBeYg6nOaIgzP+xZ7N5BFCI7DYi1qs6ygUYT6rvfi6t9k65UMLJC+PHZpDAA==
   dependencies:
     nanoid "^3.3.11"
     picocolors "^1.1.1"
@@ -6935,13 +6910,13 @@ react-style-singleton@^2.2.2, react-style-singleton@^2.2.3:
     get-nonce "^1.0.0"
     tslib "^2.0.0"
 
-react-tooltip@^5.30.1:
-  version "5.30.1"
-  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-5.30.1.tgz#d69168af4c3c104193d018ad3e2dd31ed2653262"
-  integrity sha512-1lSPLQXuVooePxadUpmcwLgOsF1mIty7UZTJ9XnyfX4drOzStYs4JMXnazcDLguQr41W5OUZddOp9kfvArdpEQ==
+react-tooltip@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-6.0.0.tgz#bd9882bebf7ead6ecbdf48ad8204c89eda011ec4"
+  integrity sha512-J7m56tmdmhpjHz8YsQXGNaJdsYtrByKQvKj/Vcd0GBru1fcGRP2yv0ehCEuJbKTirlt3iBg9W5gcMWnM1dj67w==
   dependencies:
-    "@floating-ui/dom" "^1.6.1"
-    classnames "^2.3.0"
+    "@floating-ui/dom" "1.7.6"
+    clsx "2.1.1"
 
 react-use-lanyard@^0.3.6:
   version "0.3.6"
