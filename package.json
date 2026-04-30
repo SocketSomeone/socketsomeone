@@ -62,8 +62,8 @@
     "typescript": "6.0.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.5.2",
-    "@commitlint/config-angular": "20.5.0",
+    "@commitlint/cli": "20.5.3",
+    "@commitlint/config-angular": "20.5.3",
     "@release-it/conventional-changelog": "^11.0.0",
     "@types/minimatch": "^6.0.0",
     "husky": "^9.1.7",
