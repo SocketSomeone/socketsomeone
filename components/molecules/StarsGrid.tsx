@@ -4,7 +4,6 @@ import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { useMounted } from '@/hooks/useMounted';
-import { useSnowfallEnabled } from '@/hooks';
 
 type Props = {
 	stars?: number;

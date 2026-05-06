@@ -59,15 +59,15 @@ export default function GithubActivity({ username = 'SocketSomeone', className }
 
 								renderBlock={(block, activity) =>
 									React.cloneElement(block, {
+										content: `${activity.count} activities on ${formatter.format(new Date(activity.date))}`,
 										'data-tooltip-id': 'react-tooltip',
-										'data-tooltip-html': `${activity.count} activities on ${formatter.format(new Date(activity.date))}`,
 									})
 								}
 								renderColorLegend={
 									(block, level) => (
 										React.cloneElement(block, {
+											content: `Level ${level}`,
 											'data-tooltip-id': 'react-tooltip',
-											'data-tooltip-html': `Level ${level}`,
 											className: cn(block.props.className, 'cursor-pointer')
 										})
 									)

@@ -11,7 +11,7 @@ interface ThemeSwitcherProps {
 }
 
 export default function ThemeSwitcher({ className }: ThemeSwitcherProps) {
-	const { theme, resolvedTheme, setTheme } = useTheme();
+	const { theme, setTheme } = useTheme();
 	const mounted = useMounted();
 
 	if (!mounted) return null;

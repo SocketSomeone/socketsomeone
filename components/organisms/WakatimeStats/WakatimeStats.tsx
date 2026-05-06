@@ -35,7 +35,7 @@ const mapPieData = (data: WakatimePiePoint[]) =>
 		color: COLORS[index % COLORS.length]
 	}));
 
-export default function WakatimeStats({ data }: Props) {
+export function WakatimeStats({ data }: Props) {
 	const dailyTotals = data.dailyActivity.series.reduce((sum, value) => sum + value, 0);
 	const totalLabel = data.dailyActivity.totalHuman ?? formatHoursLabel(dailyTotals);
 	const languagesTitle = data.languagesLabel ?? 'Top languages';
@@ -43,25 +43,6 @@ export default function WakatimeStats({ data }: Props) {
 	const topLanguage = data.languages.length > 0 ? data.languages[0]?.name ?? null : null;
 	const topProject = data.projects.length > 0 ? data.projects[0]?.name ?? null : null;
 	const secondaryChipLabel = projectsTitle.toLowerCase().includes('editor') ? 'Editor' : 'Project';
-	const startedAtLabel = useMemo(() => {
-		if (data.startedAtLabel) {
-			return data.startedAtLabel;
-		}
-
-		if (!data.startedAt) {
-			return null;
-		}
-
-		const date = new Date(data.startedAt);
-		if (Number.isNaN(date.valueOf())) {
-			return null;
-		}
-
-		return new Intl.DateTimeFormat(undefined, {
-			year: 'numeric',
-			month: 'short'
-		}).format(date);
-	}, [data.startedAt, data.startedAtLabel]);
 
 	const dailyAverageLabel = useMemo(() => {
 		if (data.dailyAverageLabel) {
