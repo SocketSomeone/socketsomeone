@@ -1,11 +1,13 @@
 'use client';
 
-import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import Highcharts from 'highcharts';
 import { useMemo } from 'react';
 import Link from 'next/link';
-import GradientBlob from '@/components/atoms/GradientBlob';
+
 import type { WakatimeChartData, WakatimePiePoint } from '@/interfaces/wakatime';
+
+import GradientBlob from '@/components/atoms/GradientBlob';
 
 type Props = {
 	data: WakatimeChartData;

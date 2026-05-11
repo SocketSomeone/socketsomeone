@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
-import { redirect } from '@/i18n/navigation';
-import { routing } from '@/i18n/routing';
 import { hasLocale } from 'next-intl';
-import Document from '@/components/Document';
+import { useEffect } from 'react';
+
 import Loader from '@/components/atoms/Loader';
+import { redirect } from '@/i18n/navigation';
+import Document from '@/components/Document';
+import { routing } from '@/i18n/routing';
 
 export default function Page() {
 	useEffect(() => {

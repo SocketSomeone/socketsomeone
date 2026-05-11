@@ -1,11 +1,13 @@
 'use client';
 
+import { fetchSimpleIcons, SimpleIcon } from 'react-icon-cloud';
 import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import { fetchSimpleIcons, SimpleIcon } from 'react-icon-cloud';
+
 import SectionHeader from '@/components/atoms/SectionHeader';
-import TechStackGroupCard from './TechStackGroupCard';
+
 import { techStackGroups, techStackSlugs } from './tech-stack.data';
+import TechStackGroupCard from './TechStackGroupCard';
 
 type IconMap = Record<string, SimpleIcon>;
 

@@ -1,8 +1,8 @@
 import '../styles/globals.css';
 import 'react-tooltip/dist/react-tooltip.css';
-
-import React from 'react';
 import { Metadata, Viewport } from 'next';
+import React from 'react';
+
 import { EMAILS } from '@/utils/config';
 
 

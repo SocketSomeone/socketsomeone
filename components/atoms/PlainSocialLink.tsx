@@ -1,6 +1,8 @@
 'use client';
-import { cn } from '@/utils';
 import Image from 'next/image';
+
+import { cn } from '@/utils';
+
 import { SocialLink } from '../../interfaces';
 
 type SocialLinkProps = SocialLink

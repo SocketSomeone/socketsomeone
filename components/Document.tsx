@@ -1,10 +1,12 @@
-import React from 'react';
-import { cn } from '@/utils';
 import { GoogleTagManager } from '@next/third-parties/google';
-import Providers from './providers/Providers';
 import { Inter } from 'next/font/google';
-import CrowdinInContext from './providers/CrowdinInContext';
 import Head from 'next/head';
+import React from 'react';
+
+import { cn } from '@/utils';
+
+import CrowdinInContext from './providers/CrowdinInContext';
+import Providers from './providers/Providers';
 
 const inter = Inter({
 	subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],

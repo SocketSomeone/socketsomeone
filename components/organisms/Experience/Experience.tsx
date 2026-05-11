@@ -1,16 +1,17 @@
 'use client';
 import './styles.module.css';
 
-import React from 'react';
-import Badge from '@/components/atoms/Badge';
-import SectionHeader from '@/components/atoms/SectionHeader';
-import { TimelineEvent, TimelineHeader, TimelinePeriod, TimelineSectionList } from '@/components/molecules/Timeline';
-import { ChevronDownIcon } from '@heroicons/react/24/solid';
-
-import { cn } from '@/utils';
 import { ExternalLinkIcon, LucideGraduationCap } from 'lucide-react';
-import { ExperienceEntry, ImageOrIcon, useExperienceEntries } from './data';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 import { useTranslations } from "next-intl";
+import React from 'react';
+
+import { TimelineEvent, TimelineHeader, TimelinePeriod, TimelineSectionList } from '@/components/molecules/Timeline';
+import SectionHeader from '@/components/atoms/SectionHeader';
+import Badge from '@/components/atoms/Badge';
+import { cn } from '@/utils';
+
+import { ExperienceEntry, ImageOrIcon, useExperienceEntries } from './data';
 
 export default function Experience() {
 	const experienceEntries = useExperienceEntries();

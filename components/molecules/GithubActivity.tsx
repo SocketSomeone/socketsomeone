@@ -1,11 +1,12 @@
 'use client';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 import { GitHubCalendar } from 'react-github-calendar';
-import { cn } from '@/utils';
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import React from 'react';
-import { Tooltip as ReactTooltip } from 'react-tooltip';
-import { useTranslations } from 'next-intl';
+
 import { useMounted } from '@/hooks/useMounted';
+import { cn } from '@/utils';
 
 type GitHubCalendarProps = {
 	username?: string;

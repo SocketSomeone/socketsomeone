@@ -1,12 +1,13 @@
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
+import React, { Suspense } from 'react';
+
+import SnowfallBackground from '@/components/organisms/SnowfallBackground';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
-import React, { Suspense } from 'react';
 import Document from '@/components/Document';
-import SnowfallBackground from '@/components/organisms/SnowfallBackground';
+import { routing } from '@/i18n/routing';
 
 type Props = {
 	children: React.ReactNode;

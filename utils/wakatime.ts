@@ -1,5 +1,6 @@
 'use client';
 import { QueryClient } from '@tanstack/query-core';
+
 import type {
 	WakatimeChartData,
 	WakatimeInsightsResponse,

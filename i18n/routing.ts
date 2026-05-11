@@ -1,4 +1,5 @@
 import { defineRouting } from 'next-intl/routing';
+
 import { IS_DEV } from '@/utils/config';
 
 const LOCALES = ['en', 'ru'];

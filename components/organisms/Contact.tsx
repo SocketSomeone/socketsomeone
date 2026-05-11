@@ -1,6 +1,7 @@
 'use client';
-import SectionHeader from '../atoms/SectionHeader';
 import { useTranslations } from "next-intl";
+
+import SectionHeader from '../atoms/SectionHeader';
 
 export default function Contact() {
 	const t = useTranslations('home.sections.contacts');

@@ -1,7 +1,8 @@
-import { Carousel, CarouselContent, CarouselItem } from '../../magicui/carousel';
 import AutoScroll from 'embla-carousel-auto-scroll';
-import Placeholder from '../../molecules/Placeholder';
+
+import { Carousel, CarouselContent, CarouselItem } from '../../magicui/carousel';
 import ProjectCard from '../../molecules/Card/ProjectCard';
+import Placeholder from '../../molecules/Placeholder';
 
 export interface MarqueeProjectsHorizontalProps {
 	projects: any;

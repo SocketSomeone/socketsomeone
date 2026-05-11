@@ -1,9 +1,11 @@
 'use client';
-import Avatar from '@/components/atoms/Avatar';
-import Banner from '@/components/organisms/Banner';
-import BlurFade from '@/components/magicui/blur-fade';
-import SocialLinks from './SocialLinks';
 import { useTranslations } from "next-intl";
+
+import BlurFade from '@/components/magicui/blur-fade';
+import Banner from '@/components/organisms/Banner';
+import Avatar from '@/components/atoms/Avatar';
+
+import SocialLinks from './SocialLinks';
 
 export default function Intro() {
 	const t = useTranslations('home.sections.intro');

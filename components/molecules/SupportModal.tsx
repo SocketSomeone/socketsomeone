@@ -1,8 +1,9 @@
 'use client';
-import Modal, { ModalProps } from '../atoms/Modal';
+import { AnimatePresence, motion } from 'motion/react';
 import { CopyIcon } from 'lucide-react';
 import { useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+
+import Modal, { ModalProps } from '../atoms/Modal';
 
 type Wallet = {
 	symbol: string;

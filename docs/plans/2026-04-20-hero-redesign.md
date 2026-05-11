@@ -40,8 +40,8 @@
 **Files:**
 - Verify only
 
-**Step 1:** Run `yarn lint`.
+**Step 1:** Run `npm run lint`.
 
-**Step 2:** Run `yarn build`.
+**Step 2:** Run `npm run build`.
 
 **Step 3:** Fix any issues before closing the task.

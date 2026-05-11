@@ -1,11 +1,12 @@
-import Projects from '@/components/organisms/Projects';
+import { Metadata } from 'next';
+
+import ProjectsTechStackSection from '@/components/organisms/Projects/ProjectsTechStackSection';
 import { WakatimeStatsConnector } from '@/components/organisms/WakatimeStats';
+import SectionHeader from '@/components/atoms/SectionHeader';
+import Projects from '@/components/organisms/Projects';
+import { createLocaleAlternates } from '@/utils/seo';
 import Page from '@/components/Page';
 import { cn } from '@/utils';
-import SectionHeader from '@/components/atoms/SectionHeader';
-import { Metadata } from 'next';
-import { createLocaleAlternates } from '@/utils/seo';
-import ProjectsTechStackSection from '@/components/organisms/Projects/ProjectsTechStackSection';
 
 const PAGE_TITLE = 'Projects';
 const PAGE_DESCRIPTION = 'Explore the projects of Alexey Filippov, a software engineer specializing in web development, open source, and community building.';

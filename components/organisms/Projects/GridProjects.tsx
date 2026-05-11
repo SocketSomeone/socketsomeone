@@ -1,9 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Placeholder from "../../molecules/Placeholder";
+
 import { cn } from "@/utils";
+
 import ProjectCard from "../../molecules/Card/ProjectCard";
+import Placeholder from "../../molecules/Placeholder";
 
 const INITIAL_VISIBLE_PROJECTS = 6;
 const LOAD_MORE_STEP = 6;

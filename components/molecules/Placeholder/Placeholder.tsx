@@ -1,6 +1,7 @@
 'use client';
-import { cn } from '@/utils';
 import Image from 'next/image';
+
+import { cn } from '@/utils';
 
 type Props = {
 	className?: string;

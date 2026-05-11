@@ -1,6 +1,7 @@
 'use client';
-import { cn } from '@/utils';
 import React from 'react';
+
+import { cn } from '@/utils';
 
 type Props = {
 	className?: string;

@@ -1,9 +1,10 @@
 'use client';
-import PlainSocialLink from '../atoms/PlainSocialLink';
 import { SocialLink } from '@/interfaces';
-import SocialCard from '../molecules/Card/SocialCard';
-import { cn } from '@/utils';
 import { EMAILS } from '@/utils/config';
+import { cn } from '@/utils';
+
+import PlainSocialLink from '../atoms/PlainSocialLink';
+import SocialCard from '../molecules/Card/SocialCard';
 
 export const LINKS: SocialLink[] = [
 	{

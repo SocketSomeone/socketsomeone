@@ -1,9 +1,10 @@
 'use client';
-import Star from '@/components/atoms/Star';
-import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence } from 'motion/react';
+import { useTheme } from 'next-themes';
+
 import { useMounted } from '@/hooks/useMounted';
+import Star from '@/components/atoms/Star';
 
 type Props = {
 	stars?: number;

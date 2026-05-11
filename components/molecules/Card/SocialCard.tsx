@@ -1,6 +1,7 @@
 'use client';
-import { SocialLink } from '../../../interfaces';
 import Image from 'next/image';
+
+import { SocialLink } from '../../../interfaces';
 
 export default function SocialCard({
 									   href,

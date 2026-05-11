@@ -1,7 +1,9 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import Placeholder from './Placeholder';
+
 import { cn } from '@/utils';
+
+import Placeholder from './Placeholder';
 
 type Props = {
 	className?: string;

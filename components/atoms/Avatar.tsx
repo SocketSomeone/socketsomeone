@@ -1,14 +1,16 @@
 'use client';
 import { useState, } from 'react';
 import Image from 'next/image';
-import { useLanyardContext } from '../providers/LanyardProvider';
+
 import { cn } from '@/utils';
 
+import { useLanyardContext } from '../providers/LanyardProvider';
+
 enum StatusColor {
-	ONLINE = 'bg-green-500',
-	IDLE = 'bg-yellow-500',
 	DND = 'bg-red-500',
+	IDLE = 'bg-yellow-500',
 	OFFLINE = 'bg-gray-500',
+	ONLINE = 'bg-green-500',
 }
 
 function getStatusColor(status: string = 'offline'): string {

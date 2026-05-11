@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+
 import { createOgImageTemplate, OG_IMAGE_SIZE } from '@/utils/og';
 import { routing } from '@/i18n/routing';
 

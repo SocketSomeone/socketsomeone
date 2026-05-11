@@ -1,10 +1,12 @@
 'use client';
-import React, { useEffect } from 'react';
-import { cn } from '@/utils';
-import { XMarkIcon } from '@heroicons/react/24/solid';
 import { AnimatePresence, motion } from 'motion/react';
-import { useMediaQuery } from '../../hooks';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 import { Sheet, SheetProps } from 'react-modal-sheet';
+import React, { useEffect } from 'react';
+
+import { cn } from '@/utils';
+
+import { useMediaQuery } from '../../hooks';
 
 export interface ModalProps extends SheetProps {
 	isOpen: boolean;

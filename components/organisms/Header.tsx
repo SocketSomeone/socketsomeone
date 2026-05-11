@@ -1,14 +1,16 @@
 'use client';
-import CVDownloader from '@/components/molecules/CVDownloader';
-import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
-import { Link } from '@/i18n/navigation';
-import Logo from '@/components/atoms/Logo';
-import { HeartIcon } from '@heroicons/react/24/solid';
-import { cn } from '@/utils';
 import { Bars3Icon } from '@heroicons/react/24/outline';
-import { useState } from 'react';
-import SupportModal from '../molecules/SupportModal';
+import { HeartIcon } from '@heroicons/react/24/solid';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+
+import ThemeSwitcher from '@/components/molecules/ThemeSwitcher';
+import CVDownloader from '@/components/molecules/CVDownloader';
+import Logo from '@/components/atoms/Logo';
+import { Link } from '@/i18n/navigation';
+import { cn } from '@/utils';
+
+import SupportModal from '../molecules/SupportModal';
 
 export default function Header() {
 	const [supportModalOpen, setSupportModalOpen] = useState(false);

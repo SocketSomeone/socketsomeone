@@ -1,9 +1,10 @@
 'use client';
-import { useCallback } from 'react';
-import { cn } from '@/utils';
-import { DownloadIcon } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
+import { DownloadIcon } from 'lucide-react';
 import { useTranslations } from "next-intl";
+import { useCallback } from 'react';
+
+import { cn } from '@/utils';
 
 type Props = {
 	className?: string;

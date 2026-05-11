@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
+import React from 'react';
+
 import NotFoundPlaceholder from '@/components/molecules/Placeholder/NotFoundPlaceholder';
 import Document from '@/components/Document';
-import React from 'react';
 
 export const metadata: Metadata = {
 	title: 'Page Not Found - 404',

@@ -1,8 +1,9 @@
 'use client';
-import AnimatedGradientText from '@/components/magicui/animated-gradient-text';
-import { cn } from '@/utils';
 import { ChevronRight } from 'lucide-react';
+
+import AnimatedGradientText from '@/components/magicui/animated-gradient-text';
 import AnimatedShinyText from '@/components/magicui/animated-shiny-text';
+import { cn } from '@/utils';
 
 export default function Banner() {
 	return (

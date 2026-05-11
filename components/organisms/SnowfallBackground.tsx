@@ -1,8 +1,9 @@
 'use client';
 import { Snowfall } from 'react-snowfall';
-import React from 'react';
-import { useSnowfallEnabled } from '@/hooks/useSnowfallEnabled';
 import { useTheme } from 'next-themes';
+import React from 'react';
+
+import { useSnowfallEnabled } from '@/hooks/useSnowfallEnabled';
 import { useMounted } from '@/hooks/useMounted';
 
 export default function SnowfallBackground() {

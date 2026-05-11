@@ -1,6 +1,6 @@
 'use client';
-import { createContext, ReactNode, useContext } from 'react';
 import { LanyardWebsocket, useLanyard } from 'react-use-lanyard';
+import { createContext, ReactNode, useContext } from 'react';
 
 const LanyardContext = createContext<LanyardWebsocket | null>(null);
 

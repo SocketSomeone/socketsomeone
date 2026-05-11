@@ -1,9 +1,9 @@
-import * as React from 'react';
 import useEmblaCarousel, { type UseEmblaCarouselType, } from 'embla-carousel-react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import * as React from 'react';
 
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/magicui/button';
+import { cn } from '@/lib/utils';
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -40,7 +40,7 @@ function useCarousel() {
 
 const Carousel = React.forwardRef<
 	HTMLDivElement,
-	React.HTMLAttributes<HTMLDivElement> & CarouselProps
+	CarouselProps & React.HTMLAttributes<HTMLDivElement>
 >(
 	(
 		{
@@ -107,6 +107,7 @@ const Carousel = React.forwardRef<
 				return;
 			}
 
+			// eslint-disable-next-line react-hooks/set-state-in-effect
 			onSelect(api);
 			api.on('reInit', onSelect);
 			api.on('select', onSelect);
@@ -249,10 +250,10 @@ const CarouselNext = React.forwardRef<
 CarouselNext.displayName = 'CarouselNext';
 
 export {
-	type CarouselApi,
 	Carousel,
+	type CarouselApi,
 	CarouselContent,
 	CarouselItem,
-	CarouselPrevious,
 	CarouselNext,
+	CarouselPrevious,
 };

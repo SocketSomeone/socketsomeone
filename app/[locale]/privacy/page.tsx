@@ -1,10 +1,11 @@
-import Page from '@/components/Page';
-import { Link } from '@/i18n/navigation';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
-import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
+
 import { createLocaleAlternates } from '@/utils/seo';
+import { Link } from '@/i18n/navigation';
 import { EMAILS } from '@/utils/config';
+import Page from '@/components/Page';
 
 type Props = {
 	params: Promise<{ locale: string }>;

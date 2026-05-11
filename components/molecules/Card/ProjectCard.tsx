@@ -1,6 +1,7 @@
-import Badge from '@/components/atoms/Badge';
-import { BoltIcon, FireIcon } from '@heroicons/react/20/solid';
 import { BeakerIcon, LanguageIcon, StarIcon } from '@heroicons/react/24/solid';
+import { BoltIcon, FireIcon } from '@heroicons/react/20/solid';
+
+import Badge from '@/components/atoms/Badge';
 import { cn } from '@/utils';
 
 export interface ProjectCardProps {

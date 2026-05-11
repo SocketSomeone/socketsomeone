@@ -1,10 +1,11 @@
 'use client';
 
-import { useTheme } from 'next-themes';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
-import { cn } from '@/utils';
 import { IoIosContrast } from 'react-icons/io';
+import { useTheme } from 'next-themes';
+
 import { useMounted } from '@/hooks/useMounted';
+import { cn } from '@/utils';
 
 interface ThemeSwitcherProps {
 	className?: string;

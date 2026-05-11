@@ -1,14 +1,16 @@
 "use client";
 
-import { JSX } from "react";
-import Loader from "@/components/atoms/Loader";
-import MarqueeProjects from "./MarqueeProjects";
 import { LinkIcon } from "@heroicons/react/24/solid";
-import { cn } from "@/utils";
-import GithubActivity from "../../molecules/GithubActivity";
 import { useQuery } from "@tanstack/react-query";
-import GridProjects from "./GridProjects";
 import { useTranslations } from "next-intl";
+import { JSX } from "react";
+
+import Loader from "@/components/atoms/Loader";
+import { cn } from "@/utils";
+
+import GithubActivity from "../../molecules/GithubActivity";
+import MarqueeProjects from "./MarqueeProjects";
+import GridProjects from "./GridProjects";
 
 interface ProjectsProps {
 	type: "marquee" | "grid";

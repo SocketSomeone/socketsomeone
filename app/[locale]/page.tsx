@@ -1,18 +1,19 @@
-import Light from '@/components/atoms/Light';
-import Technologies from '@/components/molecules/Technologies';
-import Toast from '@/components/molecules/Toast';
-import Intro from '@/components/organisms/Intro';
-import StarsGrid from '@/components/molecules/StarsGrid';
-import Experience from '@/components/organisms/Experience/Experience';
-import Page from '@/components/Page';
-import Contact from '@/components/organisms/Contact';
-import { createLocaleAlternates } from '@/utils/seo';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
-import ScrollDownButton from '@/components/molecules/ScrollDownButton';
-import PrintMode from '@/components/atoms/PrintMode';
-import { ClientHomeProjects } from '@/components/organisms/Projects/ClientHomeProjects';
 import React from 'react';
+
+import { ClientHomeProjects } from '@/components/organisms/Projects/ClientHomeProjects';
+import ScrollDownButton from '@/components/molecules/ScrollDownButton';
+import Experience from '@/components/organisms/Experience/Experience';
+import Technologies from '@/components/molecules/Technologies';
+import StarsGrid from '@/components/molecules/StarsGrid';
+import Contact from '@/components/organisms/Contact';
+import { createLocaleAlternates } from '@/utils/seo';
+import PrintMode from '@/components/atoms/PrintMode';
+import Toast from '@/components/molecules/Toast';
+import Intro from '@/components/organisms/Intro';
+import Light from '@/components/atoms/Light';
+import Page from '@/components/Page';
 
 type Props = {
 	params: Promise<{ locale: string }>;

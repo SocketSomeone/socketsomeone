@@ -1,6 +1,7 @@
-import { IS_DEV } from '@/utils/config';
 import Script from 'next/script';
 import React from 'react';
+
+import { IS_DEV } from '@/utils/config';
 
 type Props = {
 	enable?: boolean;

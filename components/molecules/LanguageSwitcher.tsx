@@ -1,12 +1,13 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { usePathname, useRouter } from '@/i18n/navigation';
-import { useLocale } from 'use-intl';
-import { CROWDIN_PROJECT_URL, IS_DEV } from '@/utils/config';
-import { cn } from '@/utils';
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { useLocale } from 'use-intl';
+
+import { CROWDIN_PROJECT_URL, IS_DEV } from '@/utils/config';
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { cn } from '@/utils';
 
 type LocaleOption = {
 	value: string;

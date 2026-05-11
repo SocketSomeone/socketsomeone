@@ -1,10 +1,11 @@
 'use client';
 import { PropsWithChildren } from 'react';
+
 import { cn } from '@/utils';
 
-type Props = PropsWithChildren<any> & {
+type Props = {
 	className?: string;
-}
+} & PropsWithChildren<any>
 
 export default function Page({ children, className }: Props) {
 	return (

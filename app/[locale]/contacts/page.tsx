@@ -1,9 +1,10 @@
-import Page from '@/components/Page';
-import SocialLinks from '@/components/organisms/SocialLinks';
-import { cn } from '@/utils';
-import SectionHeader from '@/components/atoms/SectionHeader';
 import { Metadata } from 'next';
+
+import SocialLinks from '@/components/organisms/SocialLinks';
+import SectionHeader from '@/components/atoms/SectionHeader';
 import { createLocaleAlternates } from '@/utils/seo';
+import Page from '@/components/Page';
+import { cn } from '@/utils';
 
 const PAGE_TITLE = 'Contacts';
 const PAGE_DESCRIPTION = 'Get in touch with Alexey Filippov, a software engineer specializing in web development, open source, and community building.';

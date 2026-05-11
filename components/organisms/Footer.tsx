@@ -1,15 +1,17 @@
 'use client';
-import Logo from '../atoms/Logo';
-import Divider from '../atoms/Divider';
-import { cn } from '@/utils';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useCallback, useState } from 'react';
 import { useTranslations } from 'next-intl';
+
+import { CROWDIN_PROJECT_URL } from '@/utils/config';
 import { Link } from '@/i18n/navigation';
+import { cn } from '@/utils';
+
 import LanguageSwitcher from '../molecules/LanguageSwitcher';
 import SocialLinks from './SocialLinks';
-import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronDownIcon } from '@heroicons/react/24/solid';
-import { CROWDIN_PROJECT_URL } from '@/utils/config';
+import Divider from '../atoms/Divider';
+import Logo from '../atoms/Logo';
 
 const styleOfLink = 'hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300';
 

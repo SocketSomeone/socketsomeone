@@ -1,9 +1,10 @@
-import Page from '@/components/Page';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
-import { Link } from '@/i18n/navigation';
 import { Metadata } from 'next';
+
 import { createLocaleAlternates } from '@/utils/seo';
+import { Link } from '@/i18n/navigation';
 import { EMAILS } from '@/utils/config';
+import Page from '@/components/Page';
 
 const PAGE_TITLE = 'Terms of Service';
 const PAGE_DESCRIPTION = 'Terms of Service for socketsomeone.me and socketsomeone.dev';

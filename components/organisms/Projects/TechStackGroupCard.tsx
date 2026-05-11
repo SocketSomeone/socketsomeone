@@ -1,10 +1,12 @@
 'use client';
 
-import { motion } from 'motion/react';
 import { SimpleIcon } from 'react-icon-cloud';
+import { motion } from 'motion/react';
+
 import { cn } from '@/utils';
-import TechStackIcon from './TechStackIcon';
+
 import { TechStackGroup } from './tech-stack.data';
+import TechStackIcon from './TechStackIcon';
 
 type Props = {
 	group: TechStackGroup;

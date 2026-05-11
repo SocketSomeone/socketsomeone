@@ -1,5 +1,5 @@
-import createPWAPlugin      from 'next-pwa';
 import createNextIntlPlugin from 'next-intl/plugin';
+import createPWAPlugin      from 'next-pwa';
 
 const withPWA = createPWAPlugin({
 	dest: 'public',

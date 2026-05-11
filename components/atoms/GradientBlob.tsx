@@ -1,11 +1,12 @@
-import { cn } from '@/utils';
 import type { HTMLAttributes } from 'react';
 
-type Props = HTMLAttributes<HTMLDivElement> & {
+import { cn } from '@/utils';
+
+type Props = {
 	innerClassName?: string;
 	gradientClassName: string;
 	blurClassName?: string;
-};
+} & HTMLAttributes<HTMLDivElement>;
 
 export default function GradientBlob({
 	className,

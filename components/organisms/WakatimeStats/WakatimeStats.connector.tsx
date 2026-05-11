@@ -1,8 +1,9 @@
 'use client';
 
 import { fetchWakatimeData } from '@/utils/wakatime';
-import { WakatimeStats } from './WakatimeStats';
+
 import Placeholder from '../../molecules/Placeholder';
+import { WakatimeStats } from './WakatimeStats';
 
 export async function WakatimeStatsConnector() {
 	const wakatimeData = await fetchWakatimeData();

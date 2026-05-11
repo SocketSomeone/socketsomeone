@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
-import { routing } from '@/i18n/routing';
+
 import { SITE_URL } from '@/utils/config';
+import { routing } from '@/i18n/routing';
 
 export const dynamic = 'force-static';
 
