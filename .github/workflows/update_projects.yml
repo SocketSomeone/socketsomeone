@@ -36,8 +36,6 @@ jobs:
           title: 'chore: update projects'
           body: |
             This PR updates the projects in the repository.
-          assignees: socketsomeone
-          reviewers: socketsomeone
           draft: false
 
       - name: Enable auto-merge for Projects PRs
