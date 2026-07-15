@@ -22,7 +22,7 @@
 		"translations:sync": "npm run translations:upload && npm run translations:download"
 	},
 	"dependencies": {
-		"@crowdin/cli": "^4.14.3",
+		"@crowdin/cli": "^4.14.4",
 		"@heroicons/react": "^2.2.0",
 		"@next/third-parties": "^16.2.10",
 		"@radix-ui/react-select": "^2.3.3",
