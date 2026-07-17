@@ -40,7 +40,7 @@
 		"embla-carousel-react": "^8.6.0",
 		"highcharts": "^13.0.0",
 		"highcharts-react-official": "^3.2.3",
-		"lucide-react": "^1.24.0",
+		"lucide-react": "^1.25.0",
 		"motion": "^12.42.2",
 		"next": "^16.2.10",
 		"next-intl": "^4.13.2",
