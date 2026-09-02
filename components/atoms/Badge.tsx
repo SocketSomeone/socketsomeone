@@ -5,7 +5,7 @@ import { cn } from '@/utils';
 type ChipType = 'flat' | 'outlined';
 type ChipColor = 'white' | 'blue' | 'green' | 'red' | 'yellow' | 'gray';
 
-interface ChipProps {
+interface ChipProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> {
 	children?: React.ReactNode;
 	className?: string;
 	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -13,8 +13,6 @@ interface ChipProps {
 	color?: ChipColor;
 	icon?: React.ReactNode;
 	iconPosition?: 'left' | 'right';
-
-	[key: string]: any;
 }
 
 const sizeVariants = {

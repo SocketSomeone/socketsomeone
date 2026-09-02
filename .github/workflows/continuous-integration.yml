@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run ESlint
+      - name: Run Oxlint
         run: npm run lint
 
       - name: Run Build

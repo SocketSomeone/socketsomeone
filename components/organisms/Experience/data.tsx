@@ -32,19 +32,26 @@ export const icons = {
 	order: <BoltIcon width={36} className={styleOfIcon}/>
 };
 
+type ExperienceMessage = {
+	icon?: {
+		url?: string;
+		type: keyof typeof icons;
+	};
+} & Omit<ExperienceEntry, 'icon'>;
+
 
 export function useExperienceEntries(): ExperienceEntry[] {
 	const t = useTranslations();
-	const experienceData = t.raw('home.sections.professions.experience');
+	const experienceData = t.raw('home.sections.professions.experience') as Record<string, ExperienceMessage>;
 
 	return Object.keys(experienceData).map(key => {
-		const exp = experienceData[key] as any;
+		const exp = experienceData[key];
 		return {
 			...exp,
 			icon: exp.icon
 				? {
 					url: exp.icon.url,
-					fallback: icons[exp.icon.type as keyof typeof icons]
+					fallback: icons[exp.icon.type]
 				}
 				: undefined,
 			skills: exp.skills || [],

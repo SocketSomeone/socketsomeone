@@ -88,7 +88,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 			target: undefined,
 			rel: undefined,
 			style: { cursor: 'default' },
-			onClick: (e: any) => e.preventDefault(),
+			onClick: (e: React.MouseEvent<HTMLAnchorElement>) => e.preventDefault(),
 		},
 	});
 
@@ -148,7 +148,7 @@ function Technologies() {
 				<li
 					key={`technology-${index}`}
 					className={`absolute block list-none object-contain animate-float duration-[${index * 250}]`}
-					style={icon.style as any}
+					style={icon.style as React.CSSProperties}
 				>
 					{icon.element}
 				</li>
