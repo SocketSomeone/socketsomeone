@@ -1,14 +1,12 @@
 import { cn } from '@/utils';
 
-interface MarqueeProps {
+interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
 	className?: string;
 	reverse?: boolean;
 	pauseOnHover?: boolean;
 	children?: React.ReactNode;
 	vertical?: boolean;
 	repeat?: number;
-
-	[key: string]: any;
 }
 
 export default function Marquee({

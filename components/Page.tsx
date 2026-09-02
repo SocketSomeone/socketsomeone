@@ -3,9 +3,9 @@ import { PropsWithChildren } from 'react';
 
 import { cn } from '@/utils';
 
-type Props = {
+type Props = PropsWithChildren<{
 	className?: string;
-} & PropsWithChildren<any>
+}>;
 
 export default function Page({ children, className }: Props) {
 	return (

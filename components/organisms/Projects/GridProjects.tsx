@@ -19,7 +19,7 @@ type ProjectLicense = {
 	spdx_id?: string | null;
 } | null;
 
-type Project = {
+export type Project = {
 	id: number;
 	name: string;
 	description: string | null;
