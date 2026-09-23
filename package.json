@@ -38,7 +38,7 @@
 		"deepmerge-ts": "^8.0.2",
 		"embla-carousel-auto-scroll": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
-		"highcharts": "^13.1.0",
+		"highcharts": "^13.1.1",
 		"highcharts-react-official": "^3.2.3",
 		"lucide-react": "^1.47.0",
 		"motion": "^13.4.0",
