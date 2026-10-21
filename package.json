@@ -62,8 +62,8 @@
 		"typescript": "7.0.2"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "21.2.3",
-		"@commitlint/config-angular": "21.2.3",
+		"@commitlint/cli": "21.2.4",
+		"@commitlint/config-angular": "21.2.4",
 		"@next/eslint-plugin-next": "^16.4.2",
 		"@release-it/conventional-changelog": "^12.0.2",
 		"@stylistic/eslint-plugin": "^5.10.0",
